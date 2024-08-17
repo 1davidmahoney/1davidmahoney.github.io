@@ -12,25 +12,43 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
+    padding: 10px 20px;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border: 2px solid #fff;
 }
 
 section {
@@ -46,12 +64,12 @@ section {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
     }
 
-    .project {
-        margin: 20px 0;
+    nav ul li {
+        margin: 10px 0;
     }
 }
