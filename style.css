@@ -1,5 +1,5 @@
 /* Reset some basic styles */
-body, h1, h2, h3, p, ul {
+body, h1, h2, h3, p, ul, header, nav {
     margin: 0;
     padding: 0;
 }
@@ -7,7 +7,6 @@ body, h1, h2, h3, p, ul {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
     background-color: #f4f4f4;
 }
 
@@ -18,7 +17,8 @@ header {
     background-color: #333;
     padding: 10px 20px;
     color: #fff;
-    position: relative;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
 }
 
 .logo {
