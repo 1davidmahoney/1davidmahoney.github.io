@@ -76,23 +76,20 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 20px; /* Space between buttons */
-    max-width: 800px; /* Max width of the grid */
+    max-width: 1100px; /* Adjust to fit 3 buttons comfortably */
     margin: 40px auto; /* Center the grid */
     padding: 20px;
 }
 
-.grid-button {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+.grid-button img {
+    width: 100%; /* Make the image fill the button area */
+    height: auto;
     border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
-.grid-button:hover {
-    background-color: #555;
+.grid-button img:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
@@ -119,8 +116,8 @@ nav ul li a:hover {
     }
 
     nav ul li a {
-		padding: 0px; /* Avoid "about me" word-wrapping when screen certain small width (e.g., my Samsung phone). */
-	}
+        padding: 0px; /* Avoid "about me" word-wrapping when screen certain small width (e.g., my Samsung phone). */
+    }
 
     nav ul li:last-child {
         margin-bottom: 0; /* Remove margin from the last item */
