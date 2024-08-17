@@ -93,6 +93,10 @@ nav ul li a:hover {
         margin-bottom: 10px; /* Add space between stacked items */
     }
 
+    nav ul li a {
+		padding: 0px; /* Avoid "about me" word-wrapping when screen certain small width (e.g., my Samsung phone). */
+	}
+
     nav ul li:last-child {
         margin-bottom: 0; /* Remove margin from the last item */
     }
