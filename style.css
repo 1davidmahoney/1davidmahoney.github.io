@@ -71,6 +71,31 @@ nav ul li a:hover {
     border: 2px solid #fff;
 }
 
+/* Button Grid Styles */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between buttons */
+    max-width: 800px; /* Max width of the grid */
+    margin: 40px auto; /* Center the grid */
+    padding: 20px;
+}
+
+.grid-button {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.grid-button:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .logo-container {
@@ -99,5 +124,15 @@ nav ul li a:hover {
 
     nav ul li:last-child {
         margin-bottom: 0; /* Remove margin from the last item */
+    }
+
+    .button-grid {
+        grid-template-columns: 1fr; /* Stack buttons vertically on small screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .button-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
     }
 }
