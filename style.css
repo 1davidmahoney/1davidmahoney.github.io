@@ -18,14 +18,26 @@ header {
     padding: 10px 20px;
     color: #fff;
     width: 100%;
-    box-sizing: border-box; /* Ensures padding is included in width calculation */
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row; /* Display the two divs side by side */
+    align-items: center;
+    flex-grow: 1;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
-    flex-grow: 1; /* Ensures it takes up the available space */
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-left: 10px; /* Space between the two divs */
+    color: #ccc; /* Optional: lighter color for the subtitle */
 }
 
 nav {
@@ -71,6 +83,11 @@ section {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column; /* Stack the divs vertically on smaller screens */
+        align-items: flex-start; /* Align them to the left */
+    }
+
     nav ul {
         flex-direction: column;
         align-items: flex-end;
