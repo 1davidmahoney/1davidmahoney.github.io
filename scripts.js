@@ -1,22 +1,17 @@
-function setFavicon(lightMode) {
-    var favicon = document.querySelector('link[rel="icon"]');
-    
-    if (!favicon) {
-        favicon = document.createElement('link');
-        favicon.rel = 'icon';
-        document.head.appendChild(favicon);
+// Detect the browser color scheme
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+    // Function to change the favicon based on the color scheme
+    function setFavicon() {
+      const link = document.querySelector("link[rel*='icon']");
+      
+      // Check if the browser is in dark mode
+      if (isDarkMode) {
+        link.href = "images/favicon/favicon-dark.ico";
+      } else {
+        link.href = "images/favicon/favicon-light.ico";
+      }
     }
-    
-    if (lightMode.matches) {
-        favicon.href = '/images/favicon/favicon-dark.ico';  // Favicon for light mode
-    } else {
-        favicon.href = '/images/favicon/favicon-light.ico'; // Favicon for dark mode
-    }
-}
-
-// Set favicon on initial load
-var lightMode = window.matchMedia('(prefers-color-scheme: light)');
-setFavicon(lightMode);
-
-// Update favicon when the theme changes
-lightMode.addEventListener('change', () => setFavicon(lightMode));
+  
+    // Call the function when the page loads
+    setFavicon();
