@@ -99,8 +99,8 @@ nav ul li a:hover {
 @media (max-width: 1024px) {
     .button-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-        padding-left: 8%; /* Adjust padding on medium screens */
-        padding-right: 8%;
+        /*padding-left: 8%;*/ /* Adjust padding on medium screens */
+        /*padding-right: 8%;*/
     }
 }
 
@@ -131,7 +131,7 @@ nav ul li a:hover {
 
     .button-grid {
         grid-template-columns: 1fr; /* Stack buttons vertically on small screens */
-        padding-left: 5%; /* Adjust padding on small screens */
-        padding-right: 5%;
+        /*padding-left: 5%;*/ /* Adjust padding on small screens */
+        /*padding-right: 5%;*/
     }
 }
