@@ -41,6 +41,36 @@ header {
     color: #ccc; /* Optional: lighter color for the subtitle */
 }
 
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border: 2px solid #fff;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .logo-container {
