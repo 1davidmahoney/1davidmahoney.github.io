@@ -32,11 +32,12 @@ header {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
+	margin-right: 10px; /* Space between the two divs in row layout */
 }
 
 .subtitle {
     font-size: 16px;
-    margin-left: 10px; /* Space between the two divs in row layout */
+    margin-left: 10px;
     color: #ccc; /* Optional: lighter color for the subtitle */
 }
 
