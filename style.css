@@ -100,6 +100,21 @@ nav ul li a:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+.grid-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Half-transparent black background */
+    z-index: 1; /* Ensure the background is behind the label but above the button */
+    border-radius: 5px; /* Match the button's border radius */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
+    pointer-events: none; /* Ignore mouse events on the background */
+}
+
 .grid-button .label {
     position: absolute;
     top: 50%;
@@ -117,24 +132,9 @@ nav ul li a:hover {
     pointer-events: none; /* Ignore mouse events on the label */
 }
 
-.grid-button .label::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Half-transparent black background */
-    z-index: 1; /* Ensure the background is behind the label but above the button */
-    border-radius: 5px; /* Match the button's border radius */
-    opacity: 0; /* Start invisible */
-    transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
-    pointer-events: none; /* Ignore mouse events on the background */
-}
-
-.grid-button:hover .label,
-.grid-button:hover .label::before {
-    opacity: 1; /* Fade in both the label and background on hover */
+.grid-button:hover::before,
+.grid-button:hover .label {
+    opacity: 1; /* Fade in both the background and label on hover */
 }
 
 /* Responsive design */
