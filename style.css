@@ -145,6 +145,11 @@ nav ul li a:hover {
     opacity: 1; /* Force hover effect when near center */
 }
 
+.grid-button.hover-active {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
     .button-grid {
