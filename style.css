@@ -143,6 +143,51 @@ nav ul li a:hover {
     opacity: 1; /* Fade in both the background and label on hover */
 }
 
+/* Screen Overlay */
+.screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+/* New Content Styles */
+.new-content {
+    opacity: 0;
+    z-index: 12;
+    transition: opacity 0.5s ease-in-out;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    display: none;
+    text-align: center;
+}
+
+/* Home Button Styles */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 13;
+    display: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
     .button-grid {
