@@ -188,9 +188,10 @@ nav ul li a:hover {
 
     .button-grid {
         grid-template-columns: 1fr; /* Stack buttons vertically on small screens */
+		margin: 40px auto 80px auto; /* Extra bottom margin on small screens so bottommost button hits center & activates hover effects */
     }
 
     .grid-button .label {
-        font-size: 24px; /* Even smaller font on small screens */
+        font-size: 40px;
     }
 }
