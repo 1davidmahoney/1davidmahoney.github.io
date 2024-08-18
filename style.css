@@ -85,6 +85,8 @@ nav ul li a:hover {
 
 .grid-button {
     position: relative; /* Enable positioning of the label and background within the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial soft shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and shadow */
 }
 
 .grid-button img {
@@ -92,12 +94,15 @@ nav ul li a:hover {
     height: auto;
     border-radius: 5px;
     object-fit: cover;
-    transition: transform 0.3s;
     display: block; /* Prevents the space below the image */
 }
 
 .grid-button img:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.grid-button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
 }
 
 .grid-button::before {
@@ -130,7 +135,6 @@ nav ul li a:hover {
     z-index: 2; /* Ensure the label is above the background */
     -webkit-text-stroke: 1px black; /* Optional: Adds a black stroke of 1px */
     pointer-events: none; /* Ignore mouse events on the label */
-    font-family: 'Roboto Slab', serif; /* Ensure the new font is used */
 }
 
 .grid-button:hover::before,
