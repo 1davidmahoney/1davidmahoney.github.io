@@ -66,7 +66,6 @@ nav ul li a {
     font-size: 16px;
     padding: 8px 12px;
     border: 2px solid transparent;
-    border-radius: 4px;
     transition: background-color 0.3s, border 0.3s;
 }
 
@@ -96,7 +95,6 @@ nav ul li a:hover {
 .grid-button img {
     width: 100%; /* Make the image fill the button area */
     height: auto;
-    border-radius: 5px;
     object-fit: cover;
     display: block; /* Prevents the space below the image */
 }
@@ -115,7 +113,6 @@ nav ul li a:hover {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5); /* Half-transparent black background */
     z-index: 1; /* Ensure the background is behind the label but above the button */
-    border-radius: 5px; /* Match the button's border radius */
     opacity: 0; /* Start invisible */
     transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
     pointer-events: none; /* Ignore mouse events on the background */
