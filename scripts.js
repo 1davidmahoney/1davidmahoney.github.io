@@ -7,6 +7,9 @@ document.querySelectorAll('.grid-button').forEach(button => {
         const newContent = document.getElementById(contentId);
         const homeButton = document.querySelector('.home-button');
 
+        // Disable pointer events to prevent hover effects
+        this.style.pointerEvents = 'none';
+
         // Fade in the black overlay
         overlay.style.opacity = 1;
         overlay.style.pointerEvents = 'auto';
@@ -31,6 +34,7 @@ document.querySelector('.home-button').addEventListener('click', function() {
     const overlay = document.querySelector('.screen-overlay');
     const newContent = document.querySelectorAll('.new-content');
     const homeButton = document.querySelector('.home-button');
+    const buttons = document.querySelectorAll('.grid-button');
 
     // Hide content and return to original state
     newContent.forEach(content => {
@@ -38,6 +42,11 @@ document.querySelector('.home-button').addEventListener('click', function() {
         setTimeout(() => {
             content.style.display = 'none';
         }, 500);
+    });
+
+    // Re-enable pointer events on all grid buttons
+    buttons.forEach(button => {
+        button.style.pointerEvents = 'auto';
     });
 
     // Fade out the overlay
