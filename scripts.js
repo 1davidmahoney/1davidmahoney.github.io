@@ -3,7 +3,7 @@ document.querySelectorAll('.grid-button').forEach(button => {
         event.preventDefault(); // Prevent immediate navigation
         const contentId = this.getAttribute('data-content');
         const overlay = document.querySelector('.screen-overlay');
-        const label = this.querySelector('.label');
+        const label = this.querySelector('.label'); // Assign the label element
         const newContent = document.getElementById(contentId);
         const homeButton = document.querySelector('.home-button');
 
@@ -16,8 +16,9 @@ document.querySelectorAll('.grid-button').forEach(button => {
         setTimeout(() => {
             label.style.opacity = 0;
 
-            // After the label fades out, show the new content
+            // After the label fades out, remove inline styles and show the new content
             setTimeout(() => {
+                label.removeAttribute('style'); // Remove inline styles
                 newContent.style.display = 'block';
                 newContent.style.opacity = 1;
                 homeButton.style.display = 'block';
