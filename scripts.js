@@ -33,3 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkButtonPositions);
     window.addEventListener('resize', checkButtonPositions);
 });
+
+document.querySelectorAll('.grid-button').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default click behavior
+
+        const grid = document.querySelector('.button-grid');
+
+        // Apply the zoom effect to the entire grid
+        grid.classList.add('zoomed');
+
+        // Fade out all buttons except the clicked one
+        document.querySelectorAll('.grid-button').forEach(btn => {
+            if (btn !== this) {
+                btn.classList.add('faded');
+            }
+        });
+
+        // Keep the clicked button visible and centered
+        this.style.zIndex = 10; // Bring the clicked button above others
+    });
+});
