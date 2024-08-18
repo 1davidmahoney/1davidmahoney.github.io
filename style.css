@@ -88,7 +88,7 @@ nav ul li a:hover {
 }
 
 .grid-button {
-    position: relative; /* Enable positioning of the label and background within the button */
+    position: relative; /* Enable positioning within this button */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial soft shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
 }
@@ -106,22 +106,7 @@ nav ul li a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
 }
 
-.grid-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Half-transparent black background */
-    z-index: 1; /* Ensure the background is behind the label but above the button */
-    border-radius: 5px; /* Match the button's border radius */
-    opacity: 0; /* Start invisible */
-    transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
-    pointer-events: none; /* Ignore mouse events on the background */
-}
-
-.grid-button .label {
+.label {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -133,14 +118,8 @@ nav ul li a:hover {
     transition: opacity 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Smooth fade effect and font size transition */
     text-align: center;
     line-height: 1.2; /* Decrease line spacing */
-    z-index: 2; /* Ensure the label is above the background */
-    -webkit-text-stroke: 1px black; /* Optional: Adds a black stroke of 1px */
+    z-index: 15; /* Ensure the label is above the overlay */
     pointer-events: none; /* Ignore mouse events on the label */
-}
-
-.grid-button:hover::before,
-.grid-button:hover .label {
-    opacity: 1; /* Fade in both the background and label on hover */
 }
 
 /* Screen Overlay */
@@ -152,7 +131,7 @@ nav ul li a:hover {
     height: 100%;
     background-color: black;
     opacity: 0;
-    z-index: 10;
+    z-index: 10; /* Place the overlay below the label */
     transition: opacity 0.5s ease-in-out;
     pointer-events: none;
 }
