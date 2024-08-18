@@ -89,6 +89,7 @@ nav ul li a:hover {
     border-radius: 5px;
     object-fit: cover;
     transition: transform 0.3s;
+    display: block; /* Prevents the space below the image */
 }
 
 .grid-button img:hover {
