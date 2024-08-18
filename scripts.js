@@ -1,11 +1,9 @@
-let label; // Declare label outside to use it in both event listeners
-
 document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent immediate navigation
         const contentId = this.getAttribute('data-content');
         const overlay = document.querySelector('.screen-overlay');
-        label = this.querySelector('.label'); // Assign the label element
+        const label = this.querySelector('.label');
         const newContent = document.getElementById(contentId);
         const homeButton = document.querySelector('.home-button');
 
@@ -40,11 +38,6 @@ document.querySelector('.home-button').addEventListener('click', function() {
             content.style.display = 'none';
         }, 500);
     });
-
-    // Show the label
-    if (label) {
-        label.style.opacity = 1;
-    }
 
     // Fade out the overlay
     overlay.style.opacity = 0;
