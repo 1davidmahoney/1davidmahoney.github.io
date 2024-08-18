@@ -58,5 +58,21 @@ document.querySelectorAll('.grid-button').forEach(button => {
                 btn.classList.add('faded');
             }
         });
+
+        // Show the back button
+        const backButton = document.querySelector('.back-button');
+        backButton.style.display = 'block';
     });
+});
+
+document.querySelector('.back-button').addEventListener('click', function() {
+    // Reset all transformations and styles
+    document.querySelectorAll('.grid-button').forEach(button => {
+        button.style.transform = ''; // Remove transformation
+        button.style.zIndex = ''; // Reset z-index
+        button.classList.remove('faded'); // Remove faded class
+    });
+
+    // Hide the back button
+    this.style.display = 'none';
 });
