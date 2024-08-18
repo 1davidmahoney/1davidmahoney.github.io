@@ -87,9 +87,8 @@ nav ul li a:hover {
 }
 
 .grid-button {
-    position: relative; /* Enable positioning of the label and background within the button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial soft shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    position: relative;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transitions */
 }
 
 .grid-button img {
@@ -150,17 +149,9 @@ nav ul li a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
 }
 
-/* Clicked button */
-
-.grid-button.zoomed {
-    transform: scale(2); /* Zoom in the clicked button */
-    z-index: 10; /* Bring the clicked button above others */
-    transition: transform 0.5s ease-in-out; /* Smooth zoom transition */
-}
-
 .grid-button.faded {
     opacity: 0; /* Fade out the other buttons */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+    pointer-events: none; /* Prevent interaction with faded buttons */
 }
 
 /* Responsive design */

@@ -1,3 +1,4 @@
+// AUTO-ACTIVATE HOVER EFFECTS WHEN ON MOBILE (SINGLE-COLUMN BUTTON GRID).
 document.addEventListener('DOMContentLoaded', () => {
     function isElementNearCenter(element) {
         const rect = element.getBoundingClientRect();
@@ -34,19 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', checkButtonPositions);
 });
 
+// HANDLE PROJECT BUTTON CLICK.
 document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
-        // Remove any existing zoomed or faded classes
-        document.querySelectorAll('.grid-button').forEach(btn => {
-            btn.classList.remove('zoomed', 'faded');
-        });
+        const grid = document.querySelector('.button-grid');
+        const gridRect = grid.getBoundingClientRect(); // Get grid's position
+        const buttonRect = this.getBoundingClientRect(); // Get button's position
 
-        // Add the zoomed class to the clicked button
-        this.classList.add('zoomed');
+        // Calculate the translation needed to move the button to the top-left of the grid
+        const translateX = gridRect.left - buttonRect.left;
+        const translateY = gridRect.top - buttonRect.top;
 
-        // Add the faded class to all other buttons
+        // Apply the transformation to move the button and scale it up
+        this.style.transform = `translate(${translateX}px, ${translateY}px) scale(2)`;
+        this.style.zIndex = 10; // Bring the clicked button above others
+
+        // Fade out all buttons except the clicked one
         document.querySelectorAll('.grid-button').forEach(btn => {
             if (btn !== this) {
                 btn.classList.add('faded');
