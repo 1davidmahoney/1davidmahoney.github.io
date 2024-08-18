@@ -140,6 +140,11 @@ nav ul li a:hover {
     opacity: 1; /* Fade in both the background and label on hover */
 }
 
+.grid-button.hover-active::before,
+.grid-button.hover-active .label {
+    opacity: 1; /* Force hover effect when near center */
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
     .button-grid {
