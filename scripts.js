@@ -25,12 +25,6 @@ document.querySelectorAll('.grid-button').forEach(button => {
             }, 500);
         }, 1000);
     });
-
-    button.addEventListener('mouseout', function() {
-        // Ensure the label's opacity is reset to allow hover effect to work
-        const label = this.querySelector('.label');
-        label.removeAttribute('style');
-    });
 });
 
 document.querySelector('.home-button').addEventListener('click', function() {
