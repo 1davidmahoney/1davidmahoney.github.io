@@ -152,15 +152,15 @@ nav ul li a:hover {
 
 /* Clicked button */
 
-.button-grid.zoomed {
-    transform: scale(2); /* Zoom in the entire grid */
+.grid-button.zoomed {
+    transform: scale(2); /* Zoom in the clicked button */
+    z-index: 10; /* Bring the clicked button above others */
     transition: transform 0.5s ease-in-out; /* Smooth zoom transition */
 }
 
 .grid-button.faded {
     opacity: 0; /* Fade out the other buttons */
     transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
-    pointer-events: none; /* Prevent interaction with faded buttons */
 }
 
 /* Responsive design */

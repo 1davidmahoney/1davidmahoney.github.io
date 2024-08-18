@@ -38,19 +38,19 @@ document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
-        const grid = document.querySelector('.button-grid');
+        // Remove any existing zoomed or faded classes
+        document.querySelectorAll('.grid-button').forEach(btn => {
+            btn.classList.remove('zoomed', 'faded');
+        });
 
-        // Apply the zoom effect to the entire grid
-        grid.classList.add('zoomed');
+        // Add the zoomed class to the clicked button
+        this.classList.add('zoomed');
 
-        // Fade out all buttons except the clicked one
+        // Add the faded class to all other buttons
         document.querySelectorAll('.grid-button').forEach(btn => {
             if (btn !== this) {
                 btn.classList.add('faded');
             }
         });
-
-        // Keep the clicked button visible and centered
-        this.style.zIndex = 10; // Bring the clicked button above others
     });
 });
