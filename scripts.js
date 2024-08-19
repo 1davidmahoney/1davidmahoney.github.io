@@ -44,9 +44,16 @@ document.querySelectorAll('.grid-button').forEach(button => {
         const gridRect = grid.getBoundingClientRect(); // Get grid's position
         const buttonRect = this.getBoundingClientRect(); // Get button's position
 
-        // Calculate the translation needed to move the button to the top-left of the grid
-        const translateX = gridRect.left - buttonRect.left;
-        const translateY = gridRect.top - buttonRect.top;
+        // Get computed styles of the grid to account for padding and margin
+        const gridStyles = window.getComputedStyle(grid);
+        const gridPaddingLeft = parseFloat(gridStyles.paddingLeft);
+        const gridPaddingTop = parseFloat(gridStyles.paddingTop);
+        const gridMarginLeft = parseFloat(gridStyles.marginLeft);
+        const gridMarginTop = parseFloat(gridStyles.marginTop);
+
+        // Calculate the translation needed to move the button to the top-left of the grid, accounting for padding and margin
+        const translateX = gridRect.left - buttonRect.left + gridPaddingLeft + gridMarginLeft;
+        const translateY = gridRect.top - buttonRect.top + gridPaddingTop + gridMarginTop;
 
         // Apply the transformation to move the button and scale it up
         this.style.transform = `translate(${translateX}px, ${translateY}px) scale(2)`;
