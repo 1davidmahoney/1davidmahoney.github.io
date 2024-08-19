@@ -40,20 +40,13 @@ document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
-        const grid = document.querySelector('.button-grid');
-        const gridRect = grid.getBoundingClientRect(); // Get grid's position
-        const buttonRect = this.getBoundingClientRect(); // Get button's position
+        const targetButton = document.getElementById('narrative-design-button');
+        const targetRect = targetButton.getBoundingClientRect(); // Get target button's position
+        const buttonRect = this.getBoundingClientRect(); // Get clicked button's position
 
-        // Get computed styles of the grid to account for padding and margin
-        const gridStyles = window.getComputedStyle(grid);
-        const gridPaddingLeft = parseFloat(gridStyles.paddingLeft);
-        const gridPaddingTop = parseFloat(gridStyles.paddingTop);
-        const gridMarginLeft = parseFloat(gridStyles.marginLeft);
-        const gridMarginTop = parseFloat(gridStyles.marginTop);
-
-        // Calculate the translation needed to move the button to the top-left of the grid, accounting for padding and margin
-        const translateX = gridRect.left - buttonRect.left + gridPaddingLeft + gridMarginLeft;
-        const translateY = gridRect.top - buttonRect.top + gridPaddingTop + gridMarginTop;
+        // Calculate the translation needed to move the clicked button to the top-left of the target button
+        const translateX = (targetRect.left - buttonRect.left) / 2; // Divide by 2 because the button is scaled by 2
+        const translateY = (targetRect.top - buttonRect.top) / 2; // Divide by 2 because the button is scaled by 2
 
         // Apply the transformation to move the button and scale it up
         this.style.transform = `translate(${translateX}px, ${translateY}px) scale(2)`;
