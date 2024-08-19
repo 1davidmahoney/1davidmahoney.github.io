@@ -56,11 +56,14 @@ document.querySelectorAll('.grid-button').forEach(button => {
             const buttonRect = this.getBoundingClientRect(); // Get clicked button's position
 
             // Calculate the translation needed to move the clicked button to the top-left of the target button
-            const translateX = (targetRect.left - buttonRect.left) - (buttonRect.width / 2) + buttonRect.width;
-            const translateY = (targetRect.top - buttonRect.top) - (buttonRect.height / 2) + buttonRect.height;
+			// ( Must adjust distance to account for scaling a couple lines down -- specifically, by decreasing distance by HALF THE AMOUNT THAT THE BUTTON IS INCREASING BY. )
+			// ( Ex: If scaling by 2x, then adjustment is '+ (buttonRect.width / 2)' b/c increase is 1x button width. )
+			const buttonScale = 1.5;
+			const translateX = (targetRect.left - buttonRect.left) + (buttonRect.width * buttonScale - buttonRect.width) / 2;
+			const translateY = (targetRect.top - buttonRect.top) + (buttonRect.height * buttonScale - buttonRect.height) / 2;
 
-            // Apply the transformation to move the button and scale it up
-            this.style.transform = `translate(${translateX}px, ${translateY}px) scale(2)`;
+			// Apply the transformation to move the button and scale it up
+			this.style.transform = `translate(${translateX}px, ${translateY}px) scale(${buttonScale})`;
             this.style.zIndex = 10; // Bring the clicked button above others
 
             // Fade out all buttons except the clicked one
@@ -78,13 +81,27 @@ document.querySelectorAll('.grid-button').forEach(button => {
 });
 
 document.querySelector('.back-button').addEventListener('click', function() {
-    // Reset all transformations and styles
+    // Add the no-hover class to all buttons to disable hover effects
     document.querySelectorAll('.grid-button').forEach(button => {
-        button.style.transform = ''; // Remove transformation
-        button.style.zIndex = ''; // Reset z-index
-        button.classList.remove('faded', 'no-hover'); // Remove faded and no-hover classes
+        button.classList.add('no-hover');
     });
 
-    // Hide the back button
-    this.style.display = 'none';
+    // Reset all transformations and styles after a short delay to allow the no-hover class to take effect
+    setTimeout(() => {
+        document.querySelectorAll('.grid-button').forEach(button => {
+            button.style.transform = ''; // Remove transformation
+            button.style.zIndex = ''; // Reset z-index
+            button.classList.remove('faded'); // Remove faded class
+        });
+
+        // Hide the back button
+        this.style.display = 'none';
+
+        // Re-enable hover effects after the transition
+        setTimeout(() => {
+            document.querySelectorAll('.grid-button').forEach(button => {
+                button.classList.remove('no-hover');
+            });
+        }, 500); // Match this delay with the transition duration (500ms)
+    }, 50); // Small delay before resetting transformations
 });
