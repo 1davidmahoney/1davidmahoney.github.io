@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // HANDLE PROJECT BUTTON CLICK.
-ddocument.querySelectorAll('.grid-button').forEach(button => {
+document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
