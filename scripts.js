@@ -43,6 +43,13 @@ document.querySelectorAll('.grid-button').forEach(button => {
         // Add a class to the button grid to trigger the fade-out
         const buttonGrid = document.querySelector('.button-grid');
         buttonGrid.classList.add('fade-out');
+
+        // Show the back button after the grid fades out
+        const backButton = document.querySelector('.back-button');
+        setTimeout(() => {
+            backButton.style.display = 'block';
+            backButton.style.opacity = 1; // Optional: add a fade-in effect for the back button
+        }, 500); // Match this delay with the grid's fade-out duration
     });
 });
 
