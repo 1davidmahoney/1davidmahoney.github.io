@@ -50,14 +50,16 @@ document.querySelectorAll('.grid-button').forEach(button => {
         void this.offsetWidth;
 
         // Move the button to a fixed position toward the left of the screen
-        const targetX = 50; // Fixed X position (50px from the left)
-        const targetY = window.innerHeight / 2 - this.getBoundingClientRect().height / 2; // Center vertically
+        const targetX = 100; // Fixed X position (100px from the left)
+        const buttonRect = this.getBoundingClientRect(); // Get the current button position
+        const targetY = buttonRect.top; // Maintain the current Y position
 
         // Apply the transformation to move the button and scale it up
         this.style.position = 'fixed';
         this.style.left = `${targetX}px`;
         this.style.top = `${targetY}px`;
         this.style.transform = `scale(1.5)`;
+        this.style.transition = 'transform 0.5s ease, left 0.5s ease, top 0.5s ease';
         this.style.zIndex = 10; // Bring the clicked button above others
 
         // Fade out all buttons except the clicked one
@@ -75,7 +77,7 @@ document.querySelectorAll('.grid-button').forEach(button => {
         // Position the new label to the right of the button
         newLabel.style.position = 'fixed';
         newLabel.style.top = `${targetY}px`;
-        newLabel.style.left = `${targetX + this.getBoundingClientRect().width * 1.5 + 20}px`; // 20px padding from the right edge of the button
+        newLabel.style.left = `${targetX + buttonRect.width * 1.5 + 20}px`; // 20px padding from the right edge of the button
         newLabel.style.color = 'white';
         newLabel.style.fontSize = '44px';
         newLabel.style.fontWeight = 'bold';
@@ -127,6 +129,7 @@ document.querySelector('.back-button').addEventListener('click', function() {
         button.style.left = ''; // Reset left position
         button.style.top = ''; // Reset top position
         button.style.transform = ''; // Remove transformation
+        button.style.transition = ''; // Reset transition
         button.style.zIndex = ''; // Reset z-index
         button.classList.remove('faded', 'no-hover'); // Remove faded and no-hover classes
 
