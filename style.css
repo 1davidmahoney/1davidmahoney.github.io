@@ -154,6 +154,12 @@ nav ul li a:hover {
     pointer-events: none; /* Prevent interaction with faded buttons */
 }
 
+.button-grid.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* Prevent interaction while faded out */
+}
+
 .back-button {
     position: fixed;
     top: 20px;
@@ -224,7 +230,7 @@ nav ul li a:hover {
 
     .button-grid {
         grid-template-columns: 1fr; /* Stack buttons vertically on small screens */
-		margin: 40px auto 80px auto; /* Extra bottom margin on small screens so bottommost button hits center & activates hover effects */
+        margin: 40px auto 80px auto; /* Extra bottom margin on small screens so bottommost button hits center & activates hover effects */
     }
 
     .grid-button .label {
