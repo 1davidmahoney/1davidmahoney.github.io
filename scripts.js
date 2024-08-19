@@ -40,6 +40,15 @@ document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
+        // Temporarily disable hover effects
+        this.classList.add('no-hover');
+        
+        // Reset transform to default (shrink back to original size)
+        this.style.transform = '';
+
+        // Force a reflow to ensure the button is reset before further calculations
+        void this.offsetWidth;
+
         const targetButton = document.getElementById('narrative-design-button');
         const targetRect = targetButton.getBoundingClientRect(); // Get target button's position
         const buttonRect = this.getBoundingClientRect(); // Get clicked button's position
@@ -70,7 +79,7 @@ document.querySelector('.back-button').addEventListener('click', function() {
     document.querySelectorAll('.grid-button').forEach(button => {
         button.style.transform = ''; // Remove transformation
         button.style.zIndex = ''; // Reset z-index
-        button.classList.remove('faded'); // Remove faded class
+        button.classList.remove('faded', 'no-hover'); // Remove faded and no-hover classes
     });
 
     // Hide the back button

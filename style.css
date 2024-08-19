@@ -170,6 +170,22 @@ nav ul li a:hover {
     display: none; /* Hide by default */
 }
 
+/* Disable hover effects */
+
+.no-hover {
+    pointer-events: none;
+}
+
+.no-hover:hover::before,
+.no-hover:hover .label {
+    opacity: 0; /* Disable hover effects */
+}
+
+.no-hover:hover {
+    transform: none; /* Disable hover transformation */
+    box-shadow: none; /* Disable hover shadow */
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
     .button-grid {
