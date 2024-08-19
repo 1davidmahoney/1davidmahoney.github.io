@@ -49,62 +49,65 @@ document.querySelectorAll('.grid-button').forEach(button => {
         // Force a reflow to ensure the button is reset before further calculations
         void this.offsetWidth;
 
-        // Delay to allow the shrinking effect to be visible
+        // Move the button to a fixed position toward the left of the screen
+        const targetX = 50; // Fixed X position (50px from the left)
+        const targetY = window.innerHeight / 2 - this.getBoundingClientRect().height / 2; // Center vertically
+
+        // Apply the transformation to move the button and scale it up
+        this.style.position = 'fixed';
+        this.style.left = `${targetX}px`;
+        this.style.top = `${targetY}px`;
+        this.style.transform = `scale(1.5)`;
+        this.style.zIndex = 10; // Bring the clicked button above others
+
+        // Fade out all buttons except the clicked one
+        document.querySelectorAll('.grid-button').forEach(btn => {
+            if (btn !== this) {
+                btn.classList.add('faded');
+            }
+        });
+
+        // Create a new label element
+        const newLabel = document.createElement('div');
+        newLabel.className = 'new-label';
+        newLabel.textContent = this.querySelector('.label').textContent;
+
+        // Position the new label to the right of the button
+        newLabel.style.position = 'fixed';
+        newLabel.style.top = `${targetY}px`;
+        newLabel.style.left = `${targetX + this.getBoundingClientRect().width * 1.5 + 20}px`; // 20px padding from the right edge of the button
+        newLabel.style.color = 'white';
+        newLabel.style.fontSize = '44px';
+        newLabel.style.fontWeight = 'bold';
+        newLabel.style.opacity = 0;
+        newLabel.style.transition = 'opacity 0.5s ease-in-out';
+        newLabel.style.zIndex = 20;
+        newLabel.style.webkitTextStroke = '1px black'; // Add an outline around the text
+
+        // Append the new label to the body
+        document.body.appendChild(newLabel);
+
+        // Trigger the fade-in effect
         setTimeout(() => {
-            const targetButton = document.getElementById('narrative-design-button');
-            const targetRect = targetButton.getBoundingClientRect(); // Get target button's position
-            const buttonRect = this.getBoundingClientRect(); // Get clicked button's position
+            newLabel.style.opacity = 1;
+        }, 50); // Slight delay to ensure the transition is visible
 
-            // Calculate the translation needed to move the clicked button to the top-left of the target button
-            const buttonScale = 1.5;
-            const translateX = (targetRect.left - buttonRect.left) + (buttonRect.width * buttonScale - buttonRect.width) / 2;
-            const translateY = (targetRect.top - buttonRect.top) + (buttonRect.height * buttonScale - buttonRect.height) / 2;
+        // Ensure the label stays near the button when resizing
+        const updateLabelPosition = () => {
+            newLabel.style.top = `${window.innerHeight / 2 - this.getBoundingClientRect().height / 2}px`;
+            newLabel.style.left = `${targetX + this.getBoundingClientRect().width * 1.5 + 20}px`;
+            this.style.top = `${window.innerHeight / 2 - this.getBoundingClientRect().height / 2}px`;
+        };
 
-            // Apply the transformation to move the button and scale it up
-            this.style.transform = `translate(${translateX}px, ${translateY}px) scale(${buttonScale})`;
-            this.style.zIndex = 10; // Bring the clicked button above others
+        // Attach the resize event listener
+        window.addEventListener('resize', updateLabelPosition);
 
-            // Fade out all buttons except the clicked one
-            document.querySelectorAll('.grid-button').forEach(btn => {
-                if (btn !== this) {
-                    btn.classList.add('faded');
-                }
-            });
+        // Store a reference to the update function for cleanup later
+        this.updateLabelPosition = updateLabelPosition;
 
-            // Delay to allow the button to complete its movement
-            setTimeout(() => {
-                // Create a new label element
-                const newLabel = document.createElement('div');
-                newLabel.className = 'new-label';
-                newLabel.textContent = this.querySelector('.label').textContent;
-
-                // Position the new label to the right of the button
-                const buttonRectUpdated = this.getBoundingClientRect(); // Get the updated button position
-                newLabel.style.position = 'absolute';
-                newLabel.style.top = `${buttonRectUpdated.top + window.scrollY}px`;
-                newLabel.style.left = `${buttonRectUpdated.right + 20}px`; // 20px padding from the right edge of the button
-                newLabel.style.color = 'white';
-                newLabel.style.fontSize = '44px';
-                newLabel.style.fontWeight = 'bold';
-                newLabel.style.opacity = 0;
-                newLabel.style.transition = 'opacity 0.5s ease-in-out';
-                newLabel.style.zIndex = 20;
-
-                // Append the new label to the body
-                document.body.appendChild(newLabel);
-
-                // Trigger the fade-in effect
-                setTimeout(() => {
-                    newLabel.style.opacity = 1;
-                }, 50); // Slight delay to ensure the transition is visible
-
-            }, 500); // This delay matches the button's transform duration (500ms)
-
-            // Show the back button
-            const backButton = document.querySelector('.back-button');
-            backButton.style.display = 'block';
-
-        }, 500); // 500ms delay to see the shrinking effect
+        // Show the back button
+        const backButton = document.querySelector('.back-button');
+        backButton.style.display = 'block';
     });
 });
 
@@ -120,9 +123,18 @@ document.querySelector('.back-button').addEventListener('click', function() {
 
     // Reset all transformations and styles
     document.querySelectorAll('.grid-button').forEach(button => {
+        button.style.position = ''; // Reset position
+        button.style.left = ''; // Reset left position
+        button.style.top = ''; // Reset top position
         button.style.transform = ''; // Remove transformation
         button.style.zIndex = ''; // Reset z-index
         button.classList.remove('faded', 'no-hover'); // Remove faded and no-hover classes
+
+        // Remove the resize event listener if it was added
+        if (button.updateLabelPosition) {
+            window.removeEventListener('resize', button.updateLabelPosition);
+            delete button.updateLabelPosition;
+        }
     });
 
     // Hide the back button
