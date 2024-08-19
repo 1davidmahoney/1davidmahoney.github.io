@@ -49,28 +49,31 @@ document.querySelectorAll('.grid-button').forEach(button => {
         // Force a reflow to ensure the button is reset before further calculations
         void this.offsetWidth;
 
-        const targetButton = document.getElementById('narrative-design-button');
-        const targetRect = targetButton.getBoundingClientRect(); // Get target button's position
-        const buttonRect = this.getBoundingClientRect(); // Get clicked button's position
+        // Delay to allow the shrinking effect to be visible
+        setTimeout(() => {
+            const targetButton = document.getElementById('narrative-design-button');
+            const targetRect = targetButton.getBoundingClientRect(); // Get target button's position
+            const buttonRect = this.getBoundingClientRect(); // Get clicked button's position
 
-        // Calculate the translation needed to move the clicked button to the top-left of the target button
-        const translateX = (targetRect.left - buttonRect.left) - (buttonRect.width / 2) + buttonRect.width;
-        const translateY = (targetRect.top - buttonRect.top) - (buttonRect.height / 2) + buttonRect.height;
+            // Calculate the translation needed to move the clicked button to the top-left of the target button
+            const translateX = (targetRect.left - buttonRect.left) - (buttonRect.width / 2) + buttonRect.width;
+            const translateY = (targetRect.top - buttonRect.top) - (buttonRect.height / 2) + buttonRect.height;
 
-        // Apply the transformation to move the button and scale it up
-        this.style.transform = `translate(${translateX}px, ${translateY}px) scale(2)`;
-        this.style.zIndex = 10; // Bring the clicked button above others
+            // Apply the transformation to move the button and scale it up
+            this.style.transform = `translate(${translateX}px, ${translateY}px) scale(2)`;
+            this.style.zIndex = 10; // Bring the clicked button above others
 
-        // Fade out all buttons except the clicked one
-        document.querySelectorAll('.grid-button').forEach(btn => {
-            if (btn !== this) {
-                btn.classList.add('faded');
-            }
-        });
+            // Fade out all buttons except the clicked one
+            document.querySelectorAll('.grid-button').forEach(btn => {
+                if (btn !== this) {
+                    btn.classList.add('faded');
+                }
+            });
 
-        // Show the back button
-        const backButton = document.querySelector('.back-button');
-        backButton.style.display = 'block';
+            // Show the back button
+            const backButton = document.querySelector('.back-button');
+            backButton.style.display = 'block';
+        }, 500); // 500ms delay to see the shrinking effect
     });
 });
 
