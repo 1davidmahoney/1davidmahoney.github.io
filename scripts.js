@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // HANDLE PROJECT BUTTON CLICK.
-document.querySelectorAll('.grid-button').forEach(button => {
+ddocument.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
@@ -71,38 +71,60 @@ document.querySelectorAll('.grid-button').forEach(button => {
                 }
             });
 
+            // Delay to allow the button to complete its movement
+            setTimeout(() => {
+                // Create a new label element
+                const newLabel = document.createElement('div');
+                newLabel.className = 'new-label';
+                newLabel.textContent = this.querySelector('.label').textContent;
+
+                // Position the new label to the right of the button
+                const buttonRectUpdated = this.getBoundingClientRect(); // Get the updated button position
+                newLabel.style.position = 'absolute';
+                newLabel.style.top = `${buttonRectUpdated.top + window.scrollY}px`;
+                newLabel.style.left = `${buttonRectUpdated.right + 20}px`; // 20px padding from the right edge of the button
+                newLabel.style.color = 'white';
+                newLabel.style.fontSize = '44px';
+                newLabel.style.fontWeight = 'bold';
+                newLabel.style.opacity = 0;
+                newLabel.style.transition = 'opacity 0.5s ease-in-out';
+                newLabel.style.zIndex = 20;
+
+                // Append the new label to the body
+                document.body.appendChild(newLabel);
+
+                // Trigger the fade-in effect
+                setTimeout(() => {
+                    newLabel.style.opacity = 1;
+                }, 50); // Slight delay to ensure the transition is visible
+
+            }, 500); // This delay matches the button's transform duration (500ms)
+
             // Show the back button
             const backButton = document.querySelector('.back-button');
             backButton.style.display = 'block';
-
-            // Delay to allow the button to reach its destination before showing the label
-            setTimeout(() => {
-                const label = this.querySelector('.label');
-                label.style.opacity = 1; // Fade in the label
-                label.style.transform = 'translateX(20px)'; // Move the label slightly to the right
-            }, 500); // Adjust this delay to match the transform duration
 
         }, 500); // 500ms delay to see the shrinking effect
     });
 });
 
 document.querySelector('.back-button').addEventListener('click', function() {
-    // Fade out the label before resetting the button position
-    const activeButton = document.querySelector('.grid-button[style*="z-index: 10"]');
-    const label = activeButton.querySelector('.label');
-    
-    label.style.opacity = 0; // Fade out the label
-    label.style.transform = 'translateX(0)'; // Move the label back to its original position
-    
-    setTimeout(() => {
-        // Reset all transformations and styles
-        document.querySelectorAll('.grid-button').forEach(button => {
-            button.style.transform = ''; // Remove transformation
-            button.style.zIndex = ''; // Reset z-index
-            button.classList.remove('faded', 'no-hover'); // Remove faded and no-hover classes
-        });
+    // Remove the new label
+    const newLabel = document.querySelector('.new-label');
+    if (newLabel) {
+        newLabel.style.opacity = 0; // Fade out the new label
+        setTimeout(() => {
+            newLabel.remove(); // Remove it from the DOM after the fade-out
+        }, 500); // Match this delay with the transition duration (500ms)
+    }
 
-        // Hide the back button
-        this.style.display = 'none';
-    }, 500); // Delay to allow the label fade-out to complete
+    // Reset all transformations and styles
+    document.querySelectorAll('.grid-button').forEach(button => {
+        button.style.transform = ''; // Remove transformation
+        button.style.zIndex = ''; // Reset z-index
+        button.classList.remove('faded', 'no-hover'); // Remove faded and no-hover classes
+    });
+
+    // Hide the back button
+    this.style.display = 'none';
 });
