@@ -126,7 +126,7 @@ nav ul li a:hover {
     font-size: 44px;
     font-weight: bold;
     opacity: 0; /* Start invisible */
-    transition: opacity 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Smooth fade effect and font size transition */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, font-size 0.3s ease-in-out; /* Add transform transition */
     text-align: center;
     line-height: 1.2; /* Decrease line spacing */
     z-index: 2; /* Ensure the label is above the background */
