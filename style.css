@@ -181,25 +181,6 @@ nav ul li a {
 	}
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
-    .button-grid {
-        margin-top: 10px; /* Reduced margin for landscape mode on phones */
-        margin-bottom: 60px;
-		gap: 0px;
-    }
-	
-	 .grid-button {
-        transform: scale(0.6); /* Scale down each button to a % of its original size */
-    }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-    .button-grid {
-        margin-top: 100px; /* Original margin for portrait mode on phones */
-        margin-bottom: 220px;
-    }
-}
-
 @media (min-width: 1025px) {
     .button-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
