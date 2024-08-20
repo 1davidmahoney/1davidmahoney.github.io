@@ -44,7 +44,7 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: column; /* Stack nav items vertically */
-    align-items: flex-end; /* Align to the right */
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -77,7 +77,6 @@ nav ul li {
 
 .subtitle {
     font-size: 16px;
-    margin-left: 10px;
     color: #ccc; /* Optional: lighter color for the subtitle */
 }
 
