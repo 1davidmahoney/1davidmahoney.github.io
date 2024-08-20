@@ -51,6 +51,7 @@ nav ul {
 
 nav ul li {
     margin-bottom: 10px; /* Add space between stacked items */
+	white-space: nowrap;
 }
 
 .piece-title {
@@ -122,7 +123,7 @@ nav ul li a {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5); /* Half-transparent black background */
     z-index: 1; /* Ensure the background is behind the label but above the button */
-    opacity: 0; /* Start invisible */
+    opacity: 1; /* Make it always visible */
     pointer-events: none; /* Ignore mouse events on the background */
 }
 
@@ -134,7 +135,7 @@ nav ul li a {
     color: white;
     font-size: 44px;
     font-weight: bold;
-    opacity: 0; /* Start invisible */
+    opacity: 1; /* Make it always visible */
     text-align: center;
     line-height: 1.2; /* Decrease line spacing */
     z-index: 2; /* Ensure the label is above the background */
