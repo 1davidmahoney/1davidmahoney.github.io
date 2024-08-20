@@ -105,6 +105,9 @@ nav ul li a {
 
 .grid-button {
     position: relative;
+    display: flex;
+    flex-direction: column; /* Stack the image and label vertically */
+    align-items: center; /* Center the label horizontally */
 }
 
 .grid-button img {
@@ -114,31 +117,13 @@ nav ul li a {
     display: block; /* Prevents the space below the image */
 }
 
-.grid-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Half-transparent black background */
-    z-index: 1; /* Ensure the background is behind the label but above the button */
-    opacity: 1; /* Make it always visible */
-    pointer-events: none; /* Ignore mouse events on the background */
-}
-
 .grid-button .label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 10px; /* Space between the image and the label */
     color: white;
-    font-size: 44px;
+    font-size: 24px;
     font-weight: bold;
-    opacity: 1; /* Make it always visible */
     text-align: center;
     line-height: 1.2; /* Decrease line spacing */
-    z-index: 2; /* Ensure the label is above the background */
     -webkit-text-stroke: 1px black; /* Optional: Adds a black stroke of 1px */
     pointer-events: none; /* Ignore mouse events on the label */
 }
