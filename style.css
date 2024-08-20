@@ -215,26 +215,11 @@ nav ul li a:hover {
     box-shadow: none; /* Disable hover shadow */
 }
 
-/* Responsive design: stack piece title below other header content on small screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .piece-title {
-        position: static; /* Remove absolute positioning */
-        transform: none; /* Reset transform */
-        margin-top: 10px; /* Add margin above the piece title */
-        font-size: 20px; /* Adjust font size for smaller screens */
-    }
-
-    .header-content {
-        width: 100%;
-    }
-}
-
+/************************************************************************************/
+/************************************************************************************/
 /* Responsive design */
+/************************************************************************************/
+/************************************************************************************/
 
 @media (max-width: 1024px) {
     .button-grid {
@@ -268,10 +253,6 @@ nav ul li a:hover {
 
     nav ul {
         align-items: center; /* Center nav items on smaller screens */
-    }
-
-    .logo-container {
-        align-items: center; /* Center logo and subtitle on smaller screens */
     }
 }
 
