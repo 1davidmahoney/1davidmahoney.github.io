@@ -91,6 +91,17 @@ nav ul li a {
     border: 2px solid transparent;
 }
 
+/* Button Grid Styles */
+.button-grid {
+    display: grid;
+    gap: 30px; /* Space between buttons */
+    max-width: 1100px; /* Adjust to fit 3 buttons comfortably */
+    margin: 40px auto; /* Center the grid */
+    padding: 20px;
+    padding-left: 15%; /* Add padding on left and right */
+    padding-right: 15%;
+}
+
 .grid-button {
     position: relative;
 }
@@ -189,8 +200,9 @@ nav ul li a {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     .button-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
         margin-top: 40px; /* Default margin for larger screens */
         margin-bottom: 80px;
     }
