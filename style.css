@@ -231,8 +231,8 @@ nav ul li a:hover {
     }
 }
 
-/* Responsive design: stack piece title below other header content on small screens */
-@media (max-width: 768px) {
+/* Responsive design: Stack piece title below other header content on small screens / when "mobile prototypes" (longest title) gets close to overlapping logo/subtitle. */
+@media (max-width: 875px) {
     header {
         flex-direction: column; /* Stack all elements vertically */
         align-items: center;
