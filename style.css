@@ -23,17 +23,15 @@ header {
     color: #fff;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack header elements vertically */
     align-items: center;
-    flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack logo and subtitle vertically */
     align-items: center;
     width: 100%;
-    flex-wrap: wrap; /* Allow logo and nav to stack if necessary */
 }
 
 .piece-title {
@@ -53,9 +51,8 @@ header {
 
 .logo-container {
     display: flex;
-    flex-direction: row; /* Display the two divs side by side */
+    flex-direction: column; /* Ensure logo is above the subtitle */
     align-items: center;
-    flex-grow: 1;
 }
 
 .logo {
@@ -78,12 +75,14 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-bottom: 10px; /* Add space between stacked items */
 }
 
 nav ul li a {
