@@ -198,18 +198,29 @@ nav ul li a:hover {
     box-shadow: none; /* Disable hover shadow */
 }
 
-/* Style the piece title */
+/* Flexbox for header content, not the entire header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Position the piece title at the bottom of the header */
 .piece-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
     font-size: 24px;
     color: white;
-    z-index: 1001; /* Ensure it stays above other content in the header */
-    transition: all 0.3s ease-in-out;
-    white-space: nowrap; /* Prevent text from wrapping */
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Responsive design: move piece title below header content on small screens */
+@media (max-width: 768px) {
+    .piece-title {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        margin-top: 15px; /* Add more space if needed */
+    }
 }
 
 /* Responsive design */
@@ -227,14 +238,13 @@ nav ul li a:hover {
 @media (max-width: 768px) {
 	header {
         flex-direction: column; /* Stack all elements vertically */
-        align-items: center; /* Center-align everything */
     }
 	
 	.piece-title {
         position: static;
         transform: none;
-        margin-top: 10px; /* Add space above the piece title */
-        font-size: 20px; /* Adjust font size for smaller screens */
+        margin-top: 0px; /* Add space above the piece title */
+        font-size: 30px; /* Adjust font size for smaller screens */
     }
 	
     .logo-container {
