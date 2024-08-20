@@ -198,37 +198,6 @@ nav ul li a:hover {
     box-shadow: none; /* Disable hover shadow */
 }
 
-/* Piece title */
-
-.piece-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    color: white;
-    z-index: 1001; /* Ensure it stays above other content in the header */
-    transition: all 0.3s ease-in-out;
-    white-space: nowrap; /* Prevents text from wrapping */
-}
-
-.secondary-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(50, 50, 50, 0.9);
-    padding: 10px 0;
-    width: 100%;
-    z-index: 999; /* Below header z-index */
-}
-
-.piece-title-secondary {
-    font-size: 24px;
-    color: white;
-    text-align: center;
-}
-
 /* Responsive design */
 @media (max-width: 1024px) {
     .button-grid {
@@ -270,15 +239,9 @@ nav ul li a:hover {
         /*margin: 40px auto 80px auto;*/ /* Extra bottom margin on small screens so bottommost button hits center & activates hover effects */
 		gap: 60px;
     }
+
     .grid-button .label {
         font-size: 40px;
-    }
-	/* Move piece title to secondary header when screen width is small */
-	.piece-title {
-        display: none;
-    }
-    .secondary-header {
-        display: flex;
     }
 }
 

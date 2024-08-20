@@ -40,38 +40,18 @@ document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
-        // Get the title text from the button label
-        const titleText = this.querySelector('.label').textContent;
+        // Add a class to the button grid to trigger the fade-out
+        const buttonGrid = document.querySelector('.button-grid');
+        buttonGrid.classList.add('fade-out');
 
-        // Display the piece title in the header
-        const pieceTitleElement = document.getElementById('pieceTitle');
-        pieceTitleElement.textContent = titleText;
-        pieceTitleElement.style.display = 'block';
-
-        // Also update the secondary title element
-        const pieceTitleSecondaryElement = document.getElementById('pieceTitleSecondary');
-        pieceTitleSecondaryElement.textContent = titleText;
+        // Show the back button after the grid fades out
+        const backButton = document.querySelector('.back-button');
+        setTimeout(() => {
+            backButton.style.display = 'block';
+            backButton.style.opacity = 1; // Optional: add a fade-in effect for the back button
+        }, 500); // Match this delay with the grid's fade-out duration
     });
 });
-
-// Adjust the position of the title on resize
-function adjustTitlePosition() {
-    const pieceTitleElement = document.getElementById('pieceTitle');
-    const secondaryHeader = document.getElementById('secondaryHeader');
-    const viewportWidth = window.innerWidth;
-
-    if (viewportWidth <= 768) {
-        pieceTitleElement.style.display = 'none';
-        secondaryHeader.style.display = 'flex';
-    } else {
-        pieceTitleElement.style.display = 'block';
-        secondaryHeader.style.display = 'none';
-    }
-}
-
-// Initial adjustment and adjustment on resize
-adjustTitlePosition();
-window.addEventListener('resize', adjustTitlePosition);
 
 document.querySelector('.back-button').addEventListener('click', function() {
     // Reset the grid to be visible again
