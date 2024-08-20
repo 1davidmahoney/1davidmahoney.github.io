@@ -28,7 +28,7 @@ header {
 }
 
 .body-content {
-    padding-top: 70px; /* Adjust this padding based on the height of your header */
+    padding-top: 90px; /* Adjust this padding based on the height of your header */
 }
 
 .logo-container {
@@ -236,7 +236,7 @@ nav ul li a:hover {
 
     .button-grid {
         grid-template-columns: 1fr; /* Stack buttons vertically on small screens */
-        margin: 80px auto 250px auto; /* Extra bottom margin on small screens so bottommost button hits center & activates hover effects */
+        margin: 80px auto 50% auto; /* Extra bottom margin on small screens so bottommost button hits center & activates hover effects */
 		gap: 60px;
     }
 
