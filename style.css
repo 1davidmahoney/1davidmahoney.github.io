@@ -237,6 +237,10 @@ nav ul li a:hover {
     .grid-button .label {
         font-size: 32px; /* Smaller font on medium screens */
     }
+	
+	.button-grid {
+        grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
+	}
 }
 
 /* Target landscape orientation on phones (small screens) */
