@@ -57,7 +57,7 @@ nav ul li {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 200%;
     color: white;
     text-align: center;
     white-space: nowrap;
@@ -242,7 +242,6 @@ nav ul li a:hover {
         position: static; /* Remove absolute positioning */
         transform: none; /* Reset transform */
         margin-top: 10px; /* Add margin above the piece title */
-        font-size: 20px; /* Adjust font size for smaller screens */
     }
 }
 
