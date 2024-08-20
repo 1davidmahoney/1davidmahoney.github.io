@@ -44,7 +44,7 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: column; /* Stack nav items vertically */
-    align-items: center;
+    align-items: flex-end;
     margin: 0;
     padding: 0;
 }
@@ -243,16 +243,6 @@ nav ul li a:hover {
         transform: none; /* Reset transform */
         margin-top: 10px; /* Add margin above the piece title */
         font-size: 20px; /* Adjust font size for smaller screens */
-    }
-
-    .header-content {
-        flex-direction: column; /* Stack logo/subtitle and nav vertically */
-        align-items: center;
-        width: 100%;
-    }
-
-    nav ul {
-        align-items: center; /* Center nav items on smaller screens */
     }
 }
 
