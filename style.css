@@ -221,18 +221,8 @@ nav ul li a:hover {
 /************************************************************************************/
 /************************************************************************************/
 
+/* Responsive design: Stack piece title below other header content on medium (or smaller) screens / when "mobile prototypes" (longest title) gets close to overlapping logo/subtitle. */
 @media (max-width: 1024px) {
-    .button-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-    }
-
-    .grid-button .label {
-        font-size: 32px; /* Smaller font on medium screens */
-    }
-}
-
-/* Responsive design: Stack piece title below other header content on small screens / when "mobile prototypes" (longest title) gets close to overlapping logo/subtitle. */
-@media (max-width: 875px) {
     header {
         flex-direction: column; /* Stack all elements vertically */
         align-items: center;
@@ -243,10 +233,14 @@ nav ul li a:hover {
         transform: none; /* Reset transform */
         margin-top: 10px; /* Add margin above the piece title */
     }
+	
+    .grid-button .label {
+        font-size: 32px; /* Smaller font on medium screens */
+    }
 }
 
 /* Target landscape orientation on phones (small screens) */
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
     .button-grid {
         margin-top: 10px; /* Reduced margin for landscape mode on phones */
         margin-bottom: 60px;
@@ -264,7 +258,7 @@ nav ul li a:hover {
 }
 
 /* Target portrait orientation on phones (small screens) */
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 1024px) and (orientation: portrait) {
     .button-grid {
         margin-top: 100px; /* Original margin for portrait mode on phones */
         margin-bottom: 220px;
