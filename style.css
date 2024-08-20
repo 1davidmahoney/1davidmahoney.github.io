@@ -245,24 +245,6 @@ nav ul li a:hover {
     .grid-button .label {
         font-size: 32px; /* Smaller font on medium screens */
     }
-	
-	/* Adjusted media query to stack piece title before overlap occurs */
-	
-	header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .piece-title {
-        position: static; /* Remove absolute positioning */
-        transform: none; /* Reset transform */
-        margin-top: 10px; /* Add margin above the piece title */
-        font-size: 20px; /* Adjust font size for smaller screens */
-    }
-
-    .header-content {
-        width: 100%;
-    }
 }
 
 @media (max-width: 768px) {
