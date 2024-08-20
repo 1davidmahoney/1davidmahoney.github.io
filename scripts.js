@@ -50,6 +50,12 @@ document.querySelectorAll('.grid-button').forEach(button => {
             backButton.style.display = 'block';
             backButton.style.opacity = 1; // Optional: add a fade-in effect for the back button
         }, 500); // Match this delay with the grid's fade-out duration
+
+        // Set the piece title in the header
+        const pieceTitle = document.getElementById('pieceTitle');
+        const titleText = this.querySelector('.label').textContent;
+        pieceTitle.textContent = titleText;
+        pieceTitle.style.display = 'block';
     });
 });
 
@@ -60,4 +66,8 @@ document.querySelector('.back-button').addEventListener('click', function() {
 
     // Hide the back button
     this.style.display = 'none';
+
+    // Hide the piece title
+    const pieceTitle = document.getElementById('pieceTitle');
+    pieceTitle.style.display = 'none';
 });
