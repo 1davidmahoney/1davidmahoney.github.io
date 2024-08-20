@@ -71,3 +71,37 @@ document.querySelector('.back-button').addEventListener('click', function() {
     const pieceTitle = document.getElementById('pieceTitle');
     pieceTitle.style.display = 'none';
 });
+
+function adjustHeaderLayout() {
+    const header = document.querySelector('header');
+    const headerContent = document.querySelector('.header-content');
+    const pieceTitle = document.getElementById('pieceTitle');
+    const logoContainer = document.querySelector('.logo-container');
+    const nav = document.querySelector('nav');
+
+    // Calculate the available space in the header
+    const availableSpace = header.offsetWidth;
+    const contentWidth = logoContainer.offsetWidth + nav.offsetWidth;
+
+    // Check if content width plus padding is greater than available space
+    if (contentWidth + 40 > availableSpace) { // 40px padding as buffer
+        // Stack the piece title below the header content
+        header.style.flexDirection = 'column';
+        pieceTitle.style.position = 'static';
+        pieceTitle.style.transform = 'none';
+        pieceTitle.style.marginTop = '10px';
+        pieceTitle.style.fontSize = '20px';
+    } else {
+        // Keep the piece title centered in the header
+        header.style.flexDirection = 'row';
+        pieceTitle.style.position = 'absolute';
+        pieceTitle.style.left = '50%';
+        pieceTitle.style.transform = 'translateX(-50%)';
+        pieceTitle.style.marginTop = '0';
+        pieceTitle.style.fontSize = '24px';
+    }
+}
+
+// Run the function on page load and on window resize
+window.addEventListener('resize', adjustHeaderLayout);
+window.addEventListener('load', adjustHeaderLayout);
