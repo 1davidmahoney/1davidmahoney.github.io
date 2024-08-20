@@ -23,15 +23,34 @@ header {
     color: #fff;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Stack header elements vertically */
+    justify-content: space-between; /* Space between logo/subtitle and nav */
     align-items: center;
 }
 
 .header-content {
     display: flex;
-    flex-direction: column; /* Stack logo and subtitle vertically */
+    justify-content: space-between; /* Keep logo on the left and nav on the right */
     align-items: center;
     width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and subtitle vertically */
+    align-items: flex-start; /* Align to the left */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: flex-end; /* Align to the right */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Add space between stacked items */
 }
 
 .piece-title {
@@ -49,12 +68,6 @@ header {
     padding-top: 90px; /* Adjust this padding based on the height of your header */
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: column; /* Ensure logo is above the subtitle */
-    align-items: center;
-}
-
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -70,19 +83,6 @@ header {
 
 nav {
     margin-left: auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin-bottom: 10px; /* Add space between stacked items */
 }
 
 nav ul li a {
@@ -263,8 +263,17 @@ nav ul li a:hover {
     }
 
     .header-content {
-        justify-content: center; /* Center the logo and nav on smaller screens */
+        flex-direction: column; /* Stack logo/subtitle and nav vertically */
+        align-items: center;
         width: 100%;
+    }
+
+    nav ul {
+        align-items: center; /* Center nav items on smaller screens */
+    }
+
+    .logo-container {
+        align-items: center; /* Center logo and subtitle on smaller screens */
     }
 }
 
