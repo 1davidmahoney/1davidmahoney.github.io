@@ -174,7 +174,7 @@ nav ul li a {
     }
 	
     .grid-button .label {
-        font-size: 32px; /* Smaller font on medium screens */
+        font-size: 300%; /* Smaller font on medium screens */
     }
 	
 	.button-grid {
@@ -182,7 +182,7 @@ nav ul li a {
 	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .button-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
         margin-top: 40px; /* Default margin for larger screens */
