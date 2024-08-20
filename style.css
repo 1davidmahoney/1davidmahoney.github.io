@@ -248,14 +248,19 @@ nav ul li a:hover {
 /* Target landscape orientation on phones (small screens) */
 @media (max-width: 768px) and (orientation: landscape) {
     .button-grid {
-        margin-top: 20px; /* Reduced margin for landscape mode on phones */
-        margin-bottom: 20px;
+        margin-top: 10px; /* Reduced margin for landscape mode on phones */
+        margin-bottom: 50px;
+		gap: 0px;
     }
 	
 	 .grid-button {
-        transform: scale(0.9); /* Scale down each button to 90% of its original size */
+        transform: scale(0.6); /* Scale down each button to a % of its original size */
         transition: transform 0.3s ease-in-out; /* Smooth transition effect */
     }
+	
+	.grid-button.hover-active {
+		transform: scale(0.7); /* Slight zoom effect on hover */
+	}
 }
 
 /* Target portrait orientation on phones (small screens) */
