@@ -223,8 +223,9 @@ nav ul li a {
 }
 	
 /* Remove the image when viewport height is below 600px */
-@media (max-height: 600px) and (max-width: 600px) {
+@media (max-height: 500px) {
 	.button-grid {
+		grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
 		max-width: 90%;
 	}
 	
