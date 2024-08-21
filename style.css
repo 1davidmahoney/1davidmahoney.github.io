@@ -236,8 +236,8 @@ nav ul li a {
 	}
 }
 	
-/* Remove the image when viewport height is below 600px */
-@media (max-height: 500px) {
+/* Remove the image when viewport height is small (my old Samsung phone is 489px) */
+@media (max-height: 480px) {
 	.button-grid {
 		grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
 		max-width: 90%;
