@@ -97,40 +97,39 @@ nav ul li a {
 /* Button Grid Styles */
 .button-grid {
     display: grid;
-    gap: 30px; /* Space between buttons */
-    max-width: 1100px; /* Adjust to fit 3 buttons comfortably */
+    gap: 20px; /* Reduced space between buttons for smaller screens */
+    max-width: 100%; /* Ensure the grid adapts to the full width */
     margin: 40px auto; /* Center the grid */
-    padding: 20px;
-    padding-left: 15%; /* Add padding on left and right */
-    padding-right: 15%;
+    padding: 0 10px; /* Add flexible padding for responsiveness */
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .grid-button {
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Stack the image and label vertically */
-    align-items: center; /* Center the label horizontally */
-	text-decoration: none;
+    width: 100%; /* Ensure buttons take up the full width of their grid column */
+    max-width: 100%; /* Prevent buttons from exceeding the grid column width */
+    text-decoration: none;
+    padding: 10px; /* Adjust padding to allow more flexibility */
+    box-sizing: border-box;
 }
 
 .grid-button img {
-    width: 100%; /* Make the image fill the button area */
+    width: 100%; /* Ensure the image fills the button area */
     height: auto;
     object-fit: cover;
-    display: block; /* Prevents the space below the image */
+    display: block;
 }
 
 .grid-button .label {
     margin-top: 10px; /* Space between the image and the label */
-	margin-bottom: 20px; /* Buffer before button below */
+    margin-bottom: 10px; /* Adjusted buffer before button below */
     color: white;
-    font-size: 31px;
+    font-size: 24px; /* Adjust font size for flexibility */
     font-weight: bold;
     text-align: center;
-    line-height: 1.2; /* Decrease line spacing */
-    -webkit-text-stroke: 1px black; /* Optional: Adds a black stroke of 1px */
-    pointer-events: none; /* Ignore mouse events on the label */
-	text-decoration: none; /* Remove underline */
+    line-height: 1.2;
+    -webkit-text-stroke: 1px black;
+    pointer-events: none;
+    text-decoration: none;
 }
 
 .back-button {
@@ -150,6 +149,33 @@ nav ul li a {
 /************************************************************************************/
 /* Responsive design */
 /************************************************************************************/
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .button-grid {
+        grid-template-columns: 1fr; /* Stack buttons vertically */
+        gap: 15px; /* Smaller gap between buttons */
+    }
+
+    .grid-button {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .grid-button .label {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 425px) {
+    .grid-button {
+        width: 100%; /* Make buttons fill the available width */
+        margin: 0 auto; /* Center the buttons */
+    }
+
+    .grid-button .label {
+        font-size: 14px; /* Further reduce font size for very small screens */
+    }
+}
 
 @media (max-width: 1024px) {
     header {
@@ -180,7 +206,7 @@ nav ul li a {
     }
 }
 
-@media (max-height: 500px) {
+@media (max-width: 425px), (max-height: 500px) {
 	.grid-button {
 		width: 50vh;
 		margin: 0 auto;
