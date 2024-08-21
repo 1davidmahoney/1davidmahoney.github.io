@@ -167,11 +167,6 @@ nav ul li a {
 
 /* Responsive design for smaller screens */
 @media (max-width: 1024px) {
-    header {
-        flex-direction: column; /* Stack all elements vertically */
-        align-items: center;
-    }
-
     .grid-button .label {
         font-size: 300%; /* Smaller font on medium screens */
     }
