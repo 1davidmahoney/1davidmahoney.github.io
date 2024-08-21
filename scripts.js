@@ -5,7 +5,7 @@ document.querySelectorAll('.grid-button').forEach(button => {
 
         // Get the project ID from the button's data attribute
         const projectId = this.getAttribute('data-project-id');
-        
+
         // Change the subtitle in the header to be the name of the clicked button's label.
         const subtitle = document.querySelector('.subtitle');
         const labelText = this.querySelector('.label').textContent;
@@ -82,18 +82,18 @@ document.querySelector('.back-button').addEventListener('click', function() {
     }, 500); // Match the timeout with the fade-in duration
 });
 
-function adjustBodyPadding() {
+function adjustContentWrapperPadding() {
     const header = document.querySelector('header');
-    const bodyContent = document.querySelector('.body-content');
-    
-    if (header && bodyContent) {
+    const contentWrapper = document.querySelector('.content-wrapper');
+
+    if (header && contentWrapper) {
         const headerHeight = header.offsetHeight;
-        bodyContent.style.paddingTop = `${headerHeight}px`;
+        contentWrapper.style.paddingTop = `${headerHeight}px`;
     }
 }
 
 // Run on page load
-window.addEventListener('load', adjustBodyPadding);
+window.addEventListener('load', adjustContentWrapperPadding);
 
 // Run on window resize
-window.addEventListener('resize', adjustBodyPadding);
+window.addEventListener('resize', adjustContentWrapperPadding);
