@@ -98,7 +98,7 @@ nav ul li a {
 .button-grid {
     display: grid;
     gap: 15px; /* Reduce the gap for smaller screens */
-    max-width: 100%; /* Ensure grid adapts to the full width */
+    max-width: 61.8%; /* Golden ratio content width */
     margin: 20px auto; /* Center the grid */
     padding: 0 5px; /* Smaller padding for small screens */
     box-sizing: border-box; /* Include padding in width calculations */
@@ -121,6 +121,9 @@ nav ul li a {
 .grid-button .label {
     font-size: 2vw; /* Font size scales with viewport width */
     margin-top: 1vw; /* Adjust margins using viewport units */
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
 }
 
 .back-button {
@@ -182,6 +185,6 @@ nav ul li a {
     }
 
     .grid-button .label {
-        font-size: 18px; /* Adjust font size for smaller screens */
+        font-size: 8vw; /* Adjust font size for smaller screens */
     }
 }
