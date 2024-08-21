@@ -187,7 +187,7 @@ nav ul li a {
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .button-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
         margin-top: 40px; /* Default margin for larger screens */
@@ -210,8 +210,16 @@ nav ul li a {
     }
 }
 
-/* Remove the image when viewport height is below 600px */
+
+/* Single column on mobile */
 @media (max-height: 600px) and (max-width: 1024px) {
+	.button-grid {
+        grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
+	}
+}
+	
+/* Remove the image when viewport height is below 600px */
+@media (max-height: 600px) and (max-width: 600px) {
 	.button-grid {
 		max-width: 90%;
 	}
