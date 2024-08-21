@@ -164,12 +164,13 @@ nav ul li a {
 
 .piece-content {
     display: none;
-    margin-top: 20px;
+    margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     opacity: 0; /* Start hidden */
+    max-width: 1000px;
 }
 
 .piece-image {
