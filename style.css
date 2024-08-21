@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Reset some basic styles */
+a:link {
+    color: white; /* Color of unvisited links */
+    text-decoration: none; /* Optional: Remove underline if you prefer */
+}
+
+a:visited {
+    color: white; /* Color of visited links */
+    text-decoration: none; /* Optional: Remove underline if you prefer */
+}
+
+a:hover {
+    color: white; /* Color when hovering over the link */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+a:active {
+    color: white; /* Color when the link is active (being clicked) */
+    text-decoration: none; /* Optional: Remove underline if you prefer */
+}
+
 body, h1, h2, h3, p, ul, header, nav {
     margin: 0;
     padding: 0;
