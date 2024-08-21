@@ -124,6 +124,7 @@ nav ul li a {
 	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
+	line-height: 1.2;
 }
 
 .back-button {
@@ -186,5 +187,24 @@ nav ul li a {
 
     .grid-button .label {
         font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Remove the image when viewport height is below 600px */
+@media (max-height: 600px) {
+	.button-grid {
+		max-width: 90%;
+	}
+	
+    .grid-button img {
+        display: none; /* Hide the image */
+    }
+
+    .grid-button {
+        padding: 5px; /* Adjust padding if needed after removing the image */
+    }
+
+    .grid-button .label {
+        font-size: 8vw; /* Adjust the font size if necessary */
     }
 }
