@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 /* Reset some basic styles */
 body, h1, h2, h3, p, ul, header, nav {
     margin: 0;
@@ -10,7 +12,7 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh; /* Ensures the gradient covers the full height of the viewport */
     margin: 0;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'Arvo', 'Calibri', system-ui;
     line-height: 1.6;
 }
 
@@ -120,6 +122,7 @@ nav ul li a {
 
 .grid-button .label {
     margin-top: 10px; /* Space between the image and the label */
+	margin-bottom: 20px; /* Buffer before button below */
     color: white;
     font-size: 24px;
     font-weight: bold;
