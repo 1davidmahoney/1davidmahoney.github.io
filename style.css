@@ -166,31 +166,6 @@ nav ul li a {
     }
 }
 
-@media (max-width: 425px) {
-    .button-grid {
-        grid-template-columns: 1fr; /* Keep a single column layout */
-        padding: 0 5px; /* Reduce padding for smaller screens */
-    }
-
-    .grid-button {
-        width: 100%; /* Ensure buttons take up full width available */
-        margin: 0 auto; /* Center the buttons */
-        padding: 5px; /* Reduce padding for more flexibility */
-        box-sizing: border-box; /* Ensure padding is included in width */
-    }
-
-    .grid-button img {
-        width: 100%; /* Ensure the image fills the button area */
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-
-    .grid-button .label {
-        font-size: 12px; /* Further reduce font size for very small screens */
-    }
-}
-
 @media (max-width: 1024px) {
     header {
         flex-direction: column; /* Stack all elements vertically */
@@ -218,14 +193,4 @@ nav ul li a {
         margin-top: 40px; /* Default margin for larger screens */
         margin-bottom: 80px;
     }
-}
-
-@media (max-width: 425px), (max-height: 500px) {
-	.grid-button {
-		width: 50vh;
-		margin: 0 auto;
-	}
-	.grid-button .label {
-		font-size: 7vh;
-	}
 }
