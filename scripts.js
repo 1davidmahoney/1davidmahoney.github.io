@@ -3,7 +3,7 @@ document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
-        // Get the project ID from the button's data attribute or another identifier
+        // Get the project ID from the button's data attribute
         const projectId = this.getAttribute('data-project-id');
         
         // Change the subtitle in the header to be the name of the clicked button's label.
@@ -11,10 +11,13 @@ document.querySelectorAll('.grid-button').forEach(button => {
         const labelText = this.querySelector('.label').textContent;
         subtitle.textContent = labelText;
 
-        // Fade out the button grid
+        // Fade out the button grid and body content
         const buttonGrid = document.querySelector('.button-grid');
+        const bodyContent = document.querySelector('.body-content');
         buttonGrid.style.opacity = '0';
+        bodyContent.style.opacity = '0';
         buttonGrid.style.transition = 'opacity 0.5s ease';
+        bodyContent.style.transition = 'opacity 0.5s ease';
 
         // Show the specific project content and back button after the fade-out completes
         setTimeout(() => {
@@ -29,7 +32,8 @@ document.querySelectorAll('.grid-button').forEach(button => {
             navElement.appendChild(backButton);
             backButton.style.display = 'block';
 
-            // Show the specific project content
+            // Hide the body content and show the specific project content
+            bodyContent.style.display = 'none';
             pieceContent.style.display = 'block';
             pieceContent.style.opacity = '1';
             pieceContent.style.transition = 'opacity 0.5s ease';
@@ -42,10 +46,14 @@ document.querySelector('.back-button').addEventListener('click', function() {
     const subtitle = document.querySelector('.subtitle');
     subtitle.textContent = "Creative Development Portfolio";
 
-    // Fade the button grid back in
+    // Fade the button grid back in and hide the project content
     const buttonGrid = document.querySelector('.button-grid');
+    const bodyContent = document.querySelector('.body-content');
     buttonGrid.style.opacity = '1';
+    bodyContent.style.display = 'block';
+    bodyContent.style.opacity = '1';
     buttonGrid.style.transition = 'opacity 0.5s ease';
+    bodyContent.style.transition = 'opacity 0.5s ease';
 
     // Hide all project content after the fade-in completes
     setTimeout(() => {
