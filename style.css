@@ -147,10 +147,6 @@ nav ul li a {
 }
 
 .back-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 20;
     padding: 10px 20px;
     background-color: white;
     border: 2px solid black;
