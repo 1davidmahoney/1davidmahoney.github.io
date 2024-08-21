@@ -179,3 +179,13 @@ nav ul li a {
         margin-bottom: 80px;
     }
 }
+
+@media (max-height: 500px) {
+	.grid-button {
+		width: 50vh;
+		margin: 0 auto;
+	}
+	.grid-button .label {
+		font-size: 7vh;
+	}
+}
