@@ -80,6 +80,7 @@ nav ul li {
     margin-top: 5px;
     margin-bottom: 5px;
     white-space: nowrap;
+    text-align: right;
 }
 
 .body-content {
