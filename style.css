@@ -50,6 +50,7 @@ header {
     justify-content: space-between; /* Space between logo/subtitle and nav */
     align-items: center;	
 	flex-shrink: 0;
+    min-height: 100px;
 }
 
 .header-content {
@@ -68,15 +69,16 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: flex-end;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out items, placing one at the top and one at the bottom */
+    height: 100%; /* Make sure the container takes the full height of the header */
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin-bottom: 10px; /* Add space between stacked items */
-	white-space: nowrap;
+    margin-bottom: 10px; /* Optional: Add space between the items */
+    white-space: nowrap;
 }
 
 .body-content {
