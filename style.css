@@ -79,16 +79,6 @@ nav ul li {
 	white-space: nowrap;
 }
 
-.piece-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 200%;
-    color: white;
-    text-align: center;
-    white-space: nowrap;
-}
-
 .body-content {
 	flex-grow: 1; /* Ensures that this section takes up the remaining space */
     padding: 20px;
@@ -176,12 +166,6 @@ nav ul li a {
         align-items: center;
     }
 
-    .piece-title {
-        position: static; /* Remove absolute positioning */
-        transform: none; /* Reset transform */
-        margin-top: 10px; /* Add margin above the piece title */
-    }
-	
     .grid-button .label {
         font-size: 300%; /* Smaller font on medium screens */
     }
