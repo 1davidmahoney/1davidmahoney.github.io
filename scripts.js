@@ -21,6 +21,8 @@ document.querySelectorAll('.grid-button').forEach(button => {
 
         // Show the specific project content and back button after the fade-out completes
         setTimeout(() => {
+            window.scrollTo(0, 0); // Scroll to the top of the page
+            
             const navElement = document.querySelector('nav');
             const backButton = document.querySelector('.back-button');
             const pieceContent = document.getElementById(projectId + '-content'); // Select the unique content by ID
