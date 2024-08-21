@@ -97,19 +97,18 @@ nav ul li a {
 /* Button Grid Styles */
 .button-grid {
     display: grid;
-    gap: 20px; /* Reduced space between buttons for smaller screens */
-    max-width: 100%; /* Ensure the grid adapts to the full width */
-    margin: 40px auto; /* Center the grid */
-    padding: 0 10px; /* Add flexible padding for responsiveness */
+    gap: 15px; /* Reduce the gap for smaller screens */
+    max-width: 100%; /* Ensure grid adapts to the full width */
+    margin: 20px auto; /* Center the grid */
+    padding: 0 5px; /* Smaller padding for small screens */
     box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .grid-button {
     width: 100%; /* Ensure buttons take up the full width of their grid column */
-    max-width: 100%; /* Prevent buttons from exceeding the grid column width */
-    text-decoration: none;
-    padding: 10px; /* Adjust padding to allow more flexibility */
+    padding: 5px; /* Reduce padding to allow further shrinking */
     box-sizing: border-box;
+	min-width: 0; /* Ensure no minimum width constraint */
 }
 
 .grid-button img {
@@ -120,16 +119,8 @@ nav ul li a {
 }
 
 .grid-button .label {
-    margin-top: 10px; /* Space between the image and the label */
-    margin-bottom: 10px; /* Adjusted buffer before button below */
-    color: white;
-    font-size: 24px; /* Adjust font size for flexibility */
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.2;
-    -webkit-text-stroke: 1px black;
-    pointer-events: none;
-    text-decoration: none;
+    font-size: 2vw; /* Font size scales with viewport width */
+    margin-top: 1vw; /* Adjust margins using viewport units */
 }
 
 .back-button {
@@ -151,21 +142,6 @@ nav ul li a {
 /************************************************************************************/
 
 /* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .button-grid {
-        grid-template-columns: 1fr; /* Stack buttons vertically */
-        gap: 15px; /* Smaller gap between buttons */
-    }
-
-    .grid-button {
-        padding: 5px; /* Reduce padding for smaller screens */
-    }
-
-    .grid-button .label {
-        font-size: 18px; /* Adjust font size for smaller screens */
-    }
-}
-
 @media (max-width: 1024px) {
     header {
         flex-direction: column; /* Stack all elements vertically */
@@ -192,5 +168,30 @@ nav ul li a {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
         margin-top: 40px; /* Default margin for larger screens */
         margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-grid {
+        grid-template-columns: 1fr; /* Stack buttons vertically */
+        gap: 15px; /* Smaller gap between buttons */
+    }
+
+    .grid-button {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .grid-button .label {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 320px) {
+    .grid-button {
+        padding: 3px; /* Further reduce padding */
+    }
+
+    .grid-button .label {
+        font-size: 8px; /* Further reduce font size */
     }
 }
