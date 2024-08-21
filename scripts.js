@@ -8,16 +8,23 @@ document.querySelectorAll('.grid-button').forEach(button => {
         const labelText = this.querySelector('.label').textContent;
         subtitle.textContent = labelText;
 
-        // Replace nav contents with the back button
-        const navElement = document.querySelector('nav');
-        const backButton = document.querySelector('.back-button');
+        // Fade out the button grid
+        const buttonGrid = document.querySelector('.button-grid');
+        buttonGrid.style.opacity = '0';
+        buttonGrid.style.transition = 'opacity 0.5s ease';
 
-        // Clear the current contents of the nav (removes <ul> and <li>)
-        navElement.innerHTML = '';
-        
-        // Move the back button into the nav element and display it
-        navElement.appendChild(backButton);
-        backButton.style.display = 'block';
+        // Replace nav contents with the back button after the fade-out completes
+        setTimeout(() => {
+            const navElement = document.querySelector('nav');
+            const backButton = document.querySelector('.back-button');
+
+            // Clear the current contents of the nav (removes <ul> and <li>)
+            navElement.innerHTML = '';
+
+            // Move the back button into the nav element and display it
+            navElement.appendChild(backButton);
+            backButton.style.display = 'block';
+        }, 500); // Match the timeout with the fade-out duration
     });
 });
 
@@ -26,21 +33,28 @@ document.querySelector('.back-button').addEventListener('click', function() {
     const subtitle = document.querySelector('.subtitle');
     subtitle.textContent = "Creative Development Portfolio";
 
-    // Restore the original nav contents (re-create the <ul> with <li>)
-    const navElement = document.querySelector('nav');
-    navElement.innerHTML = `
-        <ul>
-            <li><a href="#about">ABOUT ME</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    `;
+    // Fade the button grid back in
+    const buttonGrid = document.querySelector('.button-grid');
+    buttonGrid.style.opacity = '1';
+    buttonGrid.style.transition = 'opacity 0.5s ease';
 
-    // Re-append the back button outside the nav element for future use
-    const bodyElement = document.querySelector('body');
-    bodyElement.appendChild(this);
+    // Restore the original nav contents after the fade-in completes
+    setTimeout(() => {
+        const navElement = document.querySelector('nav');
+        navElement.innerHTML = `
+            <ul>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        `;
 
-    // Hide the back button
-    this.style.display = 'none';
+        // Re-append the back button outside the nav element for future use
+        const bodyElement = document.querySelector('body');
+        bodyElement.appendChild(this);
+
+        // Hide the back button
+        this.style.display = 'none';
+    }, 500); // Match the timeout with the fade-in duration
 });
 
 function adjustBodyPadding() {
