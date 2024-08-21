@@ -1,4 +1,3 @@
-// HANDLE PROJECT BUTTON CLICK
 document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
@@ -6,82 +5,86 @@ document.querySelectorAll('.grid-button').forEach(button => {
         // Get the project ID from the button's data attribute
         const projectId = this.getAttribute('data-project-id');
 
-        // Change the subtitle in the header to be the name of the clicked button's label.
-        const subtitle = document.querySelector('.subtitle');
-        const labelText = this.querySelector('.label').textContent;
-        subtitle.textContent = labelText;
-
-        // Fade out the button grid and body content
+        // Elements to fade out
         const buttonGrid = document.querySelector('.button-grid');
-        const bodyContent = document.querySelector('.body-content');
+        const subtitle = document.querySelector('.subtitle');
+        const navItems = document.querySelector('nav ul');
+
+        // Elements to fade in
+        const pieceContent = document.getElementById(`${projectId}-content`);
+        const backButton = document.querySelector('.back-button');
+
+        // Fade out the current elements
         buttonGrid.style.opacity = '0';
-        bodyContent.style.opacity = '0';
+        subtitle.style.opacity = '0';
+        navItems.style.opacity = '0';
         buttonGrid.style.transition = 'opacity 0.5s ease';
-        bodyContent.style.transition = 'opacity 0.5s ease';
+        subtitle.style.transition = 'opacity 0.5s ease';
+        navItems.style.transition = 'opacity 0.5s ease';
 
-        // Show the specific project content and back button after the fade-out completes
+        // After the fade-out, update content and fade in the new elements
         setTimeout(() => {
-            window.scrollTo(0, 0); // Scroll to the top of the page
-            
-            const navElement = document.querySelector('nav');
-            const backButton = document.querySelector('.back-button');
-            const pieceContent = document.getElementById(projectId + '-content'); // Select the unique content by ID
+            // Update the subtitle text
+            const labelText = this.querySelector('.label').textContent;
+            subtitle.textContent = labelText;
 
-            // Clear the current contents of the nav (removes <ul> and <li>)
-            navElement.innerHTML = '';
-
-            // Move the back button into the nav element and display it
-            navElement.appendChild(backButton);
+            // Hide the button grid and nav items, and show the piece content and back button
+            buttonGrid.style.display = 'none';
+            navItems.style.display = 'none';
+            pieceContent.style.display = 'block';
             backButton.style.display = 'block';
 
-            // Hide the body content and show the specific project content
-            bodyContent.style.display = 'none';
-            pieceContent.style.display = 'block';
+            // Fade in the new elements
             pieceContent.style.opacity = '1';
+            subtitle.style.opacity = '1';
+            backButton.style.opacity = '1';
             pieceContent.style.transition = 'opacity 0.5s ease';
+            subtitle.style.transition = 'opacity 0.5s ease';
+            backButton.style.transition = 'opacity 0.5s ease';
         }, 500); // Match the timeout with the fade-out duration
     });
 });
 
 document.querySelector('.back-button').addEventListener('click', function() {
-    // Reset the subtitle to the original text
+    // Elements to fade out
+    const pieceContents = document.querySelectorAll('.piece-content');
     const subtitle = document.querySelector('.subtitle');
-    subtitle.textContent = "Creative Development Portfolio";
+    const backButton = document.querySelector('.back-button');
 
-    // Fade the button grid back in and hide the project content
+    // Elements to fade in
     const buttonGrid = document.querySelector('.button-grid');
-    const bodyContent = document.querySelector('.body-content');
-    buttonGrid.style.opacity = '1';
-    bodyContent.style.display = 'block';
-    bodyContent.style.opacity = '1';
-    buttonGrid.style.transition = 'opacity 0.5s ease';
-    bodyContent.style.transition = 'opacity 0.5s ease';
+    const navItems = document.querySelector('nav ul');
 
-    // Hide all project content after the fade-in completes
+    // Fade out the current elements
+    pieceContents.forEach(content => content.style.opacity = '0');
+    subtitle.style.opacity = '0';
+    backButton.style.opacity = '0';
+    pieceContents.forEach(content => content.style.transition = 'opacity 0.5s ease');
+    subtitle.style.transition = 'opacity 0.5s ease';
+    backButton.style.transition = 'opacity 0.5s ease';
+
+    // After the fade-out, update content and fade in the new elements
     setTimeout(() => {
-        const navElement = document.querySelector('nav');
-        const pieceContents = document.querySelectorAll('.piece-content');
+        // Reset the subtitle to the original text
+        subtitle.textContent = "Creative Development Portfolio";
 
-        // Hide all project-specific content
-        pieceContents.forEach(content => {
-            content.style.display = 'none';
-        });
+        // Hide the piece content and back button, and show the button grid and nav items
+        pieceContents.forEach(content => content.style.display = 'none');
+        backButton.style.display = 'none';
+        buttonGrid.style.display = 'grid'; // Restore grid display
+        navItems.style.display = 'flex'; // Assuming the nav items are flex items
 
-        // Restore the original nav contents (re-create the <ul> with <li>)
-        navElement.innerHTML = `
-            <ul>
-                <li><a href="#about">ABOUT ME</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        `;
+        // Restore the 3-column layout for the button grid
+        buttonGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
 
-        // Re-append the back button outside the nav element for future use
-        const bodyElement = document.querySelector('body');
-        bodyElement.appendChild(this);
-
-        // Hide the back button
-        this.style.display = 'none';
-    }, 500); // Match the timeout with the fade-in duration
+        // Fade in the new elements
+        buttonGrid.style.opacity = '1';
+        subtitle.style.opacity = '1';
+        navItems.style.opacity = '1';
+        buttonGrid.style.transition = 'opacity 0.5s ease';
+        subtitle.style.transition = 'opacity 0.5s ease';
+        navItems.style.transition = 'opacity 0.5s ease';
+    }, 500); // Match the timeout with the fade-out duration
 });
 
 function adjustContentWrapperPadding() {
