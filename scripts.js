@@ -22,11 +22,9 @@ document.querySelectorAll('.grid-button').forEach(button => {
 });
 
 document.querySelector('.back-button').addEventListener('click', function() {
-    // Reset the grid to be visible again
-    const buttonGrid = document.querySelector('.button-grid');
-	
-	const subtitle = document.querySelector('.subtitle');
-	subtitle.textContent = "Creative Development Portfolio";
+    // Reset the subtitle to the original text
+    const subtitle = document.querySelector('.subtitle');
+    subtitle.textContent = "Creative Development Portfolio";
 
     // Restore the original nav contents (re-create the <ul> with <li>)
     const navElement = document.querySelector('nav');
@@ -36,6 +34,10 @@ document.querySelector('.back-button').addEventListener('click', function() {
             <li><a href="#contact">CONTACT</a></li>
         </ul>
     `;
+
+    // Re-append the back button outside the nav element for future use
+    const bodyElement = document.querySelector('body');
+    bodyElement.appendChild(this);
 
     // Hide the back button
     this.style.display = 'none';
