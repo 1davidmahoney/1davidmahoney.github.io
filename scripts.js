@@ -3,6 +3,9 @@ document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
 
+        // Get the project ID from the button's data attribute or another identifier
+        const projectId = this.getAttribute('data-project-id');
+        
         // Change the subtitle in the header to be the name of the clicked button's label.
         const subtitle = document.querySelector('.subtitle');
         const labelText = this.querySelector('.label').textContent;
@@ -13,10 +16,11 @@ document.querySelectorAll('.grid-button').forEach(button => {
         buttonGrid.style.opacity = '0';
         buttonGrid.style.transition = 'opacity 0.5s ease';
 
-        // Replace nav contents with the back button after the fade-out completes
+        // Show the specific project content and back button after the fade-out completes
         setTimeout(() => {
             const navElement = document.querySelector('nav');
             const backButton = document.querySelector('.back-button');
+            const pieceContent = document.getElementById(projectId + '-content'); // Select the unique content by ID
 
             // Clear the current contents of the nav (removes <ul> and <li>)
             navElement.innerHTML = '';
@@ -24,6 +28,11 @@ document.querySelectorAll('.grid-button').forEach(button => {
             // Move the back button into the nav element and display it
             navElement.appendChild(backButton);
             backButton.style.display = 'block';
+
+            // Show the specific project content
+            pieceContent.style.display = 'block';
+            pieceContent.style.opacity = '1';
+            pieceContent.style.transition = 'opacity 0.5s ease';
         }, 500); // Match the timeout with the fade-out duration
     });
 });
@@ -38,9 +47,17 @@ document.querySelector('.back-button').addEventListener('click', function() {
     buttonGrid.style.opacity = '1';
     buttonGrid.style.transition = 'opacity 0.5s ease';
 
-    // Restore the original nav contents after the fade-in completes
+    // Hide all project content after the fade-in completes
     setTimeout(() => {
         const navElement = document.querySelector('nav');
+        const pieceContents = document.querySelectorAll('.piece-content');
+
+        // Hide all project-specific content
+        pieceContents.forEach(content => {
+            content.style.display = 'none';
+        });
+
+        // Restore the original nav contents (re-create the <ul> with <li>)
         navElement.innerHTML = `
             <ul>
                 <li><a href="#about">ABOUT ME</a></li>
