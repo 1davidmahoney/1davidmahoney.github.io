@@ -165,6 +165,20 @@ nav ul li a {
     border-radius: 5px;
 }
 
+#viewport-info {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: yellow; /* Bright background color */
+    color: black; /* Text color */
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    border: 2px solid black;
+    z-index: 9999; /* Ensure it stays on top of other elements */
+    pointer-events: none; /* Prevent it from blocking interaction with other elements */
+}
+
 /************************************************************************************/
 /* Responsive design */
 /************************************************************************************/

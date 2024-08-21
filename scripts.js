@@ -40,3 +40,14 @@ window.addEventListener('load', adjustBodyPadding);
 
 // Run on window resize
 window.addEventListener('resize', adjustBodyPadding);
+
+function updateViewportInfo() {
+    const viewportInfo = document.getElementById('viewport-info');
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    viewportInfo.textContent = `Viewport: ${width}px x ${height}px`;
+}
+
+// Run the function on page load and window resize
+window.addEventListener('load', updateViewportInfo);
+window.addEventListener('resize', updateViewportInfo);
