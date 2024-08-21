@@ -77,7 +77,8 @@ nav ul {
 }
 
 nav ul li {
-    margin-bottom: 10px; /* Optional: Add space between the items */
+    margin-top: 5px;
+    margin-bottom: 5px;
     white-space: nowrap;
 }
 
@@ -99,6 +100,7 @@ nav ul li {
 }
 
 nav {
+    margin-bottom: auto;
     margin-left: auto;
 }
 
