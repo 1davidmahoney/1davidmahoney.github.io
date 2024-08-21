@@ -24,3 +24,19 @@ document.querySelector('.back-button').addEventListener('click', function() {
     const pieceTitle = document.getElementById('pieceTitle');
     pieceTitle.style.display = 'none';
 });
+
+function adjustBodyPadding() {
+    const header = document.querySelector('header');
+    const bodyContent = document.querySelector('.body-content');
+    
+    if (header && bodyContent) {
+        const headerHeight = header.offsetHeight;
+        bodyContent.style.paddingTop = `${headerHeight}px`;
+    }
+}
+
+// Run on page load
+window.addEventListener('load', adjustBodyPadding);
+
+// Run on window resize
+window.addEventListener('resize', adjustBodyPadding);
