@@ -77,13 +77,19 @@ document.querySelector('.back-button').addEventListener('click', function() {
         buttonGrid.style.display = 'grid'; // Restore grid display
         navItems.style.display = 'block';
 
-        // Fade in the new elements
-        buttonGrid.style.opacity = '1';
-        subtitle.style.opacity = '1';
-        navItems.style.opacity = '1';
+        // Set opacity to 0 before fading in
+        buttonGrid.style.opacity = '0';
+        navItems.style.opacity = '0';
+
+        // Trigger reflow to ensure the transition occurs
+        buttonGrid.offsetHeight; // Force a reflow
+        navItems.offsetHeight; // Force a reflow
+
+        // Now fade in the elements
         buttonGrid.style.transition = 'opacity 0.5s ease';
-        subtitle.style.transition = 'opacity 0.5s ease';
         navItems.style.transition = 'opacity 0.5s ease';
+        buttonGrid.style.opacity = '1';
+        navItems.style.opacity = '1';
         
         window.scrollTo(0, 0); // Scroll to the top of the page
         setTimeout(adjustContentWrapperPadding, 10);
