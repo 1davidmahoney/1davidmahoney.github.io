@@ -119,7 +119,7 @@ window.addEventListener('load', function() {
     // Delay the button grid fade-in by 300ms (or any duration you prefer)
     setTimeout(() => {
         buttonGrid.style.opacity = '1';
-    }, 300); // Adjust the delay as needed
+    }, 500); // Adjust the delay as needed
 });
 
 window.addEventListener('load', adjustContentWrapperPadding);
