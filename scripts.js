@@ -34,7 +34,7 @@ document.querySelectorAll('.grid-button').forEach(button => {
             pieceContent.style.display = 'block';
 
             // Set visibility to visible before fading in
-            backButton.style.visibility = 'visible';
+            backButton.classList.add('visible');
 
             // Ensure opacity is 0 before transition
             backButton.style.opacity = '0';
@@ -83,7 +83,7 @@ document.querySelector('.back-button').addEventListener('click', function() {
 
         // Hide the piece content, set back button visibility to hidden, and show the button grid and nav items
         pieceContents.forEach(content => content.style.display = 'none');
-        backButton.style.visibility = 'hidden';
+        backButton.classList.remove('visible');
         buttonGrid.style.display = 'grid'; // Restore grid display
         navItems.style.display = 'block';
 
