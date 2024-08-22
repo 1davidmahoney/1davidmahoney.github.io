@@ -40,6 +40,9 @@ document.querySelectorAll('.grid-button').forEach(button => {
             backButton.style.opacity = '0';
             pieceContent.style.opacity = '0';
             subtitle.style.opacity = '0';
+            
+            window.scrollTo(0, 0); // Scroll to the top of the page
+            setTimeout(adjustContentWrapperPadding, 10);
 
             // Fade in the new elements
             setTimeout(() => {
@@ -88,6 +91,9 @@ document.querySelector('.back-button').addEventListener('click', function() {
         buttonGrid.style.opacity = '0';
         navItems.style.opacity = '0';
         subtitle.style.opacity = '0';
+        
+        window.scrollTo(0, 0); // Scroll to the top of the page
+        setTimeout(adjustContentWrapperPadding, 10);
 
         // Now fade in the elements
         setTimeout(() => {
