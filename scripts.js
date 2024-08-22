@@ -72,7 +72,7 @@ document.querySelector('.back-button').addEventListener('click', function() {
         pieceContents.forEach(content => content.style.display = 'none');
         backButton.style.display = 'none';
         buttonGrid.style.display = 'grid'; // Restore grid display
-        navItems.style.display = 'flex'; // Assuming the nav items are flex items
+        navItems.style.display = 'block';
 
         // Restore the 3-column layout for the button grid
         buttonGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
