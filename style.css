@@ -166,7 +166,7 @@ nav ul li a {
     max-width: 1000px;
 }
 
-.piece-image {
+.piece-image { /* Main image at top of piece content */
     width: 380px;
     height: auto;
     margin-right: 20px;
@@ -178,6 +178,19 @@ nav ul li a {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
+}
+
+.video-container {
+    max-width: calc(100% - 40px); /* 40px total margin (20px on each side) */
+    margin: 0 auto; /* Centers the iframe */
+}
+
+.youtube-player {
+    width: 100%; /* Let the iframe scale with the container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Ensures correct aspect ratio */
+    border: 0; /* Removes default border */
+    display: block; /* Removes inline-block whitespace */
 }
 
 /************************************************************************************/
