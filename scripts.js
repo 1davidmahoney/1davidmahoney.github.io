@@ -84,6 +84,9 @@ document.querySelector('.back-button').addEventListener('click', function() {
         buttonGrid.style.transition = 'opacity 0.5s ease';
         subtitle.style.transition = 'opacity 0.5s ease';
         navItems.style.transition = 'opacity 0.5s ease';
+        
+        window.scrollTo(0, 0); // Scroll to the top of the page
+        setTimeout(adjustContentWrapperPadding, 10);
     }, 500); // Match the timeout with the fade-out duration
 });
 
