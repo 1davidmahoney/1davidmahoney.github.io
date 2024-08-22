@@ -54,6 +54,8 @@ header {
     position: fixed;
     z-index: 1000;
     transition: height 0.3s ease;
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease;
 }
 
 .logo-container {
