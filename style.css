@@ -87,6 +87,10 @@ nav ul li {
     margin: auto 0;
 }
 
+.subtitle, .logo-container {
+    transition: all 0.3s ease;
+}
+
 nav {
     display: flex;
     align-items: center;
