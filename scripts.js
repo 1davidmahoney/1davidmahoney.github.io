@@ -33,14 +33,19 @@ document.querySelectorAll('.grid-button').forEach(button => {
             navItems.style.display = 'none';
             pieceContent.style.display = 'block';
             backButton.style.display = 'block';
+            
+            // Trigger reflow to ensure the transition occurs
+            pieceContent.offsetHeight; // Force a reflow
+            subtitle.offsetHeight; // Force a reflow
+            backButton.offsetHeight; // Force a reflow
 
             // Fade in the new elements
-            pieceContent.style.opacity = '1';
-            subtitle.style.opacity = '1';
-            backButton.style.opacity = '1';
             pieceContent.style.transition = 'opacity 0.5s ease';
             subtitle.style.transition = 'opacity 0.5s ease';
             backButton.style.transition = 'opacity 0.5s ease';
+            pieceContent.style.opacity = '1';
+            subtitle.style.opacity = '1';
+            backButton.style.opacity = '1';
             
             window.scrollTo(0, 0); // Scroll to the top of the page
             setTimeout(adjustContentWrapperPadding, 10);
