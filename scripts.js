@@ -104,9 +104,6 @@ document.querySelector('.back-button').addEventListener('click', function() {
             navItems.style.opacity = '1';
             subtitle.style.opacity = '1';
         }, 10); // Brief delay to ensure visibility update before transition
-
-        window.scrollTo(0, 0); // Scroll to the top of the page
-        setTimeout(adjustContentWrapperPadding, 10);
     }, 500); // Match the timeout with the fade-out duration
 });
 
