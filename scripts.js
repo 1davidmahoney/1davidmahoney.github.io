@@ -41,6 +41,12 @@ document.querySelectorAll('.grid-button').forEach(button => {
             pieceContent.style.transition = 'opacity 0.5s ease';
             subtitle.style.transition = 'opacity 0.5s ease';
             backButton.style.transition = 'opacity 0.5s ease';
+            
+            // Force layout recalculation by triggering a reflow
+            document.querySelector('.content-wrapper').style.paddingTop = '1px';
+            document.querySelector('.content-wrapper').offsetHeight; // Trigger a reflow
+            document.querySelector('.content-wrapper').style.paddingTop = '0'; // Set it back to 0
+            
         }, 500); // Match the timeout with the fade-out duration
     });
 });
