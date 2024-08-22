@@ -1,11 +1,16 @@
 document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default click behavior
 
+        // Get the project ID from the button's data attribute
         const projectId = this.getAttribute('data-project-id');
+
+        // Elements to fade out
         const buttonGrid = document.querySelector('.button-grid');
         const subtitle = document.querySelector('.subtitle');
         const navItems = document.querySelector('nav ul');
+
+        // Elements to fade in
         const pieceContent = document.getElementById(`${projectId}-content`);
         const backButton = document.querySelector('.back-button');
 
@@ -13,37 +18,46 @@ document.querySelectorAll('.grid-button').forEach(button => {
         buttonGrid.style.opacity = '0';
         subtitle.style.opacity = '0';
         navItems.style.opacity = '0';
+        buttonGrid.style.transition = 'opacity 0.5s ease';
+        subtitle.style.transition = 'opacity 0.5s ease';
+        navItems.style.transition = 'opacity 0.5s ease';
 
+        // After the fade-out, update content and fade in the new elements
         setTimeout(() => {
+            // Update the subtitle text
+            const labelText = this.querySelector('.label').textContent;
+            subtitle.textContent = labelText;
+
+            // Hide the button grid and nav items, and show the piece content and back button
             buttonGrid.style.display = 'none';
             navItems.style.display = 'none';
             pieceContent.style.display = 'block';
-
-            // Set visibility to visible before fading in
-            backButton.style.visibility = 'visible';
-
+            backButton.style.display = 'block';
+            
             // Ensure opacity is 0 before transition
-            pieceContent.style.opacity = '0';
-            subtitle.style.opacity = '0';
             backButton.style.opacity = '0';
-
-            setTimeout(() => {
-                pieceContent.style.transition = 'opacity 0.5s ease';
-                subtitle.style.transition = 'opacity 0.5s ease';
-                backButton.style.transition = 'opacity 0.5s ease';
-
-                pieceContent.style.opacity = '1';
-                subtitle.style.opacity = '1';
-                backButton.style.opacity = '1';
-            }, 10);
+            
+            // Fade in the new elements
+            pieceContent.style.transition = 'opacity 0.5s ease';
+            subtitle.style.transition = 'opacity 0.5s ease';
+            backButton.style.transition = 'opacity 0.5s ease';
+            pieceContent.style.opacity = '1';
+            subtitle.style.opacity = '1';
+            backButton.style.opacity = '1';
+            
+            window.scrollTo(0, 0); // Scroll to the top of the page
+            setTimeout(adjustContentWrapperPadding, 10);
         }, 500); // Match the timeout with the fade-out duration
     });
 });
 
 document.querySelector('.back-button').addEventListener('click', function() {
+    // Elements to fade out
     const pieceContents = document.querySelectorAll('.piece-content');
     const subtitle = document.querySelector('.subtitle');
     const backButton = document.querySelector('.back-button');
+
+    // Elements to fade in
     const buttonGrid = document.querySelector('.button-grid');
     const navItems = document.querySelector('nav ul');
 
@@ -51,10 +65,19 @@ document.querySelector('.back-button').addEventListener('click', function() {
     pieceContents.forEach(content => content.style.opacity = '0');
     subtitle.style.opacity = '0';
     backButton.style.opacity = '0';
+    pieceContents.forEach(content => content.style.transition = 'opacity 0.5s ease');
+    subtitle.style.transition = 'opacity 0.5s ease';
+    backButton.style.transition = 'opacity 0.5s ease';
 
+    // After the fade-out, update content and fade in the new elements
     setTimeout(() => {
+        // Reset the subtitle to the original text
+        subtitle.textContent = "Creative Development Portfolio";
+
+        // Hide the piece content and back button, and show the button grid and nav items
         pieceContents.forEach(content => content.style.display = 'none');
-        buttonGrid.style.display = 'grid';
+        backButton.style.display = 'none';
+        buttonGrid.style.display = 'grid'; // Restore grid display
         navItems.style.display = 'block';
 
         // Set opacity to 0 before fading in
@@ -62,20 +85,16 @@ document.querySelector('.back-button').addEventListener('click', function() {
         navItems.style.opacity = '0';
         subtitle.style.opacity = '0';
 
-        setTimeout(() => {
-            buttonGrid.style.transition = 'opacity 0.5s ease';
-            navItems.style.transition = 'opacity 0.5s ease';
-            subtitle.style.transition = 'opacity 0.5s ease';
-
-            buttonGrid.style.opacity = '1';
-            navItems.style.opacity = '1';
-            subtitle.style.opacity = '1';
-
-            // Hide the back button after fading out
-            setTimeout(() => {
-                backButton.style.visibility = 'hidden';
-            }, 500); // Delay matches the fade-out duration
-        }, 10);
+        // Now fade in the elements
+        buttonGrid.style.transition = 'opacity 0.5s ease';
+        navItems.style.transition = 'opacity 0.5s ease';
+        subtitle.style.transition = 'opacity 0.5s ease';
+        buttonGrid.style.opacity = '1';
+        navItems.style.opacity = '1';
+        subtitle.style.opacity = '1';
+        
+        window.scrollTo(0, 0); // Scroll to the top of the page
+        setTimeout(adjustContentWrapperPadding, 10);
     }, 500); // Match the timeout with the fade-out duration
 });
 

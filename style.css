@@ -145,8 +145,7 @@ nav ul li a {
 }
 
 .back-button {
-    visibility: hidden; /* Start hidden */
-    opacity: 0; /* Start invisible */
+    display: none; /* Initially hidden */
     margin-left: 20px; /* Space between nav items and back button */
     padding: 10px 20px;
     background-color: transparent;
@@ -156,7 +155,6 @@ nav ul li a {
     cursor: pointer;
     border-radius: 5px;
     font-family: 'Sanchez', 'Calibri', system-ui;
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Ensure smooth transition */
 }
 
 .content-wrapper {
