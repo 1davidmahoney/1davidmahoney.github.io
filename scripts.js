@@ -1,16 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var overlay = document.getElementById('black-overlay');
-    if (!sessionStorage.getItem('visited')) {
-        overlay.classList.add('fade-out');
-        sessionStorage.setItem('visited', 'true');
-        overlay.addEventListener('transitionend', function() {
-            overlay.remove();
-        });
-    } else {
-        overlay.style.display = 'none';
-    }
-});
-
 document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
