@@ -127,6 +127,10 @@ nav ul li a {
     display: block;
 }
 
+.label { /* Maybe could be integrated w/ other label stuff below, but that was GPT, so I'm just leaving it alone */
+	letter-spacing: 1px; /* Default is slightly cluttered for Sanchez font in bold */
+}
+
 .grid-button .label {
     font-size: 2vw; /* Font size scales with viewport width */
     margin-top: 1vw; /* Adjust margins using viewport units */
