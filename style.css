@@ -58,14 +58,14 @@ header {
 }
 
 nav ul {
-    display: flex;
+    display: block;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 10px 0; /* Add some space between the list items if needed */
 }
 
 .body-content {
