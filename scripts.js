@@ -74,9 +74,6 @@ document.querySelector('.back-button').addEventListener('click', function() {
         buttonGrid.style.display = 'grid'; // Restore grid display
         navItems.style.display = 'block';
 
-        // Restore the 3-column layout for the button grid
-        buttonGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-
         // Fade in the new elements
         buttonGrid.style.opacity = '1';
         subtitle.style.opacity = '1';
