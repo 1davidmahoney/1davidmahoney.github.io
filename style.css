@@ -68,11 +68,6 @@ nav ul li {
     margin: 10px 0; /* Add some space between the list items if needed */
 }
 
-.body-content {
-	flex-grow: 1; /* Ensures that this section takes up the remaining space */
-    padding: 20px;
-}
-
 .logo {
     font-size: 24px;
     font-weight: bold;
