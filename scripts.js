@@ -110,10 +110,16 @@ function adjustContentWrapperPadding() {
 
 // Run on page load
 window.addEventListener('load', function() {
-    const buttonGrid = document.querySelector('.button-grid');
-    buttonGrid.style.opacity = '1'; // Trigger the fade-in
     const header = document.querySelector('header');
-    header.style.opacity = '1'; // Trigger the fade-in
+    const buttonGrid = document.querySelector('.button-grid');
+
+    // Trigger the header fade-in
+    header.style.opacity = '1';
+
+    // Delay the button grid fade-in by 300ms (or any duration you prefer)
+    setTimeout(() => {
+        buttonGrid.style.opacity = '1';
+    }, 300); // Adjust the delay as needed
 });
 
 window.addEventListener('load', adjustContentWrapperPadding);
