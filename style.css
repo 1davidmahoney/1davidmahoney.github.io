@@ -26,10 +26,6 @@ body, h1, h2, h3, p, ul, header, nav {
     padding: 0;
 }
 
-.piece-content, .back-button, .button-grid, .subtitle, nav ul {
-    transition: opacity 0.5s ease;
-}
-
 body {
     background: radial-gradient(circle at top center, rgba(204, 204, 204, 1), rgba(127, 127, 127, 1) 80%);
     background-size: cover;
@@ -117,6 +113,7 @@ nav ul li a {
     padding: 0 5px; /* Smaller padding for small screens */
     box-sizing: border-box; /* Include padding in width calculations */
     opacity: 0; /* Ensure grid starts invisible */
+    transition: opacity 0.5s ease; /* Add a smooth transition for fading */
 }
 
 .grid-button {
