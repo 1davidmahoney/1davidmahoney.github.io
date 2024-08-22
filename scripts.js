@@ -34,6 +34,9 @@ document.querySelectorAll('.grid-button').forEach(button => {
             pieceContent.style.display = 'block';
             backButton.style.display = 'block';
             
+            // Ensure opacity is 0 before transition
+            backButton.style.opacity = '0';
+            
             // Trigger reflow to ensure the transition occurs
             pieceContent.offsetHeight; // Force a reflow
             subtitle.offsetHeight; // Force a reflow
