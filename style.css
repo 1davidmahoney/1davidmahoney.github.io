@@ -119,6 +119,7 @@ nav ul li a {
     box-sizing: border-box;
 	min-width: 0; /* Ensure no minimum width constraint */
 	text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial soft shadow */
 }
 
 .grid-button img {
