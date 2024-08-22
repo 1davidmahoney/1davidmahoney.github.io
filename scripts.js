@@ -42,6 +42,7 @@ document.querySelectorAll('.grid-button').forEach(button => {
             subtitle.style.transition = 'opacity 0.5s ease';
             backButton.style.transition = 'opacity 0.5s ease';
             
+            window.scrollTo(0, 0); // Scroll to the top of the page
             setTimeout(adjustContentWrapperPadding, 10);
         }, 500); // Match the timeout with the fade-out duration
     });
