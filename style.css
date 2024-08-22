@@ -39,7 +39,7 @@ body {
 }
 
 p {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     line-height: 1.3;
 }
 
@@ -170,6 +170,7 @@ nav ul li a {
     width: 380px;
     height: auto;
     margin-right: 20px;
+    margin-bottom: 20px;
     float: left;
 }
 
@@ -181,8 +182,8 @@ nav ul li a {
 }
 
 .video-container {
-    max-width: calc(100% - 40px); /* 40px total margin (20px on each side) */
-    margin: 0 auto; /* Centers the iframe */
+    max-width: calc(70% - 40px); /* 40px total margin (20px on each side) */
+    margin: 20px auto; /* Centers the iframe */
 }
 
 .youtube-player {
@@ -244,6 +245,10 @@ nav ul li a {
 	.piece-image {
 		float:none;
 		width: 100%;
+	}
+    
+    .video-container {
+		max-width: 100%; /* Fit viewport width (piece content container) */
 	}
 }
 	
