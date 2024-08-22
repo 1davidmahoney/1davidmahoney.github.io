@@ -37,11 +37,6 @@ document.querySelectorAll('.grid-button').forEach(button => {
             // Ensure opacity is 0 before transition
             backButton.style.opacity = '0';
             
-            // Trigger reflow to ensure the transition occurs
-            pieceContent.offsetHeight; // Force a reflow
-            subtitle.offsetHeight; // Force a reflow
-            backButton.offsetHeight; // Force a reflow
-
             // Fade in the new elements
             pieceContent.style.transition = 'opacity 0.5s ease';
             subtitle.style.transition = 'opacity 0.5s ease';
@@ -89,11 +84,6 @@ document.querySelector('.back-button').addEventListener('click', function() {
         buttonGrid.style.opacity = '0';
         navItems.style.opacity = '0';
         subtitle.style.opacity = '0';
-
-        // Trigger reflow to ensure the transition occurs
-        buttonGrid.offsetHeight; // Force a reflow
-        navItems.offsetHeight; // Force a reflow
-        subtitle.offsetHeight; // Force a reflow
 
         // Now fade in the elements
         buttonGrid.style.transition = 'opacity 0.5s ease';

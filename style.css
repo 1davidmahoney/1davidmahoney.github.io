@@ -53,6 +53,7 @@ header {
     box-sizing: border-box;
     position: fixed;
     z-index: 1000;
+    transition: height 0.3s ease;
 }
 
 .logo-container {
@@ -158,6 +159,7 @@ nav ul li a {
     margin-top: 0; /* Start without a top margin */
     padding-top: 0; /* Start without padding */
     box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+    transition: padding-top 0.3s ease;
 }
 
 .piece-content {
