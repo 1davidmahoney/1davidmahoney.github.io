@@ -84,6 +84,8 @@ nav {
     display: flex;
     align-items: center;
     margin-left: auto;
+    white-space: nowrap;
+    text-align: right;
 }
 
 nav ul li a {
