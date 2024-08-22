@@ -183,7 +183,7 @@ nav ul li a {
 
 .video-container {
     max-width: calc(70% - 40px); /* 40px total margin (20px on each side) */
-    margin: 40px auto; /* Centers the iframe */
+    margin: 20px auto; /* Centers the iframe */
 }
 
 .youtube-player {
