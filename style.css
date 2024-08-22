@@ -144,9 +144,9 @@ nav ul li a {
     display: none; /* Initially hidden */
     margin-left: 20px; /* Space between nav items and back button */
     padding: 10px 20px;
-    background-color: white;
-    border: 2px solid black;
-    color: black;
+    background-color: transparent;
+    border: 2px solid lightgray;
+    color: lightgray;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
