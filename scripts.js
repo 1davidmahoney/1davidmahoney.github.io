@@ -109,6 +109,11 @@ function adjustContentWrapperPadding() {
 }
 
 // Run on page load
+window.addEventListener('load', function() {
+    const buttonGrid = document.querySelector('.button-grid');
+    buttonGrid.style.opacity = '1'; // Trigger the fade-in
+});
+
 window.addEventListener('load', adjustContentWrapperPadding);
 
 // Run on window resize

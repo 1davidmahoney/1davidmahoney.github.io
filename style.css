@@ -110,7 +110,7 @@ nav ul li a {
     margin: 20px auto; /* Center the grid */
     padding: 0 5px; /* Smaller padding for small screens */
     box-sizing: border-box; /* Include padding in width calculations */
-    opacity: 1; /* Ensure grid starts fully visible */
+    opacity: 0; /* Ensure grid starts invisible */
     transition: opacity 0.5s ease; /* Add a smooth transition for fading */
 }
 
