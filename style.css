@@ -242,6 +242,9 @@ nav ul li a {
 
 /* Center main piece image by itself (no longer floating on left) */
 @media (max-width: 660px) {
+    .piece-content {
+        padding: 30px;
+    }
 	.piece-image {
 		float:none;
 		width: 100%;
