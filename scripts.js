@@ -34,13 +34,11 @@ document.querySelectorAll('.grid-button').forEach(button => {
             pieceContent.style.display = 'block';
             backButton.style.display = 'block';
 
-            // Fade in the new elements
-            pieceContent.style.opacity = '1';
-            subtitle.style.opacity = '1';
-            backButton.style.opacity = '1';
-            pieceContent.style.transition = 'opacity 0.5s ease';
-            subtitle.style.transition = 'opacity 0.5s ease';
-            backButton.style.transition = 'opacity 0.5s ease';
+            // Add 'show' class to fade in the new elements
+            pieceContent.classList.add('show');
+            subtitle.classList.add('show');
+            backButton.classList.add('show');
+            navItems.classList.add('show');
             
             window.scrollTo(0, 0); // Scroll to the top of the page
             setTimeout(adjustContentWrapperPadding, 10);
@@ -58,13 +56,11 @@ document.querySelector('.back-button').addEventListener('click', function() {
     const buttonGrid = document.querySelector('.button-grid');
     const navItems = document.querySelector('nav ul');
 
-    // Fade out the current elements
-    pieceContents.forEach(content => content.style.opacity = '0');
-    subtitle.style.opacity = '0';
-    backButton.style.opacity = '0';
-    pieceContents.forEach(content => content.style.transition = 'opacity 0.5s ease');
-    subtitle.style.transition = 'opacity 0.5s ease';
-    backButton.style.transition = 'opacity 0.5s ease';
+    // Remove 'show' class to fade out the current elements
+    pieceContents.forEach(content => content.classList.remove('show'));
+    subtitle.classList.remove('show');
+    backButton.classList.remove('show');
+    navItems.classList.remove('show');
 
     // After the fade-out, update content and fade in the new elements
     setTimeout(() => {
@@ -77,13 +73,10 @@ document.querySelector('.back-button').addEventListener('click', function() {
         buttonGrid.style.display = 'grid'; // Restore grid display
         navItems.style.display = 'block';
 
-        // Fade in the new elements
-        buttonGrid.style.opacity = '1';
-        subtitle.style.opacity = '1';
-        navItems.style.opacity = '1';
-        buttonGrid.style.transition = 'opacity 0.5s ease';
-        subtitle.style.transition = 'opacity 0.5s ease';
-        navItems.style.transition = 'opacity 0.5s ease';
+        // Add 'show' class to fade in the new elements
+        buttonGrid.classList.add('show');
+        subtitle.classList.add('show');
+        navItems.classList.add('show');
     }, 500); // Match the timeout with the fade-out duration
 });
 

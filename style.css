@@ -154,7 +154,6 @@ nav ul li a {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 0 0 8px 8px;
-    opacity: 0; /* Start hidden */
     max-width: 1000px;
 }
 
@@ -170,6 +169,19 @@ nav ul li a {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
+}
+
+.piece-content, .back-button, nav ul {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.piece-content.show, .back-button.show, nav ul.show {
+    opacity: 1; /* Fade in */
+}
+
+.show {
+    opacity: 1;
 }
 
 /************************************************************************************/
