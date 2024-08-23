@@ -257,6 +257,7 @@ figcaption {
     font-family: 'Courier Prime', 'Courier New', monospace;
     margin: 20px auto;
     padding: 80px;
+    background-color: linen;
 }
 
 /* Center-aligned text for character names */
