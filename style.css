@@ -310,7 +310,7 @@ figcaption {
 	}
 
     .video-background {
-        visibility: hidden;
+        background-color: transparent;
     }
     
     .video-container {
