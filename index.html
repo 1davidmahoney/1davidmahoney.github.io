@@ -115,9 +115,73 @@
 
         <div id="project2-content" class="piece-content" style="display: none;">
             <img src="/images/buttons/Home_02_UnrealEngine.png" alt="Project 2 Image" class="piece-image">
-            <p class="piece-text">
-                This is the unique content for Project 2. The text wraps around the image on the left.
-            </p>
+            
+            <!-- From old wordpress portfolio -->
+            
+            <h1>Introduction</h1>
+            <p>This project, the Superhero Puzzle System, was created to demonstrate my systems design skills and my familiarity with Unreal Engine. A playable demo can be found <a href="https://drive.google.com/open?id=1VXMslAYZbZcx0c-FqN5hh-nJOpyQ566I">here</a>.</p>
+            
+            <div style="clear: both;"></div> <!-- This div clears the float -->
+            
+            <div class="video-container">
+                <iframe class="youtube-player" src="https://www.youtube.com/embed/0lMT_xKVojc?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en&autohide=2&wmode=transparent" allowfullscreen></iframe>
+            </div>
+            
+            <p>In action-adventure games, you’re sometimes tasked with changing the state of some environmental object in order to proceed. For example, you might knock down a tree to create a bridge over a raging river. As a superhero, though, such tasks are often trivial, which begs the question: what’s the greatest challenge to all superheroes? Helpless civilians, of course!</p>
+            <p>In the absence of an adequate <em>physical</em> challenge, the player should at least be <em>emotionally</em> challenged. In the example level documented below, the Superhero Puzzle System tasks you with one such challenge: weighing the safety of numerous strangers against the safety of one person you care about.</p>
+            <p>Narrative setup:</p>
+            <ul>
+                <li>The villain stands on the front deck of a ferry, seemingly prepared to kill your beloved companion.</li>
+                <li>As the city burns, panicked civilians swarm toward the ferry.</li>
+                <li>Do you take the time to <em>methodically</em> scare the civilians away, ensuring their safety, but risking your companion’s life? Or, do you hustle to <em>aggressively</em> scare away the civilians, better ensuring your companion’s safety, but risking the civilians’ lives?</li>
+            </ul>
+            <p>As the city’s only superhero, the people count on you. Unfortunately, in order to reach the villain, your sense of responsibility must be tested. Can you live up to the expectations of being a superhero? Complete the puzzle, and find out!</p>
+            
+            <h1>System</h1>
+            <p>In the example level, light poles line the dock on which panicked civilians are gathering. The player uses the Superhero Puzzle System to overcharge and ignite the poles’ light bulbs, scaring the civilians away from the villain while simultaneously clearing a path toward him.</p>
+            <p>The high-level challenge presented by the system is the identification of “good” versus “bad” poles under emotional and temporal constraints. Some poles are “sturdy,” able to be electrified until they burst into flames (“ignited”), thus scaring the civilians away toward safety. Other poles are “broken” and will fall apart upon ignition, possibly injuring nearby civilians and/or damaging nearby structures. Both pole types look deceptively similar, so the player must exercise caution to avoid mistakes.</p>
+            
+            <figure style="text-align: center;">
+                <a href="/images/portfolio/unreal/SHPS_OnePager.png">
+                    <img src="/images/portfolio/unreal/SHPS_OnePager_SM.png" alt="One-pager">
+                </a>
+                <figcaption>Puzzle interactivity</figcaption>
+            </figure>
+
+            <p>The system allows you to play according to your mood and your personal assessment of priorities.</p>
+            <p>With each charge, electrical energy in the pole’s light bulb builds up and then dissipates.  If you’re in the mood to play in a more carefree way, you can <em>aggressively</em> spam the “interact” button (5-6 rapid presses) and simply wait for the bulb to be overcharged. Or, if you want to be slick and minimize your input, you can <em>methodically</em> wait until each charge peaks before starting another (just 3 well-timed button presses).</p>
+            <p>Some poles are sturdy; some are broken. If you’re prioritizing your companion’s safety, you might use the system <em>aggressively</em>, with reckless abandon, as long as you reach your goal with haste. Or, if you’re prioritizing virtually everyone’s safety, you might take some time to <em>methodically</em> test the limitations of the system, looking for ways to help more people.</p>
+
+            <figure style="text-align: center;">
+                <a href="/images/portfolio/unreal/SHPS_OnePager.png">
+                    <img src="/images/portfolio/unreal/SHPS_OnePager_SM.png" alt="One-pager">
+                </a>
+                <figcaption>Puzzle interactivity</figcaption>
+            </figure>
+            
+            <h1>Development</h1>
+            <p>One of the biggest challenges in building the system was the “charge” mechanic. Though the Timeline component is a handy feature of Unreal, it proved to be troublesome in this case because of its limitations. To have more control, I realized I’d have to take a more manual approach for easing between values (e.g., lights fading up and down). Fortunately, because more data was exposed, this manual approach made it easier to tune the system in script (Blueprints) and to set it up for in-editor tuning by a level designer (via public variables).</p>
+
+            <figure style="text-align: center;">
+                <a href="/images/portfolio/unreal/SHPS_OnePager.png">
+                    <img src="/images/portfolio/unreal/SHPS_OnePager_SM.png" alt="One-pager">
+                </a>
+                <figcaption>Puzzle interactivity</figcaption>
+            </figure>
+
+            <figure style="text-align: center;">
+                <a href="/images/portfolio/unreal/SHPS_OnePager.png">
+                    <img src="/images/portfolio/unreal/SHPS_OnePager_SM.png" alt="One-pager">
+                </a>
+                <figcaption>Puzzle interactivity</figcaption>
+            </figure>
+            
+            <p>Another big development challenge was implementing the “broken” pole. Unlike the “sturdy” pole, the “broken” type is rather complex, involving a few unique features: a detachable bulb object; optional “pole destructible” objects which react to broken poles; and a number of ways for civilians to behave, depending on their proximity to the bulb and the presence or absence of a “pole destructible” object.</p>
+            
+            <h1>Conclusion</h1>
+            <p>By offering complementary puzzle pieces – in this case, risky poles, vulnerable civilians, and a helpless companion – the Superhero Action System allows the creation of dynamic and emotional puzzles in a world that feels both fantastical and grounded.</p>
+            <p>Beyond the example level presented here, the system could also be used in other emotionally rich yet superhuman contexts. For example, the light poles could be replaced with stubborn containers you pry open in order to attract people, rather than repel them; or you might work at pulling a rope to lift up an elevator full of innocent bystanders.</p>
+
         </div>
 
         <div id="project3-content" class="piece-content" style="display: none;">
