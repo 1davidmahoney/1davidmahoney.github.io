@@ -184,6 +184,14 @@ nav ul li a {
     max-width: 1000px;
 }
 
+.piece-content a {
+    color: #0088ff;
+}
+
+.piece-content a:visited {
+    color: #d40096;
+}
+
 .piece-image { /* Main image at top of piece content */
     width: 380px;
     height: auto;
