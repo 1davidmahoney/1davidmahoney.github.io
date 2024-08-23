@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Reset some basic styles */
 a:link {
@@ -250,6 +251,47 @@ figure a img {
 figcaption {
     font-size: 90%;
     font-style: italic;
+}
+
+.writing-script {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    margin: 20px auto;
+    padding: 80px;
+}
+
+/* Center-aligned text for character names */
+.script-char {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Character A (TOMMY) styles */
+.char-a {
+    color: red;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 100px
+}
+
+/* Character B (BECK) styles */
+.char-b {
+    color: blue;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 100px
+}
+
+/* Styles for parenthetical directions */
+.script-par {
+    font-style: italic;
+}
+
+/* Styles for dialogue */
+.script-dlg {
+}
+
+/* Styles for action description */
+.script-action {
 }
 
 /************************************************************************************/
