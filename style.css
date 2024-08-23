@@ -129,7 +129,7 @@ nav ul li a {
     height: auto;
     object-fit: cover;
     display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial soft shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 .label { /* Maybe could be integrated w/ other label stuff below, but that was GPT, so I'm just leaving it alone */
@@ -208,6 +208,7 @@ nav ul li a {
     margin-right: 20px;
     margin-bottom: 10px;
     float: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 .piece-text {
@@ -238,6 +239,7 @@ figure {
 figure a img {
     width: min(100%, 700px);
     height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 figcaption {
