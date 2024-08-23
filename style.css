@@ -230,6 +230,21 @@ nav ul li a {
     display: block; /* Removes inline-block whitespace */
 }
 
+figure {
+    max-width: 100%;
+    margin: 20px auto; /* Center the figure if desired */
+}
+
+figure a img {
+	max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-size: 90%;
+    font-style: italic;
+}
+
 /************************************************************************************/
 /* Responsive design */
 /************************************************************************************/
