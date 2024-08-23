@@ -218,6 +218,11 @@ nav ul li a {
     color: #333;
 }
 
+.video-background {
+    background-color: #000000;
+    border-radius: 8px;
+}
+
 .video-container {
     max-width: calc(70% - 40px); /* 40px total margin (20px on each side) */
     margin: 20px auto; /* Centers the iframe */
@@ -294,7 +299,7 @@ figcaption {
 	}
 }
 
-/* Center main piece image by itself (no longer floating on left) */
+/* Center images on smaller screens */
 @media (max-width: 660px) {
     .piece-content {
         padding: 30px;
@@ -303,6 +308,10 @@ figcaption {
 		float:none;
 		width: 100%;
 	}
+
+    .video-background {
+        visibility: hidden;
+    }
     
     .video-container {
 		max-width: 100%; /* Fit viewport width (piece content container) */
