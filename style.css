@@ -192,6 +192,16 @@ nav ul li a {
     color: #d40096;
 }
 
+.piece-content ul {
+	margin: 15px 0 5px 50px;
+	line-height: 1.2;
+	font-size: 90%;
+}
+
+.piece-content ul li {
+	padding-bottom: 10px;
+}
+
 .piece-image { /* Main image at top of piece content */
     width: 380px;
     height: auto;
