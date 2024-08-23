@@ -153,27 +153,27 @@
             <p>Some poles are sturdy; some are broken. If you’re prioritizing your companion’s safety, you might use the system <em>aggressively</em>, with reckless abandon, as long as you reach your goal with haste. Or, if you’re prioritizing virtually everyone’s safety, you might take some time to <em>methodically</em> test the limitations of the system, looking for ways to help more people.</p>
 
             <figure style="text-align: center;">
-                <a href="/images/portfolio/unreal/SHPS_OnePager.png">
-                    <img src="/images/portfolio/unreal/SHPS_OnePager_SM.png" alt="One-pager">
+                <a href="/images/portfolio/unreal/SHPS_Map.png" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/portfolio/unreal/SHPS_Map.png" alt="Map">
                 </a>
-                <figcaption>Puzzle interactivity</figcaption>
+                <figcaption>Example level layout</figcaption>
             </figure>
             
             <h1>Development</h1>
             <p>One of the biggest challenges in building the system was the “charge” mechanic. Though the Timeline component is a handy feature of Unreal, it proved to be troublesome in this case because of its limitations. To have more control, I realized I’d have to take a more manual approach for easing between values (e.g., lights fading up and down). Fortunately, because more data was exposed, this manual approach made it easier to tune the system in script (Blueprints) and to set it up for in-editor tuning by a level designer (via public variables).</p>
 
             <figure style="text-align: center;">
-                <a href="/images/portfolio/unreal/SHPS_OnePager.png">
-                    <img src="/images/portfolio/unreal/SHPS_OnePager_SM.png" alt="One-pager">
+                <a href="/images/portfolio/unreal/SHPS_Blueprint.png" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/portfolio/unreal/SHPS_Blueprint.png" alt="Blueprint">
                 </a>
-                <figcaption>Puzzle interactivity</figcaption>
+                <figcaption>Blueprint that interpolates SFX & VFX between user-defined min & max values</figcaption>
             </figure>
 
             <figure style="text-align: center;">
-                <a href="/images/portfolio/unreal/SHPS_OnePager.png">
-                    <img src="/images/portfolio/unreal/SHPS_OnePager_SM.png" alt="One-pager">
+                <a href="/images/portfolio/unreal/SHPS_BlueprintProps.png" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/portfolio/unreal/SHPS_BlueprintProps.png" alt="Blueprint properties">
                 </a>
-                <figcaption>Puzzle interactivity</figcaption>
+                <figcaption>Tuning variables exposed for Level/Mission Designers</figcaption>
             </figure>
             
             <p>Another big development challenge was implementing the “broken” pole. Unlike the “sturdy” pole, the “broken” type is rather complex, involving a few unique features: a detachable bulb object; optional “pole destructible” objects which react to broken poles; and a number of ways for civilians to behave, depending on their proximity to the bulb and the presence or absence of a “pole destructible” object.</p>
