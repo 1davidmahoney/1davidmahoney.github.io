@@ -255,8 +255,9 @@ figcaption {
 
 .writing-script {
     font-family: 'Courier Prime', 'Courier New', monospace;
+    max-width: min(100%, 640px);
     margin: 20px auto;
-    padding: 80px;
+    padding: min(10%, 80px);
     background-color: linen;
 }
 
@@ -358,6 +359,10 @@ figcaption {
     
     .video-container {
 		max-width: 100%; /* Fit viewport width (piece content container) */
+	}
+    
+    .writing-script {
+		padding: 20px;
 	}
 }
 	
