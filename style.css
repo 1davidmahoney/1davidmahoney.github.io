@@ -255,10 +255,11 @@ figcaption {
 
 .writing-script {
     font-family: 'Courier Prime', 'Courier New', monospace;
-    max-width: 660px; /* Width of a typical piece of paper */
-    width: 100%; /* Allows the element to shrink with the viewport */
-    margin: 0 auto; /* Centers the writing-script element */
-    padding: 20px; /* Some padding around the text content */
+    width: 100%;
+    max-width: 800px; /* Roughly the width of a piece of paper */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
     background-color: linen;
 }
 
@@ -289,17 +290,11 @@ figcaption {
 
 /* Styles for dialogue */
 .script-dlg {
-    /* Dynamic padding that adjusts based on the width of the writing-script container */
-    padding-left: clamp(0px, calc((100% - 660px) / 2), 160px);
-    padding-right: clamp(0px, calc((100% - 660px) / 2), 160px);
-
-    /* Additional styles */
-    background-color: linen; /* Background color */
-    color: #333; /* Text color */
-    border: 1px solid #ddd; /* Border around the dialog */
-    margin: 0 auto; /* Center the element if necessary */
-    box-sizing: border-box; /* Ensure padding and borders are included in the element's width */
-    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    margin: 0 auto;
+    max-width: 400px; /* Maximum width for the dialogue */
+    padding: 10px;
+    background-color: #f0f0f0;
+    transition: margin 0.3s ease; /* Smooth transition for margin */
 }
 
 /* Styles for action description */
@@ -374,11 +369,6 @@ figcaption {
     .writing-script {
 		padding: 20px;
 	}
-    
-    .script-dlg {
-        padding-left: 0;
-        padding-right: 0;
-    }
 }
 	
 /* Remove the image when viewport height is small (my old Samsung phone is 489px) */
@@ -401,16 +391,26 @@ figcaption {
     }
 }
 
- /* As writing-script shrinks, reduce the side padding of script-dlg */
-        @media (max-width: 660px) {
-            .writing-script {
-                --side-padding: calc(160px * (100vw / 660));
-            }
-        }
+@media (max-width: 800px) {
+    .script-dlg {
+        margin: 0 80px; /* Adjust margins as the viewport shrinks */
+    }
+}
 
-        @media (max-width: 330px) {
-            .writing-script {
-                --side-padding: 0px;
-            }
-        }
-        
+@media (max-width: 600px) {
+    .script-dlg {
+        margin: 0 40px; /* Further adjust margins */
+    }
+}
+
+@media (max-width: 400px) {
+    .script-dlg {
+        margin: 0 20px; /* Even smaller margins */
+    }
+}
+
+@media (max-width: 300px) {
+    .script-dlg {
+        margin: 0; /* No margins on the smallest screens */
+    }
+}

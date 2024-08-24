@@ -10,7 +10,7 @@
 <body>
 
 <div id="debug-text" style="position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px; font-family: Arial, sans-serif; z-index: 10000; text-align: center;">
-    Debug: Padding = <span id="padding-value"></span>
+    Debug: Padding = <span id="margin-value"></span>
 </div>
 
 
@@ -479,9 +479,9 @@
     <script>
     function updatePaddingDebug() {
         const container = document.querySelector('.script-dlg');
-        const paddingValue = window.getComputedStyle(container).paddingLeft;
+        const marginValue = window.getComputedStyle(container).paddingLeft;
 
-        document.getElementById('padding-value').textContent = paddingValue;
+        document.getElementById('margin-value').textContent = marginValue;
     }
 
     // Initial calculation and display
