@@ -258,7 +258,7 @@ figcaption {
     width: 100%;
     max-width: 800px; /* Roughly the width of a piece of paper */
     margin: 0 auto;
-    padding: 20px;
+    padding: 60px 20px;
     box-sizing: border-box;
     background-color: linen;
 }
