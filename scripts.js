@@ -1,6 +1,10 @@
+let isButtonClicked = false;
+
 document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
+        
+        isButtonClicked = true;
 
         // Get the project ID from the button's data attribute
         const projectId = this.getAttribute('data-project-id');
@@ -110,7 +114,7 @@ function handleBackButtonClick() {
 document.querySelector('.back-button').addEventListener('click', handleBackButtonClick);
 
 function handleEscapeKey(event) {
-    if (event.key === "Escape") {
+    if (event.key === "Escape" && isButtonClicked) {
         // Your logic for the Escape key press
         handleBackButtonClick(); // You can call the same function or handle it differently
     }
