@@ -271,14 +271,14 @@ figcaption {
 
 /* Character A (TOMMY) styles */
 .char-a {
-    color: red;
+    color: #135bec;
     text-align: center;
     margin: 0 auto;
 }
 
 /* Character B (BECK) styles */
 .char-b {
-    color: blue;
+    color: #ff2b00;
     text-align: center;
     margin: 0 auto;
 }
@@ -389,29 +389,5 @@ figcaption {
 
     .grid-button .label {
         font-size: 8vw; /* Adjust the font size if necessary */
-    }
-}
-
-@media (max-width: 800px) {
-    .script-dlg {
-        margin: 0 80px; /* Adjust margins as the viewport shrinks */
-    }
-}
-
-@media (max-width: 600px) {
-    .script-dlg {
-        margin: 0 40px; /* Further adjust margins */
-    }
-}
-
-@media (max-width: 400px) {
-    .script-dlg {
-        margin: 0 20px; /* Even smaller margins */
-    }
-}
-
-@media (max-width: 300px) {
-    .script-dlg {
-        margin: 0; /* No margins on the smallest screens */
     }
 }
