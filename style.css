@@ -289,12 +289,12 @@ figcaption {
 
 /* Styles for dialogue */
 .script-dlg {
-    max-width: 100%;
-    padding-left: clamp(0px, 10vw, 160px);
-    padding-right: clamp(0px, 10vw, 160px);
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ddd;
+            --side-padding: 160px; /* Default large padding */
+            padding-left: var(--side-padding);
+            padding-right: var(--side-padding);
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ddd;
 }
 
 /* Styles for action description */
@@ -395,3 +395,17 @@ figcaption {
         font-size: 8vw; /* Adjust the font size if necessary */
     }
 }
+
+ /* As writing-script shrinks, reduce the side padding of script-dlg */
+        @media (max-width: 660px) {
+            .writing-script {
+                --side-padding: calc(160px * (100vw / 660));
+            }
+        }
+
+        @media (max-width: 330px) {
+            .writing-script {
+                --side-padding: 0px;
+            }
+        }
+        
