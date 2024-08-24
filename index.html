@@ -168,7 +168,7 @@
                 <a href="/images/portfolio/unreal/SHPS_Blueprint.png" target="_blank" rel="noopener noreferrer">
                     <img src="/images/portfolio/unreal/SHPS_Blueprint.png" alt="Blueprint">
                 </a>
-                <figcaption>Blueprint that interpolates SFX & VFX between user-defined min & max values</figcaption>
+                <figcaption>Blueprint that interpolates SFX &amp; VFX between user-defined min &amp; max values</figcaption>
             </figure>
 
             <figure style="text-align: center;">
@@ -213,9 +213,90 @@
 
         <div id="project4-content" class="piece-content" style="display: none;">
             <img src="/images/buttons/Home_04_SystemDesign.png" alt="Project 4 Image" class="piece-image">
-            <p class="piece-text">
-                This is the unique content for Project 4. The text wraps around the image on the left.
-            </p>
+            
+            <!-- From old wordpress portfolio -->
+            
+            <h1>Introduction</h1>
+            <p>In its original incarnation, Telltale Games was a fast-paced studio, so it was understandable that priorities could shift rapidly and that you’d often be expected to solve your own problems. Fortunately, I was able to turn a few of the big challenges I came across into fun side-projects.</p>
+            <p>Over the years, my experience with dialog has ranged from practical to experimental. As a Creative Development Assistant (CDA), I built the first two projects below to solve a couple problems that were dragging down certain dialog-related workflows. Now that I’ve moved on from Telltale, it’s been fun thinking of other exciting ways to explore the world of dialog and narrative—an example of which can be seen in the third project below.</p>
+
+            <h1>Subtitle Pass Assistant</h1>
+            <p>This tool was all about saving clicks and keypresses.</p>
+            <p>For the CDA, dialog-related work was a daily occurrence, but when it came time for a certain process that occurred a couple times per episode, the work became needlessly cumbersome because of a lack of tools specific to the task. After consulting with senior engineering staff, I set about solving this efficiency problem by writing a tool of my own in C++.</p>
+            <p>More specifically, my program made use of HTML-embedded JavaScript and automated mouse clicks and button-presses to rapidly operate and transfer data between Telltale’s proprietary tool, a web browser, and the operating system’s clipboard.</p>
+            <p>Using my program, I was happy to save myself and my fellow CDAs somewhere around 75% of the work previously required to complete this task.</p>
+
+            <h1>File Management System for VO Processing</h1>
+            <p>Like the program above, my file management system was created to address a specific problem I had encountered while working as a CDA.</p>
+            <p>When it came time to add special effects to voiceover (e.g., distortion when talking through a walkie-talkie), the CDA would receive a list of VO audio files to move to a specific folder, making them readily available for the Audio department. Like before, I found myself wondering if this task could be easier; and thanks to batch scripting, it was.</p>
+            <p>By combining a batch script, specially tagged lines of dialog, and existing functionality within Telltale’s proprietary tool, I was able to design a system which streamlined the process of identifying and relocating VO files in need of special effects—an improvement which eased workloads for myself and at least a few of my coworkers.</p>
+            <p>In addition to the satisfaction of having designed a useful system, it was great having the chance to collaborate with like-minded individuals in the Production and Audio departments toward solving a problem that had regularly affected us all.</p>
+
+            <h1>Natural NPC Interaction System</h1>
+            <p>This theoretical system is meant to bridge the experientially disruptive gap that games sometimes insert between the player’s button press and the NPC’s behavior.</p>
+            <p>In many adventure-type games, when interacting with an NPC, I’ve often been jarred by a button-press that leads to an NPC’s action rather than my own. For example, <em>The Last of Us</em> handles dialog interactions fairly well by leading most of their resultant cinematic segments (i.e., acting) with a line/action from Joel (the player character, or “PC”); however, pressing the interaction button can also mean “Make Ellie talk,” which may make some players feel disconnected from the gameplay. In a more recent title, <em>Horizon Zero Dawn</em>, the transition into cinematic segments can be even more jarring, as pressing the interaction button could mean “Cut to a completely new camera angle; and also make the NPC talk.”</p>
+            <p>To alleviate this issue, I’ve designed a slightly more complex, yet significantly more natural-feeling system—one modeled after the relatable concepts of personal space and situational awareness. With this system, a game may have more intuitive interactions by providing a simple, reasonable explanation as to why their resultant cinematics are led by the PC or by the NPC.</p>
+            
+            <figure style="text-align: center;">
+                <a href="/images/portfolio/systems/NaturalNPCInteractionSystem_Awareness.png" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/portfolio/systems/NaturalNPCInteractionSystem_Awareness.png" alt="Diagram">
+                </a>
+                <figcaption>NPC’s awareness zone</figcaption>
+            </figure>
+            
+            <p>Every NPC has an “awareness zone”; when the player enters it, interaction UI appears over the NPC’s head, indicating that the NPC is now aware of the player’s presence and is interactable—i.e., a button-press may now trigger a cinematic segment which is led by the PC speaking to / acting upon the NPC.</p>
+            
+            <figure style="text-align: center;">
+                <a href="/images/portfolio/systems/NaturalNPCInteractionSystem_Personal.png" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/portfolio/systems/NaturalNPCInteractionSystem_Personal.png" alt="Diagram">
+                </a>
+                <figcaption>NPC’s personal space</figcaption>
+            </figure>
+            
+            <p>Additionally, each NPC has “personal space,” which is like the awareness zone, but with a tighter radius and a stronger—and possibly unexpected—reaction. Upon entering an NPC’s personal space, the player has a short amount of time to press the interaction button before the NPC will react to the player’s proximity; in general, happy NPCs allow more time, whereas angry NPCs allow less time. The activation of this new mode of interaction is made clear by an accented button prompt that fades out over a few seconds.</p>
+            
+            <table>
+                <tr>
+                    <th>Altogether, there are 3 ways to begin an interaction with an NPC...</th>
+                    <th>...resulting in 1 of 3 outcomes.</th>
+                </tr>
+                <tr>
+                    <td>1) Enter the NPC’S awareness zone &amp; interact.</td>
+                    <td>1) PC leads a cinematic segment.</td>
+                </tr>
+                <tr>
+                    <td>2) Enter the NPC’S personal space &amp; interact.</td>
+                    <td>2) PC leads a cinematic segment.</td>
+                </tr>
+                <tr>
+                    <td>3) Enter the NPC’S personal space &amp; wait.</td>
+                    <td>3) NPC leads a cinematic segment.</td>
+                </tr>
+            </table>
+            
+            <p>Example: If the NPC is a tough yet surprisingly kindhearted truck driver...</p>
+            
+            <table>
+                <tr>
+                    <td>1) Awareness zone + interact...</td>
+                    <td>PC greets NPC &rarr;</td>
+                    <td>NPC teases PC.</td>
+                </tr>
+                <tr>
+                    <td>2) Personal space + interact...</td>
+                    <td>PC pats NPC on back &rarr;</td>
+                    <td>NPC threatens PC.</td>
+                </tr>
+                <tr>
+                    <td>3) Personal space + wait...</td>
+                    <td>PC stands silently for a moment &rarr;</td>
+                    <td>NPC appears as if to threaten, but then hugs PC.</td>
+                </tr>
+            </table>
+            
+            <h1>Conclusion</h1>
+            <p>As next steps, I’d like to implement this experimental dialog system in Unreal Engine and further develop the concept.</p>
+            
         </div> <!-- piece-content -->
 
         <div id="project5-content" class="piece-content" style="display: none;">
@@ -263,7 +344,7 @@
                 <p class="script-action">Tommy begrudgingly pulls out an antique pocket watch, but it’s becoming too dark outside to see well, so he balls his hand into a fist and then quickly fans out his fingers, causing a glowing ball of smoky light to form in mid-air, inches from his hand. The watch is beautiful. Tommy slowly moves his sphere of light, forcing its reflection to flow around the watch’s ornate etchings, mesmerizing himself in the process. He’s snapped back to reality as he turns the watch, revealing a crudely welded seam along the lid’s edge.</p>
 
                 <p class="script-char char-a">TOMMY</p>
-                <p class="script-dlg char-a">Friggin’ cavemen, I swear…</p>
+                <p class="script-dlg char-a">Friggin’ cavemen, I swear...</p>
 
                 <p class="script-action">Tommy gazes once more at his beloved memento as he slowly extinguishes his light, then pockets the watch.</p>
 
@@ -288,7 +369,7 @@
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(agitated)</p>
-                <p class="script-dlg char-a">Are you serious? I’m a student… We’re wearing the same uniform… We were at orientation together!</p>
+                <p class="script-dlg char-a">Are you serious? I’m a student... We’re wearing the same uniform... We were at orientation together!</p>
 
                 <p class="script-action">As Tommy rudely explains away Beck’s suspicion, she eases her offensive stance, instead looking a bit annoyed.</p>
 
@@ -322,7 +403,7 @@
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(stalling)</p>
-                <p class="script-dlg char-a">Er…</p>
+                <p class="script-dlg char-a">Er...</p>
 
                 <p class="script-char char-b">BECK</p>
                 <p class="script-par char-b">(teasing)</p>
@@ -330,7 +411,7 @@
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(meek chuckle)</p>
-                <p class="script-dlg char-a">It’s just, uh…</p>
+                <p class="script-dlg char-a">It’s just, uh...</p>
 
                 <p class="script-char char-b">BECK</p>
                 <p class="script-dlg char-b">It’s alright, dude. We’re all here ‘cause we don’t play well with others, right?</p>
@@ -351,7 +432,7 @@
                 <p class="script-dlg char-a">What, about leaving? How’d you know I was–</p>
 
                 <p class="script-char char-b">BECK</p>
-                <p class="script-dlg char-b">Bright ball of light in the middle of an open field… at night…? Kinda hard to miss.</p>
+                <p class="script-dlg char-b">Bright ball of light in the middle of an open field... at night...? Kinda hard to miss.</p>
 
                 <p class="script-action">Tommy shifts uncomfortably, realizing someone caught him being vulnerable. Beck glares back at the school in the distance.</p>
 
@@ -368,7 +449,7 @@
                 <p class="script-dlg char-a">One way or another.</p>
 
                 <p class="script-char char-b">BECK</p>
-                <p class="script-dlg char-b">Props for stepping up. But if he mangled your stuff *that* badly…?</p>
+                <p class="script-dlg char-b">Props for stepping up. But if he mangled your stuff *that* badly...?</p>
 
                 <p class="script-char char-b">BECK</p>
                 <p class="script-par char-b">(half-joking)</p>
@@ -376,7 +457,7 @@
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(awkward)</p>
-                <p class="script-dlg char-a">Ha…</p>
+                <p class="script-dlg char-a">Ha...</p>
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(sighs)</p>
@@ -397,15 +478,15 @@
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(shocked)</p>
-                <p class="script-dlg char-a">You did it! I didn’t think… I mean… Thank you. Seriously.</p>
+                <p class="script-dlg char-a">You did it! I didn’t think... I mean... Thank you. Seriously.</p>
 
                 <p class="script-char char-b">BECK</p>
-                <p class="script-dlg char-b">Yeah, well, I don’t work for free, and it’s, uh…</p>
+                <p class="script-dlg char-b">Yeah, well, I don’t work for free, and it’s, uh...</p>
 
                 <p class="script-action">Beck gestures at the darkness surrounding them. Tommy sheepishly pats his body as if searching for a missing wallet.</p>
 
                 <p class="script-char char-a">TOMMY</p>
-                <p class="script-dlg char-a">I, uh… didn’t pack much, so I don’t really…</p>
+                <p class="script-dlg char-a">I, uh... didn’t pack much, so I don’t really...</p>
 
                 <p class="script-char char-b">BECK</p>
                 <p class="script-par char-b">(laughs)</p>
@@ -420,7 +501,7 @@
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(lighthearted)</p>
-                <p class="script-dlg char-a">So, uh… Late-night spy-hunting… Is that a regular thing for you? Not that I’m judging or anything…</p>
+                <p class="script-dlg char-a">So, uh... Late-night spy-hunting... Is that a regular thing for you? Not that I’m judging or anything...</p>
 
                 <p class="script-action">Beck looks slightly embarrassed.</p>
 
@@ -428,11 +509,11 @@
                 <p class="script-dlg char-b">Been running away every night for the past week.</p>
 
                 <p class="script-char char-b">BECK</p>
-                <p class="script-dlg char-b">But then it starts getting dark, and I’m actually kinda…</p>
+                <p class="script-dlg char-b">But then it starts getting dark, and I’m actually kinda...</p>
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(gentle disbelief)</p>
-                <p class="script-dlg char-a">…afraid of the dark?</p>
+                <p class="script-dlg char-a">...afraid of the dark?</p>
 
                 <p class="script-char char-b">BECK</p>
                 <p class="script-par char-b">(stubborn)</p>
@@ -451,7 +532,7 @@
 
                 <p class="script-char char-a">TOMMY</p>
                 <p class="script-par char-a">(joking)</p>
-                <p class="script-dlg char-a">Guess I need to step it up a notch, then…</p>
+                <p class="script-dlg char-a">Guess I need to step it up a notch, then...</p>
 
                 <p class="script-char char-b">BECK</p>
                 <p class="script-par char-b">(half-serious)</p>
