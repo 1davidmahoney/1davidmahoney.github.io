@@ -22,6 +22,21 @@ a:active {
     text-decoration: none; /* Optional: Remove underline if you prefer */
 }
 
+table {
+    max-width: 660px;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
 th {
     background-color: #000000;
     color: #f9f9f9;
