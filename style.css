@@ -286,6 +286,7 @@ figcaption {
 /* Styles for parenthetical directions */
 .script-par {
     font-style: italic;
+    font-size: 90%;
 }
 
 /* Styles for dialogue */
