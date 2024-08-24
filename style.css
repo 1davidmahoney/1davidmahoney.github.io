@@ -272,7 +272,8 @@ figcaption {
     color: red;
     text-align: center;
     margin: 0 auto;
-    padding: 0 100px
+    padding-left: calc(160 * ((100% - min(100%, 660px)) / 660));
+    padding-right: calc(160 * ((100% - min(100%, 660px)) / 660));
 }
 
 /* Character B (BECK) styles */
@@ -280,7 +281,8 @@ figcaption {
     color: blue;
     text-align: center;
     margin: 0 auto;
-    padding: 0 100px
+    padding-left: calc(160 * ((100% - min(100%, 660px)) / 660));
+    padding-right: calc(160 * ((100% - min(100%, 660px)) / 660));
 }
 
 /* Styles for parenthetical directions */
@@ -364,6 +366,11 @@ figcaption {
     .writing-script {
 		padding: 20px;
 	}
+    
+    .script-dlg {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 	
 /* Remove the image when viewport height is small (my old Samsung phone is 489px) */

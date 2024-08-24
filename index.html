@@ -9,6 +9,11 @@
 </head>
 <body>
 
+<div id="debug-text" style="position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px; font-family: Arial, sans-serif; z-index: 10000; text-align: center;">
+    Debug: Padding = <span id="padding-value"></span>
+</div>
+
+
     <header>
         <div class="logo-container">
             <div class="logo">David Mahoney</div>
@@ -470,5 +475,47 @@
     </div> <!-- content-wrapper -->
 
     <script src="scripts.js"></script>
+    
+    <script>
+    function updatePaddingDebug() {
+        const container = document.querySelector('.script-dlg');
+        const paddingValue = window.getComputedStyle(container).paddingLeft;
+
+        document.getElementById('padding-value').textContent = paddingValue;
+    }
+
+    // Initial calculation and display
+    updatePaddingDebug();
+
+    // Update the debug info when the window is resized
+    window.addEventListener('resize', updatePaddingDebug);
+    
+    
+  function updatePadding() {
+    const container = document.querySelector('.element');
+    const containerWidth = container.clientWidth;
+
+    // Calculate the padding such that it's 160px when the container is wide (above 660px)
+    // and decreases to 0px as the container width approaches 660px
+    let paddingValue = 160 * (1 - Math.max(0, (containerWidth - 660) / (1320 - 660)));
+
+    container.style.paddingLeft = `${paddingValue}px`;
+    container.style.paddingRight = `${paddingValue}px`;
+
+    // Update the debug text
+    document.getElementById('padding-value').textContent = `${paddingValue.toFixed(2)}px`;
+}
+
+// Initial calculation and display
+updatePadding();
+
+// Update the padding when the window is resized
+window.addEventListener('resize', updatePadding);
+
+
+    
+    
+    </script>
+    
 </body>
 </html>
