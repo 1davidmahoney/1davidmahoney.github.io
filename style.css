@@ -292,8 +292,7 @@ figcaption {
 .script-dlg {
     margin: 0 auto;
     max-width: 400px; /* Maximum width for the dialogue */
-    padding: 10px;
-    background-color: #f0f0f0;
+    padding: 10px 0;
     transition: margin 0.3s ease; /* Smooth transition for margin */
 }
 
