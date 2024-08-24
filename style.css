@@ -255,9 +255,10 @@ figcaption {
 
 .writing-script {
     font-family: 'Courier Prime', 'Courier New', monospace;
-    max-width: min(100%, 640px);
-    margin: 20px auto;
-    padding: min(10%, 80px);
+    max-width: 660px; /* Width of a typical piece of paper */
+    width: 100%; /* Allows the element to shrink with the viewport */
+    margin: 0 auto; /* Centers the writing-script element */
+    padding: 20px; /* Some padding around the text content */
     background-color: linen;
 }
 
@@ -272,8 +273,6 @@ figcaption {
     color: red;
     text-align: center;
     margin: 0 auto;
-    padding-left: calc(160 * ((100% - min(100%, 660px)) / 660));
-    padding-right: calc(160 * ((100% - min(100%, 660px)) / 660));
 }
 
 /* Character B (BECK) styles */
@@ -281,8 +280,6 @@ figcaption {
     color: blue;
     text-align: center;
     margin: 0 auto;
-    padding-left: calc(160 * ((100% - min(100%, 660px)) / 660));
-    padding-right: calc(160 * ((100% - min(100%, 660px)) / 660));
 }
 
 /* Styles for parenthetical directions */
@@ -292,6 +289,12 @@ figcaption {
 
 /* Styles for dialogue */
 .script-dlg {
+    max-width: 100%;
+    padding-left: clamp(0px, 10vw, 160px);
+    padding-right: clamp(0px, 10vw, 160px);
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
 }
 
 /* Styles for action description */
