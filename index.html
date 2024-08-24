@@ -489,30 +489,8 @@
 
     // Update the debug info when the window is resized
     window.addEventListener('resize', updatePaddingDebug);
+
     
-    
-  function updatePadding() {
-    const container = document.querySelector('.element');
-    const containerWidth = container.clientWidth;
-
-    // Calculate the padding such that it's 160px when the container is wide (above 660px)
-    // and decreases to 0px as the container width approaches 660px
-    let paddingValue = 160 * (1 - Math.max(0, (containerWidth - 660) / (1320 - 660)));
-
-    container.style.paddingLeft = `${paddingValue}px`;
-    container.style.paddingRight = `${paddingValue}px`;
-
-    // Update the debug text
-    document.getElementById('padding-value').textContent = `${paddingValue.toFixed(2)}px`;
-}
-
-// Initial calculation and display
-updatePadding();
-
-// Update the padding when the window is resized
-window.addEventListener('resize', updatePadding);
-
-
     
     
     </script>

@@ -289,12 +289,17 @@ figcaption {
 
 /* Styles for dialogue */
 .script-dlg {
-            --side-padding: 160px; /* Default large padding */
-            padding-left: var(--side-padding);
-            padding-right: var(--side-padding);
-            background-color: #fff;
-            color: #333;
-            border: 1px solid #ddd;
+    /* Dynamic padding that adjusts based on the width of the writing-script container */
+    padding-left: clamp(0px, calc((100% - 660px) / 2), 160px);
+    padding-right: clamp(0px, calc((100% - 660px) / 2), 160px);
+
+    /* Additional styles */
+    background-color: linen; /* Background color */
+    color: #333; /* Text color */
+    border: 1px solid #ddd; /* Border around the dialog */
+    margin: 0 auto; /* Center the element if necessary */
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's width */
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
 }
 
 /* Styles for action description */
