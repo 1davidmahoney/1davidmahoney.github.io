@@ -58,7 +58,7 @@ document.querySelectorAll('.grid-button').forEach(button => {
     });
 });
 
-document.querySelector('.back-button').addEventListener('click', function() {
+function handleBackButtonClick() {
     // Elements to fade out
     const pieceContents = document.querySelectorAll('.piece-content');
     const subtitle = document.querySelector('.subtitle');
@@ -105,7 +105,18 @@ document.querySelector('.back-button').addEventListener('click', function() {
             subtitle.style.opacity = '1';
         }, 10); // Brief delay to ensure visibility update before transition
     }, 500); // Match the timeout with the fade-out duration
-});
+}
+
+document.querySelector('.back-button').addEventListener('click', handleBackButtonClick);
+
+function handleEscapeKey(event) {
+    if (event.key === "Escape") {
+        // Your logic for the Escape key press
+        handleBackButtonClick(); // You can call the same function or handle it differently
+    }
+}
+
+document.addEventListener('keydown', handleEscapeKey);
 
 function adjustContentWrapperPadding() {
     const header = document.querySelector('header');
