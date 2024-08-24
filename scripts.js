@@ -62,7 +62,9 @@ document.querySelectorAll('.grid-button').forEach(button => {
     });
 });
 
-function handleBackButtonClick() {
+function returnHome() {
+    isButtonClicked = false;
+    
     // Elements to fade out
     const pieceContents = document.querySelectorAll('.piece-content');
     const subtitle = document.querySelector('.subtitle');
@@ -111,12 +113,12 @@ function handleBackButtonClick() {
     }, 500); // Match the timeout with the fade-out duration
 }
 
-document.querySelector('.back-button').addEventListener('click', handleBackButtonClick);
+document.querySelector('.back-button').addEventListener('click', returnHome);
 
 function handleEscapeKey(event) {
     if (event.key === "Escape" && isButtonClicked) {
         // Your logic for the Escape key press
-        handleBackButtonClick(); // You can call the same function or handle it differently
+        returnHome(); // You can call the same function or handle it differently
     }
 }
 
