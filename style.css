@@ -273,7 +273,8 @@ nav ul li a {
 
 figure {
     max-width: 100%;
-    margin: 20px auto; /* Center the figure if desired */
+    margin: 30px auto; /* Center the figure if desired */
+    text-align: center;
 }
 
 figure a img {

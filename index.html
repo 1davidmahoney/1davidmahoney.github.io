@@ -143,7 +143,7 @@
             <p>In the example level, light poles line the dock on which panicked civilians are gathering. The player uses the Superhero Puzzle System to overcharge and ignite the poles’ light bulbs, scaring the civilians away from the villain while simultaneously clearing a path toward him.</p>
             <p>The high-level challenge presented by the system is the identification of “good” versus “bad” poles under emotional and temporal constraints. Some poles are “sturdy,” able to be electrified until they burst into flames (“ignited”), thus scaring the civilians away toward safety. Other poles are “broken” and will fall apart upon ignition, possibly injuring nearby civilians and/or damaging nearby structures. Both pole types look deceptively similar, so the player must exercise caution to avoid mistakes.</p>
             
-            <figure style="text-align: center;">
+            <figure>
                 <a href="/images/portfolio/unreal/SHPS_OnePager.png" target="_blank" rel="noopener noreferrer">
                     <img src="/images/portfolio/unreal/SHPS_OnePager.png" alt="One-pager">
                 </a>
@@ -154,7 +154,7 @@
             <p>With each charge, electrical energy in the pole’s light bulb builds up and then dissipates.  If you’re in the mood to play in a more carefree way, you can <em>aggressively</em> spam the “interact” button (5-6 rapid presses) and simply wait for the bulb to be overcharged. Or, if you want to be slick and minimize your input, you can <em>methodically</em> wait until each charge peaks before starting another (just 3 well-timed button presses).</p>
             <p>Some poles are sturdy; some are broken. If you’re prioritizing your companion’s safety, you might use the system <em>aggressively</em>, with reckless abandon, as long as you reach your goal with haste. Or, if you’re prioritizing virtually everyone’s safety, you might take some time to <em>methodically</em> test the limitations of the system, looking for ways to help more people.</p>
 
-            <figure style="text-align: center;">
+            <figure>
                 <a href="/images/portfolio/unreal/SHPS_Map.png" target="_blank" rel="noopener noreferrer">
                     <img src="/images/portfolio/unreal/SHPS_Map.png" alt="Map">
                 </a>
@@ -164,14 +164,14 @@
             <h1>Development</h1>
             <p>One of the biggest challenges in building the system was the “charge” mechanic. Though the Timeline component is a handy feature of Unreal, it proved to be troublesome in this case because of its limitations. To have more control, I realized I’d have to take a more manual approach for easing between values (e.g., lights fading up and down). Fortunately, because more data was exposed, this manual approach made it easier to tune the system in script (Blueprints) and to set it up for in-editor tuning by a level designer (via public variables).</p>
 
-            <figure style="text-align: center;">
+            <figure>
                 <a href="/images/portfolio/unreal/SHPS_Blueprint.png" target="_blank" rel="noopener noreferrer">
                     <img src="/images/portfolio/unreal/SHPS_Blueprint.png" alt="Blueprint">
                 </a>
                 <figcaption>Blueprint that interpolates SFX &amp; VFX between user-defined min &amp; max values</figcaption>
             </figure>
 
-            <figure style="text-align: center;">
+            <figure>
                 <a href="/images/portfolio/unreal/SHPS_BlueprintProps.png" target="_blank" rel="noopener noreferrer">
                     <img src="/images/portfolio/unreal/SHPS_BlueprintProps.png" alt="Blueprint properties">
                 </a>
@@ -237,7 +237,7 @@
             <p>In many adventure-type games, when interacting with an NPC, I’ve often been jarred by a button-press that leads to an NPC’s action rather than my own. For example, <em>The Last of Us</em> handles dialog interactions fairly well by leading most of their resultant cinematic segments (i.e., acting) with a line/action from Joel (the player character, or “PC”); however, pressing the interaction button can also mean “Make Ellie talk,” which may make some players feel disconnected from the gameplay. In a more recent title, <em>Horizon Zero Dawn</em>, the transition into cinematic segments can be even more jarring, as pressing the interaction button could mean “Cut to a completely new camera angle; and also make the NPC talk.”</p>
             <p>To alleviate this issue, I’ve designed a slightly more complex, yet significantly more natural-feeling system—one modeled after the relatable concepts of personal space and situational awareness. With this system, a game may have more intuitive interactions by providing a simple, reasonable explanation as to why their resultant cinematics are led by the PC or by the NPC.</p>
             
-            <figure style="text-align: center;">
+            <figure>
                 <a href="/images/portfolio/systems/NaturalNPCInteractionSystem_Awareness.png" target="_blank" rel="noopener noreferrer">
                     <img src="/images/portfolio/systems/NaturalNPCInteractionSystem_Awareness.png" alt="Diagram">
                 </a>
@@ -246,7 +246,7 @@
             
             <p>Every NPC has an “awareness zone”; when the player enters it, interaction UI appears over the NPC’s head, indicating that the NPC is now aware of the player’s presence and is interactable—i.e., a button-press may now trigger a cinematic segment which is led by the PC speaking to / acting upon the NPC.</p>
             
-            <figure style="text-align: center;">
+            <figure>
                 <a href="/images/portfolio/systems/NaturalNPCInteractionSystem_Personal.png" target="_blank" rel="noopener noreferrer">
                     <img src="/images/portfolio/systems/NaturalNPCInteractionSystem_Personal.png" alt="Diagram">
                 </a>
