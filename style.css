@@ -24,9 +24,11 @@ a:active {
 
 hr {
     border: none;
-    height: 1px;
+    height: 2px;
     background-color: #ccc;
     width: 100%;
+    max-width: 61.8%
+    margin: 20px auto;
 }
 
 table {
