@@ -22,6 +22,13 @@ a:active {
     text-decoration: none; /* Optional: Remove underline if you prefer */
 }
 
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    width: 100%;
+}
+
 table {
     max-width: 660px;
     margin: 30px auto;
