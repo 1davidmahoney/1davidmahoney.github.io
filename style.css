@@ -24,7 +24,7 @@ a:active {
 
 table {
     max-width: 660px;
-    margin: 10px auto;
+    margin: 30px auto;
     border-collapse: collapse;
 }
 
@@ -40,6 +40,24 @@ th, td {
 th {
     background-color: #000000;
     color: #f9f9f9;
+    font-weight: normal;
+    border-color: white;
+    border-top: none; /* Remove borders */
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.interact-1 {
+    color: red;
+}
+
+.interact-2 {
+    color: green;
+}
+
+.interact-3 {
+    color: blue;
 }
 
 body, h1, h2, h3, p, ul, header, nav {
