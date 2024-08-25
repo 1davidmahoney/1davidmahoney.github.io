@@ -49,15 +49,11 @@ th {
 }
 
 .interact-1 {
-    color: red;
+    color: #61a630;
 }
 
 .interact-2 {
-    color: green;
-}
-
-.interact-3 {
-    color: blue;
+    color: #faa00f;
 }
 
 body, h1, h2, h3, p, ul, header, nav {
