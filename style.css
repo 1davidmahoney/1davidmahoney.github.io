@@ -400,7 +400,7 @@ figcaption {
     border: 8px solid rgba(255, 255, 255, 0.1);
     border-top-color: white;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
 
 @keyframes spin {
