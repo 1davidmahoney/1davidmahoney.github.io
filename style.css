@@ -308,7 +308,7 @@ figcaption {
 .figure-container figure {
     flex: 1;
     max-width: 350px;
-    margin: 0;
+	margin: 15px;
     box-sizing: border-box;
 }
 
@@ -443,7 +443,7 @@ figcaption {
     }
 
     .figure-container figure {
-        max-width: 100%;
+        max-width: 61.8%;
     }
 }
 	
@@ -464,5 +464,11 @@ figcaption {
 
     .grid-button .label {
         font-size: 8vw; /* Adjust the font size if necessary */
+    }
+}
+
+@media (max-width: 330px) {
+    .figure-container figure {
+        max-width: 100%;
     }
 }
