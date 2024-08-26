@@ -281,21 +281,18 @@ nav ul li a {
 }
 
 figure {
-    float: left; /* Align figures side by side */
-    width: 350px; /* Set the width for each figure */
-    margin: 0 15px; /* 15px on either side to create 30px gap between figures */
-    padding: 0; /* Remove default padding */
-    text-align: center; /* Center the content inside each figure */
-    box-sizing: border-box; /* Ensure padding/border is included in the width */
+    max-width: 100%;
+    margin: 30px auto; /* Center the figure if desired */
+    text-align: center;
 }
 
-figure img {
-    width: 100%; /* Make the image fill the figure's width */
-    height: auto; /* Maintain aspect ratio */
+figure a img {
+    width: min(100%, 700px);
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 figcaption {
-    margin-top: 10px; /* Add space between the image and caption */
     font-size: 90%;
     font-style: italic;
 }
