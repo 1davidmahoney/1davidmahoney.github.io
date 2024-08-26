@@ -307,9 +307,16 @@ figcaption {
 
 .figure-container figure {
     flex: 1;
-    max-width: 350px;
 	margin: 15px;
     box-sizing: border-box;
+}
+
+.figure-row-2 {
+    max-width: 350px;
+}
+
+.figure-row-3 {
+    max-width: 250px;
 }
 
 .figure-container img {
