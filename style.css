@@ -297,17 +297,6 @@ figcaption {
     font-style: italic;
 }
 
-.figure-container {
-    max-width: 730px; /* 2 x 350px figures + 30px gap between them */
-    margin: 0 auto; /* Center the container */
-    overflow: hidden; /* Clear floats within the container */
-}
-
-.floating-figure {
-    max-width: 61.8%; /* Ensures images shrink as the viewport shrinks */
-    flex: 1 1 auto; /* Allows images to grow and shrink equally */
-}
-
 .writing-script {
     font-family: 'Courier Prime', 'Courier New', monospace;
     width: 100%;
