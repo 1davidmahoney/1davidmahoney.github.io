@@ -438,7 +438,12 @@ figcaption {
 	}
     
     .figure-container {
-        flex-direction: column; /* Stacks images vertically when viewport is 660px or less */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .figure-container figure {
+        max-width: 100%;
     }
 }
 	
