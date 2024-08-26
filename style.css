@@ -297,6 +297,27 @@ figcaption {
     font-style: italic;
 }
 
+.figure-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.figure-container figure {
+    flex: 1;
+    max-width: 350px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.figure-container img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
 .writing-script {
     font-family: 'Courier Prime', 'Courier New', monospace;
     width: 100%;
