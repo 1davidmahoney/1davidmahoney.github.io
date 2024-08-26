@@ -451,6 +451,7 @@ figcaption {
 
     .figure-container figure {
         max-width: 61.8%;
+		margin: 15px auto;
     }
 }
 	
