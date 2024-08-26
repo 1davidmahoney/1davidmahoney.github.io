@@ -152,3 +152,8 @@ window.addEventListener('load', adjustContentWrapperPadding);
 
 // Run on window resize
 window.addEventListener('resize', adjustContentWrapperPadding);
+
+// Hide loading spinner when done loading.
+window.addEventListener('load', function() {
+    document.getElementById('loading').style.display = 'none';
+});
