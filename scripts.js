@@ -155,5 +155,9 @@ window.addEventListener('resize', adjustContentWrapperPadding);
 
 // Hide loading spinner when done loading.
 window.addEventListener('load', function() {
-    document.getElementById('loading').style.display = 'none';
+    const loadingScreen = document.getElementById('loading');
+    loadingScreen.style.opacity = '0';  // Start the fade-out transition
+    setTimeout(function() {
+        loadingScreen.style.display = 'none';  // Hide the element after the transition
+    }, 500); // Match this duration with the CSS transition duration
 });
