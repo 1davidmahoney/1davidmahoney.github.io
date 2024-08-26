@@ -153,7 +153,7 @@ window.addEventListener('load', adjustContentWrapperPadding);
 // Run on window resize
 window.addEventListener('resize', adjustContentWrapperPadding);
 
-// Hide loading screen when done loading.
+// Hide loading spinner when done loading.
 window.addEventListener('load', function() {
     const loadingScreen = document.getElementById('loading');
     loadingScreen.style.opacity = '0';  // Start the fade-out transition
@@ -161,39 +161,3 @@ window.addEventListener('load', function() {
         loadingScreen.style.display = 'none';  // Hide the element after the transition
     }, 500); // Match this duration with the CSS transition duration
 });
-
-document.onreadystatechange = function () {
-    if (document.readyState === "interactive") {
-        const total = document.querySelectorAll('*').length;
-        let loaded = 0;
-
-        const loadingScreen = document.getElementById('loading');
-        const progressBar = document.getElementById('progress-bar');
-        const loadingText = document.getElementById('loading-text');
-
-        document.querySelectorAll('*').forEach(function (element) {
-            if (element.complete) {
-                incrementProgress();
-            } else {
-                element.addEventListener('load', incrementProgress);
-                element.addEventListener('error', incrementProgress);
-            }
-        });
-
-        function incrementProgress() {
-            loaded++;
-            const percentage = Math.round((loaded / total) * 100);
-            progressBar.style.width = percentage + '%';
-            loadingText.textContent = percentage + '%';
-
-            if (loaded === total) {
-                setTimeout(() => {
-                    loadingScreen.style.opacity = '0';
-                    setTimeout(() => {
-                        loadingScreen.style.display = 'none';
-                    }, 500);
-                }, 500);
-            }
-        }
-    }
-};
