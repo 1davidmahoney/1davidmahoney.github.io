@@ -401,12 +401,11 @@ figcaption {
     border-top-color: white;
     border-radius: 50%;
     animation: spin 1s linear infinite;
-    animation-fill-mode: forwards; /* Keeps the end state of the animation */
 }
 
 @keyframes spin {
     to {
-        transform: rotate(300deg);
+        transform: rotate(360deg);
     }
 }
 
