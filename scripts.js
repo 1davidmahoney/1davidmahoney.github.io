@@ -1,10 +1,10 @@
-let isButtonClicked = false;
+let isButtonClicked = false; // For allowing/disallowing ESC key.
 
 document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
         
-        isButtonClicked = true;
+        isButtonClicked = true; // For allowing/disallowing ESC key.
 
         // Get the project ID from the button's data attribute
         const projectId = this.getAttribute('data-project-id');
@@ -63,7 +63,7 @@ document.querySelectorAll('.grid-button').forEach(button => {
 });
 
 function returnHome() {
-    isButtonClicked = false;
+    isButtonClicked = false; // For allowing/disallowing ESC key.
     
     // Elements to fade out
     const pieceContents = document.querySelectorAll('.piece-content');
