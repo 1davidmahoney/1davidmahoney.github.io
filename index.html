@@ -90,21 +90,16 @@
             </ul>
             
             <h2>Contact form</h2>
-            <form action="contact.php" method="POST">
-                <p><span style="color: red;">* Required</span></p>
-
+            <form action="https://formspree.io/f/xldrznng" method="POST">
+                <p>* Required</p>
             
-                <label for="name">Name<span style="color: red;">*</span>:</label>
-                <input type="text" id="name" name="name" required><br>
+                <input type="text" id="name" name="name" placeholder="Name*" required>
 
-                <label for="email">Email<span style="color: red;">*</span>:</label>
-                <input type="email" id="email" name="email" required><br>
+                <input type="email" id="email" name="email" placeholder="Email*" required>
 
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject"><br>
+                <input type="text" id="subject" name="subject" placeholder="Subject (optional)">
 
-                <label for="message">Message<span style="color: red;">*</span>:</label>
-                <textarea id="message" name="message" required></textarea><br>
+                <textarea id="message" name="message" placeholder="Message*" required></textarea>
 
                 <button type="submit">Send Message</button>
             </form>
