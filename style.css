@@ -260,6 +260,14 @@ nav ul li a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
+.profile-image {
+    width: 250px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: left;
+}
+
 .piece-text {
     flex: 1;
     font-size: 16px;
@@ -466,6 +474,7 @@ figcaption {
     .piece-content {
         padding: 30px;
     }
+    
 	.piece-image {
 		float:none;
 		width: 100%;
@@ -511,6 +520,12 @@ figcaption {
 
     .grid-button .label {
         font-size: 8vw; /* Adjust the font size if necessary */
+    }
+}
+
+@media (max-width: 350px) {
+    .profile-image {
+        max-width:100%;
     }
 }
 
