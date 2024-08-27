@@ -81,6 +81,7 @@
         </div>
 
         <div id="contact-content" class="piece-content" style="display: none;">
+            <img src="/images/contact/contact.png" alt="Contact image" class="piece-image">
         
             <h1>Let's talk!</h1>
             <p>Please use one of the following methods to get in touch:</p>
@@ -89,9 +90,11 @@
                 <li><a href="https://www.linkedin.com/in/david-mahoney" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
             
+            <div style="clear: both;"></div> <!-- This div clears the float (piece-image) -->
+            
             <h2>Contact form</h2>
             <form id="contactForm" action="https://formspree.io/f/xldrznng" method="POST">
-                <p>* Required</p>
+                <p><em>* Required</em></p>
                 
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Name*" required>
