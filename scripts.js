@@ -83,6 +83,7 @@ document.getElementById('contact-shortcut').addEventListener('click', function(e
     event.preventDefault(); // Prevent default click behavior
     
     // Elements to fade out
+    const aboutContent = document.getElementById('aboutme-content');
     const subtitle = document.querySelector('.subtitle');
     
     
@@ -90,11 +91,15 @@ document.getElementById('contact-shortcut').addEventListener('click', function(e
     const pieceContent = document.getElementById('contact-content');
 
     // Fade out the current elements
+    aboutContent.style.opacity = '0';
+    aboutContent.style.transition = 'opacity 0.5s ease';
     subtitle.style.opacity = '0';
     subtitle.style.transition = 'opacity 0.5s ease';
 
     // After the fade-out, update content and fade in the new elements
     setTimeout(() => {
+        
+        aboutContent.style.display = 'none';
         
         // Update the subtitle text
         subtitle.textContent = "Contact";
