@@ -236,9 +236,12 @@ function returnHome() {
             subtitle.style.opacity = '1';
         }, 10); // Brief delay to ensure visibility update before transition
     }, 500); // Match the timeout with the fade-out duration
+    
+    document.querySelector('.logo').removeEventListener('click', returnHome);
 }
 
 document.querySelector('.back-button').addEventListener('click', returnHome);
+document.querySelector('.logo').addEventListener('click', returnHome);
 
 function handleEscapeKey(event) {
     if (event.key === "Escape" && isButtonClicked) {
