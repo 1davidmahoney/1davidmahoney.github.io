@@ -73,6 +73,11 @@ function goToNonPieceContent(event) {
             backButton.style.opacity = '1';
         }, 10); // Brief delay to ensure the display updates before transitioning
     }, 500); // Match the timeout with the fade-out duration
+    
+    // Click my name to return home.
+    var logoElement = document.querySelector('.logo');
+    logoElement.addEventListener('click', returnHome);
+    logoElement.style.cursor = 'pointer';
 }
 
 document.getElementById('aboutme-button').addEventListener('click', goToNonPieceContent);
@@ -184,6 +189,11 @@ document.querySelectorAll('.grid-button').forEach(button => {
                 backButton.style.opacity = '1';
             }, 10); // Brief delay to ensure the display updates before transitioning
         }, 500); // Match the timeout with the fade-out duration
+        
+        // Click my name to return home.
+        var logoElement = document.querySelector('.logo');
+        logoElement.addEventListener('click', returnHome);
+        logoElement.style.cursor = 'pointer';
     });
 });
 
@@ -237,11 +247,13 @@ function returnHome() {
         }, 10); // Brief delay to ensure visibility update before transition
     }, 500); // Match the timeout with the fade-out duration
     
-    document.querySelector('.logo').removeEventListener('click', returnHome);
+    // No longer click my name to return home.
+    var logoElement = document.querySelector('.logo');
+    logoElement.removeEventListener('click', returnHome);
+    logoElement.style.cursor = '';
 }
 
 document.querySelector('.back-button').addEventListener('click', returnHome);
-document.querySelector('.logo').addEventListener('click', returnHome);
 
 function handleEscapeKey(event) {
     if (event.key === "Escape" && isButtonClicked) {
