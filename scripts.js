@@ -78,6 +78,48 @@ function goToNonPieceContent(event) {
 document.getElementById('aboutme-button').addEventListener('click', goToNonPieceContent);
 document.getElementById('contact-button').addEventListener('click', goToNonPieceContent);
 
+// Trimmed down version of other functions.
+document.getElementById('contact-shortcut').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default click behavior
+    
+    // Elements to fade out
+    const subtitle = document.querySelector('.subtitle');
+    
+    
+    // Determine the content to show based on the clicked button's ID
+    const pieceContent = document.getElementById('contact-content');
+
+    // Fade out the current elements
+    subtitle.style.opacity = '0';
+    subtitle.style.transition = 'opacity 0.5s ease';
+
+    // After the fade-out, update content and fade in the new elements
+    setTimeout(() => {
+        
+        // Update the subtitle text
+        subtitle.textContent = "Contact";
+
+        // Show the piece content
+        pieceContent.style.display = 'block';
+
+        // Ensure opacity is 0 before transition
+        pieceContent.style.opacity = '0';
+        subtitle.style.opacity = '0';
+        
+        window.scrollTo(0, 0); // Scroll to the top of the page
+        setTimeout(adjustContentWrapperPadding, 10);
+
+        // Fade in the new elements
+        setTimeout(() => {
+            pieceContent.style.transition = 'opacity 0.5s ease';
+            subtitle.style.transition = 'opacity 0.5s ease';
+
+            pieceContent.style.opacity = '1';
+            subtitle.style.opacity = '1';
+        }, 10); // Brief delay to ensure the display updates before transitioning
+    }, 500); // Match the timeout with the fade-out duration
+});
+
 document.querySelectorAll('.grid-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default click behavior
