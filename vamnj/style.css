@@ -13,28 +13,28 @@ header, footer {
 .splish-left, .splish-right {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Ensure spacing between the image and text */
     padding: 20px;
     border-bottom: 1px solid #ccc;
 }
 
 .splish-left img, .splish-right img {
-    max-width: 600px;
-    max-height: 400px;
-    width: 100%;
-    height: auto;
+    width: 600px; /* Fixed width for the image */
+    height: 400px; /* Fixed height for the image */
 }
 
 .splish-left .content, .splish-right .content {
-    flex: 1;
+    flex: 1; /* Allows the text to take up the remaining space */
     padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .splish-left {
-    flex-direction: row;
+    flex-direction: row; /* Image on the left, text on the right */
 }
 
 .splish-right {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Text on the left, image on the right */
 }
 
 .splish-left h1, .splish-right h1 {
