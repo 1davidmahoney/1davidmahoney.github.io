@@ -1,103 +1,34 @@
-/* Reset some basic styles */
-body, h1, h2, h3, p, ul, header, nav {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    color: #fff;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.logo-container {
-    display: flex;
-    flex-direction: row; /* Display the two divs side by side */
-    align-items: center;
-    flex-grow: 1;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left;
-    margin-right: 10px; /* Space between the two divs in row layout */
-}
-
-.subtitle {
-    font-size: 16px;
-    margin-left: 10px;
-    color: #ccc; /* Optional: lighter color for the subtitle */
-}
-
-nav {
-    margin-left: auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    margin-left: 20px;
+section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+section img {
+    max-width: 600px;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+section .content {
+    flex: 1;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+section p {
+    margin-top: 10px;
     font-size: 16px;
-    padding: 8px 12px;
-    border: 2px solid transparent;
-    border-radius: 4px;
-    transition: background-color 0.3s, border 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    border: 2px solid #fff;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .logo-container {
-        flex-direction: column; /* Stack the divs vertically on smaller screens */
-        align-items: flex-start; /* Align them to the left */
-    }
-
-    .subtitle {
-        margin-left: 0; /* Remove left margin when stacked vertically */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack the navigation items vertically */
-        align-items: flex-start; /* Align them to the left */
-        margin-top: 10px; /* Add some space above the buttons when stacked */
-    }
-
-    nav ul li {
-        margin-left: 0; /* Remove left margin when stacked */
-        margin-bottom: 10px; /* Add space between stacked items */
-    }
-
-    nav ul li a {
-		padding: 0px; /* Avoid "about me" word-wrapping when screen certain small width (e.g., my Samsung phone). */
-	}
-
-    nav ul li:last-child {
-        margin-bottom: 0; /* Remove margin from the last item */
-    }
 }
