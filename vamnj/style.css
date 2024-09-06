@@ -14,6 +14,8 @@ header, footer {
     display: flex;
     align-items: center;
     padding: 20px;
+    max-width: 1200px; /* Set the maximum width for the sections */
+    margin: 0 auto; /* Center the sections horizontally */
     border-bottom: 1px solid #ccc;
 }
 
@@ -33,7 +35,7 @@ header, footer {
 }
 
 .splish-right {
-    flex-direction: row; /* Fixes the issue by not reversing the layout */
+    flex-direction: row; /* Keep normal direction */
 }
 
 .splish-right img {
@@ -57,6 +59,8 @@ header, footer {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    max-width: 1200px; /* Set the maximum width for the 3-column section */
+    margin: 0 auto; /* Center the section horizontally */
     border-bottom: 1px solid #ccc;
 }
 
@@ -65,8 +69,8 @@ header, footer {
 }
 
 .split-3 img {
-    max-width: 450px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 150px;
     width: 100%;
     height: auto;
 }
