@@ -18,9 +18,9 @@ footer {
     border-top: 1px solid #ccc;
 }
 
-body h1 {
+.shout {
     text-align: center;
-    margin: 0 auto;
+    font-style: italic;
 }
 
 .splish-left, .splish-right {
