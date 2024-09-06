@@ -18,6 +18,11 @@ footer {
     border-top: 1px solid #ccc;
 }
 
+body h1 {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .splish-left, .splish-right {
     display: flex;
     align-items: center;
