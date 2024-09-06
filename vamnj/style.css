@@ -4,31 +4,73 @@ body {
     padding: 0;
 }
 
-section {
+header, footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+.splish-left, .splish-right {
     display: flex;
     align-items: center;
     padding: 20px;
     border-bottom: 1px solid #ccc;
 }
 
-section img {
+.splish-left img, .splish-right img {
     max-width: 600px;
     max-height: 400px;
     width: 100%;
     height: auto;
-    margin-right: 20px;
 }
 
-section .content {
+.splish-left .content, .splish-right .content {
     flex: 1;
+    padding: 20px;
 }
 
-section h2 {
+.splish-left {
+    flex-direction: row;
+}
+
+.splish-right {
+    flex-direction: row-reverse;
+}
+
+.splish-left h1, .splish-right h1 {
+    font-size: 28px;
     margin-top: 0;
-    font-size: 24px;
 }
 
-section p {
-    margin-top: 10px;
+.splish-left p, .splish-right p {
     font-size: 16px;
+}
+
+.split-3 {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.split-3 .column {
+    text-align: center;
+}
+
+.split-3 img {
+    max-width: 250px;
+    max-height: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.split-3 h2 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
 }
