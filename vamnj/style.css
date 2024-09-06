@@ -13,7 +13,6 @@ header, footer {
 .splish-left, .splish-right {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensure spacing between the image and text */
     padding: 20px;
     border-bottom: 1px solid #ccc;
 }
@@ -26,7 +25,7 @@ header, footer {
 .splish-left .content, .splish-right .content {
     flex: 1; /* Allows the text to take up the remaining space */
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-sizing: border-box;
 }
 
 .splish-left {
@@ -34,7 +33,15 @@ header, footer {
 }
 
 .splish-right {
-    flex-direction: row-reverse; /* Text on the left, image on the right */
+    flex-direction: row; /* Fixes the issue by not reversing the layout */
+}
+
+.splish-right img {
+    order: 2; /* Moves the image to the right */
+}
+
+.splish-right .content {
+    order: 1; /* Moves the text to the left */
 }
 
 .splish-left h1, .splish-right h1 {
