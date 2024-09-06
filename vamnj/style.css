@@ -10,6 +10,14 @@ header, footer {
     padding: 20px;
 }
 
+header {
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+}
+
 .splish-left, .splish-right {
     display: flex;
     align-items: center;
@@ -76,11 +84,4 @@ header, footer {
 .split-3 h2 {
     font-size: 22px;
     margin-top: 10px;
-}
-
-footer {
-    border-top: 1px solid #ccc;
-    background-color: #ffdfa6;
-    padding: 20px;
-    text-align: center;
 }
