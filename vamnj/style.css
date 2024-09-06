@@ -16,7 +16,6 @@ header, footer {
     padding: 20px;
     max-width: 1200px; /* Set the maximum width for the sections */
     margin: 0 auto; /* Center the sections horizontally */
-    border-bottom: 1px solid #ccc;
 }
 
 .splish-left img, .splish-right img {
@@ -61,7 +60,6 @@ header, footer {
     padding: 20px;
     max-width: 1200px; /* Set the maximum width for the 3-column section */
     margin: 0 auto; /* Center the section horizontally */
-    border-bottom: 1px solid #ccc;
 }
 
 .split-3 .column {
@@ -81,6 +79,7 @@ header, footer {
 }
 
 footer {
+    border-top: 1px solid #ccc;
     background-color: #ffdfa6;
     padding: 20px;
     text-align: center;
