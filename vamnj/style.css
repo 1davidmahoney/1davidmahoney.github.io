@@ -123,8 +123,8 @@ footer {
 
 #debug { /* Viewport size */
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
