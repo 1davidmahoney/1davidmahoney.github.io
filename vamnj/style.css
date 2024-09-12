@@ -117,6 +117,22 @@ footer {
     margin-top: 10px;
 }
 
+/*****************************************************************************/
+/* DEBUG *********************************************************************/
+/*****************************************************************************/
+
+#debug { /* Viewport size */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 0 10px;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+}
+
 /* Breakpoints -- This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
 @media (min-width: 768px) { /* Tablet */
     
