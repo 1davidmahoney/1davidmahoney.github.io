@@ -52,8 +52,10 @@ footer {
 }
 
 .splish-left img, .splish-right img {
-    width: 600px; /* Fixed width for the image */
-    height: 400px; /* Fixed height for the image */
+    max-width: 600px; /* Fixed width for the image */
+    max-height: 400px; /* Fixed height for the image */
+    width: 61.8%;
+    height: auto;
 }
 
 .splish-left .content, .splish-right .content {
