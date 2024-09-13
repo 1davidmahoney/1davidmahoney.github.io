@@ -81,12 +81,12 @@ footer {
 }
 
 .splish-left h1, .splish-right h1 {
-    font-size: 64px;
+    font-size: 5vw;/*64px;*/
     margin-top: 0;
 }
 
 .splish-left h2, .splish-right h2 {
-    font-size: 28px;
+    font-size: 4vw;
     margin-top: 0;
 }
 
