@@ -1,3 +1,7 @@
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -81,17 +85,17 @@ footer {
 }
 
 .splish-left h1, .splish-right h1 {
-    font-size: 5vw;/*64px;*/
+    font-size: 4rem;/*x 16 = 64px*/
     margin-top: 0;
 }
 
 .splish-left h2, .splish-right h2 {
-    font-size: 4vw;
+    font-size: 3rem;/*x 16 = 48px*/
     margin-top: 0;
 }
 
 .splish-left p, .splish-right p {
-    font-size: 16px;
+    font-size: 1rem;/*x 16 = 16px*/
 }
 
 /* 3-col row / 3-row col, depending on screen size. */
@@ -115,7 +119,7 @@ footer {
 }
 
 .split-3 h2 {
-    font-size: 22px;
+    font-size: 1.372rem;/*x 16 = 22px*/
     margin-top: 10px;
 }
 
@@ -136,6 +140,10 @@ footer {
 }
 
 /* Breakpoints -- This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
+@media (min-width: 600px) { /* Tablet */
+    
+}
+
 @media (min-width: 768px) { /* Tablet */
     
 }
@@ -144,3 +152,6 @@ footer {
     
 }
 
+@media (min-width: 1200px) { /* Desktop */
+    
+}
