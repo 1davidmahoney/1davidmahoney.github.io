@@ -63,7 +63,7 @@ footer {
 }
 
 /* Mobile-first: Stack image above text by default */
-.splish-left, .splish-right {
+.splash-left, .splash-right {
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     align-items: center;
@@ -72,46 +72,52 @@ footer {
     margin: 0 auto;
 }
 
-.splish-left img, .splish-right img {
+.splash-left img, .splash-right img {
     max-width: 100%; /* Make the image responsive */
     height: auto;
 }
 
-.splish-left .content, .splish-right .content {
+.splash-left .content, .splash-right .content {
     padding: 20px;
     text-align: center;
 }
 
-.splish-left h1, .splish-right h1 {
+.splash-left h1, .splash-right h1 {
     margin-top: 0;
 }
 
-.splish-left h2, .splish-right h2 {
+.splash-left h2, .splash-right h2 {
     margin-top: 0;
 } 
 
-/* 3-col row / 3-row col, depending on screen size. */
-.split-3 {
+/* Mobile-first: 3-row column with image to the left of label text */
+.splish-3 {
     display: flex;
+    flex-direction: column; /* Stack images and text vertically */
     justify-content: space-around;
+    align-items: flex-start;
     padding: 20px;
-    max-width: 1200px; /* Set the maximum width for the 3-column section */
-    margin: 0 auto; /* Center the section horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.split-3 .column {
-    text-align: center;
+.splish-3 .splish {
+    display: flex;
+    flex-direction: row; /* Image on the left, text on the right */
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.split-3 img {
-    max-width: 350px;
-    max-height: 250px;
+.splish-3 img {
+    max-width: 50px;
+    max-height: 50px;
     width: 100%;
     height: auto;
+    margin-right: 10px; /* Space between image and text */
 }
 
-.split-3 h2 {
-    margin-top: 10px;
+.splish-3 h2 {
+    margin-top: 0; /* Ensure text stays aligned with image */
 }
 
 /*****************************************************************************/
@@ -132,20 +138,39 @@ footer {
 
 /* Breakpoints -- This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
 @media (min-width: 600px) { /* Tablet */
-    .splish-left {
+    .splash-left {
         flex-direction: row; /* Image on the left, text on the right */
     }
 
-    .splish-right {
+    .splash-right {
         flex-direction: row-reverse; /* Text on the left, image on the right */
     }
 
-    .splish-left .content, .splish-right .content {
+    .splash-left .content, .splash-right .content {
         text-align: left;
     }
 
-    .splish-left img, .splish-right img {
+    .splash-left img, .splash-right img {
         max-width: 600px;
+    }
+    
+    .splish-3 {
+        flex-direction: row; /* Switch to row layout */
+    }
+
+    .splish-3 .splish {
+        flex-direction: column; /* Stack image above text */
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .splish-3 img {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between image and text */
+    }
+
+    .splish-3 h2 {
+        margin-top: 10px;
     }
 }
 
