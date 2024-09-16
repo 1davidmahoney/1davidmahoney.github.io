@@ -6,13 +6,13 @@ html {
 }
 
 body {
-    font-family: "Lora", "Times New Roman", serif;
+    font-family: "Poetsen One", "Arial", san-serif;
     margin: 0;
     padding: 0;
 }
 
 h2 {
-    font-family: "Poetsen One", "Arial", san-serif;
+    font-family: "Lora", "Times New Roman", serif;
 }
 
 header, footer {
@@ -54,25 +54,24 @@ footer {
 }
 
 /* Big image & text, but not quite big enough as "splash" level. */
+/* Mobile-first: Stack image above text by default */
 .splish-left, .splish-right {
     display: flex;
+    flex-direction: column; /* Stack image and text vertically */
     align-items: center;
     padding: 20px;
-    max-width: 1200px; /* Set the maximum width for the sections */
-    margin: 0 auto; /* Center the sections horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .splish-left img, .splish-right img {
-    max-width: 600px; /* Fixed width for the image */
-    max-height: 400px; /* Fixed height for the image */
-    width: 61.8%;
+    max-width: 100%; /* Make the image responsive */
     height: auto;
 }
 
 .splish-left .content, .splish-right .content {
-    flex: 1; /* Allows the text to take up the remaining space */
     padding: 20px;
-    box-sizing: border-box;
+    text-align: center;
 }
 
 .splish-left {
@@ -148,7 +147,21 @@ footer {
 
 /* Breakpoints -- This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
 @media (min-width: 600px) { /* Tablet */
-    
+    .splish-left {
+        flex-direction: row; /* Image on the left, text on the right */
+    }
+
+    .splish-right {
+        flex-direction: row-reverse; /* Text on the left, image on the right */
+    }
+
+    .splish-left .content, .splish-right .content {
+        text-align: left;
+    }
+
+    .splish-left img, .splish-right img {
+        max-width: 600px;
+    }
 }
 
 @media (min-width: 768px) { /* Tablet */
