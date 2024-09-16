@@ -74,22 +74,6 @@ footer {
     text-align: center;
 }
 
-.splish-left {
-    flex-direction: row; /* Image on the left, text on the right */
-}
-
-.splish-right {
-    flex-direction: row; /* Keep normal direction */
-}
-
-.splish-right img {
-    order: 2; /* Moves the image to the right */
-}
-
-.splish-right .content {
-    order: 1; /* Moves the text to the left */
-}
-
 .splish-left h1, .splish-right h1 {
     font-size: 4rem;/*x 16 = 64px*/
     margin-top: 0;
