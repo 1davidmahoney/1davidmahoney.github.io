@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
 html {
     font-size: 16px;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Lora", "Times New Roman", serif;
     margin: 0;
     padding: 0;
+}
+
+h2 {
+    font-family: "Poetsen One", "Arial", san-serif;
 }
 
 header, footer {
