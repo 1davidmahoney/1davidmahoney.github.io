@@ -11,8 +11,17 @@ body {
     padding: 0;
 }
 
+h1 {
+    font-size: 2rem;/*x 16 = 32px*/
+}
+
 h2 {
+    font-size: 1.3rem;/*x 16 = 20.8px*/
     font-family: "Lora", "Times New Roman", serif;
+} 
+
+p{
+    font-size: 1rem;/*x 16 = 16px*/
 }
 
 header, footer {
@@ -53,7 +62,6 @@ footer {
     font-style: italic;
 }
 
-/* Big image & text, but not quite big enough as "splash" level. */
 /* Mobile-first: Stack image above text by default */
 .splish-left, .splish-right {
     display: flex;
@@ -75,18 +83,12 @@ footer {
 }
 
 .splish-left h1, .splish-right h1 {
-    font-size: 4rem;/*x 16 = 64px*/
     margin-top: 0;
 }
 
 .splish-left h2, .splish-right h2 {
-    font-size: 3rem;/*x 16 = 48px*/
     margin-top: 0;
-}
-
-.splish-left p, .splish-right p {
-    font-size: 1rem;/*x 16 = 16px*/
-}
+} 
 
 /* 3-col row / 3-row col, depending on screen size. */
 .split-3 {
@@ -109,7 +111,6 @@ footer {
 }
 
 .split-3 h2 {
-    font-size: 1.372rem;/*x 16 = 22px*/
     margin-top: 10px;
 }
 
