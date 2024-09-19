@@ -37,6 +37,8 @@ header {
 }
 
 header img {
+    height: 64px;
+    width: auto; /* This will maintain the aspect ratio */
     display: block;
     margin: 0 auto; /* Ensures the image is centered */
 }
