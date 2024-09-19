@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
 html {
@@ -6,18 +7,18 @@ html {
 }
 
 body {
-    font-family: "Poetsen One", "Arial", san-serif;
+    font-family: "Lexend Deca", "Arial", san-serif;
     margin: 0;
     padding: 0;
 }
 
 h1 {
+    font-family: "Poetsen One", "Arial", san-serif;
     font-size: 2rem;/*x 16 = 32px*/
 }
 
 h2 {
     font-size: 1.3rem;/*x 16 = 20.8px*/
-    font-family: "Lora", "Times New Roman", serif;
 } 
 
 p{
@@ -25,13 +26,19 @@ p{
 }
 
 header, footer {
-    background-color: #ffdfa6;
+    background-color: #e8b878;
     text-align: center;
     padding: 16px;
 }
 
 header {
+    position: relative;
     border-bottom: 1px solid #ccc;
+}
+
+header img {
+    display: block;
+    margin: 0 auto; /* Ensures the image is centered */
 }
 
 footer {
@@ -40,6 +47,10 @@ footer {
 
 /* Menu Button Styling */
 .menu-button {
+    position: absolute;
+    left: 16px; /* Sticks the menu button to the left */
+    top: 50%; /* Vertically centers the button */
+    transform: translateY(-50%); /* Adjusts the button to be perfectly centered vertically */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
