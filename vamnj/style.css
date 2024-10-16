@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 html {
     font-size: 16px;
 }
 
 body {
-    font-family: "Lexend Deca", "Arial", san-serif;
+    /*font-family: "Lexend Deca", "Arial", san-serif;*/
+    font-family: "Figtree", "Arial", san-serif;
     margin: 0;
     padding: 0;
     /*background: radial-gradient(circle at center, #e5f3ff, #fcf6e3, #ffebe5, #fcf6e3); /*Faint blue, gold, red, gold*/
@@ -15,14 +21,17 @@ body {
 }
 
 h1 {
-    font-family: "Poetsen One", "Arial", san-serif;
-    font-size: 2rem;/*x 16 = 32px*/
-    font-weight: 350;
+    /*font-family: "Poetsen One", "Arial", san-serif;*/
+    font-size: 2.4rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 12px;
 }
 
 h2 {
-    font-size: 1.2rem;/*x 16 = 19.2px*/
+    font-size: 1.5rem;
     font-weight: 300;
+    margin-bottom: 12px;
 } 
 
 p{
@@ -37,13 +46,13 @@ p{
 header, footer {
     background-color: #e8b67d;
     text-align: center;
-    padding: 16px;
+    padding: 8px 16px;
 }
 
 header {
     position: relative;
     border-bottom: 2px solid #b3834d;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);*/ /* Maybe bring back later and also add to footer. */
 }
 
 header img {
@@ -54,7 +63,8 @@ header img {
 }
 
 footer {
-    border-top: 1px solid #ccc;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid #b3834d;
 }
 
 /* Menu Button Styling */
@@ -96,9 +106,10 @@ footer {
     margin: 0 auto;
 }
 
-.splash-left img, .splash-right img {
+.splash-left img, .splash-right img, .body-img {
     max-width: 100%; /* Make the image responsive */
     height: auto;
+    display: block;
 }
 
 .splash-left .content, .splash-right .content {
