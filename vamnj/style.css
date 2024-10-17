@@ -17,7 +17,8 @@ body {
     margin: 0;
     padding: 0;
     /*background: radial-gradient(circle at center, #e5f3ff, #fcf6e3, #ffebe5, #fcf6e3); /*Faint blue, gold, red, gold*/
-    background: repeating-linear-gradient(to bottom, #fcf6e3, #fff, #ffebe5, #fcf6e3); /*Faint gold, white, red, gold*/
+    /*background: repeating-linear-gradient(to bottom, #fcf6e3, #fff, #ffebe5, #fcf6e3); /*Faint gold, white, red, gold*/
+    background: repeating-linear-gradient(to bottom, #fff4e6, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6, #fff4e6); /*Faint sand (2x), LH-red, car-blue, LH-red, sand (2x)*/
 }
 
 h1 {
@@ -88,7 +89,7 @@ header, footer {
 header {
     position: relative;
     border-bottom: 2px solid #b3834d;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3); /* Maybe bring back later and also add to footer. */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5); /* Prbly also add to footer. */
 }
 
 header img {
@@ -151,8 +152,7 @@ footer {
 
 .splash-img {
     margin-bottom: 1rem;
-    box-shadow: /*0 -5px 6px rgba(0, 0, 0, 0.4),  /* Shadow above */
-    0 5px 10px rgba(0, 0, 0, 0.5);   /* Shadow below */
+    box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.5); /* Shadow above and below */
 }
 
 .big-logo {
@@ -200,7 +200,7 @@ footer {
 }
 
 .splish-3 h2 {
-    margin-top: 0; /* Ensure text stays aligned with image */
+    margin: 0; /* Ensure text stays aligned with image */
 }
 
 .separator {
