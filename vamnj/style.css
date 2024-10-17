@@ -84,12 +84,17 @@ header, footer {
     background-color: #e8b67d;
     text-align: center;
     padding: 8px 16px;
+    transition: top 0.3s;
 }
 
 header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     border-bottom: 2px solid #b3834d;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5); /* Prbly also add to footer. */
+    z-index: 1000;
 }
 
 header img {
