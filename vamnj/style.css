@@ -32,15 +32,38 @@ h2 {
     font-weight: 300;
 } 
 
+.svg-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Ensure the container does not overflow */
+    box-sizing: border-box; /* Include padding and borders in width */
+    overflow: hidden; /* Prevents any overflow from children */
+}
+
+.svg-image {
+    width: 27%; /* Set the width relative to the container */
+    min-width: 20%; /* Seems to allow laurels to get small enough on small-width viewports -- e.g., 360px */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image does not overflow */
+    flex-shrink: 1; /* Allow the SVG to shrink if necessary */
+}
+
+.flipped {
+  transform: scaleX(-1); /* Flip the image horizontally */
+}
+
 .title-main {
-    font-size: 2.1rem;
+    white-space: nowrap; /* Prevent wrapping */
+    font-size: clamp(1.5rem, 7.5vw, 3rem); /* Shrinks or grows between 1.5rem and 3rem based on viewport width */
     margin: 0 auto;
 }
 
 .title-sub {
+    white-space: nowrap;
     font-size: 1.6rem;
     font-weight: 800;
-    margin: 0;
+    margin: 0 0.5rem;
 }
 
 .title-desc {
