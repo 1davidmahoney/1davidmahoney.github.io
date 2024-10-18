@@ -12,23 +12,23 @@ updateViewportSize(); // Initialize on page load
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 const headerHeight = header.offsetHeight;
-let isScrolling = false;
+let scrollUpDistance = 0;
+const scrollThreshold = 20; // Adjust the threshold as needed
 
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (!isScrolling) {
-        window.requestAnimationFrame(() => {
-            if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
-                // Scroll down past header height
-                header.style.top = '-100px';
-            } else if (scrollTop < lastScrollTop && scrollTop > 0) {
-                // Scroll up but not at the very top of the page
-                header.style.top = '0';
-            }
-            lastScrollTop = scrollTop;
-            isScrolling = false;
-        });
-        isScrolling = true;
+    
+    if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+        // User is scrolling down past the header height
+        header.style.top = '-82px';
+        scrollUpDistance = 0; // Reset the scroll-up distance
+    } else if (scrollTop < lastScrollTop) {
+        // User is scrolling up
+        scrollUpDistance += lastScrollTop - scrollTop;
+        if (scrollUpDistance > scrollThreshold) {
+            // Show the header only if scrolled up more than the threshold
+            header.style.top = '0';
+        }
     }
+    lastScrollTop = scrollTop;
 });
