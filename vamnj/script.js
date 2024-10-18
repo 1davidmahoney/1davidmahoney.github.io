@@ -13,7 +13,7 @@ let lastScrollTop = 0;
 const header = document.querySelector('header');
 const headerHeight = header.offsetHeight;
 let scrollUpDistance = 0;
-const scrollThreshold = 20; // Adjust the threshold as needed
+const scrollThreshold = 50; // Adjust the threshold as needed
 
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
