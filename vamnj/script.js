@@ -20,7 +20,7 @@ window.addEventListener('scroll', function() {
     
     if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
         // User is scrolling down past the header height
-        header.style.top = '-82px';
+        header.style.top = '-80px';
         scrollUpDistance = 0; // Reset the scroll-up distance
     } else if (scrollTop < lastScrollTop) {
         // User is scrolling up

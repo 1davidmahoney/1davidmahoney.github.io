@@ -33,6 +33,10 @@ h2 {
     font-weight: 300;
 } 
 
+.h1-center, .h2-center {
+    text-align: center;
+}
+
 .svg-text-container {
     display: flex;
     justify-content: center;
@@ -92,8 +96,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 2px solid #b3834d;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5); /* Prbly also add to footer. */
+    /*border-bottom: 2px solid #b3834d;*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
@@ -105,8 +109,8 @@ header img {
 }
 
 footer {
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-    border-top: 2px solid #b3834d;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);
+    /*border-top: 2px solid #b3834d;*/
     color: #916b3e;
 }
 
@@ -157,7 +161,8 @@ footer {
 
 .splash-img {
     margin-bottom: 1rem;
-    box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.5); /* Shadow above and below */
+    /*box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.5); /* Shadow above and below */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .big-logo {
@@ -167,6 +172,10 @@ footer {
 
 .splash-left .content, .splash-right .content {
     padding: 0 20px;
+    text-align: left;
+}
+
+.title-content {
     text-align: center;
 }
 
@@ -231,7 +240,11 @@ footer {
 }*/
 
 /* Breakpoints -- This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
-@media (min-width: 600px) { /* Tablet */
+@media (min-width: 600px) { /* Small landscape (phone) */
+    
+}
+
+@media (min-width: 768px) { /* Medium portrait (tablet) */
     .splash-left {
         flex-direction: row; /* Image on the left, text on the right */
     }
@@ -244,8 +257,8 @@ footer {
         text-align: left;
     }
 
-    .splash-left img, .splash-right img {
-        max-width: 600px;
+    .splash-img {
+        max-width: 52vw;
     }
     
     .splish-3 {
@@ -266,10 +279,14 @@ footer {
     .splish-3 h2 {
         margin-top: 10px;
     }
-}
-
-@media (min-width: 768px) { /* Tablet */
     
+    .title-desc {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .title-main {
+        font-size: clamp(1.5rem, 3.6vw, 3rem); /* Shrinks or grows between 1.5rem and 3rem based on viewport width */
+    }
 }
 
 @media (min-width: 1024px) { /* Desktop */
