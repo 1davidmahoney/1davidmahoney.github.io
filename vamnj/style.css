@@ -59,8 +59,8 @@ h2 {
 }
 
 .title-main {
-    white-space: nowrap; /* Prevent wrapping */
-    font-size: clamp(1.5rem, 7.5vw, 3rem); /* Shrinks or grows between 1.5rem and 3rem based on viewport width */
+    /*white-space: nowrap; /* Prevent wrapping */
+    font-size: clamp(2rem, 7.5vw, 3rem); /* Shrinks or grows between 1.5rem and 3rem based on viewport width */
     margin: 0 auto;
 }
 
@@ -176,6 +176,7 @@ footer {
 }
 
 .title-content {
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -284,8 +285,9 @@ footer {
         font-size: 1.3rem;
         text-align: center;
     }
+    
     .title-main {
-        font-size: clamp(1.5rem, 3.6vw, 3rem); /* Shrinks or grows between 1.5rem and 3rem based on viewport width */
+        font-size: clamp(2rem, 3.5vw, 3rem); /* Shrinks or grows between min and max based on viewport width */
     }
 }
 
