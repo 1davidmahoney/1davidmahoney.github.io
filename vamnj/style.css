@@ -11,58 +11,6 @@ body {
     background: repeating-linear-gradient(to bottom, #fff4e6, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6, #fff4e6); /*Faint sand (2x), LH-red, car-blue, LH-red, sand (2x)*/
 }
 
-h1 {
-    font-size: 1.7rem;
-    font-weight: 800;
-    font-style: italic;
-}
-
-h2 {
-    font-size: 1.2rem;
-    font-weight: 300;
-} 
-
-.h1-center, .h2-center {
-    text-align: center;
-}
-
-.svg-text-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%; /* Ensure the container does not overflow */
-    box-sizing: border-box; /* Include padding and borders in width */
-    overflow: hidden; /* Prevents any overflow from children */
-}
-
-.svg-image {
-    width: 27%; /* Set the width relative to the container */
-    min-width: 20%; /* Seems to allow laurels to get small enough on small-width viewports -- e.g., 360px */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure the image does not overflow */
-    flex-shrink: 1; /* Allow the SVG to shrink if necessary */
-}
-
-.flipped {
-  transform: scaleX(-1); /* Flip the image horizontally */
-}
-
-.title-main {
-    font-size: clamp(2rem, 7.5vw, 3rem); /* Shrinks or grows between 1.5rem and 3rem based on viewport width */
-    margin: 0 auto;
-}
-
-.title-sub {
-    white-space: nowrap;
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin: 0 0.5rem;
-}
-
-.title-desc {
-    font-size: 1.5rem;
-}
-
 p{
     font-size: 1rem;/*x 16 = 16px*/
 }
@@ -116,85 +64,17 @@ footer {
     background-color: #b3834d;
 }
 
-/* Big text in middle of page. Acts as separator. */
-.shout {
-    text-align: center;
-    font-style: italic;
-}
-
-/* Mobile-first: Stack image above text by default */
-.splash-left, .splash-right, .splosh {
-    display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto 7rem auto;
-}
-
-.splash-img, .body-img {
-    max-width: 100%; /* Make the image responsive */
-    height: auto;
-    display: block;
-}
-
-.splash-img {
-    margin-bottom: 1rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-}
-
-.big-logo {
-    max-width: 19rem;
-    margin: 0 auto 2rem auto;
-}
-
-.content {
-    padding: 0 20px;
-    text-align: left;
-}
-
-.title-content {
-    padding: 0 20px;
-    text-align: center;
-}
-
-.hcorner {
-    width: 62%;
-    box-shadow: none;
-    margin: 0;
-}
-
-/* Mobile-first: 3-row column with image to the left of label text */
-.splish-3 {
-    display: flex;
-    flex-direction: column; /* Stack images and text vertically */
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.splish-3 .splish {
-    display: flex;
-    flex-direction: row; /* Image on the left, text on the right */
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.splish-3 img {
-    max-width: 50px;
-    width: 100%;
-    height: auto;
-    margin-right: 10px; /* Space between image and text */
-}
-
-.splish-3 h2 {
-    margin: 0; /* Ensure text stays aligned with image */
-}
-
 .separator {
     width: 61.8%;
     margin: 1rem auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+.flipped {
+  transform: scaleX(-1); /* Flip the image horizontally */
 }
 
 /*****************************************************************************/
@@ -213,62 +93,3 @@ footer {
     font-family: Arial, sans-serif;
     z-index: 9999;
 }*/
-
-/* Breakpoints -- This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
-@media (min-width: 600px) { /* Small landscape (phone) */
-    
-}
-
-@media (min-width: 768px) { /* Medium portrait (tablet) */
-    .splash-left {
-        flex-direction: row; /* Image on the left, text on the right */
-    }
-
-    .splash-right {
-        flex-direction: row-reverse; /* Text on the left, image on the right */
-    }
-
-    .content {
-        text-align: left;
-    }
-
-    .splash-img {
-        max-width: 52vw;
-    }
-    
-    .splish-3 {
-        flex-direction: row; /* Switch to row layout */
-        padding: 0 100px;
-        gap: 40px;
-    }
-
-    .splish-3 .splish {
-        flex-direction: column; /* Stack image above text */
-        align-items: center;
-        max-width: 220px;
-    }
-
-    .splish-3 img {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px; /* Space between image and text */
-    }
-
-    .splish-3 h2 {
-        margin-top: 10px;
-        text-align: center;
-    }
-    
-    .title-desc {
-        font-size: 1.3rem;
-        text-align: center;
-    }
-    
-    .title-main {
-        font-size: clamp(1.7rem, 3.5vw, 3rem); /* Shrinks or grows between min and max based on viewport width */
-    }
-    
-    .hcorner {
-        width: 42%;
-    }
-}
