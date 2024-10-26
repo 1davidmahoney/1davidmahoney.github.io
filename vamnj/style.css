@@ -144,7 +144,7 @@ footer {
 }
 
 /* Mobile-first: Stack image above text by default */
-.splash-left, .splash-right {
+.splash-left, .splash-right, .splosh {
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     align-items: center;
@@ -170,7 +170,7 @@ footer {
     margin: 0 auto 2rem auto;
 }
 
-.splash-left .content, .splash-right .content {
+.content {
     padding: 0 20px;
     text-align: left;
 }
@@ -214,7 +214,6 @@ footer {
 
 .splish-3 img {
     max-width: 50px;
-    max-height: 50px;
     width: 100%;
     height: auto;
     margin-right: 10px; /* Space between image and text */
@@ -260,7 +259,7 @@ footer {
         flex-direction: row-reverse; /* Text on the left, image on the right */
     }
 
-    .splash-left .content, .splash-right .content {
+    .content {
         text-align: left;
     }
 
@@ -270,21 +269,26 @@ footer {
     
     .splish-3 {
         flex-direction: row; /* Switch to row layout */
+        padding: 0 100px;
+        gap: 40px;
     }
 
     .splish-3 .splish {
         flex-direction: column; /* Stack image above text */
         align-items: center;
-        margin-bottom: 0;
+        max-width: 220px;
+        /*margin-bottom: 0;*/
     }
 
     .splish-3 img {
+        max-width: 100%;
         margin-right: 0;
         margin-bottom: 10px; /* Space between image and text */
     }
 
     .splish-3 h2 {
         margin-top: 10px;
+        text-align: center;
     }
     
     .title-desc {
@@ -293,7 +297,7 @@ footer {
     }
     
     .title-main {
-        font-size: clamp(2rem, 3.5vw, 3rem); /* Shrinks or grows between min and max based on viewport width */
+        font-size: clamp(1.7rem, 3.5vw, 3rem); /* Shrinks or grows between min and max based on viewport width */
     }
     
     .hcorner {
