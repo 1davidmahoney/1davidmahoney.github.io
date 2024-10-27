@@ -124,6 +124,7 @@ h2 {
 }
 
 @media (min-width: 768px) { /* Medium portrait (tablet) */
+
     .splash-left {
         flex-direction: row; /* Image on the left, text on the right */
     }

@@ -1,3 +1,42 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure that the body will always cover the full height of the viewport. */
+}
+
+body { /* Relatively short page doesn't need so many BG colors, so just use one. */
+    background: #fff4e6; /*Faint sand*/
+    flex: 1;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 6px;
+}
+
+.p-visit {
+    font-style: italic;
+    margin-top: 0;
+}
+
+.container {
+    display: grid;
+    gap: 10px; /* spacing between items */
+    grid-template-columns: 1fr;
+    flex: 1;
+}
+
+.container-text {
+    padding: 1px 20px;
+}
+
+.container-bg {
+    background: #e5dccf; /* Darker sand */
+}
+
 .map iframe {
     width: 100%;
     height: 75vw;
@@ -13,8 +52,51 @@ li {
     padding-bottom: 6px;
 }
 
+.li-hours {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px; /* Adjust width as needed */    
+}
+
+.day {
+    padding-right: 10px; /* Optional, for extra spacing */
+}
+
+.hours {
+    text-align: right;
+}
+
 @media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    /* Two columns on the first row, three on the second */
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns in total */
+        grid-template-rows: auto auto; /* Two rows */
+    }
+
+    /* Place items in specific grid positions */
+    .container > :nth-child(1) { grid-column: 1 / 2; } /* A */
+    .container > :nth-child(2) { grid-column: 2 / 4; } /* B spans columns 2 and 3 */
+    .container > :nth-child(3) { grid-column: 1 / 2; grid-row: 2; } /* C */
+    .container > :nth-child(4) { grid-column: 2 / 3; grid-row: 2; } /* D */
+    .container > :nth-child(5) { grid-column: 3 / 4; grid-row: 2; } /* E */
+  
     .map iframe {
         height: 25vw;
     }
+    
+    ul {
+        padding-left: 1vw; /* responsive to viewport width */
+    }
+    
+    footer {
+        margin-top: auto;
+    }
+}
+
+@media (min-width: 1024px) { /* Medium landscape (tablet) */
+
+    ul {
+        padding-left: revert; /* responsive to viewport width */
+    }    
 }
