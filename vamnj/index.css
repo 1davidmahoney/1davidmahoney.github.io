@@ -119,9 +119,6 @@ h2 {
 }
 
 /* Breakpoints -- This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
-@media (min-width: 600px) { /* Small landscape (phone) */
-    
-}
 
 @media (min-width: 768px) { /* Medium portrait (tablet) */
 

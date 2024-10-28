@@ -99,7 +99,7 @@ li {
     }
 }
 
-@media (min-width: 1200px) { /* Large landscape (desktop/tablet) */
+@media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
 
     .container {
         padding: 0 15vw;
