@@ -53,7 +53,7 @@ h2 {
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     align-items: center;
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto 7rem auto;
 }
 
@@ -79,6 +79,7 @@ h2 {
 }
 
 .title-content {
+    margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 }
@@ -122,6 +123,14 @@ h2 {
 
 @media (min-width: 768px) { /* Medium portrait (tablet) */
 
+    body {
+        background: repeating-linear-gradient(to bottom, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6); /*Faint sand, LH-red, car-blue, LH-red, sand*/
+    }
+    
+    .splash-left, .splash-right {
+        justify-content: space-between;
+    }
+
     .splash-left {
         flex-direction: row; /* Image on the left, text on the right */
     }
@@ -131,6 +140,7 @@ h2 {
     }
 
     .splash-content {
+        padding: 0 4vw;
         text-align: left;
     }
 
@@ -172,5 +182,12 @@ h2 {
     
     .hcorner {
         width: 42%;
+    }
+}
+
+@media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
+
+    .splash-img {
+        max-width: 39vw;
     }
 }

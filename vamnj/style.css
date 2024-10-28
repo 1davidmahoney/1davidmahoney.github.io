@@ -47,6 +47,10 @@ footer {
     color: #916b3e;
 }
 
+.container {
+    padding: 0;
+}
+
 /* Menu Button Styling */
 .menu-button {
     position: absolute;
@@ -79,6 +83,17 @@ footer {
 
 .flipped {
   transform: scaleX(-1); /* Flip the image horizontally */
+}
+
+/*****************************************************************************/
+/* BREAKPOINTS ***************************************************************/
+/*****************************************************************************/
+
+@media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
+
+    .container {
+        padding: 0 15vw;
+    }
 }
 
 /*****************************************************************************/

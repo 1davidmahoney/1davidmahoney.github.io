@@ -101,10 +101,6 @@ li {
 
 @media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
 
-    .container {
-        padding: 0 15vw;
-    }
-    
     ul {
         padding-left: revert; /* responsive to viewport width */
     }    
