@@ -68,6 +68,7 @@ li {
 
 .hours {
     text-align: right;
+    white-space: nowrap;
 }
 
 @media (min-width: 768px) { /* Medium portrait (tablet) */
@@ -98,8 +99,12 @@ li {
     }
 }
 
-@media (min-width: 1024px) { /* Medium landscape (tablet) */
+@media (min-width: 1200px) { /* Large landscape (desktop/tablet) */
 
+    .container {
+        padding: 0 15vw;
+    }
+    
     ul {
         padding-left: revert; /* responsive to viewport width */
     }    

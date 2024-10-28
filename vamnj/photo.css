@@ -82,6 +82,7 @@ li {
 @media (min-width: 1024px) { /* Medium landscape (tablet) */
 
     .container {
+        padding: 0 15vw;
         grid-template-columns: 1fr 1fr; /* 2 equal-width columns */
         grid-auto-rows: auto; /* As many rows as needed, all with auto sizing */
     }
