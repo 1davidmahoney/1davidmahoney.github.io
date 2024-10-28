@@ -33,6 +33,10 @@ h2 {
     padding: 1px 20px;
 }
 
+.container-border {
+    border: 1px solid black;
+}
+
 .container-bg {
     background: #e5dccf; /* Darker sand */
 }
