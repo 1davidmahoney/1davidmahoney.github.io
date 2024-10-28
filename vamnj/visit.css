@@ -93,10 +93,6 @@ li {
     ul {
         padding-left: 1vw; /* responsive to viewport width */
     }
-    
-    footer {
-        margin-top: auto;
-    }
 }
 
 @media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
