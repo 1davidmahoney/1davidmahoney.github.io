@@ -37,6 +37,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    text-align: center;
 }
 
 .splash img {
@@ -58,9 +59,14 @@ footer {
     margin-top: 20px;
 }
 
-.body-img p {
+.body-img-src {
     font-size: 0.9rem;
     padding: 0 20px;
+}
+
+.body-img-caption {
+    padding: 0 20px;
+    margin-bottom: 0;
 }
 
 .navigation {
@@ -90,6 +96,7 @@ footer {
 
     .splash {
         flex-direction: row;
+        text-align: left;
     }
     
     .splash img {
