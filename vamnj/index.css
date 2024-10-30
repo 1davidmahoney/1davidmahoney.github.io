@@ -119,7 +119,9 @@ h2 {
     margin: 0; /* Ensure text stays aligned with image */
 }
 
-/* Breakpoints -- This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
+/*****************************************************************************/
+/* BREAKPOINTS ***************************************************************/
+/*****************************************************************************/
 
 @media (min-width: 768px) { /* Medium portrait (tablet) */
 

@@ -72,6 +72,12 @@ footer {
     background-color: #b3834d;
 }
 
+.speech {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
 .separator {
     width: 61.8%;
     margin: 1rem auto;
@@ -89,9 +95,19 @@ footer {
     font-style: italic;
 }
 
+.bolded {
+    font-weight: 700;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
 /*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
+
+/* This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
 
 @media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
 
