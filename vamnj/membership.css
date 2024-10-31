@@ -59,6 +59,66 @@ li {
 }
 
 /*****************************************************************************/
+/* FORM **********************************************************************/
+/*****************************************************************************/
+
+#membership-form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.total {
+    font-size: 1.5rem;
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"] {
+    width: 60vw; /* Makes the input element fill its parent container */
+}
+button {
+    font-family: inherit; /* Makes the button inherit the font from the body */
+    font-size: 1rem;
+    background: #ebebeb;
+    color: #474747;
+    border: 2px solid #676767;
+    padding: 10px;
+    margin: 10px;
+    width: 40vw;
+    max-width: 300px;
+}
+.submit-button {
+    background: #ffdbb2;
+    color: #754f21;
+    border: 2px solid #b3834d;
+}
+#thankYouMessage {
+    color: green;
+    margin-top: 10px;
+    display: none;
+}
+#paymentSection {
+    /*margin-top: 20px;*/
+    display: none;
+}
+#creditCardFields {
+    display: none;
+    margin-top: 20px;
+}
+
+form {
+    display:flex;
+    flex-direction: column; /* Stack images and text vertically */
+    align-items: center;
+    padding: 20px 0;
+}
+
+/*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
 
@@ -84,6 +144,19 @@ li {
 
     ul {
         padding-left: 1vw; /* responsive to viewport width */
+    }
+    
+    #membership-form {
+        padding: 20px 0;
+        max-width: 700px;
+        margin: 0 auto;
+        /*width: 50vw;*/
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+        max-width: 300px;
+        width: 50vw;
     }
 }
 

@@ -61,9 +61,85 @@
                 </ul>
             </div>
         </div>
+        
+        <!-- MEMBERSHIP FORM -->
         <div id="membership-form" class="body-content">
-            <h2>Membership sign-up form</h2>
-            <p>[text fields and labels, etc.]</p>
+            <div class="container-text container-border">
+                <h2>Membership sign-up form</h2>
+                
+                <form id="membershipForm">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group total">
+                        <label class="bolded">Total</label>
+                        <output id="totalField">$0</output>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="heritageCheckbox" onclick="updateTotal()"> Heritage membership
+                        </label>
+                    </div>
+                    
+                    <div class="form-group" id="recurringOption" style="display: none;">
+                        <label>
+                            <input type="checkbox" id="recurringCheckbox" onclick="updateTotal()"> Auto-renewal (save 30%)
+                        </label>
+                    </div>
+
+                    <!-- Payment Section -->
+                    <div id="paymentSection">
+                        <h3>Payment Method</h3>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="credit" checked onclick="toggleCreditCardFields()"> Credit card
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="paypal" onclick="toggleCreditCardFields()"> PayPal
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="applepay" onclick="toggleCreditCardFields()"> Apple Pay
+                        </label>
+
+                        <!-- Credit Card Fields -->
+                        <div id="creditCardFields">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" id="cardNumber" name="cardNumber" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="submitForm()" class="submit-button">SUBMIT</button>
+                    <button type="button" onclick="resetForm()">RESET</button>
+                </form>
+
+                <div id="thankYouMessage">Thank you!</div>
+                
+                <p class="italics">By signing up, you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
         </div>
     </div>
     
@@ -73,5 +149,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="membership-form.js"></script>
 </body>
 </html>
