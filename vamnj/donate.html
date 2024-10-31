@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#e8b67d">
-    <title>NJPAM | Membership</title>
+    <title>NJPAM | Donations</title>
     <link rel="stylesheet" href="/vamnj/style.css">
-    <link rel="stylesheet" href="/vamnj/membership.css">
+    <link rel="stylesheet" href="/vamnj/donate.css">
     <link rel="icon" href="/vamnj/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -30,42 +30,43 @@
     <!-- Main content -->
     <div class="container">
         <div class="body-content">
-            <h1>Membership</h1>
+            <h1>Donations</h1>
         </div>
         <div class="splash">
-            <img src="/vamnj/images/membership/membership.jpg" alt="Shiny gold car">
+            <img src="/vamnj/images/donate/donate.jpg" alt="Little kid looking at old car at museum">
         </div>
         <div class="body-content">
-            <h2>Join the coolest historical society of them all!</h2>
-            <p>Becoming an official member of the NJ Public Auto Museum is a fun way to get involved in the car community and to support the <a href="#">museum's mission</a>.</p>
-            <p>There are 2 membership types: one free, and one paid. Either way, when you become a member, you help the museum grow! <a href="#membership-form">Sign up now</a>!</p>
+            <h2>Every little bit helps</h2>
+            <p>Our museum is free to the public because we believe automotive history belongs to everyone. We love classic cars, and we're thrilled to provide a space where the community can share that passion together. It's been a dream come true that we hope to continue for decades to come!</p>
+            <p>Although government grants help us stay afloat, we can't achieve our <a href="#dreams">biggest dreams</a> for the museum without additional funding.</p>
+            <p>By donating, you're helping us reach our true potential. Whether you're a certified &ldquo;car nut&rdquo; or simply want to contribute, <a href="#donation-form">your donation today</a> means we can do more than just keep the lights on... Together, we can put spotlights on even more classic cars!</p>
         </div>
-        <div class="body-content">
-            <div class="container-text container-border">
-                <h2>Standard Membership</h2>
-                <p class="p-member">It's free!</p>
-                <ul>
-                    <li>Receive our quarterly newsletter.</li>
-                    <li>Be the first to know when new vehicles arrive.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="body-content">
+        <div class="body-content" id="dreams">
             <div class="container-text container-bg">
-                <h2>Heritage Membership</h2>
-                <p class="p-member">For just $50 a year, you can be a <span class="bolded">Heritage Member</span> of the NJ Public Auto Museum! Choose auto-renewal at checkout, and get 30% off!</p>
+                <h2>Funding goals</h2>
+                <p>We're proud to have served the community from our current location for many years, but we haven't yet achieved our true vision for the museum.</p>
+                <p>From our humble beginnings as a <a href="#">mobile car display</a>, to now having a <a href="/vamnj/visit.html">building</a> in beautiful Point Pleasant, NJ, we're just getting started!</p>
+                </p>When you donate, you help us achieve...</p>
                 <ul>
-                    <li><span class="bolded">Exclusive access to the museum outside normal hours.</span> During this special members-only time, you'll have the museum entirely to yourself &ndash; plus your friendly museum host, of course! Please <a href="#">make an appointment</a> to take advantage of this membership benefit.</li>
-                    <li><span class="bolded">An official certificate</span> commemorating your first joining the museum.</li>
-                    <li><span class="bolded">A special &ldquo;Gift of the Year,&rdquo;</span> such as a museum-branded mug or classic car poster.</li>
+                    <li class="complete"><del aria-label="Completed">Amazing classic cars</del></li>
+                    <li class="complete"><del aria-label="Completed">&ldquo;Museum on Wheels&rdquo;</del></li>
+                    <li class="complete"><del aria-label="Completed">Physical location</del></li>
+                    <li class="incomplete">Larger building with more parking</li>
+                    <li class="incomplete">More amazing classic cars and automotive memorabilia</li>
+                    <li class="incomplete">Interactive digital displays</li>
+                    <li class="incomplete">Classic car driving simulator</li>
                 </ul>
+                <p>...and other awesome things we haven't even dreamt of yet!</p>
+                <p>Got ideas of your own? <a href="#">Let us know</a>!</p>
             </div>
         </div>
         
-        <!-- MEMBERSHIP FORM -->
-        <div id="membership-form" class="body-content">
+        <!-- DONATION FORM -->
+        <div id="donation-form" class="body-content">
             <div class="container-text container-border">
-                <h2>Membership sign-up form</h2>
+                <h2>Donation form</h2>
+                
+                <p>We deeply appreciate donations of all kinds. If you don't find an option below that suits your needs, please <a href="#">reach out to us</a>. For those interested in planned or legacy giving, our financial coordinators are available to guide you through the process.</p>
                 
                 <form id="membershipForm">
                     <div class="form-group">
@@ -83,21 +84,29 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                     
-                    <div class="form-group total">
-                        <label class="bolded">Total</label>
-                        <output id="totalField">$0</output>
-                    </div>
-
                     <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="heritageCheckbox" onclick="updateTotal()"> Heritage membership
+                        <label class="italics">
+                            <input type="checkbox" id="emailCheckbox" onclick=""> Receive our quarterly newsletters and notifications about new vehicle arrivals.
                         </label>
                     </div>
                     
-                    <div class="form-group" id="recurringOption" style="display: none;">
-                        <label>
-                            <input type="checkbox" id="recurringCheckbox" onclick="updateTotal()"> Auto-renewal (save 30%)
-                        </label>
+                    <div class="form-group donate-options">
+                        <div><input type="radio" name="options" value="5" onclick="updateTotal()">$5</div>
+                        <div><input type="radio" name="options" value="10" onclick="updateTotal()">$10</div>
+                        <div><input type="radio" name="options" value="25" onclick="updateTotal()">$25</div>
+                        <div><input type="radio" name="options" value="50" onclick="updateTotal()">$50</div>
+                        <div><input type="radio" name="options" value="100" onclick="updateTotal()">$100</div>
+                        <div><input type="radio" name="options" onclick="showCustomDonationBox()"> Custom amount</div>
+                    </div>
+                    
+                    <div id="customDonationBox">
+                        <input type="number" id="donationAmount" name="donationAmount" required>
+                        <button type="button" onclick="addCustom()">Update total</button>
+                    </div>
+
+                    <div class="form-group total">
+                        <label class="bolded">Total</label>
+                        <output id="totalField">$0</output>
                     </div>
 
                     <!-- Payment Section -->
@@ -138,7 +147,7 @@
 
                 <div id="thankYouMessage">Thank you!</div>
                 
-                <p class="italics">By signing up, you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
+                <p class="italics">By donating, you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
             </div>
         </div>
     </div>
@@ -149,6 +158,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="membership.js"></script>
+    <script src="donate.js"></script>
 </body>
 </html>

@@ -17,11 +17,6 @@ h2 {
     margin-bottom: 6px;
 }
 
-.p-member {
-    font-style: italic;
-    margin-top: 0;
-}
-
 .container {
     display: grid;
     gap: 10px; /* spacing between items */
@@ -41,15 +36,22 @@ h2 {
     background: #e5dccf; /* Darker sand */
 }
 
-.map iframe {
-    width: 100%;
-    height: 75vw;
-    position: relative;
+ul {
+    /*list-style-type: none;*/
 }
 
 li {
     font-size: 1.2rem;
     padding-bottom: 6px;
+    padding-left: 10px;
+}
+
+li.complete::marker {
+    content: "☑";
+}
+
+li.incomplete::marker {
+    content: "☐";
 }
 
 .splash img {
@@ -62,7 +64,7 @@ li {
 /* FORM **********************************************************************/
 /*****************************************************************************/
 
-#membership-form {
+#donation-form {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -80,6 +82,21 @@ label {
 input[type="text"],
 input[type="email"] {
     width: 60vw; /* Makes the input element fill its parent container */
+}
+.donate-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Three columns in total */
+    grid-auto-rows: auto;
+    width: 80%;
+}
+input[type="radio"] {
+    margin: 10px;
+}
+#customDonationBox {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display:none;
 }
 button {
     font-family: inherit; /* Makes the button inherit the font from the body */
@@ -102,10 +119,6 @@ button {
     margin-top: 10px;
     display: none;
 }
-#paymentSection {
-    /*margin-top: 20px;*/
-    display: none;
-}
 #creditCardFields {
     display: none;
     margin-top: 20px;
@@ -126,17 +139,16 @@ form {
 
     /* Two columns on the first row, three on the second */
     .container {
-        grid-template-columns: repeat(3, 1fr); /* Three columns in total */
-        grid-template-rows: auto 1fr auto auto;
+        grid-template-columns: repeat(2, 1fr); /* Three columns in total */
+        grid-template-rows: auto 1fr auto;
     }
 
     /* Place items in specific grid positions */
     .container > :nth-child(1) { grid-column: 1 / 2; } /* Page heading */
-    .container > :nth-child(2) { grid-column: 2 / 4; grid-row: 1 / 3; } /* Pic */
+    .container > :nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 3; } /* Pic */
     .container > :nth-child(3) { grid-column: 1 / 2; grid-row: 2; } /* Intro */
-    .container > :nth-child(4) { grid-column: 1 / 2; grid-row: 3; } /* Free membership */
-    .container > :nth-child(5) { grid-column: 2 / 4; grid-row: 3; } /* Paid membership */
-    .container > :nth-child(6) { grid-column: 1 / 4; grid-row: 4; } /* Form */
+    .container > :nth-child(4) { grid-column: 1 / 2; grid-row: 3; } /* Goals */
+    .container > :nth-child(5) { grid-column: 2 / 3; grid-row: 3; } /* Form */
   
     h1 {
         margin-bottom: 0;
@@ -146,8 +158,8 @@ form {
         padding-left: 1vw; /* responsive to viewport width */
     }
     
-    #membership-form {
-        padding: 20px 0;
+    #donation-form {
+        padding: 0 20px 20px 20px;
         max-width: 700px;
         margin: 0 auto;
         /*width: 50vw;*/
