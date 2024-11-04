@@ -104,6 +104,16 @@ footer {
     visibility: hidden;
 }
 
+.highlight {
+    transform: scale(1.1); /* Slightly larger */
+    transition: transform 0.5s ease-in-out;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1; /* Force visibility of the up and down arrows, so you don't have to hover over it w/ the mouse */
+}
+
 /*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/

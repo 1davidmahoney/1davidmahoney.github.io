@@ -1,26 +1,9 @@
 function updateTotal() {
     const totalField = document.getElementById('totalField');
-    const selectedOption = document.querySelector('input[name="options"]:checked');
-
-    // Update total
-    if (selectedOption) {
-        totalField.value = `$${selectedOption.value}`;
-    } else {
-        totalField.value = "$0";
-    }
+    const ticketCount = document.querySelector('input[name="ticketCount"]');
+    const ticketCost = 100;
     
-    document.getElementById('customDonationBox').style.display = 'none';
-}
-
-function showCustomDonationBox() {
-    document.getElementById('customDonationBox').style.display = 'flex';
-}
-
-function addCustom() {
-    const totalField = document.getElementById('totalField');
-    const customAmount = document.querySelector('input[name="donationAmount"]');
-    
-    totalField.value = `$${Number(customAmount.value)}`;    // Convert the value to a number to ensure proper handling.
+    totalField.value = `$${Number(ticketCount.value) * ticketCost}`;    // Convert the value to a number to ensure proper handling.
 }
 
 function toggleCreditCardFields() {
@@ -34,7 +17,7 @@ function submitForm() {
 }
 
 function resetForm() {
-    document.getElementById('donationForm').reset();
+    document.getElementById('raffleForm').reset();
     updateTotal(); // Reset the total
     document.getElementById('thankYouMessage').style.display = 'none';
     toggleCreditCardFields(); // Reset credit card field visibility
