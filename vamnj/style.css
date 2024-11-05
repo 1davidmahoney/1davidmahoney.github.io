@@ -120,6 +120,35 @@ input[type="number"]::-webkit-outer-spin-button {
     opacity: 1; /* Force visibility of the up and down arrows, so you don't have to hover over it w/ the mouse */
 }
 
+/* Mobile-first: 3-row column with image to the left of label text */
+.splish-3 {
+    display: flex;
+    flex-direction: column; /* Stack images and text vertically */
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.splish-3 .splish {
+    display: flex;
+    flex-direction: row; /* Image on the left, text on the right */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.splish-3 img {
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+    margin-right: 10px; /* Space between image and text */
+}
+
+.splish-3 h2 {
+    margin: 0; /* Ensure text stays aligned with image */
+}
+
 /*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
