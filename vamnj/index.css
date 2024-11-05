@@ -42,12 +42,6 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* Big text in middle of page. Acts as separator. */
-.shout {
-    text-align: center;
-    font-style: italic;
-}
-
 /* Mobile-first: Stack image above text by default */
 .splash-left, .splash-right, .splosh {
     display: flex;

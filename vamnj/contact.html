@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8b67d">
+    <title>NJPAM | Contact us</title>
+    <link rel="stylesheet" href="/vamnj/style.css">
+    <link rel="stylesheet" href="/vamnj/contact.css">
+    <link rel="icon" href="/vamnj/images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Debug print -- Viewport size -->
+    <!-- <div id="debug"></div> -->
+    
+    <!-- Spacer to prevent content overlap with header -->
+    <div style="height: 80px;"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <a href="/vamnj/vamnj_test.html"><img src="/vamnj/images/header/header_logo.svg" alt="NJPAM logo"></a>
+    </header>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="body-content">
+            <h1>Contact Us</h1>
+            <p>Please use the form below to get in touch with us. We look forward to hearing from you!</p>
+        </div>
+        <div class="splash">
+            <img src="/vamnj/images/contact/contact.jpg" alt="Old-school rotary phone">
+        </div>
+        
+        <!-- CONTACT FORM -->
+        <div id="contact-form" class="body-content">
+            <div class="container-text container-border">
+                <h2>Contact form</h2>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Enter your message here..."></textarea>
+                    </div>
+
+                    
+                    <button type="button" onclick="submitForm()" class="submit-button">SUBMIT</button>
+                    <button type="button" onclick="resetForm()">RESET</button>
+                </form>
+
+                <div id="thankYouMessage">Thanks for your message! We'll get back to you as soon as possible!</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 New Jersey Public Auto Museum, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

@@ -73,6 +73,12 @@ footer {
     background-color: #b3834d;
 }
 
+/* Big text in middle of page. Acts as separator. */
+.shout {
+    text-align: center;
+    font-style: italic;
+}
+
 .speech {
     font-style: italic;
     font-size: 1.2rem;
