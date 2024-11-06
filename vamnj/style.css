@@ -155,6 +155,32 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
 
+@media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    .splish-3 {
+        flex-direction: row; /* Switch to row layout */
+        padding: 0 100px;
+        gap: 40px;
+    }
+
+    .splish-3 .splish {
+        flex-direction: column; /* Stack image above text */
+        align-items: center;
+        max-width: 220px;
+    }
+
+    .splish-3 img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between image and text */
+    }
+
+    .splish-3 h2 {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
 @media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
 
     .container {
