@@ -41,15 +41,46 @@ h2 {
     background: #e5dccf; /* Darker sand */
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 0;       /* Removes padding */
+    margin-left: 0;        /* Removes margin */
+}
+
 li {
-    font-size: 1.2rem;
     padding-bottom: 6px;
+}
+
+.splish-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Enable items to wrap to the next row if needed */
+    gap: 20px;
 }
 
 .splash img {
     width: 100%;
     height: auto;
     position: relative;
+}
+
+.splish-3 {
+    margin-bottom: 20px;
+}
+
+.splish-3 .splish {
+    margin-bottom: 0;
+}
+    
+.splish-3 img {
+    max-width: 60px;
+    max-height: 60px;
+    margin-bottom: 0;
 }
 
 /*****************************************************************************/
@@ -67,23 +98,10 @@ li {
     /* Place items in specific grid positions */
     .container > :nth-child(1) { grid-column: 1 / 2; } /* Intro */
     .container > :nth-child(2) { grid-column: 2 / 4; } /* Pic */
-    .container > :nth-child(3) { grid-column: 1 / 2; grid-row: 2; } /* Founding */
-    .container > :nth-child(4) { grid-column: 2 / 3; grid-row: 2; } /* HOW */
-    .container > :nth-child(5) { grid-column: 3 / 4; grid-row: 2; } /* Mission */
-    .container > :nth-child(6) { grid-column: 1 / 2; grid-row: 3; } /* For you */
-    .container > :nth-child(7) { grid-column: 2 / 3; grid-row: 3; } /* Grant */
-    .container > :nth-child(8) { grid-column: 3 / 4; grid-row: 3; } /* SM */
-    .container > :nth-child(9) { grid-column: 1 / 4; grid-row: 4; } /* Pic */
-    .container > :nth-child(10) { grid-column: 1 / 4; grid-row: 5; } /* Thanks */
-  
-    ul {
-        padding-left: 1vw; /* responsive to viewport width */
-    }
-}
-
-@media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
-
-    ul {
-        padding-left: revert; /* responsive to viewport width */
-    }    
+    .container > :nth-child(3) { grid-column: 1 / 2; grid-row: 2; } /* Mission */
+    .container > :nth-child(4) { grid-column: 2 / 4; grid-row: 2; } /* History */
+    .container > :nth-child(5) { grid-column: 2 / 4; grid-row: 3; } /* Org */
+    .container > :nth-child(6) { grid-column: 1 / 2; grid-row: 3; } /* SM */
+    .container > :nth-child(7) { grid-column: 1 / 4; grid-row: 4; } /* Pic */
+    .container > :nth-child(8) { grid-column: 1 / 4; grid-row: 5; } /* Thanks */
 }

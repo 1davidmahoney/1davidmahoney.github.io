@@ -128,7 +128,7 @@ form {
     /* Two columns on the first row, three on the second */
     .container {
         grid-template-columns: repeat(3, 1fr); /* Three columns in total */
-        grid-template-rows: auto 1fr auto auto;
+        grid-template-rows: auto 1fr auto auto auto;
     }
 
     /* Place items in specific grid positions */
@@ -137,7 +137,8 @@ form {
     .container > :nth-child(3) { grid-column: 1 / 2; grid-row: 2; } /* Intro */
     .container > :nth-child(4) { grid-column: 1 / 2; grid-row: 3; } /* Free membership */
     .container > :nth-child(5) { grid-column: 2 / 4; grid-row: 3; } /* Paid membership */
-    .container > :nth-child(6) { grid-column: 1 / 4; grid-row: 4; } /* Form */
+    .container > :nth-child(6) { grid-column: 1 / 4; grid-row: 4; } /* Volunteering */
+    .container > :nth-child(7) { grid-column: 1 / 4; grid-row: 5; } /* Form */
   
     h1 {
         margin-bottom: 0;
