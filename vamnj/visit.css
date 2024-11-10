@@ -102,7 +102,7 @@ li {
     /* Two columns on the first row, three on the second */
     .container {
         grid-template-columns: repeat(3, 1fr); /* Three columns in total */
-        grid-template-rows: auto auto; /* Two rows */
+        grid-auto-rows: auto;
     }
 
     /* Place items in specific grid positions */
@@ -111,7 +111,9 @@ li {
     .container > :nth-child(3) { grid-column: 1 / 2; grid-row: 2; } /* Address */
     .container > :nth-child(4) { grid-column: 2 / 3; grid-row: 2; } /* Standard hours */
     .container > :nth-child(5) { grid-column: 3 / 4; grid-row: 2; } /* Special hours */
-    .container > :nth-child(6) { grid-column: 1 / 4; grid-row: 3; } /* Leave a review */
+    .container > :nth-child(6) { grid-column: 2 / 4; grid-row: 3; } /* Vehicle display */
+    .container > :nth-child(7) { grid-column: 1 / 2; grid-row: 3; } /* Gift shop */
+    .container > :nth-child(8) { grid-column: 1 / 4; grid-row: 4; } /* Leave a review */
   
     .map iframe {
         height: 25vw;
