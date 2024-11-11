@@ -6,7 +6,7 @@ function updateTotal() {
     if (selectedOption) {
         totalField.value = `$${selectedOption.value}`;
     } else {
-        totalField.value = "$0";
+        totalField.value = "$5";
     }
     
     document.getElementById('customDonationBox').style.display = 'none';

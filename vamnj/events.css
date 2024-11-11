@@ -87,6 +87,24 @@ li {
     margin-bottom: 0;
 }
 
+.calendar {
+    display: grid;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.no-events {
+    color: gray;
+}
+
+.old-event {
+    text-decoration: line-through;
+    color: gray;
+    border-color: gray;
+    border-style: dashed;
+    font-style: italic;
+}
+
 /*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/

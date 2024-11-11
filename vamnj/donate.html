@@ -37,9 +37,22 @@
         </div>
         <div class="body-content">
             <h2>Every little bit helps</h2>
-            <p>Our museum is free to the public because we believe automotive history belongs to everyone. We love classic cars, and we're thrilled to provide a space where the community can share that passion together. It's been a dream come true that we hope to continue for decades to come!</p>
-            <p>Although government grants help us stay afloat, we can't achieve our <a href="#dreams">biggest dreams</a> for the museum without additional funding.</p>
-            <p>By donating, you're helping us reach our true potential. Whether you're a certified &ldquo;car nut&rdquo; or simply want to contribute, <a href="#donation-form">your donation today</a> means we can do more than just keep the lights on... Together, we can put spotlights on even more classic cars!</p>
+            <p>Although grants and raffles help us stay afloat, we can't achieve our <a href="#dreams">biggest dreams</a> for the museum without additional funding.</p>
+            <p>By donating, you're helping us reach our <span class="bolded">true potential</span>. Whether you're a certified &ldquo;car nut&rdquo; or simply want to contribute, <a href="#donation-form">your donation today</a> means we can do more than just keep the lights on... Together, we can put spotlights on even more classic cars!</p>
+        </div>
+        <div class="body-content">
+            <div class="container-text container-border">
+                <h2>Types of Donations</h2>
+                <p>We deeply appreciate donations of all kinds, including the examples below. Whatever method of donation you choose, our financial coordinators are available to guide you through the process, including finding reputable appraisers.</p>
+                <ul>
+                    <li>Money (see form below)</li>
+                    <li>Automotive memorabilia</li>
+                    <li>Classic vehicles</li>
+                    <li>Planned giving</li>
+                    <li>Legacy giving</li>
+                </ul>
+                <p>For vehicle donations in particular, we understand how difficult it can be to part ways. These classic cars remind us of times shared with loved ones or simply a life well lived. Whatever your reason for donating, you can rest assured your vehicle will have a good home at the museum, where it will continue to wow guests for years to come.
+            </div>
         </div>
         <div class="body-content" id="dreams">
             <div class="container-text container-bg">
@@ -47,7 +60,7 @@
                 <p>We're proud to have served the community from our current location for many years, but we haven't yet achieved our true vision for the museum.</p>
                 <p>From our humble beginnings as a <a href="/vamnj/about.html">mobile car display</a>, to now having a <a href="/vamnj/visit.html">building</a> in beautiful Point Pleasant, NJ, we're just getting started!</p>
                 </p>When you donate, you help us achieve...</p>
-                <ul>
+                <ul class="goal-list">
                     <li class="complete"><del aria-label="Completed">Amazing classic cars</del></li>
                     <li class="complete"><del aria-label="Completed">&ldquo;Museum on Wheels&rdquo;</del></li>
                     <li class="complete"><del aria-label="Completed">Physical location</del></li>
@@ -66,7 +79,7 @@
             <div class="container-text container-border">
                 <h2>Donation form</h2>
                 
-                <p>We deeply appreciate donations of all kinds. If you don't find an option below that suits your needs, please <a href="#">reach out to us</a>. For those interested in planned or legacy giving, our financial coordinators are available to guide you through the process.</p>
+                <p>Please <a href="#">reach out to us</a> if you don't see an option below that suits your needs, or if you'd like to arrange a non-monetary donation.</p>
                 
                 <form id="donationForm">
                     <div class="form-group">
@@ -91,7 +104,7 @@
                     </div>
                     
                     <div class="form-group donate-options">
-                        <div><input type="radio" name="options" value="5" onclick="updateTotal()">$5</div>
+                        <div><input type="radio" name="options" value="5" onclick="updateTotal()" checked>$5</div>
                         <div><input type="radio" name="options" value="10" onclick="updateTotal()">$10</div>
                         <div><input type="radio" name="options" value="25" onclick="updateTotal()">$25</div>
                         <div><input type="radio" name="options" value="50" onclick="updateTotal()">$50</div>
@@ -106,7 +119,7 @@
 
                     <div class="form-group total">
                         <label class="bolded">Total</label>
-                        <output id="totalField">$0</output>
+                        <output id="totalField">$5</output>
                     </div>
 
                     <!-- Payment Section -->
