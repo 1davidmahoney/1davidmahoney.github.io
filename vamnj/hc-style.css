@@ -43,8 +43,6 @@ footer {
 .splash img {
     max-width: 400px;
     width: 62%;
-    height: auto;
-    position: relative;
     box-shadow: none;
 }
 

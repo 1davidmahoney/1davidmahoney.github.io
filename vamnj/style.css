@@ -14,6 +14,7 @@ body {
 
 .body-content { /* For when I just want to throw some basic html elements into a div and have it look nice. */
     padding: 0 20px;
+    margin-bottom: 10px;
 }
 
 p{
@@ -78,6 +79,14 @@ footer {
     background-color: #61482a;
 }
 
+.splash img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
 /* Big text in middle of page. Acts as separator. */
 .shout {
     text-align: center;
@@ -122,7 +131,8 @@ footer {
 
 .center-wide {
     max-width: 700px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

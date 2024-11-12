@@ -54,19 +54,12 @@ li.incomplete::marker {
     content: "☐";
 }
 
-.splash img {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
 /*****************************************************************************/
 /* FORM **********************************************************************/
 /*****************************************************************************/
 
 #donation-form {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: 40px auto;
 }
 .form-group {
     margin-bottom: 15px;
@@ -157,10 +150,7 @@ form {
     }
 
     #donation-form {
-        padding: 20px 0;
         max-width: 700px;
-        margin: 0 auto;
-        /*width: 50vw;*/
     }
     
     input[type="text"],

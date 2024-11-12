@@ -32,12 +32,6 @@ footer {
     background: #e5dccf; /* Darker sand */
 }
 
-.splash img {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
 li {
     /*font-size: 1.2rem;*/
     padding-bottom: 6px;
@@ -66,10 +60,6 @@ li {
         margin-bottom: 0;
     }
 
-    .splash img {
-        /*height: 25vw;*/
-    }
-    
     ul {
         padding-left: 1vw; /* responsive to viewport width */
     }

@@ -46,18 +46,12 @@ li {
     padding-bottom: 6px;
 }
 
-.splash img {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
 /*****************************************************************************/
 /* FORM **********************************************************************/
 /*****************************************************************************/
 
 #contact-form {
-    padding: 20px 10vw;
+    margin: 40px auto;
 }
 
 .form-group {
@@ -136,10 +130,7 @@ form {
     }
     
     #contact-form {
-        padding: 0 20px 20px 20px;
         max-width: 700px;
-        margin: 0 auto;
-        /*width: 50vw;*/
     }
     
     input[type="text"],
