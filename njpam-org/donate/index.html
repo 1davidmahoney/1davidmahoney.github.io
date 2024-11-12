@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#e8b67d">
     <title>NJPAM | Donations</title>
-    <link rel="stylesheet" href="/vamnj/style.css">
-    <link rel="stylesheet" href="/vamnj/child-page.css">
-    <link rel="stylesheet" href="/vamnj/donate.css">
-    <link rel="icon" href="/vamnj/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/njpam-org/style.css">
+    <link rel="stylesheet" href="/njpam-org/child-page.css">
+    <link rel="stylesheet" href="/njpam-org/donate/donate.css">
+    <link rel="icon" href="/njpam-org/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -22,13 +22,13 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="/vamnj/vamnj_test.html"><img src="/vamnj/images/header/header_logo.svg" alt="NJPAM logo"></a>
+        <a href="/njpam-org/"><img src="/njpam-org/images/header/header_logo.svg" alt="NJPAM logo"></a>
     </header>
     
     <!-- Sliding Menu -->
     <div id="side-menu-container"></div>
     <script>
-    fetch('/vamnj/side-menu.html')
+    fetch('/njpam-org/side-menu.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('side-menu-container').innerHTML = data;
@@ -41,7 +41,7 @@
             <h1>Donations</h1>
         </div>
         <div class="splash">
-            <img src="/vamnj/images/donate/donate.jpg" alt="Little kid looking at old car at museum">
+            <img src="/njpam-org/donate/images/donate.jpg" alt="Little kid looking at old car at museum">
         </div>
         <div class="body-content">
             <h2>Every little bit helps</h2>
@@ -67,7 +67,7 @@
             <div class="container-text container-bg">
                 <h2>Funding goals</h2>
                 <p>We're proud to have served the community from our current location for many years, but we haven't yet achieved our true vision for the museum.</p>
-                <p>From our humble beginnings as a <a href="/vamnj/about.html">mobile car display</a>, to now having a <a href="/vamnj/visit.html">building</a> in beautiful Point Pleasant, NJ, we're just getting started!</p>
+                <p>From our humble beginnings as a <a href="/njpam-org/about/">mobile car display</a>, to now having a <a href="/njpam-org/visit/">building</a> in beautiful Point Pleasant, NJ, we're just getting started!</p>
                 </p>When you donate, you help us achieve...</p>
                 <ul class="goal-list">
                     <li class="complete"><del aria-label="Completed">Amazing classic cars</del></li>
@@ -79,7 +79,7 @@
                     <li class="incomplete">Classic car driving simulator</li>
                 </ul>
                 <p>...and other awesome things we haven't even dreamt of yet!</p>
-                <p>Got ideas of your own? <a href="/vamnj/contact.html">Let us know</a>!</p>
+                <p>Got ideas of your own? <a href="/njpam-org/contact/">Let us know</a>!</p>
             </div>
         </div>
         
@@ -88,7 +88,7 @@
             <div class="container-text container-border">
                 <h2>Donation form</h2>
                 
-                <p>Please <a href="/vamnj/contact.html">reach out to us</a> if you don't see an option below that suits your needs, or if you'd like to arrange a non-monetary donation.</p>
+                <p>Please <a href="/njpam-org/contact/">reach out to us</a> if you don't see an option below that suits your needs, or if you'd like to arrange a non-monetary donation.</p>
                 
                 <form id="donationForm">
                     <div class="form-group">
@@ -187,7 +187,7 @@
         <p>&copy; 2024 New Jersey Public Auto Museum, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/njpam-org/script.js"></script>
     <script src="donate.js"></script>
 </body>
 </html>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#e8b67d">
     <title>NJPAM | Membership</title>
-    <link rel="stylesheet" href="/vamnj/style.css">
-    <link rel="stylesheet" href="/vamnj/child-page.css">
-    <link rel="stylesheet" href="/vamnj/membership.css">
-    <link rel="icon" href="/vamnj/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/njpam-org/style.css">
+    <link rel="stylesheet" href="/njpam-org/child-page.css">
+    <link rel="stylesheet" href="/njpam-org/membership/membership.css">
+    <link rel="icon" href="/njpam-org/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -22,13 +22,13 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="/vamnj/vamnj_test.html"><img src="/vamnj/images/header/header_logo.svg" alt="NJPAM logo"></a>
+        <a href="/njpam-org/"><img src="/njpam-org/images/header/header_logo.svg" alt="NJPAM logo"></a>
     </header>
     
     <!-- Sliding Menu -->
     <div id="side-menu-container"></div>
     <script>
-    fetch('/vamnj/side-menu.html')
+    fetch('/njpam-org/side-menu.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('side-menu-container').innerHTML = data;
@@ -41,11 +41,11 @@
             <h1>Membership</h1>
         </div>
         <div class="splash">
-            <img src="/vamnj/images/membership/membership.jpg" alt="Shiny gold car">
+            <img src="/njpam-org/membership/images/membership.jpg" alt="Shiny gold car">
         </div>
         <div class="body-content">
             <h2>Join the coolest historical society of them all!</h2>
-            <p>Becoming an official member of the NJ Public Auto Museum is a fun way to get involved in the car community and to support the <a href="/vamnj/about.html#mission">museum's mission</a>.</p>
+            <p>Becoming an official member of the NJ Public Auto Museum is a fun way to get involved in the car community and to support the <a href="/njpam-org/about/#mission">museum's mission</a>.</p>
             <p>There are 2 membership types: one free, and one paid. Either way, when you become a member, you help the museum grow! <a href="#membership-form">Sign up now</a>!</p>
         </div>
         <div class="body-content">
@@ -63,7 +63,7 @@
                 <h2>Heritage Membership</h2>
                 <p class="italics">For just $50 a year, you can be a <span class="bolded">Heritage Member</span> of the NJ Public Auto Museum! Choose auto-renewal at checkout, and get 30% off!</p>
                 <ul>
-                    <li><span class="bolded">Exclusive access to the museum outside normal hours.</span> During this special members-only time, you'll have the museum entirely to yourself &ndash; plus your friendly museum host, of course! Please <a href="/vamnj/contact.html">make an appointment</a> to take advantage of this membership benefit.</li>
+                    <li><span class="bolded">Exclusive access to the museum outside normal hours.</span> During this special members-only time, you'll have the museum entirely to yourself &ndash; plus your friendly museum host, of course! Please <a href="/njpam-org/contact/">make an appointment</a> to take advantage of this membership benefit.</li>
                     <li><span class="bolded">An official certificate</span> commemorating your first joining the museum.</li>
                     <li><span class="bolded">A special &ldquo;Gift of the Year,&rdquo;</span> such as a museum-branded mug or classic car poster.</li>
                 </ul>
@@ -74,7 +74,7 @@
                 <h2>Volunteer Opportunities</h2>
                 <p>Being a nonprofit organization, everything we do depends on volunteers, so we deeply appreciate your interest in helping our cause.</p>
                 <p>The easiest way to volunteer at NJPAM is to become a standard member (see form below). Then, stay tuned for announcements about volunteer opportunities.</p>
-                <p>Not interested in becoming a member? We still want to <a href="/vamnj/contact.html">hear from you</a>!</p>
+                <p>Not interested in becoming a member? We still want to <a href="/njpam-org/contact/">hear from you</a>!</p>
             </div>
         </div>
         
@@ -170,7 +170,7 @@
         <p>&copy; 2024 New Jersey Public Auto Museum, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/njpam-org/script.js"></script>
     <script src="membership.js"></script>
 </body>
 </html>

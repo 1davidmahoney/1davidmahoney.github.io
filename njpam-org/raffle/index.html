@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#e8b67d">
     <title>NJPAM | Raffle tickets</title>
-    <link rel="stylesheet" href="/vamnj/style.css">
-    <link rel="stylesheet" href="/vamnj/child-page.css">
-    <link rel="stylesheet" href="/vamnj/raffle.css">
-    <link rel="icon" href="/vamnj/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/njpam-org/style.css">
+    <link rel="stylesheet" href="/njpam-org/child-page.css">
+    <link rel="stylesheet" href="/njpam-org/raffle/raffle.css">
+    <link rel="icon" href="/njpam-org/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -22,13 +22,13 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="/vamnj/vamnj_test.html"><img src="/vamnj/images/header/header_logo.svg" alt="NJPAM logo"></a>
+        <a href="/njpam-org/"><img src="/njpam-org/images/header/header_logo.svg" alt="NJPAM logo"></a>
     </header>
     
     <!-- Sliding Menu -->
     <div id="side-menu-container"></div>
     <script>
-    fetch('/vamnj/side-menu.html')
+    fetch('/njpam-org/side-menu.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('side-menu-container').innerHTML = data;
@@ -40,10 +40,10 @@
         <div class="body-content">
             <h1>The Vintage 1000 Raffle</h1>
             <p>One of the major ways the museum funds its operations is a yearly raffle. This year, we're trying something new!</p>
-            <p>We're selling <span class="bolded">1000 raffle tickets at $100 apiece</span>. With this format, we hope to appeal to the widest possible audience, so that we might achieve our <a href="/vamnj/donate.html#dreams">wildest dreams</a> for the museum.</p>
+            <p>We're selling <span class="bolded">1000 raffle tickets at $100 apiece</span>. With this format, we hope to appeal to the widest possible audience, so that we might achieve our <a href="/njpam-org/donate/#dreams">wildest dreams</a> for the museum.</p>
         </div>
         <div class="splash">
-            <img src="/vamnj/images/raffle/raffle.jpg" alt="Pile of cash">
+            <img src="/njpam-org/raffle/images/raffle.jpg" alt="Pile of cash">
         </div>
         <div class="body-content">
             <div class="container-text container-bg">
@@ -156,7 +156,7 @@
         <p>&copy; 2024 New Jersey Public Auto Museum, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/njpam-org/script.js"></script>
     <script src="raffle.js"></script>
 </body>
 </html>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#e8b67d">
     <title>NJPAM | Your photo!</title>
-    <link rel="stylesheet" href="/vamnj/style.css">
-    <link rel="stylesheet" href="/vamnj/child-page.css">
-    <link rel="stylesheet" href="/vamnj/photo.css">
-    <link rel="icon" href="/vamnj/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/njpam-org/style.css">
+    <link rel="stylesheet" href="/njpam-org/child-page.css">
+    <link rel="stylesheet" href="/njpam-org/photo/photo.css">
+    <link rel="icon" href="/njpam-org/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -22,13 +22,13 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="/vamnj/vamnj_test.html"><img src="/vamnj/images/header/header_logo.svg" alt="NJPAM logo"></a>
+        <a href="/njpam-org/"><img src="/njpam-org/images/header/header_logo.svg" alt="NJPAM logo"></a>
     </header>
     
     <!-- Sliding Menu -->
     <div id="side-menu-container"></div>
     <script>
-    fetch('/vamnj/side-menu.html')
+    fetch('/njpam-org/side-menu.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('side-menu-container').innerHTML = data;
@@ -43,7 +43,7 @@
             <p>Get behind the steering wheel, and have your photo taken in style!</p>
         </div>
         <div class="splash">
-            <img src="/vamnj/images/home/home-03.png" alt="Visitor having picture taken in car">
+            <img src="/njpam-org/images/home-03.png" alt="Visitor having picture taken in car">
         </div>
         <div class="body-content">
             <div class="container-text container-border">
@@ -72,6 +72,6 @@
         <p>&copy; 2024 New Jersey Public Auto Museum, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/njpam-org/script.js"></script>
 </body>
 </html>

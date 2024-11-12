@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#e8b67d">
     <title>NJPAM | Visit</title>
-    <link rel="stylesheet" href="/vamnj/style.css">
-    <link rel="stylesheet" href="/vamnj/child-page.css">
-    <link rel="stylesheet" href="/vamnj/visit.css">
-    <link rel="icon" href="/vamnj/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/njpam-org/style.css">
+    <link rel="stylesheet" href="/njpam-org/child-page.css">
+    <link rel="stylesheet" href="/njpam-org/visit/visit.css">
+    <link rel="icon" href="/njpam-org/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -22,13 +22,13 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="/vamnj/vamnj_test.html"><img src="/vamnj/images/header/header_logo.svg" alt="NJPAM logo"></a>
+        <a href="/njpam-org/"><img src="/njpam-org/images/header/header_logo.svg" alt="NJPAM logo"></a>
     </header>
     
     <!-- Sliding Menu -->
     <div id="side-menu-container"></div>
     <script>
-    fetch('/vamnj/side-menu.html')
+    fetch('/njpam-org/side-menu.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('side-menu-container').innerHTML = data;
@@ -40,7 +40,7 @@
         <div class="body-content">
             <h1>Visiting the Museum</h1>
             <p>We are located a short drive from the Garden State Parkway, near Route 35.</p>
-            <p>Our museum is wheelchair-accessible, and we are committed to ensuring all visitors have a comfortable experience. Please <a href="/vamnj/contact.html">let us know</a> if you have any special needs or require additional accommodations.</p>
+            <p>Our museum is wheelchair-accessible, and we are committed to ensuring all visitors have a comfortable experience. Please <a href="/njpam-org/contact/">let us know</a> if you have any special needs or require additional accommodations.</p>
         </div>
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.6601125969664!2d-74.0512456!3d40.0689628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c1859536c9e683%3A0x28484a91e43f35bd!2sVintage%20Automobile%20Museum%20of%20New%20Jersey!5e1!3m2!1sen!2sus!4v1729977593182!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -56,8 +56,8 @@
                     </ul>
                 </a>
                 <p class="italics">Click the image below to see the turn that visitors often miss:</p>
-                <a href="/vamnj/images/visit/visit.png" target="_blank" rel="noopener noreferrer">
-                    <img id="visit-thumb" src="/vamnj/images/visit/visit-thumb.png" alt="Turn left onto Meadow Ave.">
+                <a href="/njpam-org/visit/images/visit.png" target="_blank" rel="noopener noreferrer">
+                    <img id="visit-thumb" src="/njpam-org/visit/images/visit-thumb.png" alt="Turn left onto Meadow Ave.">
                 </a>
             </div>
         </div>
@@ -75,7 +75,7 @@
         <div class="body-content">
             <div class="container-text container-bg">
                 <h2>Heritage Members' Hours</h2>
-                <p class="italics">Time reserved exclusively for our special membership tier. More info <a href="/vamnj/membership.html">here</a>.</p>
+                <p class="italics">Time reserved exclusively for our special membership tier. More info <a href="/njpam-org/membership/">here</a>.</p>
                 <ul>
                     <li class="li-hours"><span class="day">Friday</span><span class="hours">4-5 PM</span></li>
                     <li class="li-hours"><span class="day">Saturday</span><span class="hours">4-5 PM</span></li>
@@ -102,21 +102,21 @@
         <div class="body-content">
             <h2 class="italics centered">We hope you enjoy your visit! Please remember to leave a review!</h2>
             <div class="splish-3">
-                <a href="/vamnj/membership.html">
+                <a href="/njpam-org/membership/">
                     <div class="splish">
-                        <img src="/vamnj/images/visit/review-logo-google.svg" alt="Google icon">
+                        <img src="/njpam-org/visit/images/review-logo-google.svg" alt="Google icon">
                         <p>Google Reviews</p>
                     </div>
                 </a>
-                <a href="/vamnj/donate.html">
+                <a href="/njpam-org/donate/">
                     <div class="splish">
-                        <img src="/vamnj/images/visit/review-logo-tripadvisor.svg" alt="Tripadvisor icon">
+                        <img src="/njpam-org/visit/images/review-logo-tripadvisor.svg" alt="Tripadvisor icon">
                         <p>Tripadvisor</p>
                     </div>
                 </a>
-                <a href="/vamnj/raffle.html">
+                <a href="/njpam-org/raffle/">
                     <div class="splish">
-                        <img src="/vamnj/images/visit/review-logo-yelp.svg" alt="Yelp icon">
+                        <img src="/njpam-org/visit/images/review-logo-yelp.svg" alt="Yelp icon">
                         <p>Yelp</p>
                     </div>
                 </a>
@@ -129,6 +129,6 @@
         <p>&copy; 2024 New Jersey Public Auto Museum, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/njpam-org/script.js"></script>
 </body>
 </html>

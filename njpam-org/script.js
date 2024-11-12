@@ -1,14 +1,3 @@
-// DEBUG PRINT -- Viewport size
-/*function updateViewportSize() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    document.getElementById('debug').innerText = `Viewport: ${width}px x ${height}px`;
-}
-
-window.addEventListener('resize', updateViewportSize);
-updateViewportSize(); // Initialize on page load
-*/
-
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 const headerHeight = header.offsetHeight;
