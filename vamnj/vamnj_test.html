@@ -19,13 +19,23 @@
 
     <!-- Header -->
     <header>
-        <div class="menu-button">
+        <div class="menu-button" onclick="toggleMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <img src="/vamnj/images/header/header_logo.svg" alt="NJPAM logo">
+        <a href="/vamnj/vamnj_test.html"><img src="/vamnj/images/header/header_logo.svg" alt="NJPAM logo"></a>
     </header>
+    
+    <!-- Sliding Menu -->
+    <div id="side-menu-container"></div>
+    <script>
+    fetch('/vamnj/side-menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('side-menu-container').innerHTML = data;
+        });
+    </script>
     
     <!-- Main content -->
     <div class="container">

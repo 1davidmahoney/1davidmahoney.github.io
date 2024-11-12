@@ -36,6 +36,10 @@ header {
     z-index: 1000;
 }
 
+header a {
+    display: contents;
+}
+
 header img {
     height: 64px;
     width: auto; /* This will maintain the aspect ratio */
@@ -45,7 +49,7 @@ header img {
 
 footer {
     box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);
-    color: #916b3e;
+    color: #61482a;
 }
 
 .container {
@@ -64,13 +68,14 @@ footer {
     width: 40px;
     height: 30px;
     cursor: pointer;
+    padding: 20px 10px;
 }
 
 /* The lines of the hamburger menu */
 .menu-button .bar {
     width: 100%;
     height: 2px;
-    background-color: #b3834d;
+    background-color: #61482a;
 }
 
 /* Big text in middle of page. Acts as separator. */
@@ -152,6 +157,73 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .splish-3 h2 {
     margin: 0; /* Ensure text stays aligned with image */
+}
+
+/*****************************************************************************/
+/* SLIDING MENU **************************************************************/
+/*****************************************************************************/
+
+.menu-button-inv {
+    top: 40px;
+}
+
+.menu-button-inv .bar-inv {
+    width: 100%;
+    height: 2px;
+    background-color: #e8b67d;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start hidden on the left */
+    width: 250px;
+    height: 100%;
+    background-color: #b3834d;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    transition: left 0.3s ease; /* Smooth sliding effect */
+    z-index: 1001;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#home-menu-button {
+    margin-top: 80px;
+}
+
+.side-menu ul li {
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition */
+    display: block; /* Allows scaling without affecting layout */
+}
+
+.side-menu ul li:hover {
+    transform: scale(1.2); /* Slightly increases size on hover */
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.side-menu.open {
+    left: 0; /* Slide in from the left */
+}
+
+.menu-alt-section {
+    background-color: #e8b67d;
+}
+
+.side-menu .menu-alt-section li a {
+    color: #61482a;
 }
 
 /*****************************************************************************/
