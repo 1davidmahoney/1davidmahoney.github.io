@@ -47,8 +47,9 @@
         </div>
         <div class="body-content">
             <h2>Every little bit helps</h2>
+            <p>Our greatest wish is for the museum to continue operating for decades to come, so future generations can continue enjoying the automotive legacy passed down to us.</p>
             <p>Although grants and raffles help us stay afloat, we can't achieve our <a href="#dreams">biggest dreams</a> for the museum without additional funding.</p>
-            <p>By donating, you're helping us reach our <span class="bolded">true potential</span>. Whether you're a certified &ldquo;car nut&rdquo; or simply want to contribute, <a href="#donation-form">your donation today</a> means we can do more than just keep the lights on... Together, we can put spotlights on even more classic cars!</p>
+            <p>By donating, you're becoming part of our <span class="bolded">shared automotive history</span> and helping us reach our <span class="bolded">true potential</span>. Whether you're a certified &ldquo;car nut&rdquo; or simply want to contribute, <a href="#donation-form">your donation today</a> means we can do more than just keep the lights on... Together, we can put spotlights on even more classic cars!</p>
         </div>
         <div class="body-content">
             <div class="container-text container-border">
@@ -72,7 +73,7 @@
                 </p>When you donate, you help us achieve...</p>
                 <ul class="goal-list">
                     <li class="complete"><del aria-label="Completed">Amazing classic cars</del></li>
-                    <li class="complete"><del aria-label="Completed">&ldquo;Museum on Wheels&rdquo;</del></li>
+                    <li class="complete"><del aria-label="Completed">&ldquo;Museum on wheels&rdquo; events</del></li>
                     <li class="complete"><del aria-label="Completed">Physical location</del></li>
                     <li class="incomplete">Larger building with more parking</li>
                     <li class="incomplete">More amazing classic cars and automotive memorabilia</li>
@@ -113,6 +114,8 @@
                         </label>
                     </div>
                     
+                    <hr>
+                    
                     <div class="form-group donate-options">
                         <div><input type="radio" name="options" value="5" onclick="updateTotal()" checked>$5</div>
                         <div><input type="radio" name="options" value="10" onclick="updateTotal()">$10</div>
@@ -126,11 +129,15 @@
                         <input type="number" value="1" min="1" id="donationAmount" name="donationAmount" required>
                         <button type="button" onclick="addCustom()">Update total</button>
                     </div>
+                    
+                    <hr>
 
                     <div class="form-group total">
                         <label class="bolded">Total</label>
                         <output id="totalField">$5</output>
                     </div>
+                    
+                    <hr>
 
                     <!-- Payment Section -->
                     <div id="paymentSection">
@@ -163,6 +170,8 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <hr>
 
                     <button type="button" onclick="submitForm()" class="submit-button">SUBMIT</button>
                     <button type="button" onclick="resetForm()">RESET</button>

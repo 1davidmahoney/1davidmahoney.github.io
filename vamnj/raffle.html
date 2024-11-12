@@ -90,15 +90,22 @@
                         </label>
                     </div>
                     
+                    <hr>
+                    
                     <div class="form-group" id="numTicketsBox">
+                        <label for="ticketCount">Number of tickets</label>
                         <input type="number" value="1" min="1" id="ticketCount" name="ticketCount" required>
                         <button type="button" onclick="updateTotal()">Update total</button>
                     </div>
+                    
+                    <hr>
 
                     <div class="form-group total">
                         <label class="bolded">Total</label>
                         <output id="totalField">$100</output>
                     </div>
+                    
+                    <hr>
 
                     <!-- Payment Section -->
                     <div id="paymentSection">
@@ -131,6 +138,8 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <hr>
 
                     <button type="button" onclick="submitForm()" class="submit-button">SUBMIT</button>
                     <button type="button" onclick="resetForm()">RESET</button>

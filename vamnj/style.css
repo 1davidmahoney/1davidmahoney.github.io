@@ -169,6 +169,14 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0; /* Ensure text stays aligned with image */
 }
 
+hr {
+    width: 84%;
+    border: none;
+    height: 1px;
+    background-color: #a8a8a8;
+    margin: 40px auto;
+}
+
 /*****************************************************************************/
 /* SLIDING MENU **************************************************************/
 /*****************************************************************************/
@@ -190,7 +198,6 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 250px;
     height: 100%;
     background-color: #b3834d;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     overflow: auto;
     transition: left 0.3s ease; /* Smooth sliding effect */
     z-index: 1001;
@@ -226,6 +233,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .side-menu.open {
     left: 0; /* Slide in from the left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow when menu is open */
 }
 
 .menu-alt-section {
