@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure that the body will always cover the full height of the viewport. */
+}
+
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -19,6 +25,14 @@ body {
 
 p{
     font-size: 1rem;/*x 16 = 16px*/
+}
+
+a:link {
+    color: #0065b8;
+}
+
+a:visited {
+    color: #8300d4;
 }
 
 header, footer {
@@ -51,6 +65,7 @@ header img {
 footer {
     box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);
     color: #61482a;
+    margin-top: 20px;
 }
 
 .container {
@@ -282,20 +297,3 @@ hr {
         padding: 0 15vw;
     }
 }
-
-/*****************************************************************************/
-/* DEBUG *********************************************************************/
-/*****************************************************************************/
-
- /* Viewport size */
-/*#debug {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    border-radius: 0 0 0 10px;
-    font-family: Arial, sans-serif;
-    z-index: 9999;
-}*/
