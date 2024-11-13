@@ -1,0 +1,142 @@
+h1 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+} 
+
+.svg-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Ensure the container does not overflow */
+    box-sizing: border-box; /* Include padding and borders in width */
+    overflow: hidden; /* Prevents any overflow from children */
+}
+
+.svg-image {
+    width: 27%; /* Set the width relative to the container */
+    min-width: 20%; /* Seems to allow laurels to get small enough on small-width viewports -- e.g., 360px */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image does not overflow */
+    flex-shrink: 1; /* Allow the SVG to shrink if necessary */
+}
+
+.title-main {
+    font-size: clamp(2rem, 7.5vw, 3rem); /* Shrinks or grows between 1.5rem and 3rem based on viewport width */
+    margin: 0 auto;
+}
+
+.title-sub {
+    white-space: nowrap;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0.5rem;
+}
+
+.title-desc {
+    font-size: 1.5rem;
+}
+
+/* Mobile-first: Stack image above text by default */
+.splash-left, .splash-right, .splosh {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    /*max-width: 1200px;*/
+    margin: 0 auto 7rem auto;
+}
+
+.splash-img, .body-img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+    display: block;
+}
+
+.splash-img {
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.big-logo {
+    max-width: 19rem;
+    margin: 0 auto 2rem auto;
+}
+
+.splash-content {
+    padding: 0 20px;
+    text-align: left;
+}
+
+.title-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hcorner {
+    width: 62%;
+    box-shadow: none;
+    margin: 0;
+}
+
+/*****************************************************************************/
+/* BREAKPOINTS ***************************************************************/
+/*****************************************************************************/
+
+@media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    body {
+        background: repeating-linear-gradient(to bottom, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6); /*Faint sand, LH-red, car-blue, LH-red, sand*/
+    }
+    
+    .splash-left, .splash-right {
+        justify-content: space-between;
+    }
+
+    .splash-left {
+        flex-direction: row; /* Image on the left, text on the right */
+    }
+
+    .splash-right {
+        flex-direction: row-reverse; /* Text on the left, image on the right */
+    }
+
+    .splash-content {
+        padding: 0 4vw;
+        text-align: left;
+    }
+
+    .splash-img {
+        max-width: 52vw;
+    }
+    
+    .title-desc {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 4% auto;
+    }
+    
+    .title-main {
+        font-size: clamp(1.2rem, 2.5vw, 3rem); /* Shrinks or grows between min and max based on viewport width */
+    }
+    
+    .title-sub {
+        font-size: clamp(1rem, 2.4vw, 1.5rem);
+    }
+    
+    .hcorner {
+        width: 42%;
+    }
+}
+
+@media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
+
+    .splash-img {
+        max-width: 39vw;
+    }
+}

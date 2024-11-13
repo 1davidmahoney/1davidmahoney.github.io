@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8b67d">
+    <title>PAMNJ | The Assembly Line</title>
+    <link rel="stylesheet" href="/pamnj-org/style.css">
+    <link rel="stylesheet" href="/pamnj-org/child-page.css">
+    <link rel="stylesheet" href="/pamnj-org/history-corner/hc-style.css">
+    <link rel="icon" href="/pamnj-org/images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Spacer to prevent content overlap with header -->
+    <div style="height: 80px;"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="menu-button" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <a href="/pamnj-org/"><img src="/pamnj-org/images/header/header_logo.svg" alt="PAMNJ logo"></a>
+    </header>
+    
+    <!-- Sliding Menu -->
+    <div id="side-menu-container"></div>
+    <script>
+    fetch('/pamnj-org/side-menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('side-menu-container').innerHTML = data;
+        });
+    </script>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="body-content">
+            <h1>History Corner</h1>
+        </div>
+        <div class="splash">
+            <img src="/pamnj-org/images/home-04.png" alt="A happy Professor Otto ready to talk cars">
+            <div class="body-content">
+                <h2 class="italics">The assembly line!</h2>
+                <p class="speech">Despite what some say, Ford did NOT invent it!</p>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="container-text container-bg">
+                <p>Ransom Olds had an automotive assembly line of sorts as early as 1897. His workers had bins full of parts, and the assembler went from bin to bin, picking out the parts he needed. Luckily, the Curved Dash Oldsmobile didn't have a lot of parts!</p>
+                <p>Henry Ford would later modernize this process, but it wasn't Olds that had inspired him to do so...</p>
+                <p>Ford had observed a highly efficient assembly line &ndash; or rather a <em>disassembly</em> line &ndash; at a slaughterhouse. The butchers would start with a whole cow and end up with a hamburger. Ford reversed that concept by starting out with a bolt... and ending up with an entire car!</p>
+                <p>Ford opened for business in 1903 and built the first Model T in 1908. By December 1913, his assembly line was in full swing. Model T production time improved by over 80% &ndash; from 12 hours, down to one and a half. Ford was making so many Model T's in such a short amount of time, that he realized all of his cars had to be painted black, because black paint dried the fastest. So, from 1914 to 1926, all Model T's were painted black, leading to Henry Ford saying, &ldquo;You can get any color you want, as long as it's not red, yellow, green, brown, or fuchsia.&rdquo; Or something like that...</p>
+            </div>
+        </div>
+        <div class="body-img italics">
+            <img src="/pamnj-org/history-corner/assembly-line/images/hc-03.jpg" alt="1920s assembly line">
+            <p class="body-img-caption">Ford assembly line</p>
+            <p class="body-img-src">The Literary Digest for January 7, 1928 (<a href="https://commons.wikimedia.org/wiki/File:Literary_Digest_1928-01-07_Henry_Ford_Interview_2.jpg" target="_blank" rel="noopener noreferrer">source</a>)</p>
+        </div>
+        <div class="navigation body-content">
+            <a href="/pamnj-org/history-corner/goodyear/">
+                <div class="nav-btn">
+                    <img class="nav-symbol" src="/pamnj-org/history-corner/images/nav-arrow.svg" alt="Left arrow">
+                    <p>Previous Story</p>
+                </div>
+            </a>
+            <a href="/pamnj-org/history-corner/">
+                <div class="nav-btn">
+                    <img class="nav-symbol" src="/pamnj-org/history-corner/images/nav-home.svg" alt="Left arrow">
+                    <p>Back to Otto's Garage</p>
+                </div>
+            </a>
+            <div class="nav-btn invisible">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Public Auto Museum of New Jersey, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
+    </footer>
+
+    <script src="/pamnj-org/script.js"></script>
+</body>
+</html>
