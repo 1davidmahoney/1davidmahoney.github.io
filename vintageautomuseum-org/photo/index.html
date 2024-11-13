@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8b67d">
+    <title>VAMNJ | Your photo!</title>
+    <link rel="stylesheet" href="/vintageautomuseum-org/style.css">
+    <link rel="stylesheet" href="/vintageautomuseum-org/child-page.css">
+    <link rel="stylesheet" href="/vintageautomuseum-org/photo/photo.css">
+    <link rel="icon" href="/vintageautomuseum-org/images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Spacer to prevent content overlap with header -->
+    <div style="height: 80px;"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="menu-button" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <a href="/vintageautomuseum-org/"><img src="/vintageautomuseum-org/images/header/header_logo.svg" alt="VAMNJ logo"></a>
+    </header>
+    
+    <!-- Sliding Menu -->
+    <div id="side-menu-container"></div>
+    <script>
+    fetch('/vintageautomuseum-org/side-menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('side-menu-container').innerHTML = data;
+        });
+    </script>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="body-content">
+            <h1>Hop-In Photo Op</h1>
+            <p>Ever wonder what it would feel like to sit inside a classic car? Now's your chance!</p>
+            <p>Get behind the steering wheel, and have your photo taken in style!</p>
+        </div>
+        <div class="splash">
+            <img src="/vintageautomuseum-org/images/home-03.png" alt="Visitor having picture taken in car">
+        </div>
+        <div class="body-content">
+            <div class="container-text container-border">
+                <h2>How it works</h2>
+                <ol>
+                    <li>Find the museum host.</li>
+                    <li>Take a seat in the specially marked classic car.</li>
+                    <li>Strike a cool pose!</li>
+                    <li>We'll snap a few pics and email them to you.</li>
+                </ol>
+                <p class="italics">Be sure to take some fun selfies, too!</p>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="container-text container-bg">
+                <h2>Price: $5</h2>
+            </div>
+        </div>
+        <div class="body-content">
+            <p class="italics">We kindly ask that you please be careful in and around the vehicle, to avoid damaging it. Please note that we may not be able to accommodate all visitors due to design constraints of the past.</p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vintage Automobile Museum of New Jersey, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
+    </footer>
+
+    <script src="/vintageautomuseum-org/script.js"></script>
+</body>
+</html>

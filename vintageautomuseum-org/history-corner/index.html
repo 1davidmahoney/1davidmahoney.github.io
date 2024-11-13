@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8b67d">
+    <title>VAMNJ | History Corner</title>
+    <link rel="stylesheet" href="/vintageautomuseum-org/style.css">
+    <link rel="stylesheet" href="/vintageautomuseum-org/child-page.css">
+    <link rel="stylesheet" href="/vintageautomuseum-org/history-corner/history-corner.css">
+    <link rel="icon" href="/vintageautomuseum-org/images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Spacer to prevent content overlap with header -->
+    <div style="height: 80px;"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="menu-button" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <a href="/vintageautomuseum-org/"><img src="/vintageautomuseum-org/images/header/header_logo.svg" alt="VAMNJ logo"></a>
+    </header>
+    
+    <!-- Sliding Menu -->
+    <div id="side-menu-container"></div>
+    <script>
+    fetch('/vintageautomuseum-org/side-menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('side-menu-container').innerHTML = data;
+        });
+    </script>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="body-content">
+            <h1>History Corner</h1>
+        </div>
+        <div class="splash">
+            <img src="/vintageautomuseum-org/history-corner/images/hc-welcome.png" alt="Otto standing in front of his garage">
+        </div>
+        <div class="body-content">
+            <h2 class="italics">Hello! I'm Professor Otto!</h2>
+            <p class="speech">Welcome to my garage! I love talking about all things automotive.</p>
+            <p class="speech">In fact, I could use a work break. Care to hear a little tale about automobile history?</p>
+        </div>
+        <div class="body-content">
+            <div class="container-text container-bg">
+                <h2 class="italics">How about the story behind...</h2>
+                <ul>
+                    <li><a href="/vintageautomuseum-org/history-corner/pickups/">Pick-up trucks</a></li>
+                    <li><a href="/vintageautomuseum-org/history-corner/goodyear/">Goodyear tires</a></li>
+                    <li><a href="/vintageautomuseum-org/history-corner/assembly-line/">The assembly line</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="container-text container-bg">
+                <h2 class="italics">There's always more to learn!</h2>
+                <p>Recommended reading:</p>
+                <ul>
+                    <li><em>Henry Ford and the Automobile</em> by David L. Lewis</li>
+                    <li><em>Wheels of Fortune: The Story of Rubber in Akron</em> by Steve Love and David Giffels</li>
+                    <li><em>My Life and Work</em> by Henry Ford and Samuel Crowther</li>
+                </ul>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="container-text container-border">
+                <h2>About History Corner</h2>
+                <p>This section of the website is dedicated to capturing car history in a fun, anecdotal way. Information is sourced from the "more to learn" section.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vintage Automobile Museum of New Jersey, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
+    </footer>
+
+    <script src="/vintageautomuseum-org/script.js"></script>
+</body>
+</html>
