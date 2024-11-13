@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8b67d">
+    <title>NJPAM | Home</title>
+    <link rel="stylesheet" href="/vamnj-org/style.css">
+    <link rel="stylesheet" href="/vamnj-org/index.css">
+    <link rel="icon" href="/vamnj-org/images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Spacer to prevent content overlap with header -->
+    <div style="height: 80px;"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="menu-button" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <a href="/vamnj-org/"><img src="/vamnj-org/images/header/header_logo.svg" alt="NJPAM logo"></a>
+    </header>
+    
+    <!-- Sliding Menu -->
+    <div id="side-menu-container"></div>
+    <script>
+    fetch('/vamnj-org/side-menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('side-menu-container').innerHTML = data;
+        });
+    </script>
+    
+    <!-- Main content -->
+    <div class="container">
+    
+        <!-- TITLE (img left) -->
+        <section class="splash-left">
+            <img class="splash-img" src="/vamnj-org/images/home-01.png" alt="Row of classic cars">
+            <div class="title-content">
+                <h2 class="title-desc">Take a drive down memory lane at the</h2>
+                <div class="svg-text-container">
+                    <img src="/vamnj-org/images/laurel.svg" alt="Left laurel" class="svg-image">
+                    <h1 class="title-sub">NEW JERSEY</h1>
+                    <img src="/vamnj-org/images/laurel.svg" alt="Right laurel" class="svg-image flipped">
+                </div>
+                <h1 class="title-main">PUBLIC AUTO MUSEUM</h1>
+                <img class="body-img separator" src="/vamnj-org/images/separator.svg" alt="Separator line with tiny car at center">
+                <h2 class="title-desc">Where automobile history comes to life!</h2>
+            </div>
+        </section>
+
+        <!-- CTA: VISIT (img right) -->
+        <section class="splash-right">
+            <img class="splash-img" src="/vamnj-org/images/home-02.png" alt="Peeking into a car's interior">
+            <div class="splash-content">
+                <h1 class="centered">Up-close and personal views of beautiful classic cars!</h1>
+                <h2>Our collection spans over 75 years, from the turn of the century to the Fabulous Fifties and beyond.</h2>
+                <h2><a href="/vamnj-org/visit/">Come visit</a> and see for yourself!</h2>
+            </div>
+        </section>
+
+        <!-- CTA: PHOTO (img left) -->
+        <section class="splash-left">
+            <img class="splash-img" src="/vamnj-org/images/home-03.png" alt="Visitor having picture taken in car">
+            <div class="splash-content">
+                <h1 class="centered">A family-friendly attraction, legendary cultural artifacts</h1>
+                <h2>Relive the heyday of horsepower and style!</h2>
+                <h2>Surround yourself with automotive memorabilia, and enjoy an immersive educational experience like no other.</h2>
+                <h2>Want to see yourself behind the wheel of a vintage auto? Hop in for a <a href="/vamnj-org/photo/">fun photo op</a>!</h2>
+            </div>
+        </section>
+
+        <!-- CTA: HISTORY CORNER (img right) -->
+        <section class="splash-right">
+            <img class="splash-img hcorner" src="/vamnj-org/images/home-04.png" alt="A happy Professor Otto ready to talk cars">
+            <div class="splash-content">
+                <h1 class="centered">Revved up to learn more? Meet Professor Otto!</h1>
+                <h2>He always has an interesting story for you over at <a href="/vamnj-org/history-corner/"><em>History Corner</em></a>...</h2>
+            </div>
+        </section>
+        
+        <div class="splash-left">
+            <img class="body-img separator" src="/vamnj-org/images/separator.svg" alt="Separator line with tiny car at center">
+        </div>
+        
+        <!-- SOME WAYS TO CONTRIBUTE -->
+        <div class="splosh">
+            <div class="splash-content">
+                <h1 class="centered">Help celebrate and preserve our shared culture</h1>
+                <h2>There are many ways YOU can become part of automobile history TODAY!</h2>
+            </div>
+            <div class="splish-3">
+                <a href="/vamnj-org/membership/">
+                    <div class="splish">
+                        <img src="/vamnj-org/images/activity-member.svg" alt="Membership icon">
+                        <h2><em>Become a member</em></h2>
+                    </div>
+                </a>
+                <a href="/vamnj-org/donate/">
+                    <div class="splish">
+                        <img src="/vamnj-org/images/activity-donate.svg" alt="Donate icon">
+                        <h2><em>Donate</em></h2>
+                    </div>
+                </a>
+                <a href="/vamnj-org/raffle/">
+                    <div class="splish">
+                        <img src="/vamnj-org/images/activity-ticket.svg" alt="Ticket icon">
+                        <h2><em>Buy a ticket for the <span class="bolded">Vintage 1000</span> raffle</em></h2>
+                    </div>
+                </a>
+            </div>
+            <div class="splash-content">
+                <h2 style="margin-top:0;">See the menu in the upper left for more!</h2>
+            </div>
+        </div>
+
+        <div class="shout"><h1>Thank you for visiting!</h1></div>
+        <img class="body-img big-logo" src="/vamnj-org/images/header/header_logo.svg" alt="NJPAM logo">
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 New Jersey Public Auto Museum, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
+    </footer>
+
+    <script src="/vamnj-org/script.js"></script>
+</body>
+</html>
