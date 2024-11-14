@@ -236,12 +236,13 @@ hr {
 .side-menu ul li {
     padding: 15px;
     text-align: center;
-    transition: transform 0.3s ease; /* Smooth transition */
     display: block; /* Allows scaling without affecting layout */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    opacity: 1;
 }
 
 .side-menu ul li:hover {
-    transform: scale(1.2); /* Slightly increases size on hover */
+    opacity: 0.6;
 }
 
 .side-menu ul li a {
