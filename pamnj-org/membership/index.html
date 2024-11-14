@@ -31,7 +31,16 @@
     fetch('/pamnj-org/side-menu.html')
         .then(response => response.text())
         .then(data => {
+            // Insert the menu HTML into the container
             document.getElementById('side-menu-container').innerHTML = data;
+            
+            // Find the specific menu item and update its text
+            const menuItems = document.querySelectorAll('#side-menu-container li a');
+            menuItems.forEach(item => {
+                if (item.innerText.trim() === 'Membership') {
+                    item.innerText = '— Membership —';
+                }
+            });
         });
     </script>
     
