@@ -1,0 +1,101 @@
+li {
+    padding-bottom: 6px;
+}
+
+.separator {
+    max-width: 61.8%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+}
+
+hr {
+    max-width: 61.8%;
+}
+
+.gallery-separator {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Gallery Styles */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Adjust the number of columns as needed */
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.thumb {
+  width: 100%;            /* Full width of the grid cell */
+  padding-top: 100%;      /* Maintains a square aspect ratio */
+  position: relative;     /* Required for absolute positioning of img */
+  overflow: hidden;       /* Ensures any overflow is hidden */
+}
+
+.thumb img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* Fills the square container without distortion */
+  cursor: pointer;
+}
+
+/* Viewer Overlay */
+.viewer {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.viewer img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.viewer .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.navigation {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev, .next {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/*****************************************************************************/
+/* BREAKPOINTS ***************************************************************/
+/*****************************************************************************/
+
+@media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    .gallery {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
