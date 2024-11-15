@@ -190,7 +190,7 @@ hr {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 30px;
+  font-size: 40px;
   color: white;
   cursor: pointer;
 }
@@ -199,16 +199,23 @@ hr {
   position: absolute;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .prev, .next {
-  font-size: 40px;
+  font-size: 60px;
   color: white;
   cursor: pointer;
-  padding: 10px;
+}
+
+.prev {
+    margin-right: 40vw;    
+}
+
+.next {
+    margin-left: 40vw;
 }
 
 /*****************************************************************************/
