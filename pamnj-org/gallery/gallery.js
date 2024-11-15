@@ -1,9 +1,9 @@
 const images = [
-  ['/njcarmuseum-org/gallery/images/current-display/a1.jpg', '/njcarmuseum-org/gallery/images/current-display/a2.jpg', '/njcarmuseum-org/gallery/images/current-display/b1.jpg', '/njcarmuseum-org/gallery/images/current-display/b2.jpg', '/njcarmuseum-org/gallery/images/current-display/c1.jpg', '/njcarmuseum-org/gallery/images/current-display/c2.jpg'],
-  ['/njcarmuseum-org/gallery/images/2024-fall-display-roaring-20s/01.jpg', '/njcarmuseum-org/gallery/images/2024-fall-display-roaring-20s/02.jpg', '/njcarmuseum-org/gallery/images/2024-fall-display-roaring-20s/03.jpg', '/njcarmuseum-org/gallery/images/2024-fall-display-roaring-20s/04.jpg'],
-  ['/njcarmuseum-org/gallery/images/2023-winter-show-nyc/01.jpg', '/njcarmuseum-org/gallery/images/2023-winter-show-nyc/02.jpg', '/njcarmuseum-org/gallery/images/2023-winter-show-nyc/03.jpg', '/njcarmuseum-org/gallery/images/2023-winter-show-nyc/04.jpg', '/njcarmuseum-org/gallery/images/2023-winter-show-nyc/05.jpg'],
-  ['/njcarmuseum-org/gallery/images/2022-spring-show-allaire/01.jpg', '/njcarmuseum-org/gallery/images/2022-spring-show-allaire/02.jpg', '/njcarmuseum-org/gallery/images/2022-spring-show-allaire/03.jpg'],
-  ['/njcarmuseum-org/gallery/images/2021-summer-display-british-invasion/01.jpg', '/njcarmuseum-org/gallery/images/2021-summer-display-british-invasion/02.jpg', '/njcarmuseum-org/gallery/images/2021-summer-display-british-invasion/03.jpg', '/njcarmuseum-org/gallery/images/2021-summer-display-british-invasion/04.jpg']
+  ['/pamnj-org/gallery/images/current-display/a1.jpg', '/pamnj-org/gallery/images/current-display/a2.jpg', '/pamnj-org/gallery/images/current-display/b1.jpg', '/pamnj-org/gallery/images/current-display/b2.jpg', '/pamnj-org/gallery/images/current-display/c1.jpg', '/pamnj-org/gallery/images/current-display/c2.jpg'],
+  ['/pamnj-org/gallery/images/2024-fall-display-roaring-20s/01.jpg', '/pamnj-org/gallery/images/2024-fall-display-roaring-20s/02.jpg', '/pamnj-org/gallery/images/2024-fall-display-roaring-20s/03.jpg', '/pamnj-org/gallery/images/2024-fall-display-roaring-20s/04.jpg'],
+  ['/pamnj-org/gallery/images/2023-winter-show-nyc/01.jpg', '/pamnj-org/gallery/images/2023-winter-show-nyc/02.jpg', '/pamnj-org/gallery/images/2023-winter-show-nyc/03.jpg', '/pamnj-org/gallery/images/2023-winter-show-nyc/04.jpg', '/pamnj-org/gallery/images/2023-winter-show-nyc/05.jpg'],
+  ['/pamnj-org/gallery/images/2022-spring-show-allaire/01.jpg', '/pamnj-org/gallery/images/2022-spring-show-allaire/02.jpg', '/pamnj-org/gallery/images/2022-spring-show-allaire/03.jpg'],
+  ['/pamnj-org/gallery/images/2021-summer-display-british-invasion/01.jpg', '/pamnj-org/gallery/images/2021-summer-display-british-invasion/02.jpg', '/pamnj-org/gallery/images/2021-summer-display-british-invasion/03.jpg', '/pamnj-org/gallery/images/2021-summer-display-british-invasion/04.jpg']
 ];
 
 let currentSetIndex = 0;
