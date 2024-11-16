@@ -1,9 +1,6 @@
-body { /* Relatively short page doesn't need so many BG colors, so just use one. */
-    background: #fff4e6; /*Faint sand*/
-}
-
 .container {
     display: grid;
+    background: #fff4e6; /* Relatively short page doesn't need so many BG colors, so just use one -- faint sand */
     gap: 10px; /* spacing between items */
     grid-template-columns: 1fr;
     flex: 1;

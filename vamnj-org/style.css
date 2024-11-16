@@ -19,6 +19,7 @@ body {
     background-color: #8f693d; /* Fallback color */
     background-repeat: repeat;
     background-size: 100px 100px; /* Adjust to scale the texture */
+    padding-top: 80px; /* Matches the header's height */
 }
 
 .body-content { /* For when I just want to throw some basic html elements into a div and have it look nice. */
@@ -306,7 +307,7 @@ hr {
     }
 }
 
-@media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
+@media (min-width: 1024px) { /* Large landscape (desktop/laptop) */
 
     .container {
         max-width: 80vw;
