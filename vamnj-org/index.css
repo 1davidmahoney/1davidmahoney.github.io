@@ -63,8 +63,7 @@ h2 {
 }
 
 .big-logo {
-    max-width: 19rem;
-    margin: 0 auto 2rem auto;
+    margin: 3rem auto 2rem auto;
 }
 
 .splash-content {
@@ -90,7 +89,7 @@ h2 {
 
 @media (min-width: 768px) { /* Medium portrait (tablet) */
 
-    body {
+    .container {
         background: repeating-linear-gradient(to bottom, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6); /*Faint sand, LH-red, car-blue, LH-red, sand*/
     }
     
