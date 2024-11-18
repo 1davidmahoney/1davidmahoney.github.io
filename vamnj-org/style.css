@@ -60,6 +60,7 @@ header {
 
 #header-row-1 {
     display: flex; /* Flex container in the first row */
+    align-items: center;
     /*gap: 10px; /* Space between flex items */
 }
 
