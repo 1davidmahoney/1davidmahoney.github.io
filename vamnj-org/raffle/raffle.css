@@ -1,3 +1,7 @@
+.container { /* No "RAFFLE" banner on raffle page, so use banner-less margins */
+    margin: 0 auto;
+}
+
 li {
     font-size: 1.2rem;
     padding-bottom: 6px;
@@ -41,7 +45,7 @@ input[type="radio"] {
     justify-content: space-between;
     align-items: center;
 }
-button {
+form button {
     font-family: inherit; /* Makes the button inherit the font from the body */
     font-size: 1rem;
     background: #ebebeb;

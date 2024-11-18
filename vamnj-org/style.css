@@ -39,20 +39,55 @@ a:visited {
     color: #8300d4;
 }
 
-header, footer {
+#header-row-1, footer {
     background-color: #e8b67d;
     text-align: center;
     padding: 8px 16px;
-    transition: top 0.3s;
 }
 
 header {
+    display: grid;
+    grid-template-rows: auto auto; /* Two rows: adjust sizes as needed */
+    /*display: flex;
+    justify-content: space-between;*/
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+}
+
+#header-row-1 {
+    display: flex; /* Flex container in the first row */
+    /*gap: 10px; /* Space between flex items */
+}
+
+.raffle-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5aa25a; /* Green background */
+    border: 4px solid #9ac69a; /* Light green border */
+    font-size: 1.2rem; /* Adjust font size */
+    padding: 10px 20px; /* Button padding */
+    cursor: pointer; /* Pointer on hover */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline (for links styled as buttons) */
+    box-shadow: 0 0 0 0 white; /* White outer glow */
+    transition: color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions */
+    white-space: nowrap;
+    box-sizing: border-box; /* Includes padding/borders in total height */
+    height: 30px;
+}
+
+.raffle-banner:hover {
+    box-shadow: 0 0 14px 2px white; /* White outer glow */
+    color: #386338;
+}
+
+a.raffle-banner {
+    color: white;
 }
 
 header a {
@@ -63,7 +98,7 @@ header img {
     height: 64px;
     width: auto; /* This will maintain the aspect ratio */
     display: block;
-    margin: 0 auto; /* Ensures the image is centered */
+    margin: auto 0 auto auto; /* On the smallest screens, stick to the right */
 }
 
 footer {
@@ -75,16 +110,16 @@ footer {
 .container {
     padding: 0 0 20px 0;
     background: repeating-linear-gradient(to bottom, #fff4e6, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6, #fff4e6); /*Faint sand (2x), LH-red, car-blue, LH-red, sand (2x)*/
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Menu Button Styling */
 .menu-button {
-    position: absolute;
+    /*position: absolute;*/
     left: 16px; /* Sticks the menu button to the left */
     top: 50%; /* Vertically centers the button */
-    transform: translateY(-50%); /* Adjusts the button to be perfectly centered vertically */
+    /*transform: translateY(-50%); /* Adjusts the button to be perfectly centered vertically */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,6 +127,7 @@ footer {
     height: 30px;
     cursor: pointer;
     padding: 20px 10px;
+    margin: auto auto auto 0;
 }
 
 /* The lines of the hamburger menu */
@@ -275,13 +311,102 @@ hr {
     color: #61482a;
 }
 
+.wide-menu {
+    display: none;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.wide-menu-item {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+}
+
+a.wide-menu-item {
+    color: inherit;
+    transition: opacity 0.3s ease; /* Smooth transition */
+    opacity: 1;
+}
+
+a.wide-menu-item:hover {
+    opacity: 0.6;
+}
+
+.glow-button {
+    display: none;
+    align-items: center;
+    background-color: #5aa25a; /* Green background */
+    border: 4px solid #9ac69a; /* Light green border */
+    border-radius: 12px; /* Rounded corners */
+    font-size: 1.2rem; /* Adjust font size */
+    padding: 10px 20px; /* Button padding */
+    cursor: pointer; /* Pointer on hover */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline (for links styled as buttons) */
+    box-shadow: 0 0 14px 2px white; /* White outer glow */
+    transition: color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions */
+    white-space: nowrap;
+    box-sizing: border-box; /* Includes padding/borders in total height */
+    height: 60px;
+    margin: auto 0 auto auto;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 2px 2px white; /* Enhance glow on hover */
+    color: #386338;
+}
+
+a.glow-button {
+    color: white;
+    /*margin: auto;*/
+}
+
 /*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
 
 /* This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
 
+@media (min-width: 500px) { /* Header now wide enough to fit big "$$ RAFFLE $$" button */
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .raffle-banner {
+        display: none;
+    }
+
+    .glow-button {
+        display: flex;
+    }
+    
+    header img {
+        margin: 0 auto; /* Ensures the image is centered */
+    }
+
+}
+
 @media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    header img {
+        margin: 0;
+    }
+    
+    .menu-button {
+        display: none;
+    }
+
+    .wide-menu {
+        display: flex;
+        flex-direction: row; /* Align items in a row */
+        flex-wrap: wrap; /* Allow wrapping to the next line */
+        gap: 5px 20px; /* Add spacing between items */
+    }
 
     .splish-3 {
         flex-direction: row; /* Switch to row layout */
@@ -307,9 +432,16 @@ hr {
     }
 }
 
-@media (min-width: 1024px) { /* Large landscape (desktop/laptop) */
+@media (min-width: 1024px) { /* MEDIUM LANDSCAPE (TABLETS) */
 
     .container {
         max-width: 80vw;
+    }
+}
+
+@media (min-width: 1300px) { /* Menu items only nice center in one single row above this width */
+
+    .wide-menu {
+        justify-content: space-evenly;
     }
 }

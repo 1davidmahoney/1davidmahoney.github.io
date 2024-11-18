@@ -25,7 +25,7 @@ input[type="text"],
 input[type="email"] {
     width: 60vw; /* Makes the input element fill its parent container */
 }
-button {
+form button {
     font-family: inherit; /* Makes the button inherit the font from the body */
     font-size: 1rem;
     background: #ebebeb;
