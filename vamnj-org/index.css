@@ -234,8 +234,14 @@ h2 {
         text-align: left;
     }
 
+    .splash-content h1 {
+        margin-top: 0;
+    }
+    
     .splash-img {
-        max-width: 52vw;
+        max-width: 44vw;
+        height: 32vw;
+        object-fit: cover;
     }
     
     .title-desc {
@@ -257,6 +263,13 @@ h2 {
     }
 }
 
+@media (min-width: 1024px) {
+    
+    .splash-img {
+        max-width: 39vw;
+    }
+}
+
 @media (min-width: 1200px) { /* Screen is wide enough to show hero stuff side by side */
     
     .splash-hero {
@@ -275,6 +288,6 @@ h2 {
 @media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
 
     .splash-img {
-        max-width: 39vw;
+        max-width: 46vw;
     }
 }
