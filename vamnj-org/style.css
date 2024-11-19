@@ -19,6 +19,7 @@ body {
     background-color: #8f693d; /* Fallback color */
     background-repeat: repeat;
     background-size: 100px 100px; /* Adjust to scale the texture */
+    background-position: center;
     padding-top: 80px; /* Matches the header's height */
 }
 
