@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 h1 {
     font-size: 1.7rem;
     font-weight: 800;
@@ -9,25 +11,25 @@ h2 {
     font-weight: 300;
 } 
 
-.svg-text-container {
+/*.svg-text-container {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%; /* Ensure the container does not overflow */
-    box-sizing: border-box; /* Include padding and borders in width */
-    overflow: hidden; /* Prevents any overflow from children */
-}
+    /*box-sizing: border-box; /* Include padding and borders in width */
+    /*overflow: hidden; /* Prevents any overflow from children */
+/*}*/
 
-.svg-image {
-    width: 27%; /* Set the width relative to the container */
-    min-width: 20%; /* Seems to allow laurels to get small enough on small-width viewports -- e.g., 360px */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure the image does not overflow */
-    flex-shrink: 1; /* Allow the SVG to shrink if necessary */
-}
+/*.svg-image { /* TODO: Maybe repurpose for new embellishments */
+/*    width: 27%; /* Set the width relative to the container */
+/*    min-width: 20%; /* Seems to allow laurels to get small enough on small-width viewports -- e.g., 360px */
+/*    height: auto; /* Maintain aspect ratio */
+/*    max-width: 100%; /* Ensure the image does not overflow */
+/*    flex-shrink: 1; /* Allow the SVG to shrink if necessary */
+/*}*/
 
-.title-main {
-    font-size: clamp(2rem, 7.5vw, 3rem); /* Shrinks or grows between 1.5rem and 3rem based on viewport width */
+/*.title-main {
+    font-size: clamp(2rem, 7.5vw, 3rem);
     margin: 0 auto;
 }
 
@@ -40,7 +42,104 @@ h2 {
 
 .title-desc {
     font-size: 1.5rem;
+}*/
+
+/*****************************************************************************/
+/* HERO TITLE AND IMAGE ******************************************************/
+/*****************************************************************************/
+
+.splash-hero {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 20px;
 }
+
+.hero-title {
+    font-family: "Cookie", "Times New Roman", serif;
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Container for the hero image and embellishments */
+.framed-hero-image-container {
+    position: relative;
+    max-width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: clamp(1.4rem, 8%, 4rem);
+}
+
+/* Hero Image Styling */
+.hero-image {
+    display: block;
+    width: 87%;
+    /*max-width: 600px; /* Adjust based on your design */
+    border-radius: 40px; /* Rounded corners */
+    border: 1px solid #b3834d;
+    margin: 4% auto 0 auto;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Embellishment Styling (Shared) */
+.embellishment {
+    position: absolute;
+    width: auto;
+    height: auto;
+    pointer-events: none; /* Prevent interference */
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
+}
+
+/* Side Embellishments */
+.side-left {
+  top: 0;
+  left: 0; /* Adjust to fit your design */
+  /*transform: translateY(-50%);*/
+  height: 62%; /* Responsive scaling */
+}
+
+.side-right {
+  top: 0;
+  right: 0; /* Adjust to fit your design */
+  /*transform: translateY(-50%);*/
+  height: 62%; /* Responsive scaling */
+}
+
+/* Bottom Embellishments */
+.bottom-center {
+  bottom: 3%; /* Adjust to fit */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 53%; /* Responsive scaling */
+}
+
+.bottom-left {
+  bottom: 0; /* Adjust to fit */
+  left: 0; /* Adjust to fit */
+  width: 20%; /* Responsive scaling */
+}
+
+.bottom-right {
+  bottom: 0; /* Adjust to fit */
+  right: 0; /* Adjust to fit */
+  width: 20%; /* Responsive scaling */
+  transform: scaleX(-1); /* Horizontal flip */
+}
+
+/* Title Styling */
+.decorated-title {
+  text-align: center;
+  font-family: 'Your Font', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/*****************************************************************************/
+/* MISC **********************************************************************/
+/*****************************************************************************/
 
 /* Mobile-first: Stack image above text by default */
 .splash-left, .splash-right, .splosh {
@@ -52,9 +151,9 @@ h2 {
 }
 
 .splash-img, .body-img {
+    display: block;
     max-width: 100%; /* Make the image responsive */
     height: auto;
-    display: block;
 }
 
 .splash-img {
@@ -62,8 +161,9 @@ h2 {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-.big-logo {
-    margin: 3rem auto 2rem auto;
+.original-logo {
+    margin: 3rem 1rem;
+    width: clamp(210px, 44vw, 350px);
 }
 
 .splash-content {
@@ -86,6 +186,13 @@ h2 {
 /*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
+
+@media (min-width: 500px) { /* Simple fix to get nice border-radius on smaller screens */
+
+    .hero-image {
+        border-radius: 60px;
+    }
+}
 
 @media (min-width: 768px) { /* Medium portrait (tablet) */
 
@@ -130,6 +237,21 @@ h2 {
     
     .hcorner {
         width: 42%;
+    }
+}
+
+@media (min-width: 1200px) { /* Screen is wide enough to show hero stuff side by side */
+    
+    .splash-hero {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: end;
+        margin-bottom: 7rem;
+    }
+    
+    .original-logo {
+        margin: 3rem 1rem;
+        width: clamp(260px, 23vw, 350px);
     }
 }
 
