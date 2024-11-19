@@ -166,15 +166,15 @@ h2 {
     width: clamp(210px, 44vw, 350px);
 }
 
+.original-logo-outro {
+    width: clamp(100px, 50%, 230px);
+    height: auto;
+    margin: 0 auto 2rem auto;
+}
+
 .splash-content {
     padding: 0 20px;
     text-align: left;
-}
-
-.title-content {
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
 }
 
 .hcorner {
@@ -206,10 +206,19 @@ h2 {
 
     .splash-left {
         flex-direction: row; /* Image on the left, text on the right */
+        border-radius: 60px 0 0 60px;
+    }
+
+    .splash-left img {
+        border-radius: 0 60px 60px 0;
     }
 
     .splash-right {
         flex-direction: row-reverse; /* Text on the left, image on the right */
+    }
+    
+    .splash-right img {
+        border-radius: 60px 0 0 60px;
     }
 
     .splash-content {
