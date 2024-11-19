@@ -59,7 +59,7 @@ h2 {
 
 .hero-title {
     font-family: "Cookie", "Times New Roman", serif;
-    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    font-size: 2.7em;/*clamp(2.5rem, 5.5vw, 4rem);*/
     text-align: center;
     margin-bottom: 0;
 }
@@ -70,7 +70,7 @@ h2 {
     max-width: 100%;
     display: inline-block;
     text-align: center;
-    padding-bottom: clamp(20px, 8%, 70px);
+    padding-bottom: 8%;
 }
 
 /* Hero Image Styling */
@@ -189,6 +189,10 @@ h2 {
 
 @media (min-width: 500px) { /* Simple fix to get nice border-radius on smaller screens */
 
+    .hero-title {
+        font-size: 3.5em;
+    }
+
     .hero-image {
         border-radius: 60px;
     }
@@ -200,6 +204,10 @@ h2 {
         background: repeating-linear-gradient(to bottom, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6); /*Faint sand, LH-red, car-blue, LH-red, sand*/
     }
     
+    .hero-title {
+        font-size: 4em;
+    }
+
     .splash-left, .splash-right {
         justify-content: space-between;
     }
