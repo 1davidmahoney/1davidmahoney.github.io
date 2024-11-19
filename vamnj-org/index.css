@@ -70,7 +70,7 @@ h2 {
     max-width: 100%;
     display: inline-block;
     text-align: center;
-    padding-bottom: clamp(1.4rem, 8%, 4rem);
+    padding-bottom: clamp(20px, 8%, 70px);
 }
 
 /* Hero Image Styling */
