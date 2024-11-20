@@ -148,6 +148,8 @@ h2 {
     align-items: center;
     /*max-width: 1200px;*/
     margin: 0 auto 7rem auto;
+    max-height: none; /* Remove height constraints */
+    padding: 0; /* Reduce padding to avoid clipping */
 }
 
 .splash-img, .body-img {
