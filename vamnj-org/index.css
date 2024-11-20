@@ -154,6 +154,7 @@ h2 {
     display: block;
     max-width: 100%; /* Make the image responsive */
     height: auto;
+    object-fit: contain; /* Show the entire image without cropping */
 }
 
 .splash-img {
