@@ -153,16 +153,13 @@
             iframe.style.border = "0";
             iframe.style.width = "100%";
             iframe.allowFullscreen = true;
-
-            iframe.onerror = function () {
-                // If iframe fails to load, ensure fallback remains visible
+            iframe.onload = function () {
+                // Hide fallback message when iframe loads
                 const fallback = mapContainer.querySelector('.map-fallback');
                 if (fallback) {
-                    fallback.style.display = 'block';
+                    fallback.style.display = 'none';
                 }
             };
-
-            // Always append the iframe
             mapContainer.appendChild(iframe);
         }
     });
