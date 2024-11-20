@@ -8,6 +8,7 @@
 
 .container-text {
     padding: 1px 20px;
+    border-radius: 8px;
 }
 
 .container-border {
@@ -16,4 +17,20 @@
 
 .container-bg {
     background: #e5dccf; /* Darker sand */
+}
+
+.child-splash-right img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    .child-splash-right img {
+        border-radius: 0 0 0 60px;
+    }
 }

@@ -38,6 +38,15 @@ li {
     margin-bottom: 0;
 }
 
+.group-photo img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-top: 40px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
 /*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
@@ -60,4 +69,12 @@ li {
     .container > :nth-child(7) { grid-column: 2 / 4; grid-row: 4; } /* SM */
     .container > :nth-child(8) { grid-column: 1 / 4; grid-row: 5; } /* Pic */
     .container > :nth-child(9) { grid-column: 1 / 4; grid-row: 6; } /* Thanks */
+    
+    .group-photo img {
+        display: block;
+        max-width: 75%;
+        height: auto;
+        border-radius: 60px;
+        margin: 40px auto 0 auto;
+    }
 }
