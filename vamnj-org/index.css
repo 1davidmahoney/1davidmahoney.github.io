@@ -182,8 +182,12 @@ h2 {
 
 .hcorner {
     width: 62%;
-    box-shadow: none;
-    margin: 0;
+    /* Stuff from splash-img: */
+    display: block;
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+    object-fit: contain; /* Show the entire image without cropping */
+    margin-bottom: 1rem;
 }
 
 /*****************************************************************************/
