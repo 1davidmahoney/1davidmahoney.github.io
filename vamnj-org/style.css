@@ -371,6 +371,66 @@ a.glow-button {
 }
 
 /*****************************************************************************/
+/* ANIMATION *****************************************************************/
+/*****************************************************************************/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-shortest {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fade-in-short {
+  animation: fadeIn 1.3s ease-in-out forwards;
+}
+
+.fade-in-long {
+  animation: fadeIn 1.6s ease-in-out forwards;
+}
+
+.fade-in-longest {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below the final position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at the natural position */
+  }
+}
+
+.scroll-fade {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Optional fallback for browsers without JS */
+}
+
+.scroll-fade.active {
+  animation: fadeInUp 0.5s ease-out forwards; /* Trigger animation when active */
+}
+
+.scroll-fade-quick {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Optional fallback for browsers without JS */
+}
+
+.scroll-fade-quick.active {
+  animation: fadeInUp 0.5s ease-out forwards; /* Trigger animation when active */
+}
+
+/*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
 
