@@ -12,6 +12,13 @@
     border: none; /* Remove default iframe border */
 }
 
+.map-fallback {
+    display: none;
+    font-size: 1rem;
+    color: #555; /* Neutral text color */
+    margin: 10px 0;
+}
+
 ul {
     list-style-type: none;
 }
