@@ -69,13 +69,13 @@
         <div class="body-content">
             <h2>Join the coolest historical society of them all!</h2>
             <p>Becoming an official member of the Vintage Auto Museum of NJ is a fun way to get involved in the car community and to support the <a href="/vamnj-org/about/#mission">museum's mission</a>.</p>
-            <p>There are 2 membership types: one free, and one paid. Either way, when you become a member, you help the museum grow! <a href="#membership-form">Sign up now</a>!</p>
+            <p>Not ready to become a member? Be a Friend of the Museum! Either way, when you <a href="#membership-form">register below</a>, you help the museum grow!</p>
         </div>
         <div class="body-content">
             <div class="container-text container-bg">
-                <h2>Standard Membership</h2>
-                <p class="italics">It's free!</p>
-                <ul>
+                <h2>Friends of the Museum</h2>
+                <p>It's free!</p>
+                <ul class="italics">
                     <li>Receive our quarterly newsletter.</li>
                     <li>Be the first to know when new vehicles arrive.</li>
                 </ul>
@@ -83,12 +83,14 @@
         </div>
         <div class="body-content">
             <div class="container-text container-border">
-                <h2>Heritage Membership</h2>
-                <p class="italics">For just $50 a year, you can be a <span class="bolded">Heritage Member</span> of the Vintage Auto Museum of NJ! Choose auto-renewal at checkout, and get 30% off!</p>
-                <ul>
-                    <li><span class="bolded">Exclusive access to the museum outside normal hours.</span> During this special members-only time, you'll have the museum entirely to yourself &ndash; plus your friendly museum host, of course! Please <a href="/vamnj-org/contact/">make an appointment</a> to take advantage of this membership benefit.</li>
+                <h2>Members</h2>
+                <p>For just $50 a year, you can be a full-fledged <span class="bolded">Member of the Vintage Automobile Museum of NJ</span>! Choose auto-renewal at checkout, and get 30% off!</p>
+                <p>When you become a VAMNJ member, you'll receive...</p>
+                <ul class="italics">
                     <li><span class="bolded">An official certificate</span> commemorating your first joining the museum.</li>
                     <li><span class="bolded">A special &ldquo;Gift of the Year,&rdquo;</span> such as a museum-branded mug or classic car poster.</li>
+                    <li><span class="bolded">A 25% discount</span> at our gift shop.</li>
+                    <li><span class="bolded">A 15% discount</span> on our rental fee.</li>
                 </ul>
             </div>
         </div>
@@ -104,7 +106,7 @@
         <!-- MEMBERSHIP FORM -->
         <div id="membership-form" class="body-content">
             <div class="container-text form-bg">
-                <h2>Membership sign-up form</h2>
+                <h2>Registration form</h2>
                 
                 <form id="membershipForm">
                     <div class="form-group">
@@ -131,10 +133,9 @@
                     
                     <hr>
 
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="heritageCheckbox" onclick="updateTotal()"> Heritage membership
-                        </label>
+                    <div class="form-group member-options">
+                        <div><input type="radio" name="options" id="friend" onclick="updateTotal()" checked>Friend of the Museum</div>
+                        <div><input type="radio" name="options" id="member" onclick="updateTotal()">Member</div>
                     </div>
                     
                     <div class="form-group" id="recurringOption" style="display: none;">

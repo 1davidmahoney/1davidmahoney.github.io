@@ -1,17 +1,16 @@
 function updateTotal() {
-    const heritageCheckbox = document.getElementById('heritageCheckbox');
-    const recurringCheckbox = document.getElementById('recurringCheckbox');
     const totalField = document.getElementById('totalField');
+    const selectedOption = document.querySelector('input[name="options"]:checked');
+    const recurringCheckbox = document.getElementById('recurringCheckbox');
     const paymentSection = document.getElementById('paymentSection');
 
-    // Show/hide recurring checkbox and payment section
-    document.getElementById('recurringOption').style.display = heritageCheckbox.checked ? 'block' : 'none';
-    paymentSection.style.display = heritageCheckbox.checked ? 'block' : 'none';
-
-    // Update total
-    if (heritageCheckbox.checked) {
+    // Show/hide recurring checkbox and payment section, and update total.
+    document.getElementById('recurringOption').style.display = selectedOption ? 'block' : 'none';
+    if (selectedOption.id === 'member') {
+        paymentSection.style.display = 'block';
         totalField.value = recurringCheckbox.checked ? "$35 / year" : "$50 for the year";
     } else {
+        paymentSection.style.display = 'none';
         totalField.value = "$0";
     }
 }
@@ -30,6 +29,7 @@ function resetForm() {
     document.getElementById('membershipForm').reset();
     updateTotal(); // Reset the total
     document.getElementById('thankYouMessage').style.display = 'none';
+    document.getElementById('recurringOption').style.display = 'none';
     toggleCreditCardFields(); // Reset credit card field visibility
 }
 

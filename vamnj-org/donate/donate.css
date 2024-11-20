@@ -121,10 +121,3 @@ form {
         width: 50vw;
     }
 }
-
-@media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
-
-    ul {
-        padding-left: revert; /* responsive to viewport width */
-    }    
-}
