@@ -1,15 +1,10 @@
-.map {
-    width: 100%; /* Ensure the container spans the full width of its parent */
-    margin: 0 auto 20px auto; /* Center it and add bottom spacing */
-    position: relative; /* Enable positioning adjustments if needed */
-}
-
 .map iframe {
-    width: 100%; /* Fully responsive */
-    height: 50vw; /* Allow height to adjust dynamically */
-    display: block; /* Remove inline-block spacing issues */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Optional shadow for aesthetics */
-    border: none; /* Remove default iframe border */
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 ul {
@@ -77,6 +72,7 @@ li {
     cursor: pointer;
 }
 
+
 /*****************************************************************************/
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
@@ -99,8 +95,7 @@ li {
     .container > :nth-child(7) { grid-column: 1 / 4; grid-row: 4; } /* Leave a review */
     
     .map iframe {
-        border-radius: 0 0 0 8px; /* Optional: round the edges */
-        height: 40vw;
+        height: 100%;
     }
   
     ul {
@@ -113,19 +108,8 @@ li {
     }
 }
 
-@media (min-width: 1024px) {
-    
-    .map iframe {
-        height: 30vw;
-    }
-}
-
 @media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
 
-    .map iframe {
-        height: 25vw;
-    }
-    
     ul {
         padding-left: revert; /* responsive to viewport width */
     }    
