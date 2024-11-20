@@ -66,6 +66,7 @@
             <p>Our museum is wheelchair-accessible, and we are committed to ensuring all visitors have a comfortable experience. Please <a href="/vamnj-org/contact/">let us know</a> if you have any special needs or require additional accommodations.</p>
         </div>
         <div class="map fade-in-shortest">
+            <p class="map-fallback body-content">Your browser does not support embedded maps. <a href="https://maps.app.goo.gl/AbzRX12MXHRaTCa49" target="_blank" rel="noopener noreferrer">View the map</a>.</p>
         </div>
         <div class="body-content scroll-fade-quick">
             <div class="container-text container-border">
@@ -147,26 +148,19 @@
     document.addEventListener("DOMContentLoaded", function () {
         const mapContainer = document.querySelector('.map');
         if (mapContainer) {
-            // Check for iframe support
-            if (document.createElement('iframe').sandbox !== undefined) {
-                const iframe = document.createElement('iframe');
-                iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.6601125969664!2d-74.0512456!3d40.0689628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c1859536c9e683%3A0x28484a91e43f35bd!2sVintage%20Automobile%20Museum%20of%20New%20Jersey!5e1!3m2!1sen!2sus!4v1729977593182!5m2!1sen!2sus";
-                iframe.style.border = "0";
-                iframe.style.width = "100%";
-                iframe.allowFullscreen = true;
-                mapContainer.appendChild(iframe);
-            } else {
-                // Add fallback message
-                const fallbackMessage = document.createElement('p');
-                fallbackMessage.textContent = "Your browser does not support embedded maps. ";
-                const mapLink = document.createElement('a');
-                mapLink.href = "https://maps.app.goo.gl/AbzRX12MXHRaTCa49"; // Actual URL to the map
-                mapLink.target = "_blank";
-                mapLink.rel = "noopener noreferrer";
-                mapLink.textContent = "View the map";
-                fallbackMessage.appendChild(mapLink);
-                mapContainer.appendChild(fallbackMessage);
-            }
+            const iframe = document.createElement('iframe');
+            iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.6601125969664!2d-74.0512456!3d40.0689628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c1859536c9e683%3A0x28484a91e43f35bd!2sVintage%20Automobile%20Museum%20of%20New%20Jersey!5e1!3m2!1sen!2sus!4v1729977593182!5m2!1sen!2sus";
+            iframe.style.border = "0";
+            iframe.style.width = "100%";
+            iframe.allowFullscreen = true;
+            iframe.onload = function () {
+                // Hide fallback message when iframe loads
+                const fallback = mapContainer.querySelector('.map-fallback');
+                if (fallback) {
+                    fallback.style.display = 'none';
+                }
+            };
+            mapContainer.appendChild(iframe);
         }
     });
     </script>
