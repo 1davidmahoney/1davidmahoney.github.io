@@ -3,37 +3,55 @@
 /*****************************************************************************/
 
 document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll('.scroll-fade');
+    const elements = document.querySelectorAll('.scroll-fade');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }, {
-    threshold: 0.35, // Trigger when 35% of the element is visible
-    rootMargin: '0px 0px -100px 0px' // Start 100px before the bottom of the viewport
-  });
+    if ('IntersectionObserver' in window) {
+        // Modern browser: Apply scroll-based animation
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.35, // Trigger when 35% of the element is visible
+            rootMargin: '0px 0px -100px 0px' // Start 100px before the bottom of the viewport
+        });
 
-  elements.forEach(el => observer.observe(el));
+        elements.forEach(el => observer.observe(el));
+    } else {
+        // Fallback for older browsers: Ensure elements are visible immediately
+        elements.forEach(el => {
+            el.style.opacity = 1; // Fully visible
+            el.style.transform = 'translateY(0)'; // No vertical offset
+        });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll('.scroll-fade-quick');
+    const elements = document.querySelectorAll('.scroll-fade-quick');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }, {
-    threshold: 0.05, // Trigger when 5% of the element is visible
-    rootMargin: '0px 0px -50px 0px' // Start 50px before the bottom of the viewport
-  });
+    if ('IntersectionObserver' in window) {
+        // Modern browser: Apply scroll-based animation
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.05, // Trigger when 5% of the element is visible
+            rootMargin: '0px 0px -50px 0px' // Start 50px before the bottom of the viewport
+        });
 
-  elements.forEach(el => observer.observe(el));
+        elements.forEach(el => observer.observe(el));
+    } else {
+        // Fallback for older browsers: Ensure elements are visible immediately
+        elements.forEach(el => {
+            el.style.opacity = 1; // Fully visible
+            el.style.transform = 'translateY(0)'; // No vertical offset
+        });
+    }
 });
 
 /*****************************************************************************/
