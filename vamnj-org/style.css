@@ -21,6 +21,17 @@ body {
     background-size: 100px 100px; /* Adjust to scale the texture */
     background-position: center;
     padding-top: 80px; /* Matches the header's height */
+	display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, content, footer */
+}
+header {
+    grid-row: 1;
+}
+.container {
+    grid-row: 2;
+}
+footer {
+    grid-row: 3;
 }
 
 .body-content { /* For when I just want to throw some basic html elements into a div and have it look nice. */
