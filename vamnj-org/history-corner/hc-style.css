@@ -1,3 +1,7 @@
+.container {
+    justify-content: center;
+}
+
 .splash {
     display: flex;
     flex-direction: column;
