@@ -22,6 +22,7 @@ li.incomplete::marker {
 
 #donation-form {
     margin: 40px auto;
+    overflow: hidden; /* Prevents any content from overflowing */
 }
 .form-group {
     margin-bottom: 15px;
