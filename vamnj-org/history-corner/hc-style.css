@@ -26,11 +26,13 @@
 .body-img-src {
     font-size: 0.9rem;
     padding: 0 20px;
+    text-align: center;
 }
 
 .body-img-caption {
     padding: 0 20px;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .navigation {
