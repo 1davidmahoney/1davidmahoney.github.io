@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Reset some basic styles */
@@ -65,10 +66,10 @@ th {
     color: #faa00f;
 }
 
-body, h1, h2, h3, p, ul, header, nav {
+/*body, h1, h2, h3, p, ul, header, nav {
     margin: 0;
     padding: 0;
-}
+}*/
 
 body {
     background: radial-gradient(circle at top center, rgba(204, 204, 204, 1), rgba(127, 127, 127, 1) 80%);
@@ -76,7 +77,7 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh; /* Ensures the gradient covers the full height of the viewport */
     margin: 0;
-    font-family: 'Sanchez', 'Calibri', system-ui;
+    font-family: 'figtree', 'Calibri', system-ui;
     line-height: 1.6;
 	display: flex;
     flex-direction: column;
