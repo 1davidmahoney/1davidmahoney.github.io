@@ -355,7 +355,7 @@ figcaption {
     }
 }
 
-@media (min-width: 850px) { /* Wide enough to start spreading out the wide menu */
+@media (min-width: 900px) { /* Wide enough to start spreading out the wide menu */
 
     .wide-menu {
         justify-content: space-evenly; /* Menu items spread out in one single row */
