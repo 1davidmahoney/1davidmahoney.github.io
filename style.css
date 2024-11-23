@@ -1,87 +1,69 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* Reset some basic styles */
-a:link {
-    color: white; /* Color of unvisited links */
-    text-decoration: none; /* Optional: Remove underline if you prefer */
+/************************************************************************************/
+/* BIG HIGH-LEVEL STUFF *************************************************************/
+/************************************************************************************/
+
+* {
+  box-sizing: border-box;
 }
 
-a:visited {
-    color: white; /* Color of visited links */
-    text-decoration: none; /* Optional: Remove underline if you prefer */
+html, body {
+    /*min-height: 100vh; /* Ensure that the body will always cover the full height of the viewport. */
 }
 
-a:hover {
-    color: white; /* Color when hovering over the link */
-    text-decoration: underline; /* Optional: Add underline on hover */
+html {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
-
-a:active {
-    color: white; /* Color when the link is active (being clicked) */
-    text-decoration: none; /* Optional: Remove underline if you prefer */
-}
-
-hr {
-    border: none;
-    height: 2px;
-    background-color: #ccc;
-    width: 100%;
-    max-width: 61.8%;
-    margin: 50px auto;
-}
-
-table {
-    max-width: 660px;
-    margin: 30px auto;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #000000;
-    color: #f9f9f9;
-    font-weight: normal;
-    border-color: white;
-    border-top: none; /* Remove borders */
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-}
-
-.interact-1 {
-    color: #61a630;
-}
-
-.interact-2 {
-    color: #faa00f;
-}
-
-/*body, h1, h2, h3, p, ul, header, nav {
-    margin: 0;
-    padding: 0;
-}*/
 
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; /* Ensures the gradient covers the full height of the viewport */
+    font-family: 'figtree', 'Calibri', system-ui;
+    line-height: 1.6;
     background: radial-gradient(circle at top center, rgba(204, 204, 204, 1), rgba(127, 127, 127, 1) 80%);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh; /* Ensures the gradient covers the full height of the viewport */
     margin: 0;
-    font-family: 'figtree', 'Calibri', system-ui;
-    line-height: 1.6;
-	display: flex;
-    flex-direction: column;
 }
+
+header { grid-row: 1; }
+.content-wrapper { grid-row: 2; }
+footer { grid-row: 3; }
+
+header, footer {
+    width: 100%;
+    color: #ccc;
+    padding: 10px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(79, 79, 79, 1), rgba(15, 15, 15, 1));
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: height 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    color: rgb(127, 127, 127);
+    background-color: rgb(15, 15, 15);
+}
+
+/************************************************************************************/
+/* GLOBAL -- OVERRIDABLE*************************************************************/
+/************************************************************************************/
 
 h1 {
 	line-height: 1.1;
@@ -93,213 +75,201 @@ p {
     line-height: 1.3;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(to bottom, rgba(79, 79, 79, 1), rgba(15, 15, 15, 1));
-    padding: 10px 20px;
-    color: #fff;
-    width: 100%;
-    box-sizing: border-box;
-    position: fixed;
-    z-index: 1000;
-    transition: height 0.3s ease;
-    opacity: 0; /* Start invisible */
-    transition: opacity 0.5s ease;
-}
+/************************************************************************************/
+/* HEADER ***************************************************************************/
+/************************************************************************************/
 
 .logo-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    color: inherit;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
-nav ul {
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 10px 0; /* Add some space between the list items if needed */
+.logo-container:hover {
+    color: white; /* Optional: Change text color or style on hover */
 }
 
 .logo {
+    display: block; /* Ensure the anchor behaves like a block element */
     font-size: 24px;
     font-weight: bold;
     text-align: left;
-    margin-right: 10px; /* Space between the two divs in row layout */
     white-space: nowrap; /* Stop my name from word-wrapping, esp. on my old Samsung, b/c it makes menu bar too tall */
 }
 
 .subtitle {
+    display: block; /* Ensure the anchor behaves like a block element */
     font-size: 16px;
-    color: #ccc; /* Optional: lighter color for the subtitle */
-    margin: auto 0;
+    /*margin: auto 0;*/
 }
 
-nav {
+/*****************************************************************************/
+/* MENU **********************************************************************/
+/*****************************************************************************/
+
+/* Menu Button Styling */
+.menu-button {
+    /*position: absolute;*/
+    left: 16px; /* Sticks the menu button to the left */
+    top: 50%; /* Vertically centers the button */
+    /*transform: translateY(-50%); /* Adjusts the button to be perfectly centered vertically */
     display: flex;
-    align-items: center;
-    margin: auto 0 auto auto;
-    white-space: nowrap;
-    text-align: right;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    border: 2px solid transparent;
-}
-
-/* Button Grid Styles */
-.button-grid {
-    display: grid;
-    gap: 15px; /* Reduce the gap for smaller screens */
-    max-width: 61.8%; /* Golden ratio content width */
-    margin: 20px auto; /* Center the grid */
-    padding: 0 5px; /* Smaller padding for small screens */
-    box-sizing: border-box; /* Include padding in width calculations */
-    opacity: 0; /* Ensure grid starts invisible */
-    transition: opacity 0.5s ease; /* Add a smooth transition for fading */
-}
-
-.grid-button {
-    width: 100%; /* Ensure buttons take up the full width of their grid column */
-    padding: 5px; /* Reduce padding to allow further shrinking */
-    box-sizing: border-box;
-	min-width: 0; /* Ensure no minimum width constraint */
-	text-decoration: none;
-}
-
-.grid-button img {
-    width: 100%; /* Ensure the image fills the button area */
-    height: auto;
-    object-fit: cover;
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
-}
-
-.label { /* Maybe could be integrated w/ other label stuff below, but that was GPT, so I'm just leaving it alone */
-	letter-spacing: 1px; /* Default is slightly cluttered for Sanchez font in bold */
-}
-
-.grid-button .label {
-    font-size: 2vw; /* Font size scales with viewport width */
-    margin-top: 1vw; /* Adjust margins using viewport units */
-	font-weight: bold;
-	text-align: center;
-	line-height: 1.2;
-}
-
-.back-button {
-    position: absolute; /* Take the button out of the normal flow */
-    visibility: hidden; /* Start hidden */
-    opacity: 0; /* Start invisible */
-    margin-left: 20px; /* Space between nav items and back button */
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    font-size: 16px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
     cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Sanchez', 'Calibri', system-ui;
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Ensure smooth transition */
+    padding: 20px 0;
+    margin: auto auto auto 0;
+    box-sizing: revert;
 }
 
-.back-button.visible {
-    position: relative; /* Back to normal flow when visible */
-    visibility: visible;
-    opacity: 1;
+/* The lines of the hamburger menu */
+.menu-button .bar {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    transition: background-color 0.3s ease; /* Smooth sliding effect */
 }
+
+.menu-button:hover .bar {
+    background-color: #fff; /* Change to your desired hover color */
+}
+
+.menu-button-inv {
+    top: 40px;
+    margin: 10px 20px;
+    box-sizing: revert;
+}
+
+.menu-button-inv .bar-inv {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    transition: background-color 0.3s ease; /* Smooth sliding effect */
+}
+
+.menu-button-inv:hover .bar-inv {
+    background-color: white;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start hidden on the left */
+    width: 250px;
+    height: 100%;
+    background-color: rgb(32, 32, 32);
+    overflow: auto;
+    transition: left 0.3s ease; /* Smooth sliding effect */
+    z-index: 1001;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    text-align: center;
+    display: block; /* Allows scaling without affecting layout */
+    padding: 0;
+}
+
+.side-menu ul li a:hover {
+    color: white;
+}
+
+.side-menu ul li a {
+    padding: 15px 0;
+    color: #ccc;
+    transition: color 0.3s ease; /* Smooth transition */
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%; /* Ensures it covers the full width */
+    height: 100%; /* Ensures it covers the full height */
+}
+
+.side-menu.open {
+    left: 0; /* Slide in from the left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow when menu is open */
+}
+
+.menu-alt-section {
+    background-color: rgb(16, 16, 16);
+}
+
+.side-menu .menu-alt-section li a {
+    color: #ccc;
+}
+
+.wide-menu {
+    display: none;
+    justify-content: start;
+    align-items: center;
+    max-width: 65vw;
+    width: 100%;
+    padding: 0 2.5rem;
+}
+
+.wide-menu-item {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+    margin-right: 30px; /* Adds spacing */
+}
+
+.wide-menu-item:last-child {
+    margin-right: 0; /* Avoid extra spacing on the last item */
+}
+
+a.wide-menu-item {
+    color: inherit;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+a.wide-menu-item:hover {
+    color: white;
+}
+
+.at-button {
+    display: none;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto 0 auto auto;
+}
+
+.at-button a {
+    transition: color 0.3s ease;
+    text-align: center;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.at-button a:hover {
+    color: white;
+}
+
+a.at-button {
+    /*color: white;*/
+}
+
+/************************************************************************************/
+/* MAIN CONTENT *********************************************************************/
+/************************************************************************************/
 
 .content-wrapper {
     margin-top: 0; /* Start without a top margin */
     padding-top: 0; /* Start without padding */
     box-sizing: border-box; /* Ensure padding is included in width/height calculations */
     transition: padding-top 0.3s ease;
-}
-
-.piece-content {
-    display: none;
-    margin: 0 auto 20px;
-    padding: 30px 50px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 0 0 8px 8px;
-    opacity: 0; /* Start hidden */
-    max-width: 1000px;
-}
-
-.piece-content a {
-    color: #0088ff;
-}
-
-.piece-content a:visited {
-    color: #d40096;
-}
-
-.piece-content ul {
-	margin: 15px 0 5px 50px;
-	line-height: 1.2;
-	font-size: 90%;
-}
-
-.piece-content ul li {
-	padding-bottom: 10px;
-}
-
-.piece-image { /* Main image at top of piece content */
-    width: 380px;
-    height: auto;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    float: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
-}
-
-.profile-image {
-    width: 250px;
-    height: auto;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    float: left;
-}
-
-.contact-image {
-    width: 180px;
-    height: auto;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    float: right;
-}
-
-.piece-text {
-    flex: 1;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-}
-
-.video-background {
-    background-color: #000000;
-    border-radius: 8px;
-}
-
-.video-container {
-    max-width: calc(70% - 40px); /* 40px total margin (20px on each side) */
-    margin: 20px auto; /* Centers the iframe */
-}
-
-.youtube-player {
-    width: 100%; /* Let the iframe scale with the container */
-    height: auto; /* Maintain aspect ratio */
-    aspect-ratio: 16 / 9; /* Ensures correct aspect ratio */
-    border: 0; /* Removes default border */
-    display: block; /* Removes inline-block whitespace */
 }
 
 figure {
@@ -328,6 +298,7 @@ figcaption {
 }
 
 .figure-container figure {
+    max-width: 100%;
     flex: 1;
 	margin: 15px;
     box-sizing: border-box;
@@ -347,188 +318,82 @@ figcaption {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
-.writing-script {
-    font-family: 'Courier Prime', 'Courier New', monospace;
-    width: 100%;
-    max-width: 800px; /* Roughly the width of a piece of paper */
-    margin: 0 auto;
-    padding: 60px 20px;
-    box-sizing: border-box;
-    background-color: linen;
-}
-
-/* Center-aligned text for character names */
-.script-char {
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-/* Character A (TOMMY) styles */
-.char-a {
-    color: #135bec;
-    text-align: center;
-    margin: 0 auto;
-}
-
-/* Character B (BECK) styles */
-.char-b {
-    color: #ff2b00;
-    text-align: center;
-    margin: 0 auto;
-}
-
-/* Styles for parenthetical directions */
-.script-par {
-    font-style: italic;
-    font-size: 90%;
-}
-
-/* Styles for dialogue */
-.script-dlg {
-    margin: 0 auto;
-    max-width: 280px; /* Maximum width for the dialogue */
-    padding-bottom: 10px;
-    transition: margin 0.3s ease; /* Smooth transition for margin */
-}
-
-/* Styles for action description */
-.script-action {
-    max-width: 660px;
-    margin: 0 auto 10px;
-}
-
 /************************************************************************************/
-/* LOADING */
+/* GLOBAL -- DO NOT OVERRIDE ********************************************************/
 /************************************************************************************/
 
-.loading-screen {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: black;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 0.5s ease; /* Added transition for fade-out */
+.nowrap {
+    white-space: nowrap;
 }
 
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 8px solid rgba(255, 255, 255, 0.1); /* White with opacity */
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/************************************************************************************/
-/* CONTACT FORM */
-/************************************************************************************/
-
-#contactForm {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-textarea {
-    height: 150px; /* Increase height for the message field */
-    resize: vertical; /* Allow users to resize the textarea vertically */
-}
-
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+.white-text {
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-form, input, textarea, button {
-    font-family: inherit;
 }
 
 /************************************************************************************/
-/* Responsive design */
+/* BREAKPOINTS **********************************************************************/
 /************************************************************************************/
 
-/* Responsive design for smaller screens */
-@media (max-width: 1024px) {
-    .grid-button .label {
-        font-size: 300%; /* Smaller font on medium screens */
+@media (min-width: 550px) { /* Wide enough to start using wide menu */
+
+    .logo-container {
+        align-items: flex-start;
     }
-	
+    
+    .menu-button {
+        display: none;
+    }
+
+    .wide-menu {
+        display: flex;
+        flex-direction: row; /* Align items in a row */
+        flex-wrap: wrap; /* Allow wrapping to the next line */
+    }
+    
+    .at-button {
+        display: block;
+    }
+}
+
+@media (min-width: 850px) { /* Wide enough to start spreading out the wide menu */
+
+    .wide-menu {
+        justify-content: space-evenly; /* Menu items spread out in one single row */
+    }
+}
+
+
+@media (min-height: 99999px) { /* FOR DEBUGGING */
+/*@media (min-height: 480px) { /* Show image when viewport height is small */
 	.button-grid {
-        grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
-        gap: 30px;
+		grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
+		max-width: 90%;
 	}
-}
-
-@media (min-width: 1025px) {
-    .button-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
-        margin-top: 40px; /* Default margin for larger screens */
-        margin-bottom: 80px;
-    }
-}
-
-@media (max-width: 768px) {
-    .button-grid {
-        grid-template-columns: 1fr; /* Stack buttons vertically */
-        gap: 30px;
+	
+    .grid-button img {
+        display: none; /* Hide the image */
     }
 
     .grid-button {
-        padding: 5px; /* Reduce padding for smaller screens */
+        padding: 5px; /* Adjust padding if needed after removing the image */
     }
 
     .grid-button .label {
-        font-size: 8vw; /* Adjust font size for smaller screens */
+        font-size: 8vw; /* Adjust the font size if necessary */
     }
 }
 
-
 /* Single column on mobile */
-@media (max-height: 600px) and (max-width: 1024px) {
+@media (min-height: 99999px) { /* FOR DEBUGGING */
+/*@media (min-height: 600px) or (min-width: 1024px) {*/
 	.button-grid {
         grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
 	}
 }
 
 /* Center images on smaller screens */
-@media (max-width: 660px) {
+@media (min-height: 99999px) { /* FOR DEBUGGING */
+/*@media (min-width: 660px) {*/
     .piece-content {
         padding: 30px;
     }
@@ -565,34 +430,40 @@ form, input, textarea, button {
     }
 }
 	
-/* Remove the image when viewport height is small (my old Samsung phone is 489px) */
-@media (max-height: 480px) {
-	.button-grid {
-		grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
-		max-width: 90%;
-	}
-	
-    .grid-button img {
-        display: none; /* Hide the image */
+@media (min-height: 99999px) { /* FOR DEBUGGING */
+/*@media (min-width: 768px) {*/
+    .button-grid {
+        grid-template-columns: 1fr; /* Stack buttons vertically */
+        gap: 30px;
     }
 
     .grid-button {
-        padding: 5px; /* Adjust padding if needed after removing the image */
+        padding: 5px; /* Reduce padding for smaller screens */
     }
 
     .grid-button .label {
-        font-size: 8vw; /* Adjust the font size if necessary */
+        font-size: 8vw; /* Adjust font size for smaller screens */
     }
 }
 
-@media (max-width: 350px) {
-    .profile-image {
-        max-width:100%;
+@media (min-height: 99999px) { /* FOR DEBUGGING */
+/*@media (max-width: 1023px) {*/
+    .button-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+        margin-top: 40px; /* Default margin for larger screens */
+        margin-bottom: 80px;
     }
 }
 
-@media (max-width: 330px) {
-    .figure-container figure {
-        max-width: 100%;
+/* Responsive design for smaller screens */
+@media (min-height: 99999px) { /* FOR DEBUGGING */
+/*@media (min-width: 1024px) {*/
+    .grid-button .label {
+        font-size: 300%; /* Smaller font on medium screens */
     }
+	
+	.button-grid {
+        grid-template-columns: 1fr; /* Stack buttons vertically on smaller screens */
+        gap: 30px;
+	}
 }

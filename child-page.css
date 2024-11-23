@@ -1,0 +1,96 @@
+.piece-content {
+    margin: 0 auto 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    max-width: 1000px;
+}
+
+.piece-content a {
+    color: #0088ff;
+}
+
+.piece-content a:visited {
+    color: #d40096;
+}
+
+.piece-content ul {
+	/*margin: 15px 0 5px 50px;*/
+	line-height: 1.2;
+	/*font-size: 1em;*/
+}
+
+.piece-content ul li {
+	padding-bottom: 10px;
+}
+
+.piece-image { /* Main image at top of piece content */
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.piece-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    width: 100%;
+    max-width: 61.8%;
+    margin: 50px auto;
+}
+
+table {
+    max-width: 660px;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #000000;
+    color: #f9f9f9;
+    font-weight: normal;
+    border-color: white;
+    border-top: none; /* Remove borders */
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.video-background {
+    background-color: #000000;
+    border-radius: 8px;
+}
+
+.video-container {
+    max-width: calc(70% - 40px); /* 40px total margin (20px on each side) */
+    margin: 20px auto; /* Centers the iframe */
+}
+
+.youtube-player {
+    width: 100%; /* Let the iframe scale with the container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Ensures correct aspect ratio */
+    border: 0; /* Removes default border */
+    display: block; /* Removes inline-block whitespace */
+}

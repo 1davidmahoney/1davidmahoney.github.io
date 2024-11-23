@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahoney's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
+    <title>Mahoney | Unity</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/child-page.css">
     <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -41,7 +41,7 @@
             <div class="bar-inv"></div>
         </div>
         <ul class="menu-alt-section">
-            <li><a href="/">&ndash; Home &ndash;</a></li>
+            <li><a href="/">Home</a></li>
         </ul>
         <ul>
             <li><a href="/narrative-design/">Narrative Design</a></li>
@@ -58,25 +58,31 @@
     <!-- MAIN CONTENT -->
     <div class="content-wrapper">
     
-        <section class="button-grid">
-            <a href="/narrative-design/" class="grid-button">
-                <img src="/images/buttons/home-narrative-design.png" alt="Button 1">
-                <div class="label">Narrative Design</div>
-            </a>
-            <a href="/systems-design/" class="grid-button">
-                <img src="/images/buttons/home-systems-design.png" alt="Button 2">
-                <div class="label">Systems Design</div>
-            </a>
-            <a href="/unreal/" class="grid-button">
-                <img src="/images/buttons/home-unreal.png" alt="Button 3">
-                <div class="label">Unreal Engine</div>
-            </a>
-            <a href="/unity/" class="grid-button">
-                <img src="/images/buttons/home-unity.png" alt="Button 4">
-                <div class="label">Unity</div>
-            </a>
-        </section>
+        <div id="project3-content" class="piece-content">
+            <img src="/images/buttons/home-unity.png" alt="Project 3 Image" class="piece-image">
             
+            <!-- From old wordpress portfolio -->
+            
+            <h1>Introduction</h1>
+            <p>In this early Unity VR prototype, you play as a god-like war commander of a fantastical army. Use your hands to signal commands to your brave foot soldiers, towering golems, flying warriors, and more!</p>
+            <p><em>Note: The enemy behaviors in the video below are predetermined for the purpose of demonstrating player mechanics and the general game design concept.</em></p>
+            
+            <div style="clear: both;"></div> <!-- This div clears the float (piece-image) -->
+            
+            <div class="video-background">
+                <div class="video-container">
+                    <iframe class="youtube-player" src="https://www.youtube.com/embed/dvmqlAClR0s?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en&autohide=2&wmode=transparent" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <h1>Development</h1>
+            <p>The biggest challenge was the "throw" action, which required careful tuning for it to feel good in the large-scale environment. Because your target is always far away – either in the skies above or on the ground below – the projectile must leave the hand more quickly than might be expected. Too slow and realistic, and you feel oddly underpowered. Too quick, and you feel overpowered and out of control.</p>
+
+            <h1>Next Steps</h1>
+            <p>Although I was able to tune the system to a good middle ground, I'm looking forward to trying other aim-assist methods in future iterations of the prototype.</p>
+            
+        </div> <!-- piece-content -->
+
     </div> <!-- content-wrapper -->
 
     <!-- FOOTER -->
@@ -84,7 +90,8 @@
         <p>&copy; 2024 David Mahoney. All rights reserved, except for stuff that's clearly not mine.</p>
     </footer>
     
-    <script src="script.js"></script>
+    <!-- SCRIPTS -->
+    <script src="/script.js"></script>
     
 </body>
 </html>
