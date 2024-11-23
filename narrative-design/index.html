@@ -20,12 +20,12 @@
         </div>
         <a href="/" class="logo-container">
             <div class="logo">David Mahoney</div>
-            <div class="subtitle">Game Dev Portfolio</div>
+            <div class="subtitle">Portfolio | Narrative Design</div>
         </div>
         <div class="wide-menu">
             <a class="wide-menu-item nowrap" href="/narrative-design/">&ndash; Narrative Design &ndash;</a>
             <a class="wide-menu-item nowrap" href="/systems-design/">Systems Design</a>
-            <a class="wide-menu-item" href="/unreal/">Unreal</a>
+            <a class="wide-menu-item" href="/unreal/">Unreal Engine</a>
             <a class="wide-menu-item" href="/unity/">Unity</a>
         </div>
         <div class="at-button">
@@ -47,7 +47,7 @@
         <ul>
             <li><a href="/narrative-design/">&ndash; Narrative Design &ndash;</a></li>
             <li><a href="/systems-design/">Systems Design</a></li>
-            <li><a href="/unreal/">Unreal</a></li>
+            <li><a href="/unreal/">Unreal Engine</a></li>
             <li><a href="/unity/">Unity</a></li>
         </ul>
         <ul class="menu-alt-section">
@@ -60,14 +60,17 @@
     <div class="content-wrapper">
     
         <div id="project1-content" class="piece-content">
+        
+            <h1>Narrative Design</h1>
+        
             <img src="/images/buttons/home-narrative-design.png" alt="Project 1 Image" class="piece-image">
             
             <!-- From old wordpress Portfolio -->
             
-            <h1>Introduction</h1>
+            <h2>Introduction</h2>
             <p>Story is fundamental to the human experience – whether telling a story, imagining one, or living one to tell later. I’ve been honored to continue this age-old tradition through my work on some incredible properties.</p>
 
-            <h1>Lone Echo II</h1>
+            <h2>Lone Echo II</h2>
             <p>As a lifelong sci-fi fan and VR enthusiast, it was a dream come true working on <em>Lone Echo II</em>. Unexpectedly taking this dream a step further, I had the incredible honor of seeing the project win the D.I.C.E. Award for Immersive Reality Game of the Year and be nominated for the Webby Award for Best Narrative Experience.</p>
             
             <div style="clear: both;"></div> <!-- This div clears the float (piece-image) -->
@@ -83,7 +86,7 @@
 
             <p>I’m especially proud of the dialogue I wrote for the Research Facility, where you discover the <a href="https://youtu.be/jY1ACKXwyjM?t=1020">heart-rending message</a> left behind for one of your companions.</p>
             
-            <h1>Marvel’s Guardians of the Galaxy: The Telltale Series</h1>
+            <h2>Marvel’s Guardians of the Galaxy: The Telltale Series</h2>
 
             <p>I spent much of my youth daydreaming in the Marvel universe – playing with action figures, reading comics, drawing my own superheroes, and even having a personal rendition of Spider-Man signed by Stan Lee! Little did I know I’d one day have a chance to put my mark on that universe.</p>
 
@@ -130,6 +133,19 @@
     
     <!-- SCRIPTS -->
     <script src="/script.js"></script>
+    <script>
+        function updateSubtitle() {
+            const subtitleDiv = document.querySelector('.subtitle');
+            if (window.innerWidth >= 550) { // Manual media query
+                subtitleDiv.textContent = "Game Dev Portfolio"; // Portfolio piece title is already visible in wide menu
+            } else {
+                subtitleDiv.textContent = "Portfolio | Narrative Design"; // Wide menu is hidden
+            }
+        }
+
+        updateSubtitle(); // Run on initial load
+        window.addEventListener('resize', updateSubtitle); // Update on window resize
+    </script>
     
 </body>
 </html>

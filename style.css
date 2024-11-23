@@ -268,7 +268,6 @@ a.at-button {
 .content-wrapper {
     margin-top: 0; /* Start without a top margin */
     padding-top: 0; /* Start without padding */
-    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
     transition: padding-top 0.3s ease;
 }
 
@@ -322,6 +321,10 @@ figcaption {
 /* GLOBAL -- DO NOT OVERRIDE ********************************************************/
 /************************************************************************************/
 
+.italics {
+    font-style: oblique;
+}
+
 .nowrap {
     white-space: nowrap;
 }
@@ -355,7 +358,7 @@ figcaption {
     }
 }
 
-@media (min-width: 900px) { /* Wide enough to start spreading out the wide menu */
+@media (min-width: 1000px) { /* Wide enough to start spreading out the wide menu */
 
     .wide-menu {
         justify-content: space-evenly; /* Menu items spread out in one single row */

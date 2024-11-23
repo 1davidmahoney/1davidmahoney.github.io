@@ -5,6 +5,7 @@
     border: 1px solid #ddd;
     border-radius: 0 0 8px 8px;
     max-width: 1000px;
+    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.3);
 }
 
 .piece-content a {

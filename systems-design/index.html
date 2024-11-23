@@ -24,7 +24,7 @@
         <div class="wide-menu">
             <a class="wide-menu-item nowrap" href="/narrative-design/">Narrative Design</a>
             <a class="wide-menu-item nowrap" href="/systems-design/">&ndash; Systems Design &ndash;</a>
-            <a class="wide-menu-item" href="/unreal/">Unreal</a>
+            <a class="wide-menu-item" href="/unreal/">Unreal Engine</a>
             <a class="wide-menu-item" href="/unity/">Unity</a>
         </div>
         <div class="at-button">
@@ -46,7 +46,7 @@
         <ul>
             <li><a href="/narrative-design/">Narrative Design</a></li>
             <li><a href="/systems-design/">&ndash; Systems Design &ndash;</a></li>
-            <li><a href="/unreal/">Unreal</a></li>
+            <li><a href="/unreal/">Unreal Engine</a></li>
             <li><a href="/unity/">Unity</a></li>
         </ul>
         <ul class="menu-alt-section">
@@ -160,6 +160,19 @@
     
     <!-- SCRIPTS -->
     <script src="/script.js"></script>
+    <script>
+        function updateSubtitle() {
+            const subtitleDiv = document.querySelector('.subtitle');
+            if (window.innerWidth >= 550) { // Manual media query
+                subtitleDiv.textContent = "Game Dev Portfolio"; // Portfolio piece title is already visible in wide menu
+            } else {
+                subtitleDiv.textContent = "Portfolio | Systems Design"; // Wide menu is hidden
+            }
+        }
+
+        updateSubtitle(); // Run on initial load
+        window.addEventListener('resize', updateSubtitle); // Update on window resize
+    </script>
     
 </body>
 </html>
