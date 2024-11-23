@@ -81,3 +81,12 @@ a.grid-button:hover .label {
         padding: 0 20vw;
     }
 }
+
+@media (min-width: 1440px) {
+    
+    .button-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 4vw;
+        padding: 0 5vw;
+    }       
+}
