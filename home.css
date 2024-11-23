@@ -84,6 +84,10 @@ a.grid-button:hover .label {
 
 @media (min-width: 1440px) {
     
+    .intro {
+        margin-bottom: 60px;
+    }
+    
     .button-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 4vw;
