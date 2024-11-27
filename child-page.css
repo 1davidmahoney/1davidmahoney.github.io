@@ -127,6 +127,11 @@ th {
         max-width: 50%;
     }
     
+    .piece-image {
+        width: 50%;
+        margin-left: 40px;
+    }
+    
     .video-background {
         width: 50%;
     }
