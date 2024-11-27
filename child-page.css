@@ -1,5 +1,9 @@
+/************************************************************************************/
+/* MAIN CONTENT *********************************************************************/
+/************************************************************************************/
+
 .piece-content {
-    margin: 0 auto 20px;
+    margin: 0 auto 50px;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -30,7 +34,7 @@
     width: 100%;
     max-width: 400px;
     height: auto;
-    margin-right: 20px;
+    /*margin-right: 20px;*/
     margin-bottom: 10px;
     float: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
@@ -78,14 +82,27 @@ th {
     border-right: none;
 }
 
+.splash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash img {
+    display: block;
+}
+
 .video-background {
-    background-color: #000000;
-    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
 }
 
 .video-container {
-    max-width: calc(70% - 40px); /* 40px total margin (20px on each side) */
-    margin: 20px auto; /* Centers the iframe */
+    width: 100%;
+    height: auto;
 }
 
 .youtube-player {
@@ -94,4 +111,24 @@ th {
     aspect-ratio: 16 / 9; /* Ensures correct aspect ratio */
     border: 0; /* Removes default border */
     display: block; /* Removes inline-block whitespace */
+}
+
+/************************************************************************************/
+/* BREAKPOINTS **********************************************************************/
+/************************************************************************************/
+
+@media (min-width: 768px) {
+    
+    .splash {
+        flex-direction: row;
+    }
+    
+    .splash-desc {
+        max-width: 50%;
+    }
+    
+    .video-background {
+        width: 50%;
+    }
+
 }
