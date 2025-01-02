@@ -1,0 +1,50 @@
+.company-splash {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-splash .company {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+}
+
+.splash-desc {
+    grid-row: 2;
+}
+
+.splash img {
+    max-width: 250px;
+    margin: 0 auto;
+    grid-row: 3;
+}
+
+@media (min-width: 768px) {
+    
+    .company-splash {
+        grid-template-columns: 1fr 1.5fr;
+    }
+    
+    .splash {
+        grid-template-columns: 1.5fr 1fr;
+    }
+    
+    .splash img {
+        grid-row: 2;
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .splash .company {
+        /*width: 35%;*/
+    }
+    
+    .company-splash .splash-desc {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}

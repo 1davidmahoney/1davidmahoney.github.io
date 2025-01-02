@@ -1,13 +1,12 @@
-.profile-image {
-    max-width:100%;
-    width: 250px;
+.title-splash img {
+    max-width:300px;
+    width: 100%;
     height: auto;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    float: left;
+    margin: 0 auto;
 }
 
-.contact-image {
+.body-content .contact-image {
+    display: none;
     width: 180px;
     height: auto;
     margin-right: 20px;
@@ -71,3 +70,10 @@ form, input, textarea, button {
 /************************************************************************************/
 /* BREAKPOINTS **********************************************************************/
 /************************************************************************************/
+
+@media (min-width: 768px) {
+    
+    .body-content .contact-image {
+        display: block;
+    }
+}

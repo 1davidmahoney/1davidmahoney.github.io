@@ -25,9 +25,17 @@ body {
     min-height: 100vh; /* Ensures the gradient covers the full height of the viewport */
     font-family: 'figtree', 'Calibri', system-ui;
     line-height: 1.6;
-    background: radial-gradient(circle at top center, rgba(204, 204, 204, 1), rgba(127, 127, 127, 1) 80%);
+    
+    /*background: radial-gradient(circle at top center, rgba(204, 204, 204, 1), rgba(127, 127, 127, 1) 80%);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+    
+    background-image: url('/unreal/images/runt-bg.svg');
+    background-color: rgba(204, 204, 204, 1); /* Fallback color */
+    background-repeat: repeat;
+    background-size: 800px 800px; /* Adjust to scale the texture */
+    background-position: center;
+    
     margin: 0;
 }
 
@@ -99,15 +107,15 @@ p {
 
 .logo {
     display: block; /* Ensure the anchor behaves like a block element */
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: 600;
     text-align: left;
     white-space: nowrap; /* Stop my name from word-wrapping, esp. on my old Samsung, b/c it makes menu bar too tall */
 }
 
 .subtitle {
     display: block; /* Ensure the anchor behaves like a block element */
-    font-size: 16px;
+    font-size: 1.1em;
     /*margin: auto 0;*/
 }
 
@@ -266,6 +274,16 @@ a.at-button {
     /*color: white;*/
 }
 
+.selected {
+    font-size: 1.5em;
+    font-weight: 600;
+    font-style: oblique;
+}
+
+.at-selected {
+    font-size: 2rem;
+}
+
 /************************************************************************************/
 /* MAIN CONTENT *********************************************************************/
 /************************************************************************************/
@@ -328,6 +346,10 @@ figcaption {
 
 .bolded {
     font-weight: 700;
+}
+
+.extra-bolded {
+    font-weight: 900;
 }
 
 .italics {

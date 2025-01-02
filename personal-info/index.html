@@ -28,7 +28,7 @@
             <a class="wide-menu-item" href="/unreal/">Unreal Engine</a>
             <a class="wide-menu-item" href="/unity/">Unity</a>
         </div>
-        <div class="at-button">
+        <div class="at-button selected at-selected">
             <a href="/personal-info/" class="nowrap">@</a>
         </div>
     </header>
@@ -59,58 +59,53 @@
     <!-- MAIN CONTENT -->
     <div class="content-wrapper">
     
-        <div id="aboutme-content" class="piece-content">
-            <img src="/personal-info/images/profile.png" alt="Profile image" class="profile-image">
+        <div class="piece-content">
+            <div class="title-splash">
+                <img src="/personal-info/images/profile.png" alt="Profile pic">
+                <div class="title-text body-content">
+                    <h1>Hello there!</h1>
+                    <p>Thanks for visiting! I hope you enjoy my portfolio as much as I've enjoyed compiling it.</p>
+                    <p>For over a decade, I've made a career mixing two of my favorite activities: sharing a good story, and playing with computers. Being a narrative-focused game designer means I have a unique sense of empowerment wherein I'm able to dream up exciting, emotional gameplay moments and then go a step further by bringing them to life in game engines.</p>
+                    <p>I've worked with <span class="bolded">proprietary tools</span> (Telltale; RAD) and <span class="bolded">industry-standard tools</span> (Unreal; Maya) on content ranging from original IP (<em>Lone Echo II</em>) to franchises beloved across the world (<em>Guardians of the Galaxy</em>; <em>Game of Thrones</em>; another super-popular IP that I'm not sure I can mention).</p>
+                    <p>The scope of work I've done has ranged from mobile QA to technical narrative design, from <span class="bolded">writing dialogue</span> to <span class="bolded">prototyping</span> new modes of interaction in VR.</p>
+                    <p>I'm always open to talk shop, so if you'd like to chat, please feel free to <a href="#lets-talk" id="contact-shortcut">reach out</a>! Check out my <a href="/personal-info/images/DMahoney_Resume.pdf" target="_blank" rel="noopener noreferrer">r&eacute;sum&eacute; here</a>!</p>
+                </div>
+            </div>
             
-            <h1>Hello there!</h1>
-
-            <p>Thanks for visiting! I hope you enjoy my portfolio as much as I've enjoyed compiling it.</p>
-
-            <p>For over a decade, I've made a career mixing two of my favorite activities: sharing a good story, and playing with computers. Being a narrative-focused game designer means I have a unique sense of empowerment wherein I'm able to dream up exciting, emotional story moments and then go a step further by bringing them to life in game engines.</p>
-
-            <p>I've worked with <span class="bolded">proprietary tools</span> (Telltale; RAD) and <span class="bolded">industry-standard tools</span> (Unreal; Maya) on content ranging from original IP (<em>Lone Echo II</em>) to franchises beloved across the world (<em>Guardians of the Galaxy</em>; another super-popular IP I can't/shouldn't talk about). The scope of work I've done has ranged from mobile QA to technical narrative design, from <span class="bolded">writing dialogue</span> to <span class="bolded">prototyping</span> new modes of interaction in VR.</p>
-
-            <p>I'm always open to talk shop, so if you'd like to chat, please feel free to <a href="#lets-talk" id="contact-shortcut">reach out</a>! Check out my <a href="/personal-info/images/DMahoney_Resume.pdf" target="_blank" rel="noopener noreferrer">r&eacute;sum&eacute; here</a>!</p>
+            <hr>
             
-            <div style="clear: both; padding-bottom: 15px;"></div> <!-- This div clears the float (piece-image) -->
+            <div class="body-content">
+                <img src="/personal-info/images/contact.png" alt="Contact image" class="contact-image">
             
-            <img src="/personal-info/images/contact.png" alt="Contact image" class="contact-image">
-        
-            <h1 id="lets-talk">Let's talk!</h1>
-            <p>Please use one of the following methods to get in touch:</p>
-            <ul>
-                <li><a href="mailto:1davidmahoney@gmail.com">Email</a></li>
-                <li><a href="https://www.linkedin.com/in/david-mahoney" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
-            
-            <div style="clear: both;"></div> <!-- This div clears the float (piece-image) -->
-            
-            <!-- CONTACT FORM -->
-            
-            <h2>Contact form</h2>
-            <form id="contactForm" action="https://formspree.io/f/xldrznng" method="POST">
-                <p><em>* Required</em></p>
+                <h1 id="lets-talk">Let's talk!</h1>
+                <p>Please use one of the following methods to get in touch:</p>
+                <ul>
+                    <li><a href="mailto:1davidmahoney@gmail.com">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/david-mahoney" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
                 
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Name*" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email*" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" id="subject" name="subject" placeholder="Subject (optional)">
-                </div>
-
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Message*" required></textarea>
-                </div>
-
-                <button type="submit">Send</button>
-            </form>
+                <!-- CONTACT FORM -->
+                <h2>Contact form</h2>
+                <form id="contactForm" action="https://formspree.io/f/xldrznng" method="POST">
+                    <p><em>* Required</em></p>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject (optional)">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message*" required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+                
+                <p id="thankYouMessage">Thank you!</p>
             
-            <p id="thankYouMessage">Thank you!</p>
+            </div>
 
         </div>
             

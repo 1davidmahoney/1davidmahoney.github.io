@@ -6,6 +6,7 @@
     <title>Mahoney | Systems Design</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/child-page.css">
+    <link rel="stylesheet" href="/systems-design/systems-design.css">
     <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -23,7 +24,7 @@
         </div>
         <div class="wide-menu">
             <a class="wide-menu-item nowrap" href="/narrative-design/">Narrative Design</a>
-            <a class="wide-menu-item nowrap" href="/systems-design/">&ndash; Systems Design &ndash;</a>
+            <a class="wide-menu-item nowrap selected" href="/systems-design/">Systems Design</a>
             <a class="wide-menu-item" href="/unreal/">Unreal Engine</a>
             <a class="wide-menu-item" href="/unity/">Unity</a>
         </div>
@@ -58,100 +59,49 @@
     <!-- MAIN CONTENT -->
     <div class="content-wrapper">
     
-        <div id="project4-content" class="piece-content">
+        <div class="piece-content">
         
-            <h1>Systems Design</h1>
-            
-            <div class="splash">
+            <div class="title-splash">
                 <img src="/images/buttons/home-systems-design.png" alt="Project 4 Image" class="piece-image">
-                <div class="body-content">
-                    <h2>I &#9829; systems</h2>
-                    <p>In its original incarnation, Telltale Games was a fast-paced studio, so it was understandable that priorities could shift rapidly and that you’d often be expected to solve your own problems. Fortunately, I was able to turn a few of the big challenges I came across into fun side-projects.</p>
-                    <p>Over the years, my experience with dialog has ranged from practical to experimental. As a Creative Development Assistant (CDA), I built the first two projects below to solve a couple problems that were dragging down certain dialog-related workflows. Now that I’ve moved on from Telltale, it’s been fun thinking of other exciting ways to explore the world of dialog and narrative—an example of which can be seen in the third project below.</p>
+                <div class="title-text body-content">
+                    <h1>I &#9829; systems</h1>
+                    <p>Like the concept of storytelling, I'm fascinated by systems because of how all-encompassing and grand they are. In describing systems, we're making our best attempt at <span class="bolded">describing life itself</span>, from the subatomic particle to the galactic supercluster and everything in between &ndash; including you and me!</p>
+                    <p>Most of my systems design work has been during pre-production, so I don't have much to share in terms of publicly available work samples. However, I'm happy to talk about the type of work I've done.</p>
                 </div>
             </div>
-
-            <h1>Subtitle Pass Assistant</h1>
-            <p>This tool was all about saving clicks and keypresses.</p>
-            <p>For the CDA, dialog-related work was a daily occurrence, but when it came time for a certain process that occurred a couple times per episode, the work became needlessly cumbersome because of a lack of tools specific to the task. After consulting with senior engineering staff, I set about solving this efficiency problem by writing a tool of my own in C++.</p>
-            <p>More specifically, my program made use of HTML-embedded JavaScript and automated mouse clicks and button-presses to rapidly operate and transfer data between Telltale’s proprietary tool, a web browser, and the operating system’s clipboard.</p>
-            <p>Using my program, I was happy to save myself and my fellow CDAs somewhere around 75% of the work previously required to complete this task.</p>
-
-            <h1>File Management System for VO Processing</h1>
-            <p>Like the program above, my file management system was created to address a specific problem I had encountered while working as a CDA.</p>
-            <p>When it came time to add special effects to voiceover (e.g., distortion when talking through a walkie-talkie), the CDA would receive a list of VO audio files to move to a specific folder, making them readily available for the Audio department. Like before, I found myself wondering if this task could be easier; and thanks to batch scripting, it was.</p>
-            <p>By combining a batch script, specially tagged lines of dialog, and existing functionality within Telltale’s proprietary tool, I was able to design a system which streamlined the process of identifying and relocating VO files in need of special effects—an improvement which eased workloads for myself and at least a few of my coworkers.</p>
-            <p>In addition to the satisfaction of having designed a useful system, it was great having the chance to collaborate with like-minded individuals in the Production and Audio departments toward solving a problem that had regularly affected us all.</p>
-
-            <h1>Natural NPC Interaction System</h1>
-            <p>This theoretical system is meant to bridge the experientially disruptive gap that games sometimes insert between the player’s button press and the NPC’s behavior.</p>
-            <p>In many adventure-type games, when interacting with an NPC, I’ve often been jarred by a button-press that leads to an NPC’s action rather than my own. For example, <em>The Last of Us</em> handles dialog interactions fairly well by leading most of their resultant cinematic segments (i.e., acting) with a line/action from Joel (the player character, or “PC”); however, pressing the interaction button can also mean “Make Ellie talk,” which may make some players feel disconnected from the gameplay. In a more recent title, <em>Horizon Zero Dawn</em>, the transition into cinematic segments can be even more jarring, as pressing the interaction button could mean “Cut to a completely new camera angle; and also make the NPC talk.”</p>
-            <p>To alleviate this issue, I’ve designed a slightly more complex, yet significantly more natural-feeling system—one modeled after the relatable concepts of personal space and situational awareness. With this system, a game may have more intuitive interactions by providing a simple, reasonable explanation as to why their resultant cinematics are led by the PC or by the NPC.</p>
-            
-            <figure>
-                <a href="/images/portfolio/systems/NaturalNPCInteractionSystem_Awareness.png" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/portfolio/systems/NaturalNPCInteractionSystem_Awareness.png" alt="Diagram">
-                </a>
-                <figcaption>NPC’s awareness zone</figcaption>
-            </figure>
-            
-            <p>Every NPC has an “awareness zone”; when the player enters it, interaction UI appears over the NPC’s head, indicating that the NPC is now aware of the player’s presence and is interactable—i.e., a button-press may now trigger a cinematic segment which is led by the PC speaking to / acting upon the NPC.</p>
-            
-            <figure>
-                <a href="/images/portfolio/systems/NaturalNPCInteractionSystem_Personal.png" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/portfolio/systems/NaturalNPCInteractionSystem_Personal.png" alt="Diagram">
-                </a>
-                <figcaption>NPC’s personal space</figcaption>
-            </figure>
-            
-            <p>Additionally, each NPC has “personal space,” which is like the awareness zone, but with a tighter radius and a stronger—and possibly unexpected—reaction. Upon entering an NPC’s personal space, the player has a short amount of time to press the interaction button before the NPC will react to the player’s proximity; in general, happy NPCs allow more time, whereas angry NPCs allow less time. The activation of this new mode of interaction is made clear by an accented button prompt that fades out over a few seconds.</p>
-            
-            <table>
-                <tr>
-                    <th style="border-right:1px solid white">Altogether, there are 3 ways to begin an interaction with an NPC...</th>
-                    <th>...each with its own unique outcome.</th>
-                </tr>
-                <tr class="interact-1">
-                    <td>A) Enter the NPC’S awareness zone &amp; interact.</td>
-                    <td>PC leads a cinematic segment.</td>
-                </tr>
-                <tr class="interact-2">
-                    <td>B) Enter the NPC’S personal space &amp; interact.</td>
-                    <td>PC leads a cinematic segment.</td>
-                </tr>
-                <tr class="interact-2">
-                    <td>C) Enter the NPC’S personal space &amp; wait.</td>
-                    <td>NPC leads a cinematic segment.</td>
-                </tr>
-            </table>
-            
-            <p>For example, if the NPC is a hard-nosed, rough-around-the-edges type of character...</p>
-            
-            <table>
-                <tr>
-                    <th style="border-right:1px solid white">Scenario</th>
-                    <th style="border-right:1px solid white">Cinematic start</th>
-                    <th>Cinematic end</th>
-                </tr>
-                <tr class="interact-1">
-                    <td>A) Awareness zone + interact</td>
-                    <td>PC greets NPC.</td>
-                    <td>NPC responds gruffly.</td>
-                </tr>
-                <tr class="interact-2">
-                    <td>B) Personal space + interact</td>
-                    <td>PC taps NPC on shoulder.</td>
-                    <td>NPC threatens you.</td>
-                </tr>
-                <tr class="interact-2">
-                    <td>C) Personal space + wait</td>
-                    <td>PC stands silently for a moment.</td>
-                    <td>NPC jokes about you being sneaky.</td>
-                </tr>
-            </table>
-            
-            <h1>Conclusion</h1>
-            <p>As next steps, I’d like to implement this experimental dialog system in Unreal Engine and further develop the concept.</p>
+            <hr>
+            <div class="center-heading body-content">
+                <h2>Innovations in Immersive Gameplay</h2>
+            </div>
+            <div class="company-splash">
+                <img class="company" src="/systems-design/images/rad.svg" alt="RAD logo">
+                <div class="splash-desc body-content">
+                    <h3>Voice-Activated Dialogue Interactions</h3>
+                    <p>Working at Ready At Dawn was an amazing opportunity to explore narrative design at the cutting edge of technology. Like many gamers, I've dreamt of being able to speak to my favorite characters and to feel like they're really talking back to <em>me</em>. Speech recognition tech is improving, but problems remain, such as the accurate handling of accents and latency during processing.</p>
+                    <p>Driven to bring my voice into the game, I prototyped a few experimental systems that found compromises between the traditional dialogue choice wheel and the life-like speech recognition we all dream of. Thanks to my prototypes, I was able to prove that when an NPC responses to your actual voice, it feels like being truly immersed in the virtual reality of the moment.</p>
+                </div>
+            </div>
+            <div class="company-splash">
+                <img class="company" src="/systems-design/images/ttg.svg" alt="TTG logo">
+                <div class="splash-desc body-content">
+                    <h3>Newbie- and Party-Friendly Action Controls</h3>
+                    <p>At Telltale Games (before its closing and subsequent revival), stagnation was a concern. Our style had become so predictable that the community had begun referring to "the Telltale formula" to describe their gameplay experiences.</p>
+                    <p>Although I wasn't yet officially a designer, I took it upon myself to prototype and pitch novel systems to help us grow as a company. For instance, for games that focused more on combat, I devised a system wherein the game controller could be used more reactively, requiring zero familiarity with button names, which would allow for even complete newbies to join in on the fun.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="splash">
+                <div class="center-heading body-content">
+                    <h2>Tool Development</h2>
+                </div>
+                <div class="splash-desc body-content">
+                    <h3>Working Smarter, Not Harder</h3>
+                    <p>Back before I became a designer with official engineering support, if I wanted specialized tools, making my own was often my only option. My Subtitle Pass Assistant tool, for example, was all about saving clicks and keypresses.</p>
+                    <p>As a Creative Development Assistant (CDA) at Telltale, a lot of my time was spent proofreading and processing dialogue scripts &ndash; e.g., fixing spelling errors, and flagging lines that needed special attention from the automated lipsync system. Unfortunately, this work was needlessly cumbersome due to a lack of task-specific tools. After consulting with senior engineering staff, I set about solving this efficiency problem by writing a tool of my own in C++.</p>
+                    <p>Now, instead of digging through multiple menus every time a line needed attention, the CDAs (of which there were several) would only need a couple clicks.</p>
+                </div>
+                <img src="/systems-design/images/spa.png" alt="Subtitle Pass Assistant">
+            </div>
             
         </div> <!-- piece-content -->
 
