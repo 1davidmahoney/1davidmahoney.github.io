@@ -27,13 +27,17 @@
     align-items: revert;
 }
 
+.special-splash {
+    align-items: center;
+}
+
+.center-paragraph {
+    grid-column: 1 / 3;
+}
+
 .level {
     align-items: center;
     grid-template-columns: auto auto;
-}
-
-.splash-desc {
-    grid-row: 1;
 }
 
 .project-title {
@@ -51,6 +55,19 @@
 
 .script-section {
     font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
+.char-sheet-thumbs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.char-sheet-thumbs a {
+    margin: 10px;
+}
+
+#bp {
+    align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -78,5 +95,9 @@
     
     #coming-soon {
         grid-row: revert;
+    }
+    
+    #bp-thumb {
+        grid-column: 1 / 3;
     }
 }
