@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahoney | Personal Info</title>
+    <title>Mahoney | About Me</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/child-page.css">
-    <link rel="stylesheet" href="/personal-info/personal-info.css">
+    <link rel="stylesheet" href="/about-me/about-me.css">
     <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -29,7 +29,7 @@
             <a class="wide-menu-item" href="/unity/">Unity</a>
         </div>
         <div class="at-button selected at-selected">
-            <a href="/personal-info/" class="nowrap">@</a>
+            <a href="/about-me/" class="nowrap">@</a>
         </div>
     </header>
     
@@ -48,10 +48,10 @@
             <li><a href="/narrative-design/">Narrative Design</a></li>
             <li><a href="/systems-design/">Systems Design</a></li>
             <li><a href="/unreal/">Unreal Engine</a></li>
-            <li><a href="/unity/">Undity</a></li>
+            <li><a href="/unity/">Unity</a></li>
         </ul>
         <ul class="menu-alt-section">
-            <li><a href="/personal-info/">&ndash; Personal Info &ndash;</a></li>
+            <li><a href="/about-me/">&ndash; About Me &ndash;</a></li>
         </ul>
     </nav>
     </div>
@@ -61,21 +61,21 @@
     
         <div class="piece-content">
             <div class="title-splash">
-                <img src="/personal-info/images/profile.png" alt="Profile pic">
+                <img src="/about-me/images/profile.png" alt="Profile pic">
                 <div class="title-text body-content">
                     <h1>Hello there!</h1>
                     <p>Thanks for visiting! I hope you enjoy my portfolio as much as I've enjoyed compiling it.</p>
                     <p>For over a decade, I've made a career mixing two of my favorite activities: sharing a good story, and playing with computers. Being a <span class="bolded">narrative-focused game designer</span> has helped me develop a wonderful sense of empowerment wherein I'm able to dream up exciting, emotionally fulfilling gameplay moments and then go a step further by bringing them to life in cutting-edge game engines.</p>
                     <p>I've worked with <span class="bolded">proprietary tools</span> (at Telltale; Ready At Dawn) and <span class="bolded">industry-standard tools</span> (Unreal; Maya) on content ranging from original IP (<em>Lone Echo II</em>) to franchises beloved across the world (<em>Guardians of the Galaxy</em>; <em>Game of Thrones</em>; one other &ldquo;galactically&rdquo; popular IP, but only during pre-production).</p>
                     <p>My professional journey has taken me from testing games and taking notes during writers' rooms to <span class="bolded">writing dialogue</span> for a dramatic space adventure game; to <span class="bolded">prototyping</span> new modes of character interaction in VR; and ultimately to <span class="bolded">collaborating</span> with studio leadership on the development of new original IP.</p>
-                    <p>I'm always open to talk shop, so if you'd like to chat, please feel free to <a href="#lets-talk" id="contact-shortcut">reach out</a>! Check out my <a href="/personal-info/images/DMahoney_Resume.pdf" target="_blank" rel="noopener noreferrer">r&eacute;sum&eacute; here</a>!</p>
+                    <p>I'm always open to talk shop, so if you'd like to chat, please feel free to <a href="#lets-talk" id="contact-shortcut">reach out</a>! Check out my <a href="/about-me/images/DMahoney_Resume.pdf" target="_blank" rel="noopener noreferrer">r&eacute;sum&eacute; here</a>!</p>
                 </div>
             </div>
             
             <hr>
             
             <div class="body-content">
-                <img src="/personal-info/images/contact.png" alt="Contact image" class="contact-image">
+                <img src="/about-me/images/contact.png" alt="Contact image" class="contact-image">
             
                 <h1 id="lets-talk">Let's talk!</h1>
                 <p>Please use one of the following methods to get in touch:</p>
@@ -118,14 +118,14 @@
     
     <!-- SCRIPTS -->
     <script src="/script.js"></script>
-    <script src="/personal-info/personal-info.js"></script>
+    <script src="/about-me/about-me.js"></script>
     <script>
         function updateSubtitle() {
             const subtitleDiv = document.querySelector('.subtitle');
             if (window.innerWidth >= 550) { // Manual media query
                 subtitleDiv.textContent = "Game Dev Portfolio"; // Portfolio piece title is already visible in wide menu
             } else {
-                subtitleDiv.textContent = "Portfolio | Personal Info"; // Wide menu is hidden
+                subtitleDiv.textContent = "Portfolio | About Me"; // Wide menu is hidden
             }
         }
 
