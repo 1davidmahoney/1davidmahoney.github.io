@@ -1,17 +1,3 @@
-.company-splash {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.company-splash .company {
-    width: 100%;
-    height: auto;
-    padding: 0 20px;
-}
-
 .splash-desc {
     grid-row: 2;
 }

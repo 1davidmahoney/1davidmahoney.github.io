@@ -48,10 +48,18 @@
     color: #333;
 }
 
-hr {
+hr.plain {
     border: none;
     height: 2px;
     background-color: #ccc;
+    width: 100%;
+    max-width: 61.8%;
+    margin: 50px auto;
+}
+
+hr.dot {
+    border: none;
+    border-top: 5px dotted #ccc;
     width: 100%;
     max-width: 61.8%;
     margin: 50px auto;
@@ -106,6 +114,20 @@ hr {
     aspect-ratio: 16 / 9; /* Ensures correct aspect ratio */
     border: 0; /* Removes default border */
     display: block; /* Removes inline-block whitespace */
+}
+
+.company-splash {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-splash .company {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
 }
 
 /************************************************************************************/
