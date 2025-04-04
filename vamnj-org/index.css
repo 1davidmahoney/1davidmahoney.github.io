@@ -287,15 +287,13 @@ h2 {
         background: repeating-linear-gradient(to bottom, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6); /*Faint sand, LH-red, car-blue, LH-red, sand*/
     }
     
-    .overlay.top {
+    .overlay.top,
+    .overlay.bottom {
         width: 50%;
     }
     .overlay.middle {
         transform: translate(-50%, -79%);
         max-width: 21%;
-    }
-    .overlay.bottom {
-        width: 50%;
     }
     
     .hero-title {
@@ -357,6 +355,18 @@ h2 {
     }
 }
 
+@media (min-width: 830px) { /* Hero elements */
+    
+    .overlay.top,
+    .overlay.bottom {
+        width: 45%;
+    }
+    .overlay.middle {
+        transform: translate(-50%, -85%);
+        max-width: 16%;
+    }
+}
+
 @media (min-width: 1024px) {
     
     .splash-img {
@@ -376,6 +386,15 @@ h2 {
     .original-logo {
         margin: 3rem 1rem;
         width: clamp(260px, 23vw, 350px);
+    }
+    
+    .overlay.top,
+    .overlay.bottom {
+        width: 42%;
+    }
+    .overlay.middle {
+        transform: translate(-50%, -85%);
+        max-width: 15%;
     }
 }
 
