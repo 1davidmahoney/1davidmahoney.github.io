@@ -114,3 +114,25 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         highlightElement(hash);
     });
 });
+
+/*****************************************************************************/
+/* KEEP CONTENT-WRAPPER BELOW HEADER *****************************************/
+/*****************************************************************************/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    const contentWrapper = document.querySelector('.container');
+
+    if (header && contentWrapper) {
+        const updateMargin = () => {
+            const headerHeight = header.offsetHeight;
+            contentWrapper.style.marginTop = `${headerHeight}px`;
+        };
+
+        // Initial adjustment
+        updateMargin();
+
+        // Adjust on window resize to handle dynamic height changes
+        window.addEventListener('resize', updateMargin);
+    }
+});

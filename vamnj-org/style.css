@@ -20,7 +20,7 @@ body {
     background-repeat: repeat;
     background-size: 100px 100px; /* Adjust to scale the texture */
     background-position: center;
-    padding-top: 80px; /* Matches the header's height */
+    /*padding-top: 80px; /* Matches the header's height */
 	display: grid;
     grid-template-rows: auto 1fr auto; /* Header, content, footer */
 }
@@ -165,7 +165,7 @@ footer {
 }
 
 .separator {
-    width: 61.8%;
+    width: 80%;
     margin: 1rem auto;
 }
 
