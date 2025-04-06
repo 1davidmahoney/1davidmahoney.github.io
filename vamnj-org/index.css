@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 
 h1 {
     font-size: 1.7rem;
@@ -59,25 +59,22 @@ h2 {
 }
 /* ~~~ NEW ~~~ */
 #splash-hero {
+    background-image: url('/vamnj-org/images/home-01.png');
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     /*margin-bottom: 2rem;*/
     /*padding: 0 20px;*/
-    
+    background-size: cover;
+    background-position: center;
+
     /* For SVG overlay */
-    position: relative;
+    /*position: relative;*/
     width: 100%;
+    height: auto;
     /*max-width: 1000px; /* optional */
     margin: 0 auto 7rem auto;
-}
-
-.hero-title {
-    font-family: "Cookie", "Times New Roman", serif;
-    font-size: 2.7em;/*clamp(2.5rem, 5.5vw, 4rem);*/
-    text-align: center;
-    margin-bottom: 0;
 }
 
 /* Container for the hero image and embellishments */
@@ -115,29 +112,47 @@ h2 {
 
 /* Hero SVG overlay stuff */
 .overlay {
-  position: absolute;
+  /*position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%);*/
   width: 100%;
   height: auto;
+  font-weight: 100;
+}
+.overlay.top,
+.overlay.bottom {
+    font-family: "Coiny", "Times New Roman", serif;
+    font-size: clamp(1.1rem, 4vw, 2rem);/*2.5rem;*/
+    color: white;
+    font-style: normal;
+    text-align: center;
+    width: 95%;
+    text-shadow:
+    -2px -2px 4px black,
+     2px -2px 4px black,
+    -2px  2px 4px black,
+     2px  2px 4px black;
 }
 .overlay.top {
-    top: 0;
+    /*top: 0;*/
     margin-top: 20px; /* adjust as needed */
 }
 .overlay.middle {
-    top: 50%;
-    transform: translate(-50%, -77%);
-    max-width: 45%;
+    /*top: 50%;
+    transform: translate(-50%, -77%);*/
+    width: 45%;
+    height: auto;
+    max-width: 260px;
 }
 .overlay.bottom {
-    bottom: 0;
+    /*bottom: 0;*/
     margin-bottom: 20px; /* adjust as needed */
+    font-size: clamp(1.7rem, 5.5vw, 3rem);/*3.5rem;*/
 }
 .overlay.top,
 .overlay.middle,
 .overlay.bottom {
-  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1));
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 1));
 }
 
 #teaser {
@@ -264,9 +279,9 @@ h2 {
 @media (min-width: 400px) { /* For VAMNJ logo at center of hero section */
 
     .overlay.middle {
-        top: 50%;
-        transform: translate(-50%, -83%);
-        max-width: 37%;
+        /*top: 50%;
+        transform: translate(-50%, -83%);*/
+        /*max-width: 37%;*/
     }
 }
 
@@ -287,13 +302,13 @@ h2 {
         background: repeating-linear-gradient(to bottom, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6); /*Faint sand, LH-red, car-blue, LH-red, sand*/
     }
     
-    .overlay.top,
+    /*.overlay.top,
     .overlay.bottom {
         width: 50%;
-    }
+    }*/
     .overlay.middle {
-        transform: translate(-50%, -79%);
-        max-width: 21%;
+        /*transform: translate(-50%, -79%);*/
+        /*max-width: 21%;*/
     }
     
     .hero-title {
@@ -357,13 +372,13 @@ h2 {
 
 @media (min-width: 830px) { /* Hero elements */
     
-    .overlay.top,
+    /*.overlay.top,
     .overlay.bottom {
         width: 45%;
-    }
+    }*/
     .overlay.middle {
-        transform: translate(-50%, -85%);
-        max-width: 16%;
+        /*transform: translate(-50%, -85%);*/
+        /*max-width: 16%;*/
     }
 }
 
@@ -388,13 +403,13 @@ h2 {
         width: clamp(260px, 23vw, 350px);
     }
     
-    .overlay.top,
+    /*.overlay.top,
     .overlay.bottom {
         width: 42%;
-    }
+    }*/
     .overlay.middle {
-        transform: translate(-50%, -85%);
-        max-width: 15%;
+        /*transform: translate(-50%, -85%);*/
+        /*max-width: 15%;*/
     }
 }
 
