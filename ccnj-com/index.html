@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3876C7">
+    <title>Coastal Classics | Home</title>
+    <link rel="stylesheet" href="/ccnj-com/style.css">
+    <link rel="stylesheet" href="/ccnj-com/index.css">
+    <link rel="icon" href="/ccnj-com/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div id="header-row-1">
+            <div class="menu-button" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <a href="/ccnj-com/"><img src="/ccnj-com/images/header-logo.svg" alt="CCNJ logo"></a>
+            <div class="wide-menu">
+                <a class="wide-menu-item" href="/ccnj-com/visit/">Services</a>
+                <a class="wide-menu-item" href="/ccnj-com/photo/">Portfolio</a>
+                <a class="wide-menu-item" href="/ccnj-com/history-corner/">Publications</a>
+                <a class="wide-menu-item" href="/ccnj-com/about/">About Us</a>
+            </div>
+            <a href="/ccnj-com/raffle/" class="glow-button">CONTACT US</a>
+        </div>
+    </header>
+    
+    <!-- Sliding Menu -->
+    <div id="side-menu-container"></div>
+    <script>
+    fetch('/ccnj-com/side-menu.html')
+        .then(response => response.text())
+        .then(data => {
+            // Insert the menu HTML into the container
+            document.getElementById('side-menu-container').innerHTML = data;
+            
+            // Find the specific menu item and update its text
+            const menuItems = document.querySelectorAll('#side-menu-container li a');
+            menuItems.forEach(item => {
+                if (item.innerText.trim() === 'Home') {
+                    item.innerText = '— Home —';
+                }
+            });
+        });
+    </script>
+    
+    <!-- Main content -->
+    <div class="container">
+    
+        <!-- TITLE -- HERO SPLASH -->
+        <section id="splash-hero">
+            <h1 class="overlay top fade-in-shortest">Welcome to</h1>
+            <img src="/ccnj-com/images/vamnj_logo.png" alt="VAMNJ Logo" class="overlay middle fade-in-shortest">
+            <h1 class="overlay bottom fade-in-shortest">The Vintage Automobile Museum <span class="nowrap">of New Jersey</span></h1>
+        </section>
+        
+        <img id="scroll-arrow" src="/ccnj-com/images/scroll-arrow.svg" alt="Scroll arrow">
+        
+        <div id="teaser" class="body-content centered italics scroll-fade"><h1>Take a drive down memory lane...</h1></div>
+        
+        <!-- CTA: VISIT (img right) -->
+        <section class="splash-right">
+            <img class="splash-img scroll-fade" src="/ccnj-com/images/home-02.png" alt="Peeking into a car's interior">
+            <div class="splash-content scroll-fade">
+                <h1 class="centered">Up-close and personal views of beautiful classic cars!</h1>
+                <h2>Our collection spans over 75 years, from the turn of the century to the Fabulous Fifties and beyond.</h2>
+                <h2><a href="/ccnj-com/visit/">Come visit</a> and see for yourself!</h2>
+            </div>
+        </section>
+
+        <!-- CTA: PHOTO (img left) -->
+        <section class="splash-left">
+            <img class="splash-img scroll-fade" src="/ccnj-com/images/home-03.png" alt="Visitor having picture taken in car">
+            <div class="splash-content scroll-fade">
+                <h1 class="centered">A family-friendly attraction, legendary cultural artifacts</h1>
+                <h2>Relive the heyday of horsepower and style!</h2>
+                <h2>Surround yourself with automotive memorabilia, and enjoy an immersive educational experience like no other.</h2>
+                <h2>Want to see yourself behind the wheel of a vintage auto? Hop in for a <a href="/ccnj-com/photo/">fun photo op</a>!</h2>
+            </div>
+        </section>
+
+        <!-- CTA: HISTORY CORNER (img right) -->
+        <section class="splash-right">
+            <img class="hcorner scroll-fade" src="/ccnj-com/images/home-04.png" alt="A happy Professor Otto ready to talk cars">
+            <div class="splash-content scroll-fade">
+                <h1 class="centered">Revved up to learn more? Meet Professor Otto!</h1>
+                <h2>He always has an interesting story for you over at <a href="/ccnj-com/history-corner/"><em>History Corner</em></a>...</h2>
+            </div>
+        </section>
+        
+        <img id="contribute" class="body-img scroll-fade" src="/ccnj-com/images/car.svg" alt="Classic car">
+        
+        <!-- SOME WAYS TO CONTRIBUTE -->
+        <div class="splosh">
+            <div class="splash-content scroll-fade">
+                <h1 class="centered">Help celebrate and preserve our shared culture</h1>
+                <h2>There are many ways YOU can become part of automobile history TODAY!</h2>
+            </div>
+            <div class="splish-3 scroll-fade">
+                <a href="/ccnj-com/membership/">
+                    <div class="splish">
+                        <img src="/ccnj-com/images/activity-member.svg" alt="Membership icon">
+                        <h2><em>Become a member</em></h2>
+                    </div>
+                </a>
+                <a href="/ccnj-com/donate/">
+                    <div class="splish">
+                        <img src="/ccnj-com/images/activity-donate.svg" alt="Donate icon">
+                        <h2><em>Donate</em></h2>
+                    </div>
+                </a>
+                <a href="/ccnj-com/raffle/">
+                    <div class="splish">
+                        <img src="/ccnj-com/images/activity-ticket.svg" alt="Ticket icon">
+                        <h2><em>Buy a ticket for the <span class="bolded">Vintage 1000</span> raffle</em></h2>
+                    </div>
+                </a>
+            </div>
+            <div class="splash-content scroll-fade">
+                <h2 style="margin-top:0;">See the menu up top for more!</h2>
+            </div>
+        </div>
+
+        <div class="body-content centered italics scroll-fade"><h1>Thank you for visiting!</h1></div>
+        <img class="body-img original-logo-outro scroll-fade" src="/ccnj-com/images/header/footer_logo.svg" alt="VAMNJ logo">
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Coastal Classics, LLC. All rights reserved.</p>
+    </footer>
+
+    <script src="/ccnj-com/script.js"></script>
+    <script src="/ccnj-com/index.js"></script>
+</body>
+</html>

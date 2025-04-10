@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+} 
+
+/*.svg-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Ensure the container does not overflow */
+    /*box-sizing: border-box; /* Include padding and borders in width */
+    /*overflow: hidden; /* Prevents any overflow from children */
+/*}*/
+
+/*.svg-image { /* TODO: Maybe repurpose for new embellishments */
+/*    width: 27%; /* Set the width relative to the container */
+/*    min-width: 20%; /* Seems to allow laurels to get small enough on small-width viewports -- e.g., 360px */
+/*    height: auto; /* Maintain aspect ratio */
+/*    max-width: 100%; /* Ensure the image does not overflow */
+/*    flex-shrink: 1; /* Allow the SVG to shrink if necessary */
+/*}*/
+
+/*.title-main {
+    font-size: clamp(2rem, 7.5vw, 3rem);
+    margin: 0 auto;
+}
+
+.title-sub {
+    white-space: nowrap;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0.5rem;
+}
+
+.title-desc {
+    font-size: 1.5rem;
+}*/
+
+/*****************************************************************************/
+/* HERO TITLE AND IMAGE ******************************************************/
+/*****************************************************************************/
+
+/* ~~~ OLD ~~~ */
+.splash-hero {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 20px;
+}
+/* ~~~ NEW ~~~ */
+#splash-hero {
+    background-image: url('/vamnj-org/images/home-01.png');
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center;
+    align-items: center;
+    /*margin-bottom: 2rem;*/
+    /*padding: 0 20px;*/
+    background-size: cover;
+    background-position: center;
+
+    /* For SVG overlay */
+    /*position: relative;*/
+    width: 100%;
+    height: auto;
+    /*max-width: 1000px; /* optional */
+    margin: 0 auto 7rem auto;
+}
+
+/* Container for the hero image and embellishments */
+.framed-hero-image-container {
+    position: relative;
+    max-width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 8%;
+}
+
+/* ~~~ OLD ~~~ */
+/* Hero Image Styling */
+.hero-image {
+    display: block;
+    width: 87%;
+    /*max-width: 600px; /* Adjust based on your design */
+    border-radius: 40px; /* Rounded corners */
+    border: 1px solid #b3834d;
+    margin: 4% auto 0 auto;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+/* ~~~ NEW ~~~ */
+#hero-image {
+    display: block;
+    width: 100%;
+    min-height: 450px;
+    /*max-width: 600px; /* Adjust based on your design */
+    /*border-radius: 40px; /* Rounded corners */
+    /*border: 1px solid #b3834d;*/
+    margin: 0 auto;
+    object-fit: cover;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero SVG overlay stuff */
+.overlay {
+  /*position: absolute;
+  left: 50%;
+  transform: translateX(-50%);*/
+  width: 100%;
+  height: auto;
+  font-weight: 100;
+}
+.overlay.top,
+.overlay.bottom {
+    font-family: "Coiny", "Times New Roman", serif;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);/*2.5rem;*/
+    color: white;
+    font-style: normal;
+    text-align: center;
+    width: 95%;
+    text-shadow:
+    -2px -2px 4px black,
+     2px -2px 4px black,
+    -2px  2px 4px black,
+     2px  2px 4px black;
+}
+.overlay.top {
+    /*top: 0;*/
+    margin-top: 20px; /* adjust as needed */
+}
+.overlay.middle {
+    /*top: 50%;
+    transform: translate(-50%, -77%);*/
+    width: 45%;
+    height: auto;
+    max-width: 260px;
+}
+.overlay.bottom {
+    /*bottom: 0;*/
+    margin-bottom: 20px; /* adjust as needed */
+    font-size: clamp(2.2rem, 5.5vw, 3.3rem);/*3.5rem;*/
+}
+.overlay.top,
+.overlay.middle,
+.overlay.bottom {
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 1));
+}
+
+#scroll-arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*width: 40px;
+    height: auto;*/
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 100;
+}
+.bounce {
+  animation: bounce 1.6s ease;
+}
+@keyframes bounce {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+#teaser {
+    margin-bottom: 7rem;
+}
+
+/* Embellishment Styling (Shared) */
+.embellishment {
+    position: absolute;
+    width: auto;
+    height: auto;
+    pointer-events: none; /* Prevent interference */
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
+}
+
+/* Side Embellishments */
+.side-left {
+  top: 0;
+  left: 0; /* Adjust to fit your design */
+  /*transform: translateY(-50%);*/
+  height: 62%; /* Responsive scaling */
+}
+
+.side-right {
+  top: 0;
+  right: 0; /* Adjust to fit your design */
+  /*transform: translateY(-50%);*/
+  height: 62%; /* Responsive scaling */
+}
+
+/* Bottom Embellishments */
+.bottom-center {
+  bottom: 3%; /* Adjust to fit */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 53%; /* Responsive scaling */
+}
+
+.bottom-left {
+  bottom: 0; /* Adjust to fit */
+  left: 0; /* Adjust to fit */
+  width: 20%; /* Responsive scaling */
+}
+
+.bottom-right {
+  bottom: 0; /* Adjust to fit */
+  right: 0; /* Adjust to fit */
+  width: 20%; /* Responsive scaling */
+  transform: scaleX(-1); /* Horizontal flip */
+}
+
+/* Title Styling */
+.decorated-title {
+  text-align: center;
+  font-family: 'Your Font', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/*****************************************************************************/
+/* MISC **********************************************************************/
+/*****************************************************************************/
+
+/* Mobile-first: Stack image above text by default */
+.splash-left, .splash-right, .splosh {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    /*max-width: 1200px;*/
+    margin: 0 auto 7rem auto;
+    max-height: none; /* Remove height constraints */
+    padding: 0; /* Reduce padding to avoid clipping */
+}
+
+.splash-img, .body-img {
+    display: block;
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+    object-fit: contain; /* Show the entire image without cropping */
+}
+
+.splash-img {
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.original-logo {
+    margin: 3rem 1rem;
+    width: clamp(210px, 44vw, 350px);
+}
+
+.original-logo-outro {
+    width: clamp(100px, 50%, 230px);
+    height: auto;
+    margin: 0 auto 2rem auto;
+}
+
+.splash-content {
+    padding: 0 20px;
+    text-align: left;
+}
+
+.hcorner {
+    width: 62%;
+    /* Stuff from splash-img: */
+    display: block;
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+    object-fit: contain; /* Show the entire image without cropping */
+    margin-bottom: 1rem;
+}
+
+#contribute {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto 1rem auto;
+    padding: 0 20px;
+}
+
+/*****************************************************************************/
+/* BREAKPOINTS ***************************************************************/
+/*****************************************************************************/
+
+@media (min-width: 400px) { /* For VAMNJ logo at center of hero section */
+
+    .overlay.middle {
+        /*top: 50%;
+        transform: translate(-50%, -83%);*/
+        /*max-width: 37%;*/
+    }
+}
+
+@media (min-width: 500px) { /* Simple fix to get nice border-radius on smaller screens */
+
+    .hero-title {
+        font-size: 3.5em;
+    }
+
+    .hero-image {
+        border-radius: 60px;
+    }
+}
+
+@media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    .container {
+        background: repeating-linear-gradient(to bottom, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6); /*Faint sand, LH-red, car-blue, LH-red, sand*/
+    }
+    
+    /*.overlay.top,
+    .overlay.bottom {
+        width: 50%;
+    }*/
+    .overlay.middle {
+        /*transform: translate(-50%, -79%);*/
+        /*max-width: 21%;*/
+    }
+    
+    .hero-title {
+        font-size: 4em;
+    }
+
+    .splash-left, .splash-right {
+        justify-content: space-between;
+    }
+
+    .splash-left {
+        flex-direction: row; /* Image on the left, text on the right */
+        border-radius: 60px 0 0 60px;
+    }
+
+    .splash-left img {
+        border-radius: 0 60px 60px 0;
+    }
+
+    .splash-right {
+        flex-direction: row-reverse; /* Text on the left, image on the right */
+    }
+    
+    .splash-right img {
+        border-radius: 60px 0 0 60px;
+    }
+
+    .splash-content {
+        padding: 0 4vw;
+        text-align: left;
+    }
+
+    .splash-content h1 {
+        margin-top: 0;
+    }
+    
+    .splash-img {
+        max-width: 44vw;
+        height: 32vw;
+        object-fit: cover;
+    }
+    
+    .title-desc {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 4% auto;
+    }
+    
+    .title-main {
+        font-size: clamp(1.2rem, 2.5vw, 3rem); /* Shrinks or grows between min and max based on viewport width */
+    }
+    
+    .title-sub {
+        font-size: clamp(1rem, 2.4vw, 1.5rem);
+    }
+    
+    .hcorner {
+        width: 42%;
+    }
+}
+
+@media (min-width: 830px) { /* Hero elements */
+    
+    /*.overlay.top,
+    .overlay.bottom {
+        width: 45%;
+    }*/
+    .overlay.middle {
+        /*transform: translate(-50%, -85%);*/
+        /*max-width: 16%;*/
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .splash-img {
+        max-width: 39vw;
+    }
+}
+
+@media (min-width: 1200px) { /* Screen is wide enough to show hero stuff side by side */
+    
+    .splash-hero {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: end;
+        margin-bottom: 7rem;
+    }
+    
+    .original-logo {
+        margin: 3rem 1rem;
+        width: clamp(260px, 23vw, 350px);
+    }
+    
+    /*.overlay.top,
+    .overlay.bottom {
+        width: 42%;
+    }*/
+    .overlay.middle {
+        /*transform: translate(-50%, -85%);*/
+        /*max-width: 15%;*/
+    }
+}
+
+@media (min-width: 1440px) { /* Large landscape (desktop/laptop) */
+
+    .splash-img {
+        max-width: 46vw;
+    }
+}

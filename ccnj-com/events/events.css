@@ -1,0 +1,130 @@
+li {
+    padding-bottom: 6px;
+}
+
+.calendar {
+    display: grid;
+    padding-bottom: 20px;
+}
+
+.calendar h3 {
+    font-size: 1.5em;
+}
+
+.month {
+    margin-bottom: 20px;
+}
+
+.month:last-child {
+    margin-bottom: 0;
+}
+
+.no-events {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+    font-style: oblique;
+}
+
+.no-events p {
+    margin-left: 6px;
+}
+
+.events-all-done {
+    color: gray;
+    border-color: gray;
+    border-style: dashed;
+    font-style: italic;
+}
+
+.active-events {
+    border-width: 2px;
+    background-color: white;
+}
+
+/*****************************************************************************/
+/* BREAKPOINTS ***************************************************************/
+/*****************************************************************************/
+
+@media (min-width: 500px) {
+    
+    .calendar {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .month {
+        margin-right: 20px;
+    }
+    
+    .month:nth-child(2n) {
+        margin-right: 0;
+    }
+    
+    .month:nth-child(11), .month:nth-child(12) {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    /* Two columns on the first row, three on the second */
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns in total */
+        grid-auto-rows: auto;
+    }
+
+    /* Place items in specific grid positions */
+    .container > :nth-child(1) { grid-column: 1 / 2; grid-row: 1; } /* Intro */
+    .container > :nth-child(2) { grid-column: 2 / 4; grid-row: 1; } /* Pic */
+    .container > :nth-child(3) { grid-column: 1 / 4; grid-row: 2; } /* Title */
+    .container > :nth-child(4) { grid-column: 1 / 4; grid-row: 3; } /* Calendar */
+    
+    .calendar {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .month:nth-child(2n) {
+        margin-right: 20px;
+    }
+    
+    .month:nth-child(3n) {
+        margin-right: 0;
+    }
+    
+    .month:nth-child(10) {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .calendar {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    .month:nth-child(3n) {
+        margin-right: 20px;
+    }
+    
+    .month:nth-child(4n) {
+        margin-right: 0;
+    }
+    
+    .month:nth-child(9) {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    
+    .body-content {
+        padding-left: 6vw;
+    }
+    
+    .calendar {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+}

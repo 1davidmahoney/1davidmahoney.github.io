@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8b67d">
+    <title>VAMNJ | About us</title>
+    <link rel="stylesheet" href="/vamnj-org/style.css">
+    <link rel="stylesheet" href="/vamnj-org/child-page.css">
+    <link rel="stylesheet" href="/vamnj-org/about/about.css">
+    <link rel="icon" href="/vamnj-org/images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div id="header-row-1">
+            <div class="menu-button" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <a href="/vamnj-org/"><img src="/vamnj-org/images/header/header_logo.svg" alt="VAMNJ logo"></a>
+            <div class="wide-menu">
+                <a class="wide-menu-item" href="/vamnj-org/visit/">Visit</a>
+                <a class="wide-menu-item" href="/vamnj-org/photo/">Photo Op</a>
+                <a class="wide-menu-item" href="/vamnj-org/history-corner/">History Corner</a>
+                <a class="wide-menu-item" href="/vamnj-org/events/">Events</a>
+                <a class="wide-menu-item" href="/vamnj-org/membership/">Membership</a>
+                <a class="wide-menu-item" href="/vamnj-org/gallery/">Gallery</a>
+                <a class="wide-menu-item" href="/vamnj-org/donate/">Donate</a>
+                <a class="wide-menu-item" href="/vamnj-org/about/">About Us</a>
+                <a class="wide-menu-item" href="/vamnj-org/contact/">Contact</a>
+            </div>
+            <a href="/vamnj-org/raffle/" class="glow-button">$ &nbsp; RAFFLE &nbsp; $</a>
+        </div>
+        <div>
+            <a href="/vamnj-org/raffle/" class="raffle-banner">$ &nbsp; RAFFLE &nbsp; $</a>
+        </div>
+    </header>
+    
+    <!-- Sliding Menu -->
+    <div id="side-menu-container"></div>
+    <script>
+    fetch('/vamnj-org/side-menu.html')
+        .then(response => response.text())
+        .then(data => {
+            // Insert the menu HTML into the container
+            document.getElementById('side-menu-container').innerHTML = data;
+            
+            // Find the specific menu item and update its text
+            const menuItems = document.querySelectorAll('#side-menu-container li a');
+            menuItems.forEach(item => {
+                if (item.innerText.trim() === 'About Us') {
+                    item.innerText = '— About Us —';
+                }
+            });
+        });
+    </script>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="body-content fade-in-shortest">
+            <h1>About the Museum</h1>
+            <p>In 2025, our organization will be celebrating its 25th anniversary! Time really does fly when you're having fun! See our full story below.</p>
+        </div>
+        <div class="child-splash-right fade-in-shortest">
+            <img src="/vamnj-org/about/images/about.jpg" alt="Wide shot of classic cars in museum">
+        </div>
+        <div class="body-content center-wide scroll-fade" id="mission">
+            <div class="container-text container-border" style="border: 4px double black;">
+                <h2>Our Mission</h2>
+                <p>The Vintage Automobile Museum of New Jersey's primary goal is to provide an educational and entertaining family attraction that preserves, shares, and takes pride in the automotive heritage that truly shaped the growth of our state, our country, and indeed the entire world.</p>
+            </div>
+        </div>
+        <div class="body-content scroll-fade-quick">
+            <div class="container-text container-bg">
+                <h2>Our History</h2>
+                <h3>Founding</h3>
+                <p>The Vintage Automobile Museum of New Jersey was incorporated in 2000.</p>
+                <p>At first, we were simply a group of passionate collectors who liked to talk cars. Although we didn't yet have a building, we knew we wanted to share our love of automotive history with the community and to recognize automobiles' monumental impact on the world.</p>
+                <h3>Community Engagement</h3>
+                <p>The first step toward realizing our vision for the museum was to reach out to the community. Through coordination with local schools and organizations, we have been able to run many outreach programs that help educate and unite our community. For example, our <span class="bolded">History on Wheels</span> program is an educational pop-up car show where students can observe history up close and see for themselves how design, style, and engineering have evolved over time. With our <span class="bolded">STEM Summer Program for Kids</span> &ndash; thanks to a partnership with <em>Save Bargenat Bay</em> &ndash; we deliver hands-on science and engineering activities for kids, such as making air-propelled cars that can taken home afteward. We also love visiting local <span class="bolded">assisted-living and 55+ communities</span> to help enrich the lives of residents with beautiful car displays. It's the perfect way for residents to share memories and create new ones!</p>
+                <p>The museum also participates in and sponsors many other events throughout the year, such as parades, car shows, flea markets, and collaborations with local car clubs. See our full list of <a href="/vamnj-org/events/">events</a> for more info.</p>
+                <p>Please feel free to <a href="/vamnj-org/contact/">reach out</a> if you or your organization is interested in our educational programs, community events, or other fun collaboration ideas.</p>
+                <p>We're also happy to rent the museum space for your special events, such as private parties. Please <a href="/vamnj-org/contact/">contact us</a> to make arrangements. <a href="/vamnj-org/membership/">Members</a> get a 15% discount!</p>
+                <h3>A Museum for You</h3>
+                <p>We are proud to serve New Jersey as the state's <span class="bolded">only public car museum</span>. Admission is always free because we believe that everyone should be able to share in the joy of cars.</p>
+                <p>In 2013, thanks to the community's support and a lot of hard work, we were able to secure a building in Point Pleasant, NJ, where we could finally provide a permanent location that anyone could visit.</p>
+                <h3>A Museum by You</h3>
+                <p>VAMNJ is staffed by volunteers from all throughout Ocean County, NJ. We love cars as much as you do, and we are thrilled to be able to enjoy them together with you!</p>
+                <p>For more info about volunteer opportunities with the museum, please see the <a href="/vamnj-org/membership/#volunteer">membership page</a>.</p>
+            </div>
+        </div>
+        <div class="body-content scroll-fade-quick">
+            <div class="container-text container-border">
+                <h2>Grants and Sponsorships</h2>
+                <p>VAMNJ is grateful to receive a portion of its funding through a grant administered by the Ocean County Cultural and Heritage Commission, with support from the New Jersey Historical Commission, a division of the Department of State.</p>
+                <p>Thank you also to our wonderful 2024 sponsors! We couldn't do this without your kind support!</p>
+                <ul class="sponsors">
+                    <li>Carol Chojnacki</li>
+                    <li>Causeway Family of Dealerships</li>
+                    <li>Christopher Kavan</li>
+                    <li>Delicious Orchards</li>
+                    <li>Don and Kathy Barnes</li>
+                    <li>Lakes Corvette Club</li>
+                    <li>Mid Jersey Motorama</li>
+                    <li>Mike Kahrer</li>
+                    <li>Mueller’s Bakery</li>
+                    <li>New Jersey Natural Gas</li>
+                    <li>Rose Garden Nursing and Rehabilitation</li>
+                    <li>State Tire and Auto</li>
+                    <li>Taylor Hardware</li>
+                    <li>U 4 Guys Hot Rods and Harleys</li>
+                    <li>Worthington Biochemical</li>
+                </ul>
+                <p>Please <a href="/vamnj-org/contact/">contact us</a> to become a sponsor of the museum.</p>
+            </div>
+        </div>
+        <div class="body-content center-wide scroll-fade">
+            <div class="container-text container-bg">
+                <h2>Organizational Structure</h2>
+                <h3>Operations</h3>
+                <p>VAMNJ is a 501(c)(3) nonprofit organization led by an experienced board of trustees &ndash; each a longtime, actively contributing member &ndash; in accordance with carefully crafted bylaws.</p>
+                <h3>Board of Trustees</h3>
+                <ul class="trustees">
+                    <li>Bob Adams, <em>President</em></li>
+                    <li>Bill Coon, <em>Vice President</em></li>
+                    <li>Mary Ann Lang, <em>Secretary</em></li>
+                    <li>Ann Stabile, <em>Treasurer</em></li>
+                    <li>Carol Chojnacki</li>
+                    <li>Joe DellaVella</li>
+                    <li>Mike Kahrer</li>
+                    <li>John Mahoney</li>
+                    <li>Ray Weber</li>
+                    <li>Stevan Zboyan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="body-content scroll-fade">
+            <div class="container-text container-border">
+                <h2>Social Media</h2>
+                <p>Follow us on popular social media platforms to get the latest news about the museum.</p>
+                <div class="splish-3">
+                    <a href="https://www.facebook.com/p/Vintage-Automobile-Museum-Of-NJ-100063510523279/" target="_blank" rel="noreferrer">
+                        <div class="splish">
+                            <img src="/vamnj-org/about/images/sm-logo-fb.svg" alt="Facebook logo">
+                            <p>Facebook</p>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/explore/locations/1009330988/vintage-automobile-museum-of-new-jersey/" target="_blank" rel="noreferrer">
+                        <div class="splish">
+                            <img src="/vamnj-org/about/images/sm-logo-ig.svg" alt="Instagram logo">
+                            <p>Instagram</p>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/explore/locations/1009330988/vintage-automobile-museum-of-new-jersey/" target="_blank" rel="noreferrer">
+                        <div class="splish">
+                            <img src="/vamnj-org/about/images/sm-logo-th.svg" alt="Threads logo">
+                            <p>Threads</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="group-photo scroll-fade">
+            <img src="/vamnj-org/about/images/founding.jpg" alt="Group photo on founding day">
+            <p class="body-content italics centered">Founding day for our Point Pleasant location, 2013</p>
+        </div>
+        <div class="body-content scroll-fade">
+            <div class="centered italics"><h1>Thank you for being part of our journey!</h1></div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vintage Automobile Museum of New Jersey, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
+    </footer>
+
+    <script src="/vamnj-org/script.js"></script>
+</body>
+</html>

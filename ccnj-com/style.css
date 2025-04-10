@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure that the body will always cover the full height of the viewport. */
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Figtree", "Arial", san-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/vamnj-org/images/bg-cushion.svg');
+    background-color: #8f693d; /* Fallback color */
+    background-repeat: repeat;
+    background-size: 100px 100px; /* Adjust to scale the texture */
+    background-position: center;
+    /*padding-top: 80px; /* Matches the header's height */
+	display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, content, footer */
+}
+header {
+    grid-row: 1;
+}
+.container {
+    grid-row: 2;
+}
+footer {
+    grid-row: 3;
+}
+
+.body-content { /* For when I just want to throw some basic html elements into a div and have it look nice. */
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 1rem;/*x 16 = 16px*/
+}
+
+a:link {
+    color: #0065b8;
+}
+
+a:visited {
+    color: #8300d4;
+}
+
+#header-row-1, footer {
+    background-color: #fdfdfd;
+    text-align: center;
+    padding: 8px 16px;
+}
+
+header {
+    display: grid;
+    grid-template-rows: auto auto; /* Two rows: adjust sizes as needed */
+    /*display: flex;
+    justify-content: space-between;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#header-row-1 {
+    display: flex; /* Flex container in the first row */
+    align-items: center;
+    /*gap: 10px; /* Space between flex items */
+}
+
+.raffle-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5aa25a; /* Green background */
+    border: 4px solid #9ac69a; /* Light green border */
+    font-size: 1.2rem; /* Adjust font size */
+    padding: 10px 20px; /* Button padding */
+    cursor: pointer; /* Pointer on hover */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline (for links styled as buttons) */
+    box-shadow: 0 0 0 0 white; /* White outer glow */
+    transition: color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions */
+    white-space: nowrap;
+    box-sizing: border-box; /* Includes padding/borders in total height */
+    height: 30px;
+}
+
+.raffle-banner:hover {
+    box-shadow: 0 0 14px 2px white; /* White outer glow */
+    color: #386338;
+}
+
+a.raffle-banner {
+    color: white;
+}
+
+/*header a {
+    display: contents;
+}*/
+
+header img {
+    /*width: 82%;*/
+    max-width: 100%;
+    height: auto;
+    max-height: 64px;
+    display: block;
+    margin: auto 0 auto auto; /* Stick to the right */
+}
+
+footer {
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);
+    color: #61482a;
+    /*margin-top: 20px;*/
+}
+
+.container {
+    padding: 0 0 20px 0;
+    background: repeating-linear-gradient(to bottom, #fff4e6, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6, #fff4e6); /*Faint sand (2x), LH-red, car-blue, LH-red, sand (2x)*/
+    margin: 30px auto 0 auto;
+    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Button Styling */
+.menu-button {
+    /*position: absolute;*/
+    left: 16px; /* Sticks the menu button to the left */
+    top: 50%; /* Vertically centers the button */
+    /*transform: translateY(-50%); /* Adjusts the button to be perfectly centered vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 40px;
+    height: 30px;
+    cursor: pointer;
+    padding: 20px 10px;
+    margin: auto auto auto 0; /* Stick to the left */
+}
+
+/* The lines of the hamburger menu */
+.menu-button .bar {
+    width: 100%;
+    height: 5px;
+    background-color: #777777;
+}
+
+.splash img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.speech {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.separator {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+.flipped {
+  transform: scaleX(-1); /* Flip the image horizontally */
+}
+
+.italics {
+    font-style: italic;
+}
+
+.bolded {
+    font-weight: 700;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.highlight {
+    transform: scale(1.1); /* Slightly larger */
+    transition: transform 0.5s ease-in-out;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center-wide {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1; /* Force visibility of the up and down arrows, so you don't have to hover over it w/ the mouse */
+}
+
+.form-bg {
+    background-color: #f6e2cb;
+    border: 1px solid #754f21;
+}
+
+/* Mobile-first: 3-row column with image to the left of label text */
+.splish-3 {
+    display: flex;
+    flex-direction: column; /* Stack images and text vertically */
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.splish-3 .splish {
+    display: flex;
+    flex-direction: row; /* Image on the left, text on the right */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.splish-3 img {
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+    margin-right: 10px; /* Space between image and text */
+}
+
+.splish-3 h2 {
+    margin: 0; /* Ensure text stays aligned with image */
+}
+
+hr {
+    width: 84%;
+    border: none;
+    height: 1px;
+    background-color: #a8a8a8;
+    margin: 40px auto;
+}
+
+/*****************************************************************************/
+/* SLIDING MENU **************************************************************/
+/*****************************************************************************/
+
+.menu-button-inv {
+    top: 40px;
+    margin: 8px 16px;
+}
+
+.menu-button-inv .bar-inv {
+    width: 100%;
+    height: 2px;
+    background-color: #e8b67d;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start hidden on the left */
+    width: 250px;
+    height: 100%;
+    background-color: #b3834d;
+    overflow: auto;
+    transition: left 0.3s ease; /* Smooth sliding effect */
+    z-index: 1001;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    text-align: center;
+    display: block; /* Allows scaling without affecting layout */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    opacity: 1;
+    padding: 0;
+}
+
+.side-menu ul li:hover {
+    opacity: 0.6;
+}
+
+.side-menu ul li a {
+    padding: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%; /* Ensures it covers the full width */
+    height: 100%; /* Ensures it covers the full height */
+}
+
+.side-menu.open {
+    left: 0; /* Slide in from the left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow when menu is open */
+}
+
+.menu-alt-section {
+    background-color: #e8b67d;
+}
+
+.side-menu .menu-alt-section li a {
+    color: #61482a;
+}
+
+.wide-menu {
+    display: none;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.wide-menu-item {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+    margin-left: 20px; /* Adds spacing */
+}
+
+.wide-menu-item:last-child {
+    margin-right: 0; /* Avoid extra spacing on the last item */
+}
+
+a.wide-menu-item {
+    color: inherit;
+    transition: opacity 0.3s ease; /* Smooth transition */
+    opacity: 1;
+}
+
+a.wide-menu-item:hover {
+    opacity: 0.6;
+}
+
+.glow-button {
+    display: none;
+    align-items: center;
+    background-color: #FF650A; /* Orange background */
+    border: 4px solid #FFB68A; /* Light orange border */
+    border-radius: 12px; /* Rounded corners */
+    font-size: 1.2rem; /* Adjust font size */
+    padding: 10px 20px; /* Button padding */
+    cursor: pointer; /* Pointer on hover */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline (for links styled as buttons) */
+    /*box-shadow: 0 0 14px 2px white; /* White outer glow */
+    transition: color 0.3s ease, box-shadow 0.3s ease; /* Combine transitions */
+    white-space: nowrap;
+    box-sizing: border-box; /* Includes padding/borders in total height */
+    height: 60px;
+    margin: auto 0 auto auto;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 10px 2px #cccccc; /* Enhance glow on hover */
+    color: #cccccc;
+}
+
+a.glow-button {
+    color: white;
+    /*margin: auto;*/
+}
+
+/*****************************************************************************/
+/* ANIMATION *****************************************************************/
+/*****************************************************************************/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-shortest {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fade-in-short {
+  animation: fadeIn 1.3s ease-in-out forwards;
+}
+
+.fade-in-long {
+  animation: fadeIn 1.6s ease-in-out forwards;
+}
+
+.fade-in-longest {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below the final position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at the natural position */
+  }
+}
+
+.scroll-fade {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Optional fallback for browsers without JS */
+}
+
+.scroll-fade.active {
+  animation: fadeInUp 0.5s ease-out forwards; /* Trigger animation when active */
+}
+
+.scroll-fade-quick {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Optional fallback for browsers without JS */
+}
+
+.scroll-fade-quick.active {
+  animation: fadeInUp 0.5s ease-out forwards; /* Trigger animation when active */
+}
+
+/*****************************************************************************/
+/* BREAKPOINTS ***************************************************************/
+/*****************************************************************************/
+
+/* This site is designed mobile-first, meaning (A) all the above CSS is for phones and (B) the below CSS modifies the above CSS so that the site works for larger screens. */
+
+@media (min-width: 500px) { /* Header now wide enough to fit big "$$ RAFFLE $$" button */
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .raffle-banner {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    .glow-button {
+        display: flex;
+    }
+    
+    header img {
+        margin: 0;
+    }
+    
+    .menu-button {
+        display: none;
+    }
+
+    .wide-menu {
+        display: flex;
+        flex-direction: row; /* Align items in a row */
+        flex-wrap: wrap; /* Allow wrapping to the next line */
+        /*gap: 5px 20px; /* Add spacing between items */
+    }
+
+    .splish-3 {
+        flex-direction: row; /* Switch to row layout */
+        padding: 0 100px;
+        gap: 40px;
+    }
+
+    .splish-3 .splish {
+        flex-direction: column; /* Stack image above text */
+        align-items: center;
+        max-width: 220px;
+    }
+
+    .splish-3 img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between image and text */
+    }
+
+    .splish-3 h2 {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) { /* MEDIUM LANDSCAPE (TABLETS) */
+
+    .container {
+        max-width: 80vw;
+    }
+}
+
+@media (min-width: 1300px) { /* Menu items only nice center in one single row above this width */
+
+    /*.wide-menu {
+        justify-content: space-evenly;
+    }*/
+}

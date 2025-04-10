@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8b67d">
+    <title>VAMNJ | Membership</title>
+    <link rel="stylesheet" href="/vamnj-org/style.css">
+    <link rel="stylesheet" href="/vamnj-org/child-page.css">
+    <link rel="stylesheet" href="/vamnj-org/membership/membership.css">
+    <link rel="icon" href="/vamnj-org/images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div id="header-row-1">
+            <div class="menu-button" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <a href="/vamnj-org/"><img src="/vamnj-org/images/header/header_logo.svg" alt="VAMNJ logo"></a>
+            <div class="wide-menu">
+                <a class="wide-menu-item" href="/vamnj-org/visit/">Visit</a>
+                <a class="wide-menu-item" href="/vamnj-org/photo/">Photo Op</a>
+                <a class="wide-menu-item" href="/vamnj-org/history-corner/">History Corner</a>
+                <a class="wide-menu-item" href="/vamnj-org/events/">Events</a>
+                <a class="wide-menu-item" href="/vamnj-org/membership/">Membership</a>
+                <a class="wide-menu-item" href="/vamnj-org/gallery/">Gallery</a>
+                <a class="wide-menu-item" href="/vamnj-org/donate/">Donate</a>
+                <a class="wide-menu-item" href="/vamnj-org/about/">About Us</a>
+                <a class="wide-menu-item" href="/vamnj-org/contact/">Contact</a>
+            </div>
+            <a href="/vamnj-org/raffle/" class="glow-button">$ &nbsp; RAFFLE &nbsp; $</a>
+        </div>
+        <div>
+            <a href="/vamnj-org/raffle/" class="raffle-banner">$ &nbsp; RAFFLE &nbsp; $</a>
+        </div>
+    </header>
+    
+    <!-- Sliding Menu -->
+    <div id="side-menu-container"></div>
+    <script>
+    fetch('/vamnj-org/side-menu.html')
+        .then(response => response.text())
+        .then(data => {
+            // Insert the menu HTML into the container
+            document.getElementById('side-menu-container').innerHTML = data;
+            
+            // Find the specific menu item and update its text
+            const menuItems = document.querySelectorAll('#side-menu-container li a');
+            menuItems.forEach(item => {
+                if (item.innerText.trim() === 'Membership') {
+                    item.innerText = '— Membership —';
+                }
+            });
+        });
+    </script>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="body-content fade-in-shortest">
+            <h1>Membership</h1>
+        </div>
+        <div class="child-splash-right fade-in-shortest">
+            <img src="/vamnj-org/membership/images/membership.jpg" alt="Shiny gold car">
+        </div>
+        <div class="body-content scroll-fade">
+            <h2>Join the coolest historical society of them all!</h2>
+            <p>Becoming an official member of the Vintage Automobile Museum of NJ is a fun way to get involved in the car community and to support the <a href="/vamnj-org/about/#mission">museum's mission</a>.</p>
+            <p>Not ready to become a member? Be a Friend of the Museum! Either way, when you <a href="#membership-form">sign up below</a>, you help the museum grow!</p>
+        </div>
+        <div class="body-content scroll-fade">
+            <div class="container-text container-bg">
+                <h2>Friends of the Museum</h2>
+                <p>It's free!</p>
+                <ul class="italics">
+                    <li>Receive our quarterly newsletter.</li>
+                    <li>Be the first to know when new vehicles arrive.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="body-content scroll-fade">
+            <div class="container-text container-border">
+                <h2>Members</h2>
+                <p>For just $50 a year, you can be a full-fledged <span class="bolded">Member of the Vintage Automobile Museum of NJ</span>! Choose auto-renewal at checkout, and get 30% off!</p>
+                <p>When you become a VAMNJ member, you'll receive...</p>
+                <ul class="italics">
+                    <li><span class="bolded">An official certificate</span> commemorating your first joining the museum.</li>
+                    <li><span class="bolded">A special &ldquo;Gift of the Year,&rdquo;</span> such as a museum-branded mug or classic car poster.</li>
+                    <li><span class="bolded">A 25% discount</span> at our gift shop.</li>
+                    <li><span class="bolded">A 15% discount</span> on our rental fee.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="body-content scroll-fade" id="volunteer">
+            <div class="container-text container-bg center-wide">
+                <h2>Volunteer Opportunities</h2>
+                <p>Being a nonprofit organization, everything we do depends on volunteers, so we deeply appreciate your interest in helping our cause.</p>
+                <p>The easiest way to volunteer at VAMNJ is to become a standard member (see form below). Then, stay tuned for announcements about volunteer opportunities.</p>
+                <p>Not interested in becoming a member? We still want to <a href="/vamnj-org/contact/">hear from you</a>!</p>
+            </div>
+        </div>
+        
+        <!-- MEMBERSHIP FORM -->
+        <div id="membership-form" class="body-content scroll-fade-quick">
+            <div class="container-text form-bg">
+                <h2>Sign-up form</h2>
+                
+                <p>Please <a href="/vamnj-org/contact/">contact us</a> for other payment options, if choosing "Member" below.</p>
+                
+                <form id="membershipForm">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="form-group total">
+                        <label class="bolded">Total</label>
+                        <output id="totalField">$0</output>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="form-group member-options">
+                        <div><input type="radio" name="options" id="friend" onclick="updateTotal()" checked>Friend of the Museum</div>
+                        <div><input type="radio" name="options" id="member" onclick="updateTotal()">Member</div>
+                    </div>
+                    
+                    <div class="form-group" id="recurringOption" style="display: none;">
+                        <label>
+                            <input type="checkbox" id="recurringCheckbox" onclick="updateTotal()"> Auto-renewal (save 30%)
+                        </label>
+                    </div>
+
+                    <!-- Payment Section -->
+                    <div id="paymentSection">
+                        <h3>Payment Method</h3>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="credit" checked onclick="toggleCreditCardFields()"> Credit card
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="paypal" onclick="toggleCreditCardFields()"> PayPal
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="applepay" onclick="toggleCreditCardFields()"> Apple Pay
+                        </label>
+
+                        <!-- Credit Card Fields -->
+                        <div id="creditCardFields">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" id="cardNumber" name="cardNumber" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+
+                    <button type="button" onclick="submitForm()" class="submit-button">SUBMIT</button>
+                    <button type="button" onclick="resetForm()">RESET</button>
+                </form>
+
+                <div id="thankYouMessage">Thank you, and welcome aboard!</div>
+                
+                <p class="italics">By signing up, you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vintage Automobile Museum of New Jersey, Inc., a 501(c)(3) nonprofit organization. All rights reserved.</p>
+    </footer>
+
+    <script src="/vamnj-org/script.js"></script>
+    <script src="membership.js"></script>
+</body>
+</html>
