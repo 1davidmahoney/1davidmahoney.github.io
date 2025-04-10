@@ -59,7 +59,7 @@ h2 {
 }
 /* ~~~ NEW ~~~ */
 #splash-hero {
-    background-image: url('/vamnj-org/images/home-01.png');
+    background-image: url('/ccnj-com/images/home-01.png');
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     justify-content: center;
