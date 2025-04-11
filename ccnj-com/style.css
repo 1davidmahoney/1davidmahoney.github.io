@@ -58,8 +58,8 @@ a:visited {
 }
 
 header {
-    display: grid;
-    grid-template-rows: auto auto; /* Two rows: adjust sizes as needed */
+    /*display: grid;*/
+    /*grid-template-rows: auto auto; /* Two rows: adjust sizes as needed */
     /*display: flex;
     justify-content: space-between;*/
     position: fixed;
@@ -111,9 +111,16 @@ header img {
     /*width: 82%;*/
     max-width: 100%;
     height: auto;
-    max-height: 64px;
+    /*max-height: 64px;*/
     display: block;
-    margin: auto 0 auto auto; /* Stick to the right */
+    margin: 0 auto;
+}
+
+#header-logo {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* includes padding in the width */
 }
 
 footer {
@@ -135,15 +142,15 @@ footer {
     left: 16px; /* Sticks the menu button to the left */
     top: 50%; /* Vertically centers the button */
     /*transform: translateY(-50%); /* Adjusts the button to be perfectly centered vertically */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: inline-block;
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
     /*width: 40px;*/
     /*min-width: 40px;*/
     /*height: 30px;*/
     cursor: pointer;
-    padding: 0 20px 0 0;
-    margin: auto auto auto 0; /* Stick to the left */
+    /*padding: 0 20px 0 0;*/
+    margin: 12px;
 }
 
 .menu-button img {
@@ -267,7 +274,8 @@ hr {
 
 .menu-button-inv {
     top: 40px;
-    margin: 8px 16px;
+    display: table;
+    margin: 8px auto;
     padding: revert;
 }
 
