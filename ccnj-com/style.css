@@ -138,12 +138,19 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*width: 40px;
-    min-width: 40px;
-    height: 30px;*/
+    /*width: 40px;*/
+    /*min-width: 40px;*/
+    /*height: 30px;*/
     cursor: pointer;
     padding: 0 20px 0 0;
     margin: auto auto auto 0; /* Stick to the left */
+}
+
+.menu-button img {
+    max-width: 100%;
+    height: auto;
+    max-height: 64px;
+    display: block;
 }
 
 /* The lines of the hamburger menu */
@@ -261,6 +268,7 @@ hr {
 .menu-button-inv {
     top: 40px;
     margin: 8px 16px;
+    padding: revert;
 }
 
 /*.menu-button-inv .bar-inv {
@@ -275,7 +283,7 @@ hr {
     left: -250px; /* Start hidden on the left */
     width: 250px;
     height: 100%;
-    background-color: #b3834d;
+    background-color: #3876C7;
     overflow: auto;
     transition: left 0.3s ease; /* Smooth sliding effect */
     z-index: 1001;
@@ -315,11 +323,11 @@ hr {
 }
 
 .menu-alt-section {
-    background-color: #e8b67d;
+    background-color: #7db5ff;
 }
 
 .side-menu .menu-alt-section li a {
-    color: #61482a;
+    color: black;
 }
 
 .wide-menu {
