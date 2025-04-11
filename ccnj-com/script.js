@@ -1,4 +1,27 @@
 /*****************************************************************************/
+/* SHRINK HEADER-LOGO ON SCROLL ******************************************************/
+/*****************************************************************************/
+
+const logo = document.getElementById('header-logo');
+const header = document.querySelector('header');
+
+function shiftLogo() {
+    if (window.scrollY > 10) {
+        logo.style.width = '75%';
+        logo.style.top = '30px';
+        header.style.backgroundColor = 'white';
+        header.style.boxShadow = '0 3px 6px rgba(0, 0, 0, 0.3)';
+    } else {
+        logo.style.width = '100%';
+        logo.style.top = '100px';
+        header.style.backgroundColor = 'revert';
+        header.style.boxShadow = 'revert';
+    }
+}
+
+window.addEventListener('scroll', shiftLogo);
+
+/*****************************************************************************/
 /* FADE-IN-UP ON SCROLL ******************************************************/
 /*****************************************************************************/
 
@@ -73,7 +96,7 @@ function toggleMenu() {
 
 function closeMenuOnClickOutside(event) {
     const menu = document.getElementById('sideMenu');
-    const menuButton = document.querySelector('.menu-button');
+    const menuButton = document.getElementById('menu-button');
 
     // Check if the click happened outside the menu and the menu button
     if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
