@@ -119,7 +119,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 /* KEEP CONTENT-WRAPPER BELOW HEADER *****************************************/
 /*****************************************************************************/
 
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const contentWrapper = document.querySelector('.container');
 
@@ -135,4 +135,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // Adjust on window resize to handle dynamic height changes
         window.addEventListener('resize', updateMargin);
     }
-});
+});*/

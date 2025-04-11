@@ -52,7 +52,7 @@ a:visited {
 }
 
 #header-row-1, footer {
-    background-color: #fdfdfd;
+    /*background-color: #fdfdfd;*/
     text-align: center;
     padding: 8px 16px;
 }
@@ -66,7 +66,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);*/
     z-index: 1000;
 }
 
@@ -125,7 +125,7 @@ footer {
 .container {
     padding: 0 0 20px 0;
     background: repeating-linear-gradient(to bottom, #fff4e6, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6, #fff4e6); /*Faint sand (2x), LH-red, car-blue, LH-red, sand (2x)*/
-    margin: 30px auto 0 auto;
+    margin: 0 auto;
     box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -138,11 +138,11 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40px;
+    /*width: 40px;
     min-width: 40px;
-    height: 30px;
+    height: 30px;*/
     cursor: pointer;
-    padding: 20px 10px;
+    padding: 0 20px 0 0;
     margin: auto auto auto 0; /* Stick to the left */
 }
 
