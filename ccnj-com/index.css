@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
 
 h1 {
     font-size: 1.7rem;
@@ -59,10 +60,10 @@ h2 {
 }
 /* ~~~ NEW ~~~ */
 #splash-hero {
-    background-image: url('/ccnj-com/images/home-01-tall.png');
+    /*background-image: url('/ccnj-com/images/home-01-tall.png');*/
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     /*margin-bottom: 2rem;*/
     /*padding: 0 20px;*/
@@ -72,9 +73,11 @@ h2 {
     /* For SVG overlay */
     /*position: relative;*/
     width: 100%;
-    height: auto;
+    height: 60vh;
     /*max-width: 1000px; /* optional */
     margin: 0 auto 7rem auto;
+    
+    position: relative;
 }
 
 /* Container for the hero image and embellishments */
@@ -109,6 +112,20 @@ h2 {
     object-fit: cover;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
+#hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#splash-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* Hero SVG overlay stuff */
 .overlay {
@@ -121,7 +138,7 @@ h2 {
 }
 .overlay.top,
 .overlay.bottom {
-    font-family: "Coiny", "Times New Roman", serif;
+    font-family: "Cutive", "Times New Roman", serif;
     font-size: clamp(1.6rem, 4vw, 2.3rem);/*2.5rem;*/
     color: white;
     font-style: normal;
