@@ -112,14 +112,14 @@ h2 {
     object-fit: cover;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
-/*#hero-text {
+#hero-text {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-}*/
+}
 
 #splash-hero img {
     width: 100%;
