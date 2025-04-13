@@ -1,9 +1,15 @@
+header {
+    background-color: #fdfdfd;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
 .container {
     display: grid;
     background: #fff4e6; /* Relatively short page doesn't need so many BG colors, so just use one -- faint sand */
     gap: 10px; /* spacing between items */
     grid-template-columns: 1fr;
     flex: 1;
+    padding-top: 100px;
 }
 
 .container-text {
