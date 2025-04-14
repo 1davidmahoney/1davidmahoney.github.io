@@ -75,7 +75,7 @@ h2 {
     width: 100%;
     /*height: 60vh;*/
     /*max-width: 1000px; /* optional */
-    margin: 0 auto 7rem auto;
+    margin: 0 auto;/* 7rem auto;*/
     
     position: relative;
 }
@@ -159,6 +159,18 @@ h2 {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.splash-text {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 90%;
+}
+.splash-text-top {
+    top: 30px;
+}
+.splash-text-bottom {
+    bottom: 30px;
 }
 
 /* Hero SVG overlay stuff */
@@ -296,7 +308,7 @@ h2 {
     flex-direction: column; /* Stack image and text vertically */
     align-items: center;
     /*max-width: 1200px;*/
-    margin: 0 auto 7rem auto;
+    margin: 0 auto;/* 7rem auto;*/
     max-height: none; /* Remove height constraints */
     padding: 0; /* Reduce padding to avoid clipping */
 }
@@ -309,8 +321,8 @@ h2 {
 }
 
 .splash-img {
-    margin-bottom: 1rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    /*margin-bottom: 1rem;*/
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);*/
 }
 
 .original-logo {
