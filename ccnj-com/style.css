@@ -528,7 +528,7 @@ a.glow-button {
 @media (min-width: 1024px) { /* MEDIUM LANDSCAPE (TABLETS) */
 
     .container {
-        max-width: 80vw;
+        /*max-width: 80vw;*/
     }
 }
 
