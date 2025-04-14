@@ -3,6 +3,10 @@ header {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
+#logo-text-1, #logo-text-2 {
+    opacity: 1;
+}
+
 .container {
     display: grid;
     background: #fff4e6; /* Relatively short page doesn't need so many BG colors, so just use one -- faint sand */
