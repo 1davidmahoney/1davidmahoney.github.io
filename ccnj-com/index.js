@@ -2,35 +2,32 @@
 /* HEADER-HERO SHIFT ON SCROLL ***********************************************/
 /*****************************************************************************/
 
-//const logo = document.getElementById('header-logo');
+const logo1 = document.getElementById('logo-text-1');
+const logo2 = document.getElementById('logo-text-2');
+const giantlogo1 = document.getElementById('giant-logo-text-1');
+const giantlogo2 = document.getElementById('giant-logo-text-2');
 const header = document.querySelector('header');
 
 function shiftLogo() {
     
-    //const logoHeight = logo.offsetHeight;
-    //const headerHeight = header.offsetHeight;
-    //const centeredTop = (headerHeight - logoHeight) / 2 + 'px';
-    
     if (window.scrollY > 10) {
-        //logo.style.width = '50%';
-        //logo.style.top = '30px';//centeredTop;
-        /*logo.style.paddingLeft = '23vw';
-        logo.style.marginTop = '0';
-        header.style.backgroundColor = 'white';
-        header.style.boxShadow = '0 3px 6px rgba(0, 0, 0, 0.3)';*/
         header.classList.add('header-on');
+        logo1.classList.add('logo-on');
+        logo2.classList.add('logo-on');
+        giantlogo1.classList.remove('logo-on');
+        giantlogo2.classList.remove('logo-on');
     } else {
-        //logo.style.width = '100%';
-        //logo.style.top = '100px';
-        /*logo.style.paddingLeft = '5vw';
-        logo.style.marginTop = '22vw';
-        header.style.backgroundColor = 'revert';
-        header.style.boxShadow = 'revert';*/
         header.classList.remove('header-on');
+        logo1.classList.remove('logo-on');
+        logo2.classList.remove('logo-on');
+        giantlogo1.classList.add('logo-on');
+        giantlogo2.classList.add('logo-on');
     }
 }
 
 window.addEventListener('scroll', shiftLogo);
+
+shiftLogo();
 
 /*****************************************************************************/
 /* SCROLL NAG ****************************************************************/

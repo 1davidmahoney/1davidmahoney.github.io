@@ -121,6 +121,36 @@ h2 {
     color: white;
 }
 
+#giant-logo {
+    position: absolute;
+    top: 100px;
+}
+#giant-logo-text-1 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #3876C7;
+    font-family: "Croissant One", "Times New Roman", serif;
+    font-weight: 600;
+    font-size: clamp(2em, 10.5vw, 4em);
+    font-style: revert;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+}
+#giant-logo-text-2 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: black;
+    font-family: "Montserrat", "Times New Roman", serif;
+    font-weight: 500;
+    font-size: clamp(0.7em, 3.3vw, 1.3em);
+    white-space: nowrap;
+    margin: 0;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
 #splash-hero img {
     width: 100%;
     height: auto;
@@ -336,6 +366,22 @@ h2 {
     }
 }
 
+@media (min-width: 600px) { /* Start using "desktop" img */
+
+    #logo-text-1 {
+        opacity: 1 !important;
+    }
+    #logo-text-2 {
+        opacity: 1 !important;
+    }
+    #giant-logo-text-1 {
+        opacity: 0 !important;
+    }
+    #giant-logo-text-2 {
+        opacity: 0 !important;
+    }
+}
+
 @media (min-width: 768px) { /* Medium portrait (tablet) */
 
     .container {
@@ -351,9 +397,9 @@ h2 {
         /*max-width: 21%;*/
     }
     
-    #splash-hero {
+    /*#splash-hero {
         background-image: url('/ccnj-com/images/home-01.png');
-    }
+    }*/
     
     .hero-title {
         font-size: 4em;
