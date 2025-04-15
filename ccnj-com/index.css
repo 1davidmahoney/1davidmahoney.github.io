@@ -165,12 +165,23 @@ h2 {
     position: absolute;
     transform: translateX(-50%);
     width: 90%;
+    font-weight: 500;
 }
 .splash-text-top {
     top: 30px;
 }
 .splash-text-bottom {
     bottom: 30px;
+}
+.splash-text-emphasis {
+    font-weight: 800;
+}
+#glow-button-end {
+    position: absolute;
+    bottom: 60px;
+    margin: 0 auto;
+    transform: translateX(-50%);
+    display: flex;
 }
 
 /* Hero SVG overlay stuff */
