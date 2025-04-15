@@ -334,6 +334,7 @@ h2 {
 .splash-img {
     /*margin-bottom: 1rem;*/
     /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);*/
+    z-index: 0;
 }
 
 .original-logo {

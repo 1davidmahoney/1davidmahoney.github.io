@@ -161,9 +161,10 @@ header img {
 }
 
 footer {
-    /*box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);*/
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);
     color: black;/*#61482a;*/
     /*margin-top: 20px;*/
+    z-index: 1;
 }
 
 .container {
