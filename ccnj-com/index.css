@@ -188,6 +188,15 @@ h2 {
     display: flex;
 }
 
+.splash-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none; /* Optional: lets clicks pass through */
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
 /* Hero SVG overlay stuff */
 .overlay {
   /*position: absolute;
@@ -319,6 +328,7 @@ h2 {
 
 /* Mobile-first: Stack image above text by default */
 .splash-left, .splash-right, .splosh {
+    position: relative;
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     align-items: center;
