@@ -54,6 +54,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll('.splash-content');
+
+    if ('IntersectionObserver' in window) {
+        // Modern browser: Apply scroll-based animation
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    //entry.target.classList.add('active');
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, {
+            threshold: 0.35, // Trigger when 35% of the element is visible
+            rootMargin: '0px 0px 250px 0px' // Start 100px before the bottom of the viewport
+        });
+
+        elements.forEach(el => observer.observe(el));
+    } else {
+        // Fallback for older browsers: Ensure elements are visible immediately
+        elements.forEach(el => {
+            el.style.opacity = 1; // Fully visible
+            //el.style.transform = 'translateY(0)'; // No vertical offset
+        });
+    }
+});
+
 /*****************************************************************************/
 /* SIDE MENU *****************************************************************/
 /*****************************************************************************/
