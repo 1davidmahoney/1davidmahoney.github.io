@@ -3,31 +3,28 @@
 /*****************************************************************************/
 
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll('.splash-overlay');
+    const overlayElements = document.querySelectorAll('.splash-overlay');
 
     if ('IntersectionObserver' in window) {
-        // Modern browser: Apply scroll-based animation
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
+                const contentElement = entry.target.parentElement.querySelector('.splash-content');
                 if (entry.isIntersecting) {
-                    //entry.target.classList.add('active');
-                    entry.target.style.opacity = 0;
+                    entry.target.style.opacity = 0;  // fade out overlay
+                    if (contentElement) contentElement.style.opacity = 1;  // fade in content
                 } else {
-                    entry.target.style.opacity = 1;
+                    entry.target.style.opacity = 1;  // fade overlay back in
+                    if (contentElement) contentElement.style.opacity = 0;  // fade content back out
                 }
             });
         }, {
-            threshold: 0.35, // Trigger when 35% of the element is visible
-            rootMargin: '0px 0px -100px 0px' // Start 100px before the bottom of the viewport
+            threshold: 0.35,
+            rootMargin: '0px 0px -100px 0px'
         });
 
-        elements.forEach(el => observer.observe(el));
+        overlayElements.forEach(el => observer.observe(el));
     } else {
-        // Fallback for older browsers: Ensure elements are invisible immediately
-        elements.forEach(el => {
-            el.style.opacity = 0; // Fully invisible
-            //el.style.transform = 'translateY(0)'; // No vertical offset
-        });
+        overlayElements.forEach(el => el.style.opacity = 0);
     }
 });
 

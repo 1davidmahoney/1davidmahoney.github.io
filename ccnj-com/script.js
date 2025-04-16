@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll('.splash-content');
 
     if ('IntersectionObserver' in window) {
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             //el.style.transform = 'translateY(0)'; // No vertical offset
         });
     }
-});
+});*/
 
 /*****************************************************************************/
 /* SIDE MENU *****************************************************************/
