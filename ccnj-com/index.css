@@ -351,6 +351,17 @@ h2 {
     z-index: 0;
 }
 
+.splash-image {
+    width: 100%;
+    height: auto;
+}
+
+.splash-image img {
+    width: 100%;  /* viewport width */
+    height: auto;  /* maintains aspect ratio */
+    display: block; /* removes unwanted spacing below images */
+}
+
 .original-logo {
     margin: 3rem 1rem;
     width: clamp(210px, 44vw, 350px);
