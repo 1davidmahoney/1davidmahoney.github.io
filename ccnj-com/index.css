@@ -450,24 +450,24 @@ h2 {
     }
 
     .splash-left, .splash-right {
-        justify-content: space-between;
+        /*justify-content: space-between;*/
     }
 
     .splash-left {
-        flex-direction: row; /* Image on the left, text on the right */
-        border-radius: 60px 0 0 60px;
+        /*flex-direction: row;*/ /* Image on the left, text on the right */
+        /*border-radius: 60px 0 0 60px;*/
     }
 
     .splash-left img {
-        border-radius: 0 60px 60px 0;
+        /*border-radius: 0 60px 60px 0;*/
     }
 
     .splash-right {
-        flex-direction: row-reverse; /* Text on the left, image on the right */
+        /*flex-direction: row-reverse;*/ /* Text on the left, image on the right */
     }
     
     .splash-right img {
-        border-radius: 60px 0 0 60px;
+        /*border-radius: 60px 0 0 60px;*/
     }
 
     .splash-content {
@@ -526,7 +526,7 @@ h2 {
 @media (min-width: 1100px) {
     
     #hero-image {
-        transform: translateY(clamp(-7em, calc(1600px - 100vw), 0em));
+        /*transform: translateY(clamp(-7em, calc(1600px - 100vw), 0em));*/
     }
 }
 
