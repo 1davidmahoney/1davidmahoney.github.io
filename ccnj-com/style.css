@@ -516,7 +516,7 @@ a.glow-button {
     }
 }
 
-@media (min-width: 768px) { /* Medium portrait (tablet) */
+@media (min-width: 769px) { /* Medium portrait (tablet) */
 
     #logo-text-1 {
         font-size: 2.35em;

@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
 
 h1 {
-    font-size: 1.7rem;
     font-weight: 800;
     font-style: italic;
 }
@@ -164,7 +163,10 @@ h2 {
 .splash-text {
     position: absolute;
     transform: translateX(-50%);
-    width: 80%;
+    /*width: 80%;*/
+    /*max-width: 650px;*/
+    min-width: 80%;
+    font-size: 1.4rem;
     font-weight: 500;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
@@ -172,17 +174,17 @@ h2 {
     border-radius: 30px 8px;
 }
 .splash-text-top {
-    top: 30px;
+    top: 12vw; /*30px;*/
 }
 .splash-text-bottom {
-    bottom: 30px;
+    bottom: 12vw;
 }
 .splash-text-emphasis {
     font-weight: 800;
 }
 #glow-button-end {
     position: absolute;
-    bottom: 60px;
+    bottom: 24vw; /*60px;*/
     margin: 0 auto;
     transform: translateX(-50%);
     display: flex;
@@ -401,12 +403,16 @@ h2 {
 /* BREAKPOINTS ***************************************************************/
 /*****************************************************************************/
 
-@media (min-width: 400px) { /* For VAMNJ logo at center of hero section */
+@media (min-width: 360px) { /* For VAMNJ logo at center of hero section */
 
     .overlay.middle {
         /*top: 50%;
         transform: translate(-50%, -83%);*/
         /*max-width: 37%;*/
+    }
+    
+    .splash-text {
+        font-size: 1.7rem;
     }
 }
 
@@ -419,9 +425,19 @@ h2 {
     .hero-image {
         border-radius: 60px;
     }
+    
+    .splash-text-top {
+        top: 24vw; /*170px;*/
+    }
+    .splash-text-bottom {
+        bottom: 24vw;
+    }
+    #glow-button-end {
+        bottom: 36vw;
+    }
 }
 
-@media (min-width: 600px) { /* Start using "desktop" img */
+@media (min-width: 769px) { /* Start using "tablet" img */
 
     #logo-text-1 {
         opacity: 1 !important;
@@ -435,10 +451,17 @@ h2 {
     #giant-logo-text-2 {
         opacity: 0 !important;
     }
-}
 
-@media (min-width: 768px) { /* Medium portrait (tablet) */
-
+    .splash-text-top {
+        top: 15vw; /*170px;*/
+    }
+    .splash-text-bottom {
+        bottom: 15vw;
+    }
+    #glow-button-end {
+        bottom: 17vw;
+    }
+    
     .container {
         background: repeating-linear-gradient(to bottom, #fff4e6, #ffeae6, #f0f8ff, #ffeae6, #fff4e6); /*Faint sand, LH-red, car-blue, LH-red, sand*/
     }
