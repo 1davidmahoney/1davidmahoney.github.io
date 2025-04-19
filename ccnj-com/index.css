@@ -170,9 +170,8 @@ h2 {
 .splash-text {
     position: absolute;
     transform: translateX(-50%);
-    /*width: 80%;*/
-    /*max-width: 650px;*/
-    min-width: 80%;
+    width: max-content;
+    max-width: 80%;
     font-size: 1.4rem;
     font-weight: 500;
     background-color: rgba(0, 0, 0, 0.7);
@@ -453,13 +452,13 @@ h2 {
     }
 
     .splash-text-top {
-        top: 15vw; /*170px;*/
+        top: 13vw; /*170px;*/
     }
     .splash-text-bottom {
-        bottom: 15vw;
+        bottom: 13vw;
     }
     #glow-button-end {
-        bottom: 17vw;
+        bottom: 15vw;
     }
     
     .container {
