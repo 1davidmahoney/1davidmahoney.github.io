@@ -2,9 +2,18 @@
 /* FADE-IN PAGE ON LOADED ****************************************************/
 /*****************************************************************************/
 
-window.addEventListener('load', () =>
-  document.body.classList.add('page-loaded')
-);
+(function() {
+  function markLoaded() {
+    document.body.classList.add('page-loaded');
+  }
+  if (document.readyState === 'complete') {
+    // page has already loaded
+    markLoaded();
+  } else {
+    // wait for load
+    window.addEventListener('load', markLoaded);
+  }
+})();
 
 /*****************************************************************************/
 /* FADE-OUT ON SCROLL ********************************************************/
