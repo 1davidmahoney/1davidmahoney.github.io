@@ -160,6 +160,13 @@ h2 {
     display: block;
 }
 
+.splash-content {
+    padding: 0 20px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
 .splash-text {
     position: absolute;
     transform: translateX(-50%);
@@ -373,13 +380,6 @@ h2 {
     width: clamp(100px, 50%, 230px);
     height: auto;
     margin: 0 auto 2rem auto;
-}
-
-.splash-content {
-    padding: 0 20px;
-    text-align: left;
-    opacity: 0;
-    transition: opacity 1s ease;
 }
 
 .hcorner {
