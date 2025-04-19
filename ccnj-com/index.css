@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
 
+body { opacity: 0; transition: opacity 1s ease-in-out; }
+body.page-loaded { opacity: 1; }
+
 h1 {
     font-weight: 800;
     font-style: italic;
