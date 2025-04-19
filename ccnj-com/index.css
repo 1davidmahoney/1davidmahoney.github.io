@@ -180,17 +180,28 @@ h2 {
     border-radius: 30px 8px;
 }
 .splash-text-top {
-    top: 12vw; /*30px;*/
+    top: 10vw; /*12px;*/
 }
 .splash-text-bottom {
-    bottom: 12vw;
+    bottom: 10vw;
 }
 .splash-text-emphasis {
     font-weight: 800;
 }
+#founders {
+    position: absolute;
+    top: 63vw;
+    width: max-content;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    color: #3876C7;
+    padding: 6px 12px;
+    font-size: 1.0em;
+}
 #glow-button-end {
     position: absolute;
-    bottom: 24vw; /*60px;*/
+    bottom: 27vw; /*24px;*/
     margin: 0 auto;
     transform: translateX(-50%);
     display: flex;
@@ -411,7 +422,7 @@ h2 {
     }
     
     .splash-text {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -431,8 +442,13 @@ h2 {
     .splash-text-bottom {
         bottom: 24vw;
     }
+    #founders {
+        top: 0;
+        left: 12px;
+        transform: unset;
+    }
     #glow-button-end {
-        bottom: 36vw;
+        bottom: 35vw;
     }
 }
 
@@ -456,6 +472,11 @@ h2 {
     }
     .splash-text-bottom {
         bottom: 13vw;
+    }
+    #founders {
+        left: revert;
+        top: 1.5vw;
+        right: 3vw;
     }
     #glow-button-end {
         bottom: 15vw;
