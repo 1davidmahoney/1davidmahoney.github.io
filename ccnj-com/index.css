@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
 
-body { opacity: 0; transition: opacity 1s ease-in-out; }
-body.page-loaded { opacity: 1; }
+html {
+    background-color: #1a385e; /* or whatever color/image you actually want behind the fade */
+}
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+body.page-loaded {
+    opacity: 1;
+}
 
 h1 {
     font-weight: 800;
@@ -177,10 +185,11 @@ h2 {
     max-width: 80%;
     font-size: 1.4rem;
     font-weight: 500;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
     padding: 16px;
     border-radius: 30px 8px;
+    border: medium solid white;
 }
 .splash-text-top {
     top: 10vw; /*12px;*/
@@ -191,16 +200,40 @@ h2 {
 .splash-text-emphasis {
     font-weight: 800;
 }
+#st-2a {
+    
+}
+#st-2b {
+    
+}
+#st-3a {
+    
+}
+#st-3b {
+    
+}
+#st-4a {
+    font-size: 1.2rem;
+    top: 3vw;
+}
+#st-4b {
+    font-size: 1.2rem;
+    bottom: 3vw;
+}
+#st-5 {
+    top: 20vw;
+}
 #founders {
     position: absolute;
-    top: 63vw;
+    top: 65vw;
     width: max-content;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    border-radius: 10px 4px;
     color: #3876C7;
     padding: 6px 12px;
     font-size: 1.0em;
+    text-align: center;
 }
 #glow-button-end {
     position: absolute;
@@ -428,6 +461,18 @@ h2 {
         font-size: 1.6rem;
     }
 }
+@media (min-width: 440px) { /* iPhone 16 width */
+
+    #st-4a {
+        font-size: 1.6rem; /* Back to splash-text default (see directly above) */
+    }
+    #st-4b {
+        font-size: 1.6rem;
+    }
+    #founders {
+        top: 70vw;
+    }
+}
 
 @media (min-width: 500px) { /* Simple fix to get nice border-radius on smaller screens */
 
@@ -440,18 +485,38 @@ h2 {
     }
     
     .splash-text-top {
-        top: 24vw; /*170px;*/
+        top: 5vw; /*170px;*/
     }
     .splash-text-bottom {
-        bottom: 24vw;
+        bottom: 5vw;
+    }
+    #st-4a {
+        top: 26vw;
+    }
+    #st-4b {
+        bottom: 22vw;
     }
     #founders {
         top: 0;
         left: 12px;
         transform: unset;
+        width: 28vw;
     }
     #glow-button-end {
-        bottom: 35vw;
+        bottom: 37vw;
+    }
+}
+
+@media (min-width: 670px) { /* Founders text looks better as one line now */
+
+    #st-4a {
+        top: 32vw;
+    }
+    #st-4b {
+        bottom: 28vw;
+    }
+    #founders {
+        width: auto;
     }
 }
 
@@ -471,18 +536,41 @@ h2 {
     }
 
     .splash-text-top {
-        top: 13vw; /*170px;*/
+        top: 7vw;/*13vw;*/
     }
     .splash-text-bottom {
-        bottom: 13vw;
+        bottom: 5vw;/*13vw;*/
+    }
+    #st-2a {
+        top: 0;
+        left: 0;
+        margin-top: 3vw;
+        margin-left: 3vw;
+        transform: unset;
+    }
+    #st-2b {
+        bottom: 0;
+        right: 0;
+        margin-bottom: 3vw;
+        margin-right: 3vw;
+        transform: unset;
+    }
+    #st-4a {
+        top: 20vw;
+    }
+    #st-4b {
+        bottom: 7vw;
     }
     #founders {
         left: revert;
         top: 1.5vw;
         right: 3vw;
     }
+    #st-5 {
+        top: 9vw;
+    }
     #glow-button-end {
-        bottom: 15vw;
+        bottom: 21vw;
     }
     
     .container {
@@ -578,6 +666,9 @@ h2 {
     .splash-img {
         max-width: 39vw;
     }
+    #st-4b {
+        bottom: 13vw;
+    }
 }
 
 @media (min-width: 1100px) {
@@ -615,5 +706,30 @@ h2 {
 
     .splash-img {
         max-width: 46vw;
+    }
+    
+    .splash-text-top {
+        top: 8vw;/*7vw;*/
+    }
+    .splash-text-bottom {
+        bottom: 7vw;/*5vw;*/
+    }
+    #st-2a {
+        margin-top: 5vw;
+        margin-left: 5vw;
+    }
+    #st-2b {
+        margin-bottom: 5vw;
+        margin-right: 5vw;
+    }
+    #st-4b {
+        bottom: 18vw;
+    }
+}
+
+@media (min-width: 1670px) { /* Ultra-wide */
+
+    #st-4b {
+        bottom: 13vw;
     }
 }
