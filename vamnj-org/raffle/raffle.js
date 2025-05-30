@@ -1,7 +1,7 @@
 function updateTotal() {
     const totalField = document.getElementById('totalField');
     const ticketCount = document.querySelector('input[name="ticketCount"]');
-    const ticketCost = 100;
+    const ticketCost = 50;
     
     totalField.value = `$${Number(ticketCount.value) * ticketCost}`;    // Convert the value to a number to ensure proper handling.
 }
