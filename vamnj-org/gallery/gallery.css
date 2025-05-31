@@ -1,3 +1,7 @@
+.center-wide {
+    max-width: revert;
+}
+
 li {
     padding-bottom: 6px;
 }
@@ -224,6 +228,10 @@ hr {
 /*****************************************************************************/
 
 @media (min-width: 768px) { /* Medium portrait (tablet) */
+
+    .center-wide {
+        padding: 0 80px;
+    }
 
     .gallery {
       grid-template-columns: 1fr 1fr 1fr 1fr;
