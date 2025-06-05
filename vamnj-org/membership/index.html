@@ -67,125 +67,27 @@
         </div>
         <div class="body-content scroll-fade">
             <h2>Join the coolest historical society of them all!</h2>
-            <p>Becoming an official member of the Vintage Automobile Museum of NJ is a fun way to get involved in the car community and to support the <a href="/vamnj-org/about/#mission">museum's mission</a>.</p>
-            <p>Not ready to become a member? Be a Friend of the Museum! Either way, when you <a href="#membership-form">sign up below</a>, you help the museum grow!</p>
+            <p>Becoming an official member of the Vintage Automobile Museum of NJ is a fun way to get involved in the car community and to support the museum.</p>
         </div>
         <div class="body-content scroll-fade">
             <div class="container-text container-bg">
-                <h2>Friends of the Museum</h2>
-                <p>It's free!</p>
-                <ul class="italics">
-                    <li>Receive our quarterly newsletter.</li>
-                    <li>Be the first to know when new vehicles arrive.</li>
-                </ul>
+                <h2>Volunteer Opportunities</h2>
+                <p>Volunteering with the museum gives you a chance to give back to the community&mdash;all while hanging out around awesome classic cars! We welcome people of all ages and experience levels to join us in our mission to promote, preserve, and protect vintage automobiles.</p>
+                <p>Museum membership is <em>not</em> required in order to volunteer.</p>
+                <p>Being a nonprofit organization, everything we do depends on the noble spirit of volunteerism, so we deeply appreciate your interest in helping our cause. <a href="/vamnj-org/contact/">Contact us</a> today to discuss ways you can help.</p>
             </div>
         </div>
         <div class="body-content scroll-fade">
             <div class="container-text container-border">
-                <h2>Members</h2>
-                <p>For just $50 a year, you can be a full-fledged <span class="bolded">Member of the Vintage Automobile Museum of NJ</span>! Choose auto-renewal at checkout, and get 30% off!</p>
-                <p>When you become a VAMNJ member, you'll receive...</p>
+                <h2>Become a Member or Sponsor</h2>
+                <p>Support the preservation and celebration of automotive history by becoming a member or sponsor of the Vintage Automobile Museum of NJ. Your membership helps fund exhibits, events, and educational programs, while offering you special benefits and the satisfaction of supporting a nonprofit community organization. Sponsorships are also available for individuals and businesses who wish to make an even greater impact.</p>
+                <p>Simply fill out <a href="/vamnj-org/membership/files/VAMNJ_MemberSponsorForm.pdf" target="_blank" rel="noopener noreferrer">this form</a> and mail along with your payment to the indicated address.</p>
+                <p>When you become a VAMNJ member or sponsor, you'll receive...</p>
                 <ul class="italics">
-                    <li><span class="bolded">An official certificate</span> commemorating your first joining the museum.</li>
-                    <li><span class="bolded">A special &ldquo;Gift of the Year,&rdquo;</span> such as a museum-branded mug or classic car poster.</li>
-                    <li><span class="bolded">A 25% discount</span> at our gift shop.</li>
-                    <li><span class="bolded">A 15% discount</span> on our venue rental fee.</li>
+                    <li><span class="bolded">An engraved plaque</span> commemorating your first joining the museum.</li>
+                    <li><span class="bolded">Special access</span> to exclusive members-only events.</li>
+                    <li><span class="bolded">A reserved seat </span> at our monthly meeting.</li>
                 </ul>
-            </div>
-        </div>
-        <div class="body-content scroll-fade" id="volunteer">
-            <div class="container-text container-bg center-wide">
-                <h2>Volunteer Opportunities</h2>
-                <p>Being a nonprofit organization, everything we do depends on volunteers, so we deeply appreciate your interest in helping our cause.</p>
-                <p>The easiest way to volunteer at VAMNJ is to become a standard member (see form below). Then, stay tuned for announcements about volunteer opportunities.</p>
-                <p>Not interested in becoming a member? We still want to <a href="/vamnj-org/contact/">hear from you</a>!</p>
-            </div>
-        </div>
-        
-        <!-- MEMBERSHIP FORM -->
-        <div id="membership-form" class="body-content scroll-fade-quick">
-            <div class="container-text form-bg">
-                <h2>Sign-up form</h2>
-                
-                <p>Please <a href="/vamnj-org/contact/">contact us</a> for other payment options, if choosing "Member" below.</p>
-                
-                <form id="membershipForm">
-                    <div class="form-group">
-                        <label for="firstName">First name</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="lastName">Last name</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <hr>
-                    
-                    <div class="form-group total">
-                        <label class="bolded">Total</label>
-                        <output id="totalField">$0</output>
-                    </div>
-                    
-                    <hr>
-
-                    <div class="form-group member-options">
-                        <div><input type="radio" name="options" id="friend" onclick="updateTotal()" checked>Friend of the Museum</div>
-                        <div><input type="radio" name="options" id="member" onclick="updateTotal()">Member</div>
-                    </div>
-                    
-                    <div class="form-group" id="recurringOption" style="display: none;">
-                        <label>
-                            <input type="checkbox" id="recurringCheckbox" onclick="updateTotal()"> Auto-renewal (save 30%)
-                        </label>
-                    </div>
-
-                    <!-- Payment Section -->
-                    <div id="paymentSection">
-                        <h3>Payment Method</h3>
-                        <label>
-                            <input type="radio" name="paymentMethod" value="credit" checked onclick="toggleCreditCardFields()"> Credit card
-                        </label>
-                        <label>
-                            <input type="radio" name="paymentMethod" value="paypal" onclick="toggleCreditCardFields()"> PayPal
-                        </label>
-                        <label>
-                            <input type="radio" name="paymentMethod" value="applepay" onclick="toggleCreditCardFields()"> Apple Pay
-                        </label>
-
-                        <!-- Credit Card Fields -->
-                        <div id="creditCardFields">
-                            <div class="form-group">
-                                <label for="cardNumber">Card Number</label>
-                                <input type="text" id="cardNumber" name="cardNumber" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="expiryDate">Expiry Date</label>
-                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="cvv">CVV</label>
-                                <input type="text" id="cvv" name="cvv" required>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-
-                    <button type="button" onclick="submitForm()" class="submit-button">SUBMIT</button>
-                    <button type="button" onclick="resetForm()">RESET</button>
-                </form>
-
-                <div id="thankYouMessage">Thank you, and welcome aboard!</div>
-                
-                <p class="italics">By signing up, you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
             </div>
         </div>
     </div>
@@ -196,6 +98,6 @@
     </footer>
 
     <script src="/vamnj-org/script.js"></script>
-    <script src="membership.js"></script>
+    <!-- <script src="membership.js"></script> -->
 </body>
 </html>
