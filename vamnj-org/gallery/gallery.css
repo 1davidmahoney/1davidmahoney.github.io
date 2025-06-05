@@ -1,3 +1,9 @@
+p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h2 {
     text-align: center;
 }
@@ -84,6 +90,37 @@ hr {
 }
 
 /*****************************************************************************/
+/* Specific styling for #gallery-02 ******************************************/
+/*****************************************************************************/
+
+#gallery-02 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;       /* Two equal-width columns */
+  grid-auto-rows: auto;
+  gap: 20px;
+  grid-template-areas: /* Each row spans across 2 columns */
+    "item1 item1"
+    "item2 item2"
+    "item3 item3"
+    "item4 item4";
+}
+
+/* Assign grid areas for each child */
+#gallery-02 > :nth-child(1) { grid-area: item1; }
+#gallery-02 > :nth-child(2) { grid-area: item2; }
+#gallery-02 > :nth-child(3) { grid-area: item3; }
+#gallery-02 > :nth-child(4) { grid-area: item4; }
+
+/* General styling for each item in #gallery-02 to make them horizontal rectangles */
+#gallery-02 > .thumb {
+  width: 100%;
+  overflow: hidden;
+  grid-column: 1 / 3; /* Spans across both columns */
+  padding-top: 50%;   /* Half the padding for a horizontal rectangle */
+  position: relative;
+}
+
+/*****************************************************************************/
 /* Specific styling for #gallery-03 ******************************************/
 /*****************************************************************************/
 
@@ -93,9 +130,10 @@ hr {
   grid-auto-rows: auto;
   gap: 20px;
   grid-template-areas:
-    "item1 item2"   /* First row */
-    "item3 item3"   /* Second row - item spans across both columns */
-    "item4 item5";   /* Third row */
+    "item1 item2"
+    "item3 item3"
+    "item4 item4"
+    "item5 item6";
 }
 
 /* Assign grid areas for each child */
@@ -104,6 +142,7 @@ hr {
 #gallery-03 > :nth-child(3) { grid-area: item3; }
 #gallery-03 > :nth-child(4) { grid-area: item4; }
 #gallery-03 > :nth-child(5) { grid-area: item5; }
+#gallery-03 > :nth-child(6) { grid-area: item6; }
 
 /* General styling for each item in #gallery-03 to make them square */
 #gallery-03 > .thumb {
@@ -113,8 +152,9 @@ hr {
   overflow: hidden;
 }
 
-/* Specific styling for item 3 to make it a horizontal rectangle */
-#gallery-03 > :nth-child(3) {
+/* Specific styling for items 3 and 4 to make them each a horizontal rectangle */
+#gallery-03 > :nth-child(3),
+#gallery-03 > :nth-child(4) {
   grid-column: 1 / 3; /* Spans across both columns */
   padding-top: 50%;   /* Half the padding for a horizontal rectangle */
   position: relative;
@@ -130,14 +170,16 @@ hr {
   grid-auto-rows: auto;
   gap: 20px;
   grid-template-areas:
-    "item1 item1"   /* First row - item spans across both columns */
-    "item2 item3";   /* Second row */
+    "item1 item1"
+    "item2 item3"
+    "item4 item4";
 }
 
 /* Assign grid areas for each child */
 #gallery-04 > :nth-child(1) { grid-area: item1; }
 #gallery-04 > :nth-child(2) { grid-area: item2; }
 #gallery-04 > :nth-child(3) { grid-area: item3; }
+#gallery-04 > :nth-child(4) { grid-area: item4; }
 
 /* General styling for each item in #gallery-04 to make them square */
 #gallery-04 > .thumb {
@@ -151,7 +193,13 @@ hr {
 #gallery-04 > :nth-child(1) {
   grid-column: 1 / 3; /* Spans across both columns */
   padding-top: 50%;   /* Half the padding for a horizontal rectangle */
-  position: relative;
+}
+
+/* Specific styling for item 4 to make it a horizontal rectangle */
+#gallery-04 > :nth-child(4) {
+  grid-column: 1 / 3; /* Spans across both columns */
+  grid-row: 3;
+  padding-top: 50%;   /* Half the padding for a horizontal rectangle */
 }
 
 /*****************************************************************************/
@@ -276,6 +324,50 @@ hr {
     }
     
     /*****************************************************************************/
+    /* Specific styling for #gallery-02 ******************************************/
+    /*****************************************************************************/
+
+    #gallery-02 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-auto-rows: auto;
+      gap: 20px;
+      grid-template-areas:
+        "item1 item2 item3 item3"
+        "item1 item2 item4 item4";
+    }
+
+    /* Specific styling for item 1 to make it a vertical rectangle */
+    #gallery-02 > :nth-child(1) {
+      grid-row: 1 / span 2; /* Spans across both rows */
+      grid-column: revert; /* Undo style */
+      padding-top: 100%;   /* Full padding for a vertical rectangle */
+      position: relative;
+    }
+    
+    /* Specific styling for item 2 to make it a vertical rectangle */
+    #gallery-02 > :nth-child(2) {
+      grid-row: 1 / span 2; /* Spans across both rows */
+      grid-column: revert; /* Undo style */
+      padding-top: 100%;   /* Full padding for a vertical rectangle */
+      position: relative;
+    }
+    
+    /* Specific styling for item 3 to make it a horizontal rectangle */
+    #gallery-02 > :nth-child(3) {
+      grid-column: 1 / 3; /* Spans across both columns */
+      padding-top: 50%;   /* Half the padding for a horizontal rectangle */
+      position: relative;
+    }
+    
+    /* Specific styling for item 4 to make it a horizontal rectangle */
+    #gallery-02 > :nth-child(4) {
+      grid-column: 1 / 3; /* Spans across both columns */
+      padding-top: 50%;   /* Half the padding for a horizontal rectangle */
+      position: relative;
+    }
+    
+    /*****************************************************************************/
     /* Specific styling for #gallery-03 ******************************************/
     /*****************************************************************************/
 
@@ -285,35 +377,48 @@ hr {
       grid-auto-rows: auto;
       gap: 20px;
       grid-template-areas:
-        "item1 item1 item2 item3"
-        "item4 item4 item2 item5";
+        "item1 item2 item3 item3"
+        "item4 item4 item5 item6";
     }
 
-    /* Specific styling for item 1 to make it a horizontal rectangle */
+    /* Specific styling for item 1 to make it square */
     #gallery-03 > :nth-child(1) {
-      grid-column: 1 / 3; /* Spans across both columns */
-      padding-top: 50%;   /* Half the padding for a horizontal rectangle */
-      position: relative;
-    }
-    
-    /* Specific styling for item 2 to make it a vertical rectangle */
-    #gallery-03 > :nth-child(2) {
-      grid-row: 1 /span 2; /* Spans across both columns */
-      padding-top: 100%;   /* Half the padding for a horizontal rectangle */
-      position: relative;
-    }
-    
-    /* Undo specific styling */
-    #gallery-03 > :nth-child(3) {
-      grid-column: 4;
+      grid-column: 1;
       padding-top: 100%;
+    }
+    
+    /* Specific styling for item 2 to make it square */
+    #gallery-03 > :nth-child(2) {
+      grid-column: 2;
+      padding-top: 100%;
+    }
+    
+    /* Specific styling for item 3 to make it a horizontal rectangle */
+    #gallery-03 > :nth-child(3) {
+      grid-row: 2;
+      grid-column: 1 / 3;
+      padding-top: 50%;
     }
     
     /* Specific styling for item 4 to make it a horizontal rectangle */
     #gallery-03 > :nth-child(4) {
-      grid-column: 1 / 3; /* Spans across both columns */
-      padding-top: 50%;   /* Half the padding for a horizontal rectangle */
-      position: relative;
+      grid-row: 1;
+      grid-column: 3 / 5;
+      padding-top: 50%;
+    }
+    
+    /* Specific styling for item 5 to make it square */
+    #gallery-03 > :nth-child(5) {
+      grid-row: 2;
+      grid-column: 3;
+      padding-top: 100%;
+    }
+    
+    /* Specific styling for item 6 to make it square */
+    #gallery-03 > :nth-child(6) {
+      grid-row: 2;
+      grid-column: 4;
+      padding-top: 100%;
     }
     
     /*****************************************************************************/
@@ -326,6 +431,35 @@ hr {
       grid-auto-rows: auto;
       gap: 20px;
       grid-template-areas:
-        "item1 item1 item2 item3";
+        "item1 item1 item3 item3"
+        "item2 item2 item4 item4";
+    }
+    
+    /* Specific styling for item 1 to make it a horizontal rectangle */
+    #gallery-04 > :nth-child(1) {
+      grid-row: 1;
+      grid-column: 1 / 3;
+      padding-top: 50%;
+    }
+    
+    /* Specific styling for item 2 to make it a horizontal rectangle */
+    #gallery-04 > :nth-child(2) {
+      grid-row: 2;
+      grid-column: 1 / 3;
+      padding-top: 50%;
+    }
+    
+    /* Specific styling for item 3 to make it a horizontal rectangle */
+    #gallery-04 > :nth-child(3) {
+      grid-row: 1;
+      grid-column: 3 / 5;
+      padding-top: 50%;
+    }
+    
+    /* Specific styling for item 4 to make it a horizontal rectangle */
+    #gallery-04 > :nth-child(4) {
+      grid-row: 2;
+      grid-column: 3 / 5;
+      padding-top: 50%;
     }
 }

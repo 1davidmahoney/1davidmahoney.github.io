@@ -1,9 +1,8 @@
 const images = [
-    ['/vamnj-org/gallery/images/current-display/a1.jpg', '/vamnj-org/gallery/images/current-display/a2.jpg', '/vamnj-org/gallery/images/current-display/b1.jpg', '/vamnj-org/gallery/images/current-display/b2.jpg', '/vamnj-org/gallery/images/current-display/c1.jpg', '/vamnj-org/gallery/images/current-display/c2.jpg'],
-    ['/vamnj-org/gallery/images/2024-fall-display-roaring-20s/01.jpg', '/vamnj-org/gallery/images/2024-fall-display-roaring-20s/02.jpg', '/vamnj-org/gallery/images/2024-fall-display-roaring-20s/03.jpg', '/vamnj-org/gallery/images/2024-fall-display-roaring-20s/04.jpg'],
-    ['/vamnj-org/gallery/images/2023-winter-show-nyc/01.jpg', '/vamnj-org/gallery/images/2023-winter-show-nyc/02.jpg', '/vamnj-org/gallery/images/2023-winter-show-nyc/03.jpg', '/vamnj-org/gallery/images/2023-winter-show-nyc/04.jpg', '/vamnj-org/gallery/images/2023-winter-show-nyc/05.jpg'],
-    ['/vamnj-org/gallery/images/2022-spring-show-allaire/01.jpg', '/vamnj-org/gallery/images/2022-spring-show-allaire/02.jpg', '/vamnj-org/gallery/images/2022-spring-show-allaire/03.jpg'],
-    ['/vamnj-org/gallery/images/2021-summer-display-british-invasion/01.jpg', '/vamnj-org/gallery/images/2021-summer-display-british-invasion/02.jpg', '/vamnj-org/gallery/images/2021-summer-display-british-invasion/03.jpg', '/vamnj-org/gallery/images/2021-summer-display-british-invasion/04.jpg']
+    ['/vamnj-org/gallery/images/current-display/01.jpg', '/vamnj-org/gallery/images/current-display/02.jpg', '/vamnj-org/gallery/images/current-display/03.jpg', '/vamnj-org/gallery/images/current-display/04.jpg', '/vamnj-org/gallery/images/current-display/05.jpg', '/vamnj-org/gallery/images/current-display/06.jpg'],
+    ['/vamnj-org/gallery/images/pickup-trucks/01.jpg', '/vamnj-org/gallery/images/pickup-trucks/02.jpg', '/vamnj-org/gallery/images/pickup-trucks/03.jpg', '/vamnj-org/gallery/images/pickup-trucks/04.jpg'],
+    ['/vamnj-org/gallery/images/stock-cars/01.jpg', '/vamnj-org/gallery/images/stock-cars/02.jpg', '/vamnj-org/gallery/images/stock-cars/03.jpg', '/vamnj-org/gallery/images/stock-cars/04.jpg'],
+    ['/vamnj-org/gallery/images/50s-60s/01.jpg', '/vamnj-org/gallery/images/50s-60s/02.jpg', '/vamnj-org/gallery/images/50s-60s/03.jpg', '/vamnj-org/gallery/images/50s-60s/04.jpg', '/vamnj-org/gallery/images/50s-60s/05.jpg', '/vamnj-org/gallery/images/50s-60s/06.jpg']
 ];
 
 let currentSetIndex = 0;
