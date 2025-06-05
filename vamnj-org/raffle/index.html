@@ -64,111 +64,20 @@
         <div class="child-splash-right fade-in-shortest">
             <img src="/vamnj-org/raffle/images/raffle.jpg" alt="Pile of cash">
         </div>
-        <div class="body-content scroll-fade-quick">
+        <div id="rules" class="body-content scroll-fade-quick">
             <div class="container-text container-bg">
                 <h2>How it works</h2>
                 <h3>Drawing and payout</h3>
-                <p>A single winner will be chosen at the drawing, which will occur on December 30, 2025. Winnings are 50% of the total pot.</p>
+                <p>A single winner will be chosen at the drawing, which will occur on November 8, 2025. Winnings are 50% of the total pot.</p>
                 <ul>
                     <li class="bolded">Grand Prize: $50,000</li>
                     <ul><li><em>(Maximum payout, if pot is full)</em></li></ul>
                 </ul>
-                <p>The remainder goes to the museum, where it will help fund our normal operations and support our <a href="/vamnj-org/donate/#dreams">long-term goals</a>.</p>
+                <p>The remainder will help fund museum operations and support our <a href="/vamnj-org/donate/#dreams">long-term goals</a>.</p>
                 <h3>Ticket sales</h3>
-                <p>Tickets for the next drawing will be sold from January to December 2025. To purchase tickets, please use the <a href="#raffle-form">raffle form</a>.</p>
+                <p>Tickets for the next drawing will be sold from January to November 2025. To purchase tickets, please <a href="/vamnj-org/contact/">contact us</a>.</p>
             </div>
         </div>
-        
-        <!-- RAFFLE FORM -->
-        <div id="raffle-form" class="body-content scroll-fade-quick">
-            <div class="container-text form-bg">
-                <h2>Raffle form</h2>
-                
-                <p>Please <a href="/vamnj-org/contact/">contact us</a> for other payment options.</p>
-                
-                <form id="raffleForm">
-                    <div class="form-group">
-                        <label for="firstName">First name</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="lastName">Last name</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="italics">
-                            <input type="checkbox" id="emailCheckbox" onclick=""> Receive our quarterly newsletters and notifications about new vehicle arrivals.
-                        </label>
-                    </div>
-                    
-                    <hr>
-                    
-                    <div class="form-group" id="numTicketsBox">
-                        <label for="ticketCount">Number of tickets</label>
-                        <input type="number" value="1" min="1" id="ticketCount" name="ticketCount" required>
-                        <button type="button" onclick="updateTotal()">Update total</button>
-                    </div>
-                    
-                    <hr>
-
-                    <div class="form-group total">
-                        <label class="bolded">Total</label>
-                        <output id="totalField">$50</output>
-                    </div>
-                    
-                    <hr>
-
-                    <!-- Payment Section -->
-                    <div id="paymentSection">
-                        <h3>Payment Method</h3>
-                        <label>
-                            <input type="radio" name="paymentMethod" value="credit" checked onclick="toggleCreditCardFields()"> Credit card
-                        </label>
-                        <label>
-                            <input type="radio" name="paymentMethod" value="paypal" onclick="toggleCreditCardFields()"> PayPal
-                        </label>
-                        <label>
-                            <input type="radio" name="paymentMethod" value="applepay" onclick="toggleCreditCardFields()"> Apple Pay
-                        </label>
-
-                        <!-- Credit Card Fields -->
-                        <div id="creditCardFields">
-                            <div class="form-group">
-                                <label for="cardNumber">Card Number</label>
-                                <input type="text" id="cardNumber" name="cardNumber" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="expiryDate">Expiry Date</label>
-                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="cvv">CVV</label>
-                                <input type="text" id="cvv" name="cvv" required>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-
-                    <button type="button" onclick="submitForm()" class="submit-button">SUBMIT</button>
-                    <button type="button" onclick="resetForm()">RESET</button>
-                </form>
-
-                <div id="thankYouMessage">Thank you, and good luck!</div>
-                
-                <p class="italics">By purchasing, you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
-            </div>
-        </div>
-        
     </div>
     
     <!-- Footer -->
