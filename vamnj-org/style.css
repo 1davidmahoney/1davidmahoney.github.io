@@ -328,6 +328,7 @@ hr {
 }
 
 .wide-menu-item {
+    color: inherit;
     font-size: 1.2rem;
     font-weight: 300;
     text-decoration: none;
@@ -347,6 +348,28 @@ a.wide-menu-item {
 
 a.wide-menu-item:hover {
     opacity: 0.6;
+}
+
+a.wide-menu-item:visited {
+    color: inherit;
+}
+
+a.wide-menu-item.current-page:visited {
+    color: #fff5e5;
+}
+
+.current-page {
+    color: #fff5e5;
+    /*text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 9px;
+    font-weight: bold;
+    font-size: 1.6rem;*/
+    font-weight: 600;
+    background-color: #7a561f;
+    border-radius: 5px;
+    padding: 4px;
 }
 
 .glow-button {

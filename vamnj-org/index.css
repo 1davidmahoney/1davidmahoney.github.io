@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
+.wide-menu {
+    row-gap: 4px;
+}
+
 h1 {
     font-size: 1.7rem;
     font-weight: 800;
