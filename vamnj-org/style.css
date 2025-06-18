@@ -34,6 +34,28 @@ footer {
     grid-row: 3;
 }
 
+.banner {
+  background: #ffe066; /* Eye-catching yellow */
+  color: #333;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem; /* Larger than normal text */
+  font-weight: 500;
+  border-bottom: 2px solid #d4af37;
+}
+
+.banner-dismiss {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+  margin-left: 1.5rem;
+}
+
 .body-content { /* For when I just want to throw some basic html elements into a div and have it look nice. */
     padding: 0 20px;
     margin-bottom: 10px;

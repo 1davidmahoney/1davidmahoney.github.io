@@ -116,6 +116,26 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 /*****************************************************************************/
+/* HANDLE NOTIFICATION BANNER ************************************************/
+/*****************************************************************************/
+
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('notification-banner');
+  const dismiss = banner.querySelector('.banner-dismiss');
+  const currentBannerId = 'banner-20250618'; // Change this string for each new banner. # = date this banner was set.
+
+  // Check localStorage to see if this banner was dismissed
+  if (localStorage.getItem('bannerDismissed') === currentBannerId) {
+    banner.style.display = 'none';
+  }
+
+  dismiss.addEventListener('click', () => {
+    banner.style.display = 'none';
+    localStorage.setItem('bannerDismissed', currentBannerId);
+  });
+});
+
+/*****************************************************************************/
 /* KEEP CONTENT-WRAPPER BELOW HEADER *****************************************/
 /*****************************************************************************/
 
