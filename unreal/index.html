@@ -73,6 +73,9 @@
             <hr class="plain">
             
             <div class="splash special-splash">
+                <div class="project-title body-content">
+                    <img src="/unreal/images/runt-title.png" alt="Game logo">
+                </div>
                 <div class="center-heading">
                     <h2>What I Made</h2>
                 </div>
@@ -105,22 +108,38 @@
                     <h2>How I Made It</h2>
                 </div>
                 <div class="center-paragraph body-content">
-                    <p>The rest of this page shows all the design documentation I used to inform my implementation work:</p>
+                    <p>The rest of this page shows all the work that went into making the playable demo level.</p>
                     <ol>
-                        <li><a href="#game-intro">Game Specs and Overview</a></li>
-                        <li><a href="#level-intro">Level Overview</a></li>
-                        <li><a href="#level-details">Level 1, Part 1 Details</a></li>
-                        <li><a href="#char-sheets">Character Sheets</a></li>
+                        <li><a href="#bp">Blueprint Scripting &amp; Level Sequences</a></li>
+                        <li><a href="#game-intro">Narrative Design &amp; Writing</a></li>
                     </ol>
-                    <p>An example of my <a href="#bp">visual scripting (Blueprints)</a> is at the very end.
                 </div>
             </div>
             
             <hr class="plain">
+
+            <div id="bp" class="splash">
+                <div class="center-heading">
+                    <h2>Technical Design &amp; Implementation</h2>
+                </div>
+                <div class="body-content">
+                    <h3>Visual Scripting (Blueprints)</h3>
+                    <p>In this example, a single cinematic sequence is being played in segments &ndash; one for each time the player presses the right trigger button while engaged with the tongs.</p>
+                    <p>With each button press, the player character climbs farther along the tongs, until finally reaching a position to launch himself.</p>
+                </div>
+                <div class="body-content">
+                    <img src="/unreal/images/runt_tongs.png" alt="Climb tongs sequence">
+                </div>
+                <div id="bp-thumb" class="body-content">
+                    <a href="/unreal/images/runt_blueprints.png" target="_blank" rel="noopener noreferrer"><img src="/unreal/images/runt_blueprints_thumb.png" alt="Blueprint example"></a>
+                </div>
+            </div>
+
+            <hr class="plain">
             
             <div id="game-intro" class="splash">
-                <div class="project-title body-content">
-                    <img src="/unreal/images/runt-title.png" alt="Game logo">
+                <div class="center-heading">
+                    <h2>Narrative Design &amp; Writing</h2>
                 </div>
                 <div id="game-specs" class="body-content">
                     <h3>Game Specs</h3>
@@ -199,22 +218,6 @@
                 <div class="char-sheet-thumbs body-content">
                     <a href="/unreal/images/Runt_CharSheet_Thorn.pdf" target="_blank" rel="noopener noreferrer"><img src="/unreal/images/Runt_CharSheet_Thorn.png" alt="Thorn's character sheet"></a>
                     <a href="/unreal/images/Runt_CharSheet_Flint.pdf" target="_blank" rel="noopener noreferrer"><img src="/unreal/images/Runt_CharSheet_Flint.png" alt="Flint's character sheet"></a>
-                </div>
-            </div>
-
-            <hr class="plain">
-
-            <div id="bp" class="splash">
-                <div class="body-content">
-                    <h3>Visual Scripting (Blueprints)</h3>
-                    <p>In this example, a single cinematic sequence is being played in segments &ndash; one for each time the player presses the right trigger button while engaged with the tongs.</p>
-                    <p>With each button press, the player character climbs farther along the tongs, until finally reaching a position to launch himself.</p>
-                </div>
-                <div class="body-content">
-                    <img src="/unreal/images/runt_tongs.png" alt="Climb tongs sequence">
-                </div>
-                <div id="bp-thumb" class="body-content">
-                    <a href="/unreal/images/runt_blueprints.png" target="_blank" rel="noopener noreferrer"><img src="/unreal/images/runt_blueprints_thumb.png" alt="Blueprint example"></a>
                 </div>
             </div>
 
