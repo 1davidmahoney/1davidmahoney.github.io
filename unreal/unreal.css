@@ -30,6 +30,7 @@
 #what-i-made {
     align-items: center;
     grid-template-columns: 1fr;
+    display: revert;
 }
 
 .center-paragraph {
