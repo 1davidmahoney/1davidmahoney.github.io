@@ -30,7 +30,7 @@
 #what-i-made {
     align-items: center;
     grid-template-columns: 1fr;
-    display: revert;
+    display: block;
 }
 
 .center-paragraph {
@@ -105,12 +105,12 @@
     
     #what-i-made {
         grid-template-columns: 1fr;
-        display: revert;
+        display: block;
     }
 }
 
 @media (min-width: 1000px) { /* Main content area width */
-{
+
     #what-i-made {
         grid-template-columns: 1fr 1fr;
         display: grid;
