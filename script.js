@@ -46,4 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Adjust on window resize to handle dynamic height changes
         window.addEventListener('resize', updateMargin);
     }
+
+    /*************************************************************************/
+    /* AUTO-UPDATE COPYRIGHT YEAR ********************************************/
+    /*************************************************************************/
+
+    const yearElement = document.getElementById('copyrightYear');
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 });
