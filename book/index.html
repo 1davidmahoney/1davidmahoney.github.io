@@ -70,6 +70,59 @@
         padding-top: 15px;
         border-top: 1px solid #ccc;
     }
+    
+    .work.assignable li {
+        position: relative;
+        padding: 8px 10px 8px 42px;
+        margin: 5px 0;
+        border-radius: 6px;
+        transition: background-color 0.15s ease;
+    }
+
+    .assignment-button {
+        position: absolute;
+        left: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 28px;
+        height: 28px;
+        padding: 0;
+
+        text-align: center;
+        font-weight: bold;
+
+        border: 1px solid #777;
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+    }
+
+    /* Assignment states */
+
+    .assignment-none {
+        background-color: white;
+    }
+
+    .assignment-j {
+        background-color: orange;
+    }
+
+    .assignment-v {
+        background-color: violet;
+    }
+
+    .assignment-r {
+        background-color: #ff7777;
+    }
+
+    .assignment-s {
+        background-color: cyan;
+    }
+
+    .assignment-d {
+        background-color: #c49a6c;
+    }
 </style>
 </head>
 
@@ -81,9 +134,38 @@
 </p>
 
 
+<!-- LANDING PAGE -->
+
+<section id="landing" class="page active">
+
+    <h1>Dad's Interactive Guide to Book Publishing!!!</h1>
+    
+    <p>Use this guide to help gain a clearer perspective of all the possibilities and the potential work involved.</p>
+    
+    <p>Most paths you go down will end in a list of potential work tasks. The list has buttons for temporarily assigning tasks to people, just to get a sense of how we could work as a group to get things done.</p>
+
+    <p class="assignment-legend">
+        Task assignments:
+        <strong>?</strong> Unassigned ·
+        <strong>J</strong> John ·
+        <strong>V</strong> Virginia ·
+        <strong>R</strong> Robert ·
+        <strong>S</strong> Susan ·
+        <strong>D</strong> David
+    </p>
+
+    <div class="choices">
+        <button onclick="goTo('start')">
+            Let's GOOOOOO!
+        </button>
+    </div>
+
+</section>
+
+
 <!-- STEP 1 -->
 
-<section id="start" class="page active">
+<section id="start" class="page">
 
     <h2>1. What formats do we want?</h2>
 
@@ -169,7 +251,7 @@
             <li>Give copies away where appropriate</li>
         </ul>
 
-        <div class="work">
+        <div class="work assignable">
             <strong>Work we'd need to plan:</strong>
 
             <ul>
@@ -221,7 +303,7 @@
             and ships it to the customer.
         </p>
 
-        <div class="work">
+        <div class="work assignable">
 
             <strong>Work we'd need to plan:</strong>
 
@@ -336,7 +418,7 @@
             <li>University or academic presses, if appropriate</li>
         </ul>
 
-        <div class="work">
+        <div class="work assignable">
 
             <strong>Likely work:</strong>
 
@@ -424,7 +506,7 @@
             manufacturing printed copies.
         </p>
 
-        <div class="work">
+        <div class="work assignable">
 
             <strong>Likely work:</strong>
 
@@ -609,6 +691,44 @@ function goTo(pageId) {
         window.scrollTo(0, 0);
     }
 }
+
+const assignmentStates = [
+    { text: "?", className: "assignment-none" },
+    { text: "J", className: "assignment-j" },
+    { text: "V", className: "assignment-v" },
+    { text: "R", className: "assignment-r" },
+    { text: "S", className: "assignment-s" },
+    { text: "D", className: "assignment-d" }
+];
+
+document.querySelectorAll(".work.assignable li").forEach(item => {
+
+    let stateIndex = 0;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "assignment-button";
+    button.textContent = assignmentStates[stateIndex].text;
+
+    item.classList.add(assignmentStates[stateIndex].className);
+    item.prepend(button);
+
+    button.addEventListener("click", () => {
+
+        item.classList.remove(
+            ...assignmentStates.map(state => state.className)
+        );
+
+        stateIndex =
+            (stateIndex + 1) % assignmentStates.length;
+
+        const state = assignmentStates[stateIndex];
+
+        button.textContent = state.text;
+        item.classList.add(state.className);
+    });
+
+});
 
 </script>
 
