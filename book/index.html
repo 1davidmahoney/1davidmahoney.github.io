@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Publishing Decision Guide</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.5;
+        color: #222;
+    }
+
+    h1 {
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .page {
+        display: none;
+    }
+
+    .page.active {
+        display: block;
+    }
+
+    .choices {
+        display: grid;
+        gap: 12px;
+        margin: 25px 0;
+    }
+
+    button {
+        font: inherit;
+        text-align: left;
+        padding: 14px 18px;
+        border: 1px solid #aaa;
+        border-radius: 8px;
+        background: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #f3f3f3;
+    }
+
+    .back {
+        margin-top: 30px;
+        color: #555;
+    }
+
+    .result {
+        padding: 20px;
+        background: #f4f4f4;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    .work {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #ccc;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>How Should We Publish the Book?</h1>
+<p class="subtitle">
+    Work through the questions below to narrow down the best publishing approach.
+</p>
+
+
+<!-- STEP 1 -->
+
+<section id="start" class="page active">
+
+    <h2>1. What formats do we want?</h2>
+
+    <div class="choices">
+        <button onclick="goTo('physical-goal')">
+            Printed book
+        </button>
+
+        <button onclick="goTo('ebook')">
+            Ebook only
+        </button>
+
+        <button onclick="goTo('physical-goal')">
+            Printed book + ebook
+        </button>
+
+        <button onclick="goTo('audio')">
+            Audiobook
+        </button>
+
+        <button onclick="goTo('physical-goal')">
+            Several formats — start by figuring out the printed book
+        </button>
+    </div>
+
+</section>
+
+
+<!-- PHYSICAL BOOK GOAL -->
+
+<section id="physical-goal" class="page">
+
+    <h2>2. What do we mainly want to accomplish with the printed book?</h2>
+
+    <div class="choices">
+
+        <button onclick="goTo('direct-print')">
+            Have copies ourselves to give or sell to museums,
+            local bookstores, events, friends, etc.
+        </button>
+
+        <button onclick="goTo('pod')">
+            Make it easy for anyone to order a printed copy online
+        </button>
+
+        <button onclick="goTo('traditional')">
+            Try to get a traditional publisher to publish it
+        </button>
+
+        <button onclick="goTo('hybrid')">
+            Both: distribute copies ourselves AND make it available online
+        </button>
+
+    </div>
+
+    <button class="back" onclick="goTo('start')">← Back</button>
+
+</section>
+
+
+<!-- DIRECT PRINT -->
+
+<section id="direct-print" class="page">
+
+    <h2>Direct Printing / Short Print Run</h2>
+
+    <div class="result">
+
+        <p>
+            We pay a printer to manufacture a batch of books.
+            The books are delivered to us, and we control what happens to them.
+        </p>
+
+        <h3>Possible distribution</h3>
+
+        <ul>
+            <li>Personally distribute copies to museums</li>
+            <li>Approach local bookstores</li>
+            <li>Sell wholesale to bookstores</li>
+            <li>Offer books on consignment</li>
+            <li>Sell at events, talks, or signings</li>
+            <li>Sell directly and ship copies ourselves</li>
+            <li>Give copies away where appropriate</li>
+        </ul>
+
+        <div class="work">
+            <strong>Work we'd need to plan:</strong>
+
+            <ul>
+                <li>Editing and proofreading</li>
+                <li>Interior book layout</li>
+                <li>Cover design</li>
+                <li>Choose book size, binding, paper, color, etc.</li>
+                <li>Get printer quotes</li>
+                <li>Order and review a proof</li>
+                <li>Decide how many copies to print</li>
+                <li>Store the books</li>
+                <li>Contact museums and bookstores</li>
+                <li>Handle inventory and sales if applicable</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="choices">
+        <button onclick="goTo('hybrid')">
+            Also make the book available online
+        </button>
+
+        <button onclick="goTo('final-direct')">
+            This may be all we need
+        </button>
+    </div>
+
+    <button class="back" onclick="goTo('physical-goal')">← Back</button>
+
+</section>
+
+
+<!-- POD -->
+
+<section id="pod" class="page">
+
+    <h2>Print on Demand</h2>
+
+    <div class="result">
+
+        <p>
+            Instead of buying a large inventory, we upload the finished
+            book to a print-on-demand service.
+        </p>
+
+        <p>
+            When someone orders the book, the service prints a copy
+            and ships it to the customer.
+        </p>
+
+        <div class="work">
+
+            <strong>Work we'd need to plan:</strong>
+
+            <ul>
+                <li>Edit and proofread the manuscript</li>
+                <li>Create print-ready interior files</li>
+                <li>Create the cover</li>
+                <li>Decide ISBN/publishing arrangements</li>
+                <li>Choose price</li>
+                <li>Upload book and description</li>
+                <li>Order and review a proof</li>
+                <li>Choose distribution channels</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="choices">
+
+        <button onclick="goTo('hybrid')">
+            We also want copies to distribute ourselves
+        </button>
+
+        <button onclick="goTo('final-pod')">
+            Print-on-demand alone may be enough
+        </button>
+
+    </div>
+
+    <button class="back" onclick="goTo('physical-goal')">← Back</button>
+
+</section>
+
+
+<!-- HYBRID -->
+
+<section id="hybrid" class="page">
+
+    <h2>Direct Distribution + Online Availability</h2>
+
+    <div class="result">
+
+        <p>
+            This combines two approaches.
+        </p>
+
+        <p>
+            <strong>Local/direct:</strong>
+            We obtain copies ourselves and personally distribute them
+            to museums, bookstores, events, and other organizations.
+        </p>
+
+        <p>
+            <strong>Online:</strong>
+            A print-on-demand service lets anyone else order the book
+            without us having to pack and ship every copy.
+        </p>
+
+        <p>
+            Our local copies could either be author copies purchased
+            through the print-on-demand service or a separate batch
+            purchased from a commercial printer.
+        </p>
+
+        <div class="work">
+
+            <strong>Important comparison:</strong>
+
+            <ul>
+                <li>Cost of POD author copies</li>
+                <li>Cost per book from a separate printer</li>
+                <li>Minimum quantities</li>
+                <li>Print quality</li>
+                <li>Shipping costs</li>
+                <li>Storage needs</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <button onclick="goTo('production')">
+        Next: Who will prepare and publish the book?
+    </button>
+
+    <button class="back" onclick="goTo('physical-goal')">← Back</button>
+
+</section>
+
+
+<!-- TRADITIONAL -->
+
+<section id="traditional" class="page">
+
+    <h2>Traditional Publishing</h2>
+
+    <div class="result">
+
+        <p>
+            We try to persuade an existing publisher to acquire
+            and publish the book.
+        </p>
+
+        <p>Possible targets could include:</p>
+
+        <ul>
+            <li>Commercial publishers</li>
+            <li>Regional publishers</li>
+            <li>Local-history publishers</li>
+            <li>Specialty publishers</li>
+            <li>University or academic presses, if appropriate</li>
+        </ul>
+
+        <div class="work">
+
+            <strong>Likely work:</strong>
+
+            <ul>
+                <li>Finish/polish the manuscript</li>
+                <li>Research appropriate publishers</li>
+                <li>Determine whether an agent is required</li>
+                <li>Prepare queries or a book proposal</li>
+                <li>Submit sample chapters/manuscript</li>
+                <li>Wait for responses</li>
+                <li>Possibly revise and resubmit</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="choices">
+
+        <button onclick="goTo('final-traditional')">
+            We want to investigate traditional publishing
+        </button>
+
+        <button onclick="goTo('physical-goal')">
+            We'd rather control publication ourselves
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTION -->
+
+<section id="production" class="page">
+
+    <h2>Who will do the production work?</h2>
+
+    <p>
+        For each part of the book, we can do it ourselves,
+        hire a freelancer, or pay a publishing/printing service.
+    </p>
+
+    <ul>
+        <li>Editing</li>
+        <li>Proofreading</li>
+        <li>Fact checking</li>
+        <li>Permissions/citations</li>
+        <li>Interior design and typesetting</li>
+        <li>Photo/illustration preparation</li>
+        <li>Cover design</li>
+        <li>ISBN and barcode</li>
+        <li>Copyright/front/back matter</li>
+        <li>Print-file preparation</li>
+        <li>Proof review</li>
+        <li>Pricing</li>
+        <li>Distribution setup</li>
+        <li>Marketing</li>
+        <li>Museum/bookstore outreach</li>
+    </ul>
+
+    <div class="choices">
+
+        <button onclick="goTo('ebook-question')">
+            Next: Should we also make an ebook?
+        </button>
+
+    </div>
+
+    <button class="back" onclick="goTo('hybrid')">← Back</button>
+
+</section>
+
+
+<!-- EBOOK -->
+
+<section id="ebook" class="page">
+
+    <h2>Ebook Only</h2>
+
+    <div class="result">
+
+        <p>
+            Prepare the book as a digital publication rather than
+            manufacturing printed copies.
+        </p>
+
+        <div class="work">
+
+            <strong>Likely work:</strong>
+
+            <ul>
+                <li>Edit and proofread manuscript</li>
+                <li>Format ebook</li>
+                <li>Create ebook cover</li>
+                <li>Prepare title/description/metadata</li>
+                <li>Choose sales platforms</li>
+                <li>Choose price</li>
+                <li>Upload and test</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <button class="back" onclick="goTo('start')">← Back</button>
+
+</section>
+
+
+<!-- EBOOK QUESTION -->
+
+<section id="ebook-question" class="page">
+
+    <h2>Should we also publish an ebook?</h2>
+
+    <div class="choices">
+
+        <button onclick="goTo('final-hybrid')">
+            Yes — printed book + ebook
+        </button>
+
+        <button onclick="goTo('final-hybrid')">
+            No — printed book only
+        </button>
+
+    </div>
+
+    <button class="back" onclick="goTo('production')">← Back</button>
+
+</section>
+
+
+<!-- AUDIO -->
+
+<section id="audio" class="page">
+
+    <h2>Audiobook</h2>
+
+    <p>Major decisions:</p>
+
+    <ul>
+        <li>Dad narrates it himself?</li>
+        <li>Hire a narrator?</li>
+        <li>Record/edit it ourselves?</li>
+        <li>Hire an audiobook producer?</li>
+        <li>Which audiobook stores/services should carry it?</li>
+    </ul>
+
+    <p>
+        An audiobook can also be added later after the printed
+        and/or ebook editions are finished.
+    </p>
+
+    <button class="back" onclick="goTo('start')">← Back</button>
+
+</section>
+
+
+<!-- RESULTS -->
+
+<section id="final-direct" class="page">
+
+    <h2>Possible Plan: Local / Direct Publishing</h2>
+
+    <div class="result">
+
+        <strong>Basic model:</strong>
+
+        <p>
+            Finish the book → prepare print-ready files →
+            hire a printer → purchase a batch →
+            personally distribute books to museums,
+            local bookstores, events, and other interested groups.
+        </p>
+
+    </div>
+
+    <button class="back" onclick="goTo('direct-print')">← Back</button>
+
+</section>
+
+
+<section id="final-pod" class="page">
+
+    <h2>Possible Plan: Print on Demand</h2>
+
+    <div class="result">
+
+        <p>
+            Finish and design the book → upload it to a
+            print-on-demand service → make it available for ordering →
+            service prints and ships copies as needed.
+        </p>
+
+    </div>
+
+    <button class="back" onclick="goTo('pod')">← Back</button>
+
+</section>
+
+
+<section id="final-hybrid" class="page">
+
+    <h2>Possible Plan: Hybrid Self-Publishing</h2>
+
+    <div class="result">
+
+        <p>
+            Prepare one professionally finished book.
+        </p>
+
+        <p>
+            Obtain physical copies for personal distribution to museums,
+            bookstores, events, and other local outlets.
+        </p>
+
+        <p>
+            At the same time, make the book available through
+            print-on-demand so people elsewhere can order it online.
+        </p>
+
+        <p>
+            Optionally add an ebook and audiobook.
+        </p>
+
+    </div>
+
+    <button class="back" onclick="goTo('production')">← Back</button>
+
+</section>
+
+
+<section id="final-traditional" class="page">
+
+    <h2>Possible Plan: Traditional Publishing</h2>
+
+    <div class="result">
+
+        <p>
+            Polish the manuscript → identify appropriate publishers
+            and/or agents → prepare submission materials →
+            submit the book → pursue publication offers.
+        </p>
+
+        <p>
+            If that route doesn't work or proves undesirable,
+            self-publishing remains available later.
+        </p>
+
+    </div>
+
+    <button class="back" onclick="goTo('traditional')">← Back</button>
+
+</section>
+
+
+<script>
+
+function goTo(pageId) {
+
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    const nextPage = document.getElementById(pageId);
+
+    if (nextPage) {
+        nextPage.classList.add('active');
+        window.scrollTo(0, 0);
+    }
+}
+
+</script>
+
+</body>
+</html>
