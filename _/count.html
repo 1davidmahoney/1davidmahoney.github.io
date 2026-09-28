@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Ask search engines not to index or follow this page -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+
+  <title>Count</title>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+    }
+
+    #count {
+      font-size: clamp(2rem, 8vw, 6rem);
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="count"></div>
+
+  <script>
+    const startingNumber = 5035598347500;
+
+    // July 9, 2018, using UTC to avoid timezone/DST issues.
+    const startDate = Date.UTC(2018, 6, 9);
+
+    const now = new Date();
+    const today = Date.UTC(
+      now.getUTCFullYear(),
+      now.getUTCMonth(),
+      now.getUTCDate()
+    );
+
+    const millisecondsPerDay = 24 * 60 * 60 * 1000;
+    const daysSinceStart = Math.floor(
+      (today - startDate) / millisecondsPerDay
+    );
+
+    const result = startingNumber + daysSinceStart;
+
+    document.getElementById("count").textContent =
+      result.toLocaleString("en-US");
+  </script>
+</body>
+</html>
